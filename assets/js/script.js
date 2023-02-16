@@ -217,12 +217,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
-/*=====================
-   10. Cookie Bar Js
-   ==========================*/
-$(".ok-button").click(function () {
-    $(".cookie-bar-box").addClass("hide");
-});
 
 /*=====================
    11. Image To Background Js
