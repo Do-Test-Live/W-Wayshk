@@ -24202,7 +24202,8 @@ header .offcanvas-backdrop {
     background: #fff;
     padding: calc(27px + (50 - 27) * ((100vw - 320px) / (1920 - 320)));
     border-radius: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
-    position: relative
+    position: relative;
+    height: 465px;
 }
 
 .client-section .clint-contain:hover .client-icon img {

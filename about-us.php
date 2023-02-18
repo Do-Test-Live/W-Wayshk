@@ -136,18 +136,10 @@
                     <div class="fresh-contain p-center-left">
                         <div>
                             <div class="review-title">
-                                <h4>About Us</h4>
-                                <h2>We make Organic Food In Market</h2>
+                                <h2>Wayshk 活籽兒童治療用品店</h2>
                             </div>
 
                             <div class="delivery-list">
-                                <p class="text-content">Just a few seconds to measure your body temperature. Up to 5
-                                    users! The battery lasts up to 2 years. There are many variations of passages of
-                                    Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A
-                                    global brand that doesn't sleep, we are 24/7 and always bringing something new with
-                                    over 100 new products dropping on the monhtly, bringing you the latest looks for
-                                    less.</p>
-
                                 <ul class="delivery-box">
                                     <li>
                                         <div class="delivery-box">
@@ -156,7 +148,7 @@
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Free delivery for all orders</h5>
+                                                <h5 class="text">Wayshk 以小店形式經營，以職業治療師的專業角度精心挑選兒童治療用品及設計教材，</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -168,7 +160,7 @@
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Only fresh foods</h5>
+                                                <h5 class="text">協助有需要的孩子更投入日常生活活動中。</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -180,7 +172,7 @@
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Free delivery for all orders</h5>
+                                                <h5 class="text">請讚好我們的Facebook，留意最新的免費自製教材及優惠詳情。</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -192,7 +184,7 @@
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Only fresh foods</h5>
+                                                <h5 class="text">https://www.facebook.com/wayshk000</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -205,100 +197,6 @@
         </div>
     </section>
     <!-- Fresh Vegetable Section End -->
-
-    <!-- Client Section Start -->
-    <section class="client-section section-lg-space">
-        <div class="container-fluid-lg">
-
-
-
-            <!-- come oder page-->
-            <div class="row">
-                <div class="col-12">
-                    <div class="about-us-title text-center">
-                        <h4>What We Do</h4>
-                        <h2 class="center">We are Trusted by Clients</h2>
-                    </div>
-
-                    <div class="slider-3_1 product-wrapper">
-                        <div>
-                            <div class="clint-contain">
-                                <div class="client-icon">
-                                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg" class="blur-up lazyload" alt="">
-                                </div>
-                                <h2>10</h2>
-                                <h4>Business Years</h4>
-                                <p>A coffee shop is a small business that sells coffee, pastries, and other morning
-                                    goods. There are many different types of coffee shops around the world.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="clint-contain">
-                                <div class="client-icon">
-                                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/buy.svg" class="blur-up lazyload" alt="">
-                                </div>
-                                <h2>80 K+</h2>
-                                <h4>Products Sales</h4>
-                                <p>Some coffee shops have a seating area, while some just have a spot to order and then
-                                    go somewhere else to sit down. The coffee shop that I am going to.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="clint-contain">
-                                <div class="client-icon">
-                                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/user.svg" class="blur-up lazyload" alt="">
-                                </div>
-                                <h2>90%</h2>
-                                <h4>Happy Customers</h4>
-                                <p>My goal for this coffee shop is to be able to get a coffee and get on with my day.
-                                    It's a Thursday morning and I am rushing between meetings.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-3_1 product-wrapper mt-5">
-                        <div>
-                            <div class="clint-contain">
-                                <div class="client-icon">
-                                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg" class="blur-up lazyload" alt="">
-                                </div>
-                                <h2>10</h2>
-                                <h4>Business Years</h4>
-                                <p>A coffee shop is a small business that sells coffee, pastries, and other morning
-                                    goods. There are many different types of coffee shops around the world.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="clint-contain">
-                                <div class="client-icon">
-                                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/buy.svg" class="blur-up lazyload" alt="">
-                                </div>
-                                <h2>80 K+</h2>
-                                <h4>Products Sales</h4>
-                                <p>Some coffee shops have a seating area, while some just have a spot to order and then
-                                    go somewhere else to sit down. The coffee shop that I am going to.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="clint-contain">
-                                <div class="client-icon">
-                                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/user.svg" class="blur-up lazyload" alt="">
-                                </div>
-                                <h2>90%</h2>
-                                <h4>Happy Customers</h4>
-                                <p>My goal for this coffee shop is to be able to get a coffee and get on with my day.
-                                    It's a Thursday morning and I am rushing between meetings.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Client Section End -->
 
     <!-- Fresh Vegetable Section Start -->
     <section class="fresh-vegetable-section section-lg-space">

@@ -281,9 +281,9 @@
                 <div class="col-lg-6">
                     <div class="left-sidebar-box">
                         <div class="row">
-                            
+
                             <div class="col-xl-12">
-                                <div class="contact-title">
+                                <div class="contact-title text-center">
                                     <h3>Get In Touch</h3>
                                 </div>
 

@@ -674,7 +674,7 @@
                                             <a class="nav-link" href="about-us.php">關於</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="about-us.php#order">訂購方法</a>
+                                            <a class="nav-link" href="order.php">訂購方法</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="living-seeds-children.php">活籽兒童服務社</a>
