@@ -185,7 +185,7 @@
                                         </div>
                                     </li>
 
-                                    <li>
+                                    <li id="order">
                                         <div class="delivery-box">
                                             <div class="delivery-icon">
                                                 <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg" class="blur-up lazyload" alt="">
@@ -300,221 +300,33 @@
     </section>
     <!-- Client Section End -->
 
-    <!-- Team Section Start -->
-<!--    <section class="team-section section-lg-space">
+    <!-- Fresh Vegetable Section Start -->
+    <section class="fresh-vegetable-section section-lg-space">
         <div class="container-fluid-lg">
-            <div class="about-us-title text-center">
-                <h4 class="text-content">Our Creative Team</h4>
-                <h2 class="center">fastkart team member</h2>
-            </div>
-            <div class="row">
+            <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
+                <!--  come from demo website about us page-->
                 <div class="col-12">
-                    <div class="slider-user product-wrapper">
+                    <div class="fresh-contain">
                         <div>
-                            <div class="team-box">
-                                <div class="team-iamge">
-                                    <img src="assets/images/inner-page/user/1.jpg" class="img-fluid blur-up lazyload"
-                                         alt="">
-                                </div>
-
-                                <div class="team-name">
-                                    <h3>Anna Baranov</h3>
-                                    <h5>Marketing</h5>
-                                    <p>cheeseburger airedale mozzarella the big cheese fondue.</p>
-                                    <ul class="team-media">
-                                        <li>
-                                            <a href="https://www.facebook.com/" class="fb-bg">
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://in.pinterest.com/" class="pint-bg">
-                                                <i class="fa-brands fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://twitter.com/" class="twitter-bg">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.instagram.com/" class="insta-bg">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="review-title text-center">
+                                <p style="font-size: 28px;font-weight: bold">We make Organic Food In Market</p>
                             </div>
-                        </div>
 
-                        <div>
-                            <div class="team-box">
-                                <div class="team-iamge">
-                                    <img src="assets/images/inner-page/user/2.jpg" class="img-fluid blur-up lazyload"
-                                         alt="">
-                                </div>
-
-                                <div class="team-name">
-                                    <h3>Anna Baranov</h3>
-                                    <h5>Marketing</h5>
-                                    <p>cheese on toast mozzarella bavarian bergkase smelly cheese cheesy feet.</p>
-                                    <ul class="team-media">
-                                        <li>
-                                            <a href="https://www.facebook.com/" class="fb-bg">
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://in.pinterest.com/" class="pint-bg">
-                                                <i class="fa-brands fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://twitter.com/" class="twitter-bg">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.instagram.com/" class="insta-bg">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="team-box">
-                                <div class="team-iamge">
-                                    <img src="assets/images/inner-page/user/3.jpg" class="img-fluid blur-up lazyload"
-                                         alt="">
-                                </div>
-
-                                <div class="team-name">
-                                    <h3>Anna Baranov</h3>
-                                    <h5>Marketing</h5>
-                                    <p>camembert de normandie. Bocconcini rubber cheese fromage frais port-salut.</p>
-                                    <ul class="team-media">
-                                        <li>
-                                            <a href="https://www.facebook.com/" class="fb-bg">
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://in.pinterest.com/" class="pint-bg">
-                                                <i class="fa-brands fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://twitter.com/" class="twitter-bg">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.instagram.com/" class="insta-bg">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="team-box">
-                                <div class="team-iamge">
-                                    <img src="assets/images/inner-page/user/4.jpg" class="img-fluid blur-up lazyload"
-                                         alt="">
-                                </div>
-
-                                <div class="team-name">
-                                    <h3>Anna Baranov</h3>
-                                    <h5>Marketing</h5>
-                                    <p>Fondue stinking bishop goat. Macaroni cheese croque monsieur cottage cheese.</p>
-                                    <ul class="team-media">
-                                        <li>
-                                            <a href="https://www.facebook.com/" class="fb-bg">
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://in.pinterest.com/" class="pint-bg">
-                                                <i class="fa-brands fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://twitter.com/" class="twitter-bg">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.instagram.com/" class="insta-bg">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="team-box">
-                                <div class="team-iamge">
-                                    <img src="assets/images/inner-page/user/1.jpg" class="img-fluid blur-up lazyload"
-                                         alt="">
-                                </div>
-
-                                <div class="team-name">
-                                    <h3>Anna Baranov</h3>
-                                    <h5>Marketing</h5>
-                                    <p>squirty cheese cheddar macaroni cheese airedale cheese triangles.</p>
-                                    <ul class="team-media">
-                                        <li>
-                                            <a href="https://www.facebook.com/" class="fb-bg">
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://in.pinterest.com/" class="pint-bg">
-                                                <i class="fa-brands fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://twitter.com/" class="twitter-bg">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.instagram.com/" class="insta-bg">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="delivery-list">
+                                <p class="text-content">Just a few seconds to measure your body temperature. Up to 5
+                                    users! The battery lasts up to 2 years. There are many variations of passages of
+                                    Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A
+                                    global brand that doesn't sleep, we are 24/7 and always bringing something new with
+                                    over 100 new products dropping on the monhtly, bringing you the latest looks for
+                                    less.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>-->
-    <!-- Team Section End -->
+    </section>
+    <!-- Fresh Vegetable Section End -->
 
     <!-- Review Section Start -->
     <section class="review-section section-lg-space">
@@ -870,216 +682,11 @@
     </section>
     <!-- Review Section End -->
 
-    <!-- Blog Section Start -->
-  <!--  <section class="section-lg-space">
-        <div class="container-fluid-lg">
-            <div class="about-us-title text-center">
-                <h4 class="text-content">Our Blog</h4>
-                <h2 class="center">Our Latest Blog</h2>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="slider-5 ratio_87">
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="assets/images/veg-2/blog/1.jpg" class="bg-img blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Farmart</h6>
-                                    <h5>Fresh Meat Saugage</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="assets/images/veg-2/blog/2.jpg" class="bg-img blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Soda Brand</h6>
-                                    <h5>Soda 500ml - 20% OFF</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="assets/images/veg-2/blog/3.jpg" class="bg-img blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Beer Brand</h6>
-                                    <h5>Soda 500ml - 20% OFF</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="assets/images/veg-2/blog/4.jpg" class="bg-img blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Beer Brand</h6>
-                                    <h5>Fresh Beer -30% OFF</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="rounded-3">
-                                        <img src="assets/images/veg-2/blog/5.jpg" class="bg-img blur-up lazyload"
-                                             alt="">
-                                    </a>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Milk Brand</h6>
-                                    <h5>Fresh Milk</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- Blog Section End -->
-
     <!-- Footer Section Start -->
     <?php
     include ('include/footer.php');
     ?>
     <!-- Footer Section End -->
-
-    <!-- Location Modal Start -->
-    <!--<div class="modal location-modal fade theme-modal" id="locationModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Choose your Delivery Location</h5>
-                    <p class="mt-1 text-content">Enter your address and we will specify the offer for your area.</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="location-list">
-                        <div class="search-input">
-                            <input type="search" class="form-control" placeholder="Search Your Area">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-
-                        <div class="disabled-box">
-                            <h6>Select a Location</h6>
-                        </div>
-
-                        <ul class="location-select custom-height">
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Alabama</h6>
-                                    <span>Min: $130</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Arizona</h6>
-                                    <span>Min: $150</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>California</h6>
-                                    <span>Min: $110</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Colorado</h6>
-                                    <span>Min: $140</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Florida</h6>
-                                    <span>Min: $160</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Georgia</h6>
-                                    <span>Min: $120</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Kansas</h6>
-                                    <span>Min: $170</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Minnesota</h6>
-                                    <span>Min: $120</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>New York</h6>
-                                    <span>Min: $110</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <h6>Washington</h6>
-                                    <span>Min: $130</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <!-- Location Modal End -->
 
     <!-- Deal Box Modal Start -->
     <div class="modal fade theme-modal deal-modal" id="deal-box" tabindex="-1" aria-labelledby="exampleModalLabel"

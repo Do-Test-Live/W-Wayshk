@@ -8,7 +8,7 @@
     <meta name="keywords" content="Fastkart">
     <meta name="author" content="Fastkart">
     <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
-    <title>Order Success</title>
+    <title>Blog Grid</title>
 
     <?php include ('include/css.php');?>
     <style>
@@ -40,14 +40,13 @@
     <!-- Loader End -->
 
     <!-- Header Start -->
- <?php
- include ('include/header.php');
-
- ?>
+    <?php
+    include ('include/header.php');
+    ?>
     <!-- Header End -->
 
     <!-- mobile fix menu start -->
-<div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
+    <div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
         <ul>
             <li class="active">
                 <a href="index.html">
@@ -67,11 +66,11 @@
                 </a>
             </li>
 
-<!--            <li>
-                <a href="wishlist.html" class="notifi-wishlist">
-                    <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
-                </a>
-            </li>-->
+            <!--            <li>
+                            <a href="wishlist.html" class="notifi-wishlist">
+                                <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
+                            </a>
+                        </li>-->
 
             <li>
                 <a href="cart.php">
@@ -82,174 +81,90 @@
     </div>
     <!-- mobile fix menu end -->
 
-    <!-- Cart Section Start -->
-    <section class="contact-box-section">
+    <!-- Breadcrumb Section Start -->
+    <section class="breadscrumb-section pt-0">
         <div class="container-fluid-lg">
-            <div class="row g-lg-5 g-3">
-                <div class="col-lg-12 mb-5">
-                    <div class="left-sidebar-box">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-title">
-                                    <h3>Get In Touch</h3>
-                                </div>
-
-                                <div class="contact-detail">
-                                    <div class="row g-4">
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-phone"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Phone</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>(+1) 618 190 496</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-envelope"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Email</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>geweto9420@chokxus.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-location-dot"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>London Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Cruce Casa de Postas 29</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadscrumb-contain">
+                        <h2>Blog Grid</h2>
+                        <nav>
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">
+                                        <i class="fa-solid fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Blog Grid</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Cart Section End -->
+    <!-- Breadcrumb Section End -->
 
+    <!-- Blog Section Start -->
+    <section class="blog-section section-b-space">
+        <div class="container-fluid-lg">
+            <div class="row g-4">
+                <div class="col-xxl-12">
+                    <div class="row g-4 ratio_65">
+                        <div class="col-xxl-4 col-sm-6 ms-auto">
+                            <div class="blog-box wow fadeInUp">
+                                <div class="blog-image">
+                                    <a href="blog-detail.html">
+                                        <img src="assets/images/inner-page/blog/1.jpg"
+                                            class="bg-img blur-up lazyload" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="blog-contain">
+                                    <div class="blog-label">
+                                        <span class="time"><i data-feather="clock"></i> <span>25 Feg, 2022</span></span>
+                                        <span class="super"><i data-feather="user"></i> <span>Mark J.
+                                                Speight</span></span>
+                                    </div>
+                                    <a href="blog-detail.html">
+                                        <h3>one pot creamy mediterranean chicken pasta cream.</h3>
+                                    </a>
+                                    <button onclick="location.href = 'blog-detail.html';" class="blog-button">Read More
+                                        <i class="fa-solid fa-right-long"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xxl-4 col-sm-6 me-auto">
+                            <div class="blog-box wow fadeInUp" data-wow-delay="0.05s">
+                                <div class="blog-image">
+                                    <a href="blog-detail.html">
+                                        <img src="assets/images/inner-page/blog/2.jpg" class="bg-img" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="blog-contain">
+                                    <div class="blog-label">
+                                        <span class="time"><i data-feather="clock"></i> <span>25 Feg, 2022</span></span>
+                                        <span class="super"><i data-feather="user"></i> <span>rebeus
+                                                hagrid</span></span>
+                                    </div>
+                                    <a href="blog-detail.html">
+                                        <h3>Crispy Frozen Vegetable is the on the Tempura.</h3>
+                                    </a>
+                                    <button onclick="location.href = 'blog-detail.html';" class="blog-button">Read More
+                                        <i class="fa-solid fa-right-long"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
     <!-- Breadcrumb Section Start -->
     <section class="breadscrumb-section pt-0">
         <div class="container-fluid-lg">
@@ -281,7 +196,8 @@
                 <div class="col-lg-6">
                     <div class="left-sidebar-box">
                         <div class="row">
-                            
+
+
                             <div class="col-xl-12">
                                 <div class="contact-title">
                                     <h3>Get In Touch</h3>
@@ -447,7 +363,7 @@
     <!-- Footer Section End -->
 
     <!-- Location Modal Start -->
-   <!-- <div class="modal location-modal fade theme-modal" id="locationModal" tabindex="-1"
+    <!--<div class="modal location-modal fade theme-modal" id="locationModal" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
             <div class="modal-content">
@@ -629,6 +545,50 @@
 
     <!-- Tap to top start -->
     <div class="theme-option">
+        <div class="setting-box">
+            <button class="btn setting-button">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+            <div class="theme-setting-2">
+                <div class="theme-box">
+                    <ul>
+                        <li>
+                            <div class="setting-name">
+                                <h4>Color</h4>
+                            </div>
+                            <div class="theme-setting-button color-picker">
+                                <form class="form-control">
+                                    <label for="colorPick" class="form-label mb-0">Theme Color</label>
+                                    <input type="color" class="form-control form-control-color" id="colorPick"
+                                        value="#0da487" title="Choose your color">
+                                </form>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="setting-name">
+                                <h4>Dark</h4>
+                            </div>
+                            <div class="theme-setting-button">
+                                <button class="btn btn-2 outline" id="darkButton">Dark</button>
+                                <button class="btn btn-2 unline" id="lightButton">Light</button>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="setting-name">
+                                <h4>RTL</h4>
+                            </div>
+                            <div class="theme-setting-button rtl">
+                                <button class="btn btn-2 rtl-unline">LTR</button>
+                                <button class="btn btn-2 rtl-outline">RTL</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="back-to-top">
             <a id="back-to-top" href="#">
@@ -637,7 +597,6 @@
         </div>
     </div>
     <!-- Tap to top end -->
-
 
     <!-- Bg overlay Start -->
     <div class="bg-overlay"></div>
@@ -663,7 +622,12 @@
 
     <!-- Slick js-->
     <script src="assets/js/slick/slick.js"></script>
+    <script src="assets/js/slick/slick-animation.min.js"></script>
     <script src="assets/js/slick/custom_slick.js"></script>
+
+    <!-- WOW js -->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom-wow.js"></script>
 
     <!-- script js -->
     <script src="assets/js/script.js"></script>
@@ -673,5 +637,4 @@
 </body>
 
 
-<!-- Mirrored from themes.pixelstrap.com/fastkart/front-end/order-success.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Feb 2023 07:41:24 GMT -->
 </html>

@@ -665,41 +665,25 @@
                                 <div class="offcanvas-body">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.php">Home</a>
-
+                                            <a class="nav-link" href="index.php">首頁</a>
                                         </li>
-
                                         <li class="nav-item">
-                                            <a class="nav-link" href="shop.php">Product</i></a>
-
+                                            <a class="nav-link" href="shop.php">所有產品</i></a>
                                         </li>
-
                                         <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0)">About</a>
-
+                                            <a class="nav-link" href="about-us.php">關於</a>
                                         </li>
-
                                         <li class="nav-item">
-                                            <a class="nav-link"
-                                               href="javascript:void(0)">Order</a>
+                                            <a class="nav-link" href="about-us.php#order">訂購方法</a>
                                         </li>
-
                                         <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0)">Living Seeds Children's Services</a>
+                                            <a class="nav-link" href="living-seeds-children.php">活籽兒童服務社</a>
                                         </li>
-
-
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                               data-bs-toggle="dropdown">More &nbsp;<i class="fa-solid fa-angle-down"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="occupational-therapy-courses.php">線上職業治療課程</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="purchasing-service.php">代購服務</a>
-                                                </li>
-                                            </ul>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="occupational-therapy-courses.php">線上職業治療課程</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="purchasing-service.php">代購服務</a>
                                         </li>
                                     </ul>
                                 </div>
