@@ -77,40 +77,35 @@
     <!-- Header End -->
 
     <!-- mobile fix menu start -->
-    <div class="mobile-menu d-md-none d-block mobile-cart">
+<div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
         <ul>
             <li class="active">
-                <a href="index.php">
-                    <i class="iconly-Home icli"></i>
-                    <span>Home</span>
+                <a href="index.html">
+                    <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
                 </a>
             </li>
 
             <li class="mobile-category">
                 <a href="javascript:void(0)">
-                    <i class="iconly-Category icli js-link"></i>
-                    <span>Category</span>
+                    <i class="fa-solid fa-border-all text-white" style="font-size: 18px"></i>
                 </a>
             </li>
 
             <li>
                 <a href="search.html" class="search-box">
-                    <i class="iconly-Search icli"></i>
-                    <span>Search</span>
+                    <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
                 </a>
             </li>
 
 <!--            <li>
                 <a href="wishlist.html" class="notifi-wishlist">
-                    <i class="iconly-Heart icli"></i>
-                    <span>My Wish</span>
+                    <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
                 </a>
             </li>-->
 
             <li>
                 <a href="cart.php">
-                    <i class="iconly-Bag-2 icli fly-cate"></i>
-                    <span>Cart</span>
+                    <i class="fa-solid fa-cart-shopping text-white" style="font-size: 18px"></i>
                 </a>
             </li>
         </ul>
