@@ -42,6 +42,19 @@
 
     <!-- Template css -->
     <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style>
+        header .header-top .about-list .right-nav-list .theme-form-select .dropdown-toggle.hkd::before {
+            content: " ";
+            position: absolute;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 0;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -87,12 +100,12 @@
                 </a>
             </li>
 
-            <li>
+<!--            <li>
                 <a href="wishlist.html" class="notifi-wishlist">
                     <i class="iconly-Heart icli"></i>
                     <span>My Wish</span>
                 </a>
-            </li>
+            </li>-->
 
             <li>
                 <a href="cart.php">
@@ -531,77 +544,6 @@
                                                             </ul>
                                                             <span class="text-content">(1 Star)</span>
                                                         </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                            aria-expanded="false" aria-controls="collapseFour">
-                                            <span>Discount</span>
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingFour">
-                                        <div class="accordion-body">
-                                            <ul class="category-list custom-padding">
-                                                <li>
-                                                    <div class="form-check ps-0 m-0 category-list-box">
-                                                        <input class="checkbox_animated" type="checkbox"
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            <span class="name">upto 5%</span>
-                                                            <span class="number">(06)</span>
-                                                        </label>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="form-check ps-0 m-0 category-list-box">
-                                                        <input class="checkbox_animated" type="checkbox"
-                                                            id="flexCheckDefault1">
-                                                        <label class="form-check-label" for="flexCheckDefault1">
-                                                            <span class="name">5% - 10%</span>
-                                                            <span class="number">(08)</span>
-                                                        </label>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="form-check ps-0 m-0 category-list-box">
-                                                        <input class="checkbox_animated" type="checkbox"
-                                                            id="flexCheckDefault2">
-                                                        <label class="form-check-label" for="flexCheckDefault2">
-                                                            <span class="name">10% - 15%</span>
-                                                            <span class="number">(10)</span>
-                                                        </label>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="form-check ps-0 m-0 category-list-box">
-                                                        <input class="checkbox_animated" type="checkbox"
-                                                            id="flexCheckDefault3">
-                                                        <label class="form-check-label" for="flexCheckDefault3">
-                                                            <span class="name">15% - 25%</span>
-                                                            <span class="number">(14)</span>
-                                                        </label>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="form-check ps-0 m-0 category-list-box">
-                                                        <input class="checkbox_animated" type="checkbox"
-                                                            id="flexCheckDefault4">
-                                                        <label class="form-check-label" for="flexCheckDefault4">
-                                                            <span class="name">More than 25%</span>
-                                                            <span class="number">(13)</span>
-                                                        </label>
                                                     </div>
                                                 </li>
                                             </ul>

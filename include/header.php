@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xxl-3 d-xxl-block d-none">
                     <div class="top-left-header">
-                        <i class="iconly-Location icli text-white"></i>
+                        <i class="fa-solid fa-location-dot text text-white"></i>
                         <span class="text-white">1418 Riverwood Drive, CA 96052, US</span>
                     </div>
                 </div>
@@ -70,23 +70,11 @@
                             </div>
                         </li>
                         <li class="right-nav-list">
-                            <div class="dropdown theme-form-select">
-                                <button class="btn dropdown-toggle" type="button" id="select-dollar"
+                            <div class="theme-form-select">
+                                <button class="btn dropdown-toggle hkd" type="button" id="select-dollar"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>USD</span>
+                                    <span>HKD</span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-end sm-dropdown-menu"
-                                    aria-labelledby="select-dollar">
-                                    <li>
-                                        <a class="dropdown-item" id="aud" href="javascript:void(0)">AUD</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" id="eur" href="javascript:void(0)">EUR</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" id="cny" href="javascript:void(0)">CNY</a>
-                                    </li>
-                                </ul>
                             </div>
                         </li>
                     </ul>
@@ -106,21 +94,11 @@
                                     <i class="fa-solid fa-bars"></i>
                                 </span>
                         </button>
-                        <a href="index.html" class="web-logo nav-logo">
+                        <a href="index.php" class="web-logo nav-logo">
                             <img src="assets/images/logo/2.png" class="img-fluid blur-up lazyload" alt="">
                         </a>
 
                         <div class="middle-box">
-                            <div class="location-box">
-                                <button class="btn location-button" data-bs-toggle="modal"
-                                        data-bs-target="#locationModal">
-                                        <span class="location-arrow">
-                                            <i data-feather="map-pin"></i>
-                                        </span>
-                                    <span class="locat-name">Your Location</span>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </button>
-                            </div>
 
                             <div class="search-box">
                                 <div class="input-group">
@@ -156,7 +134,7 @@
                                     </div>
                                 </li>
                                 <li class="right-side">
-                                    <a href="contact-us.html" class="delivery-login-box">
+                                    <a href="contact.php" class="delivery-login-box">
                                         <div class="delivery-icon">
                                             <i data-feather="phone-call"></i>
                                         </div>
@@ -164,11 +142,6 @@
                                             <h6>24/7 Delivery</h6>
                                             <h5>+91 888 104 2340</h5>
                                         </div>
-                                    </a>
-                                </li>
-                                <li class="right-side">
-                                    <a href="wishlist.html" class="btn p-0 position-relative header-wishlist">
-                                        <i data-feather="heart"></i>
                                     </a>
                                 </li>
                                 <li class="right-side">
@@ -228,8 +201,8 @@
                                             </div>
 
                                             <div class="button-group">
-                                                <a href="cart.html" class="btn btn-sm cart-button">View Cart</a>
-                                                <a href="checkout.html" class="btn btn-sm cart-button theme-bg-color
+                                                <a href="cart.php" class="btn btn-sm cart-button">View Cart</a>
+                                                <a href="checkout.php" class="btn btn-sm cart-button theme-bg-color
                                                     text-white">Checkout</a>
                                             </div>
                                         </div>
@@ -250,15 +223,15 @@
                                         <ul class="user-box-name">
                                             <li class="product-box-contain">
                                                 <i></i>
-                                                <a href="login.html">Log In</a>
+                                                <a href="login.php">Log In</a>
                                             </li>
 
                                             <li class="product-box-contain">
-                                                <a href="sign-up.html">Register</a>
+                                                <a href="sign-up.php">Register</a>
                                             </li>
 
                                             <li class="product-box-contain">
-                                                <a href="forgot.html">Forgot Password</a>
+                                                <a href="forgot.php">Forgot Password</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -692,30 +665,27 @@
                                 <div class="offcanvas-body">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0)">Home</a>
+                                            <a class="nav-link" href="index.php">Home</a>
 
                                         </li>
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                               data-bs-toggle="dropdown">Product</i></a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="shop.php">Product</i></a>
 
                                         </li>
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                               data-bs-toggle="dropdown">About</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0)">About</a>
 
                                         </li>
 
-                                        <li class="nav-item dropdown dropdown-mega">
-                                            <a class="nav-link dropdown-toggle ps-xl-2 ps-0"
-                                               href="javascript:void(0)" data-bs-toggle="dropdown">Oder</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                               href="javascript:void(0)">Order</a>
                                         </li>
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                               data-bs-toggle="dropdown">Living Seeds Children's Services</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0)">Living Seeds Children's Services</a>
                                         </li>
 
 
@@ -724,10 +694,10 @@
                                                data-bs-toggle="dropdown">More &nbsp;<i class="fa-solid fa-angle-down"></i></a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="seller-become.html">線上職業治療課程</a>
+                                                    <a class="dropdown-item" href="occupational-therapy-courses.php">線上職業治療課程</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="seller-dashboard.html">代購服務</a>
+                                                    <a class="dropdown-item" href="purchasing-service.php">代購服務</a>
                                                 </li>
                                             </ul>
                                         </li>

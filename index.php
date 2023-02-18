@@ -10,8 +10,20 @@
     <meta name="author" content="Fastkart">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
     <title>On-demand last-mile delivery</title>
-
 <?php include ('include/css.php');?>
+    <style>
+        header .header-top .about-list .right-nav-list .theme-form-select .dropdown-toggle.hkd::before {
+            content: " ";
+            position: absolute;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 0;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body class="theme-color-1">
@@ -54,11 +66,11 @@ include ('include/header.php');
                 </a>
             </li>
 
-            <li>
+<!--            <li>
                 <a href="wishlist.html" class="notifi-wishlist">
                     <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
                 </a>
-            </li>
+            </li>-->
 
             <li>
                 <a href="cart.php">

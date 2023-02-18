@@ -189,24 +189,6 @@
                                     </div>
                                 </div>
                             </li>
-
-                            <li class="social-app mb-0">
-                                <h5 class="mb-2 text-content">Download App :</h5>
-                                <ul>
-                                    <li class="mb-0">
-                                        <a href="https://play.google.com/store/apps" target="_blank">
-                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/playstore.svg" class="blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                    <li class="mb-0">
-                                        <a href="https://www.apple.com/in/app-store/" target="_blank">
-                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/appstore.svg" class="blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -215,7 +197,7 @@
 
         <div class="sub-footer section-small-space">
             <div class="reserve">
-                <h6 class="text-content">©2022 Fastkart All rights reserved</h6>
+                <h6 class="text-content">©2023 Wayshk All rights reserved</h6>
             </div>
 
             <div class="payment">
