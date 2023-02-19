@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -240,7 +237,4 @@
     <!-- thme setting js -->
     <script src="assets/js/theme-setting.js"></script>
 </body>
-
-
-<!-- Mirrored from themes.pixelstrap.com/fastkart/front-end/forgot.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Feb 2023 07:40:04 GMT -->
 </html>

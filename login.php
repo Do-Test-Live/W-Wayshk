@@ -283,7 +283,4 @@
     <!-- thme setting js -->
     <script src="assets/js/theme-setting.js"></script>
 </body>
-
-
-<!-- Mirrored from themes.pixelstrap.com/fastkart/front-end/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Feb 2023 07:40:03 GMT -->
 </html>

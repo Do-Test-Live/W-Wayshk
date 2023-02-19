@@ -641,6 +641,4 @@ include('include/footer.php');
 <!-- thme setting js -->
 <script src="assets/js/theme-setting.js"></script>
 </body>
-
-
 </html>
