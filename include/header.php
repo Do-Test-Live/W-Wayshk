@@ -150,13 +150,13 @@
                                             <ul class="cart-list">
                                                 <li class="product-box-contain">
                                                     <div class="drop-cart">
-                                                        <a href="product-left-thumbnail.html" class="drop-image">
+                                                        <a href="#" class="drop-image">
                                                             <img src="assets/images/vegetable/product/1.png"
                                                                  class="blur-up lazyload" alt="">
                                                         </a>
 
                                                         <div class="drop-contain">
-                                                            <a href="product-left-thumbnail.html">
+                                                            <a href="#">
                                                                 <h5>Fantasy Crunchy Choco Chip Cookies</h5>
                                                             </a>
                                                             <h6><span>1 x</span> $80.58</h6>
@@ -169,13 +169,13 @@
 
                                                 <li class="product-box-contain">
                                                     <div class="drop-cart">
-                                                        <a href="product-left-thumbnail.html" class="drop-image">
+                                                        <a href="#" class="drop-image">
                                                             <img src="assets/images/vegetable/product/2.png"
                                                                  class="blur-up lazyload" alt="">
                                                         </a>
 
                                                         <div class="drop-contain">
-                                                            <a href="product-left-thumbnail.html">
+                                                            <a href="#">
                                                                 <h5>Peanut Butter Bite Premium Butter Cookies 600 g
                                                                 </h5>
                                                             </a>
@@ -695,3 +695,39 @@
         </div>
     </div>
 </header>
+
+<!-- mobile fix menu start -->
+<div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
+    <ul>
+        <li class="active">
+            <a href="index.php">
+                <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
+            </a>
+        </li>
+
+        <li class="mobile-category">
+            <a href="javascript:void(0)">
+                <i class="fa-solid fa-border-all text-white" style="font-size: 18px"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="search-box">
+                <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
+            </a>
+        </li>
+
+        <!--            <li>
+                        <a href="#" class="notifi-wishlist">
+                            <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
+                        </a>
+                    </li>-->
+
+        <li>
+            <a href="cart.php">
+                <i class="fa-solid fa-cart-shopping text-white" style="font-size: 18px"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- mobile fix menu end -->

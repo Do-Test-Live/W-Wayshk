@@ -53,7 +53,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="footer-logo">
                         <div class="theme-logo">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="assets/images/logo/2.png" class="blur-up lazyload" alt="">
                             </a>
                         </div>
@@ -116,7 +116,7 @@
                     <div class="footer-contain">
                         <ul>
                             <li>
-                                <a href="index.html" class="text-content">Home</a>
+                                <a href="index.php" class="text-content">Home</a>
                             </li>
                             <li>
                                 <a href="shop.html" class="text-content">Shop</a>
@@ -151,7 +151,7 @@
                                 <a href="order-tracking.html" class="text-content">Track Order</a>
                             </li>
                             <li>
-                                <a href="wishlist.html" class="text-content">Your Wishlist</a>
+                                <a href="#" class="text-content">Your Wishlist</a>
                             </li>
                             <li>
                                 <a href="search.html" class="text-content">Search</a>

@@ -7,7 +7,7 @@
     <meta name="description" content="Wayshk">
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
-    <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
     <title>Log In</title>
 
     <?php include ('include/css.php');?>
@@ -45,41 +45,6 @@
     ?>
     <!-- Header End -->
 
-    <!-- mobile fix menu start -->
-<div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
-        <ul>
-            <li class="active">
-                <a href="index.html">
-                    <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-            <li class="mobile-category">
-                <a href="javascript:void(0)">
-                    <i class="fa-solid fa-border-all text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="search.html" class="search-box">
-                    <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-<!--            <li>
-                <a href="wishlist.html" class="notifi-wishlist">
-                    <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
-                </a>
-            </li>-->
-
-            <li>
-                <a href="cart.php">
-                    <i class="fa-solid fa-cart-shopping text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
 
     <!-- Breadcrumb Section Start -->
     <section class="breadscrumb-section pt-0">
@@ -91,7 +56,7 @@
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>

@@ -7,7 +7,7 @@
     <meta name="description" content="Wayshk">
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
-    <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
     <title>活籽兒童服務社 | Wayshk | 全港職業治療服務</title>
 
     <?php include ('include/css.php');?>
@@ -46,41 +46,6 @@
  ?>
     <!-- Header End -->
 
-    <!-- mobile fix menu start -->
-<div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
-        <ul>
-            <li class="active">
-                <a href="index.html">
-                    <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-            <li class="mobile-category">
-                <a href="javascript:void(0)">
-                    <i class="fa-solid fa-border-all text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="search.html" class="search-box">
-                    <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-<!--            <li>
-                <a href="wishlist.html" class="notifi-wishlist">
-                    <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
-                </a>
-            </li>-->
-
-            <li>
-                <a href="cart.php">
-                    <i class="fa-solid fa-cart-shopping text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
 
     <!-- Cart Section Start -->
     <section class="contact-box-section">
@@ -237,7 +202,7 @@
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
@@ -528,12 +493,12 @@
                         <ul class="deal-offer-list">
                             <li class="list-1">
                                 <div class="deal-offer-contain">
-                                    <a href="shop-left-sidebar.html" class="deal-image">
+                                    <a href="#" class="deal-image">
                                         <img src="assets/images/vegetable/product/10.png" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
-                                    <a href="shop-left-sidebar.html" class="deal-contain">
+                                    <a href="#" class="deal-contain">
                                         <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
                                         <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
                                     </a>
@@ -542,12 +507,12 @@
 
                             <li class="list-2">
                                 <div class="deal-offer-contain">
-                                    <a href="shop-left-sidebar.html" class="deal-image">
+                                    <a href="#" class="deal-image">
                                         <img src="assets/images/vegetable/product/11.png" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
-                                    <a href="shop-left-sidebar.html" class="deal-contain">
+                                    <a href="#" class="deal-contain">
                                         <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
                                         <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
                                     </a>
@@ -556,12 +521,12 @@
 
                             <li class="list-3">
                                 <div class="deal-offer-contain">
-                                    <a href="shop-left-sidebar.html" class="deal-image">
+                                    <a href="#" class="deal-image">
                                         <img src="assets/images/vegetable/product/12.png" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
-                                    <a href="shop-left-sidebar.html" class="deal-contain">
+                                    <a href="#" class="deal-contain">
                                         <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
                                         <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
                                     </a>
@@ -570,12 +535,12 @@
 
                             <li class="list-1">
                                 <div class="deal-offer-contain">
-                                    <a href="shop-left-sidebar.html" class="deal-image">
+                                    <a href="#" class="deal-image">
                                         <img src="assets/images/vegetable/product/13.png" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
-                                    <a href="shop-left-sidebar.html" class="deal-contain">
+                                    <a href="#" class="deal-contain">
                                         <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
                                         <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
                                     </a>

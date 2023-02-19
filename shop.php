@@ -7,7 +7,7 @@
     <meta name="description" content="Wayshk">
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
-    <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
     <title>治療用品 | Wayshk | 香港</title>
 
     <!-- Google font -->
@@ -74,41 +74,6 @@
     ?>
     <!-- Header End -->
 
-    <!-- mobile fix menu start -->
-<div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
-        <ul>
-            <li class="active">
-                <a href="index.html">
-                    <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-            <li class="mobile-category">
-                <a href="javascript:void(0)">
-                    <i class="fa-solid fa-border-all text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="search.html" class="search-box">
-                    <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-
-<!--            <li>
-                <a href="wishlist.html" class="notifi-wishlist">
-                    <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
-                </a>
-            </li>-->
-
-            <li>
-                <a href="cart.php">
-                    <i class="fa-solid fa-cart-shopping text-white" style="font-size: 18px"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
 
     <!-- Poster Section Start -->
     <section>
@@ -601,7 +566,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/2.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -621,7 +586,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -631,7 +596,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fresh Bread and Pastry Flour 200 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Cheesy feet cheesy grin brie.
@@ -690,7 +655,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.05s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/3.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -710,7 +675,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -721,7 +686,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Peanut Butter Bite Premium Butter Cookies 600 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Feta taleggio croque monsieur
@@ -780,7 +745,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/4.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -800,7 +765,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -811,7 +776,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Snacks</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">SnackAmor Combo Pack of Jowar Stick and Jowar Chips</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Lancashire hard cheese
@@ -872,7 +837,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.15s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/5.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -892,7 +857,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -903,7 +868,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Snacks</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Yumitos Chilli Sprinkled Potato Chips 100 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Cheddar cheddar pecorino hard
@@ -962,7 +927,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/6.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -982,7 +947,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -993,7 +958,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fantasy Crunchy Choco Chip Cookies</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Bavarian bergkase smelly
@@ -1055,7 +1020,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.25s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/7.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1075,7 +1040,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1086,7 +1051,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fresh Bread and Pastry Flour 200 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Melted cheese babybel chalk
@@ -1147,7 +1112,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/2.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1167,7 +1132,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1177,7 +1142,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fresh Bread and Pastry Flour 200 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Squirty cheese cottage cheese
@@ -1236,7 +1201,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.35s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/3.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1256,7 +1221,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1267,7 +1232,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Peanut Butter Bite Premium Butter Cookies 600 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Swiss ricotta cauliflower
@@ -1327,7 +1292,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.4s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/4.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1347,7 +1312,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1358,7 +1323,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Snacks</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">SnackAmor Combo Pack of Jowar Stick and Jowar Chips</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Boursin the big cheese
@@ -1418,7 +1383,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.45s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/5.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1438,7 +1403,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1449,7 +1414,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Snacks</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Yumitos Chilli Sprinkled Potato Chips 100 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Halloumi mozzarella monterey
@@ -1509,7 +1474,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/6.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1529,7 +1494,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1540,7 +1505,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fantasy Crunchy Choco Chip Cookies</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Manchego cow cheddar.
@@ -1601,7 +1566,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.55s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/7.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1621,7 +1586,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1632,7 +1597,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fresh Bread and Pastry Flour 200 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Roquefort say cheese the big
@@ -1693,7 +1658,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.6">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/2.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1713,7 +1678,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1723,7 +1688,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Fresh Bread and Pastry Flour 200 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Lancashire when the cheese
@@ -1782,7 +1747,7 @@
                             <div class="product-box-3 h-100 wow fadeInUp" data-wow-delay="0.65s">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <img src="assets/images/cake/product/3.png"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
@@ -1802,7 +1767,7 @@
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="wishlist.html" class="notifi-wishlist">
+                                                <a href="#" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -1813,7 +1778,7 @@
                                 <div class="product-footer">
                                     <div class="product-detail">
                                         <span class="span-name">Vegetable</span>
-                                        <a href="product-left-thumbnail.html">
+                                        <a href="#">
                                             <h5 class="name">Peanut Butter Bite Premium Butter Cookies 600 g</h5>
                                         </a>
                                         <p class="text-content mt-1 mb-2 product-content">Say cheese cheese and biscuits
@@ -1994,10 +1959,10 @@
                                 </div>
 
                                 <div class="modal-button">
-                                    <button onclick="location.href = 'cart.html';"
+                                    <button onclick="location.href = 'cart.php';"
                                         class="btn btn-md add-cart-button icon">Add
                                         To Cart</button>
-                                    <button onclick="location.href = 'product-left.html';"
+                                    <button onclick="location.href = '#';"
                                         class="btn theme-bg-color view-button icon text-white fw-bold btn-md">
                                         View More Details</button>
                                 </div>
