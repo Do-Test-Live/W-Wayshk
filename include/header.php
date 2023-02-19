@@ -40,9 +40,9 @@
                             <div class="dropdown theme-form-select">
                                 <button class="btn dropdown-toggle" type="button" id="select-language"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/images/country/united-states.png"
+                                    <img src="assets/images/country/hk-flag.png"
                                          class="img-fluid blur-up lazyload" alt="">
-                                    <span>English</span>
+                                    <span>Hong Kong</span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
                                     <li>
@@ -54,16 +54,9 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="france">
-                                            <img src="assets/images/country/germany.png"
+                                            <img src="assets/images/country/hk-flag.png"
                                                  class="img-fluid blur-up lazyload" alt="">
-                                            <span>Germany</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0)" id="chinese">
-                                            <img src="assets/images/country/turkish.png"
-                                                 class="img-fluid blur-up lazyload" alt="">
-                                            <span>Turki</span>
+                                            <span>Hong Kong</span>
                                         </a>
                                     </li>
                                 </ul>
