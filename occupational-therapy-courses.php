@@ -85,7 +85,7 @@ include('include/header.php');
 <section class="breadscrumb-section pt-0">
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-12 text-center pt-3 pb-3">
+            <div class="col-12 text-center pt-5 pb-5">
                 <h2>職業治療服務</h2>
             </div>
         </div>

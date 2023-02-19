@@ -105,9 +105,9 @@
                                         <div class="col-lg-4">
                                             <div class="row">
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
+                                                    <div class="contact-detail-box" style="background: #f8eab3">
                                                         <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                            <i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>服務範圍包括：</h4>
@@ -115,9 +115,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
+                                                    <div class="contact-detail-box" style="background: #f8eab3">
                                                         <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                            <i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>學前/小學/中學到校服務
@@ -126,9 +126,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #f8eab3">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>老師/家長工作坊</h4>
@@ -136,9 +135,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #f8eab3">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>​線上親子課程</h4>
@@ -146,9 +144,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #f8eab3">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>上門職業治療訓練 </h4>
@@ -160,9 +157,8 @@
                                         <div class="col-lg-4">
                                             <div class="row">
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #e1e193">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>感覺統合</h4>
@@ -170,9 +166,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #e1e193">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>​手部功能</h4>
@@ -180,9 +175,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #e1e193">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>​視覺感知</h4>
@@ -194,9 +188,8 @@
                                         <div class="col-lg-4">
                                             <div class="row">
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #e2caca">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>​幼兒發展</h4>
@@ -204,9 +197,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #e2caca">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>​寫前/書寫技巧</h4>
@@ -214,9 +206,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <div class="contact-detail-box">
-                                                        <div class="contact-icon">
-                                                            <i class="fa-solid fa-phone"></i>
+                                                    <div class="contact-detail-box" style="background: #e2caca">
+                                                        <div class="contact-icon"><i class="fa-solid fa-arrow-right"></i>
                                                         </div>
                                                         <div class="contact-detail-title">
                                                             <h4>​專注/執行功能</h4>
