@@ -4,11 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fastkart">
-    <meta name="keywords" content="Fastkart">
-    <meta name="author" content="Fastkart">
+    <meta name="description" content="Wayshk">
+    <meta name="keywords" content="Wayshk">
+    <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
-    <title>About Us</title>
+    <title>產品代購服務 | Wayshk</title>
 
     <?php include ('include/css.php');?>
     <style>
@@ -136,67 +136,16 @@ include ('include/header.php');
                 <div class="fresh-contain p-center-left">
                     <div>
                         <div class="review-title">
-                            <h4>About Us</h4>
-                            <h2>We make Organic Food In Market</h2>
+                            <h2>
+                                Wayshk
+                            </h2>
                         </div>
 
                         <div class="delivery-list">
-                            <p class="text-content">Just a few seconds to measure your body temperature. Up to 5
-                                users! The battery lasts up to 2 years. There are many variations of passages of
-                                Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A
-                                global brand that doesn't sleep, we are 24/7 and always bringing something new with
-                                over 100 new products dropping on the monhtly, bringing you the latest looks for
-                                less.</p>
-
-                            <ul class="delivery-box">
-                                <li>
-                                    <div class="delivery-box">
-                                        <div class="delivery-icon">
-                                            <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/delivery.svg" class="blur-up lazyload" alt="">
-                                        </div>
-
-                                        <div class="delivery-detail">
-                                            <h5 class="text">Free delivery for all orders</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="delivery-box">
-                                        <div class="delivery-icon">
-                                            <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg" class="blur-up lazyload" alt="">
-                                        </div>
-
-                                        <div class="delivery-detail">
-                                            <h5 class="text">Only fresh foods</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="delivery-box">
-                                        <div class="delivery-icon">
-                                            <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/delivery.svg" class="blur-up lazyload" alt="">
-                                        </div>
-
-                                        <div class="delivery-detail">
-                                            <h5 class="text">Free delivery for all orders</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="delivery-box">
-                                        <div class="delivery-icon">
-                                            <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg" class="blur-up lazyload" alt="">
-                                        </div>
-
-                                        <div class="delivery-detail">
-                                            <h5 class="text">Only fresh foods</h5>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <p class="text-content">
+                                我們亦提供代購服務，協助客人訂購不同國家不同平台的評估工具及治療用品，歡迎私訊洽詢詳情。
+                            </p>
+                            <button onclick="location.href = 'blog-detail.html';" class="btn simple-button">Shop Now<i class="fa-solid fa-right-long"></i></button>
                         </div>
                     </div>
                 </div>
@@ -213,7 +162,7 @@ include ('include/header.php');
             <div class="col-lg-6">
                 <div class="left-sidebar-box">
                     <div class="row">
-                        
+
                         <div class="col-xl-12">
                             <div class="contact-title">
                                 <h3>Get In Touch</h3>

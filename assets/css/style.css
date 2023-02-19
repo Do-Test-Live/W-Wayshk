@@ -16897,6 +16897,16 @@ header .offcanvas-backdrop {
     transition: all 0.3s ease
 }
 
+.simple-button {
+    padding: 7px 11px;
+    background-color: var(--theme-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+
 .product-box .counter-box .addtocart_btn .add-button span, .product-box .counter-box .addtocart_btn .add_cart span {
     position: relative;
     left: unset;

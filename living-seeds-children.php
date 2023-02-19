@@ -4,11 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fastkart">
-    <meta name="keywords" content="Fastkart">
-    <meta name="author" content="Fastkart">
+    <meta name="description" content="Wayshk">
+    <meta name="keywords" content="Wayshk">
+    <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
-    <title>Order Success</title>
+    <title>活籽兒童服務社 | Wayshk | 全港職業治療服務</title>
 
     <?php include ('include/css.php');?>
     <style>
@@ -90,152 +90,138 @@
                     <div class="left-sidebar-box">
                         <div class="row">
                             <div class="col-xl-12">
-                                <div class="contact-title">
-                                    <h3>Get In Touch</h3>
+                                <div class="contact-title text-center">
+                                    <h3>
+                                        活籽兒童服務社
+                                    </h3>
+                                    <h4 class="mt-3">
+                                        活籽兒童服務社於2022年10月成立，<br/>
+                                        致力於全港各區提供優質的職業治療服務。
+                                    </h4>
                                 </div>
 
                                 <div class="contact-detail">
                                     <div class="row g-4">
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-phone"></i>
+                                        <div class="col-lg-4">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>服務範圍包括：</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Phone</h4>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>學前/小學/中學到校服務
+                                                                （ 評估及訓練）</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>(+1) 618 190 496</p>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>老師/家長工作坊</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-envelope"></i>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>​線上親子課程</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Email</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>geweto9420@chokxus.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-location-dot"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>London Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Cruce Casa de Postas 29</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>上門職業治療訓練 </h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
+                                        <div class="col-lg-4">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>感覺統合</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>​手部功能</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>​視覺感知</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
+                                        <div class="col-lg-4">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>​幼兒發展</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>​寫前/書寫技巧</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-lg-12 col-sm-4">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
+                                                <div class="col-12 mb-3">
+                                                    <div class="contact-detail-box">
+                                                        <div class="contact-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </div>
+                                                        <div class="contact-detail-title">
+                                                            <h4>​專注/執行功能</h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

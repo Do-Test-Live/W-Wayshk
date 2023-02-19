@@ -72,7 +72,7 @@
                                 </li>
                                 <li>
                                     <i data-feather="mail"></i>
-                                    <a href="javascript:void(0)">support@fastkart.com</a>
+                                    <a href="javascript:void(0)">support@wayshk.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -175,7 +175,7 @@
                                     <i data-feather="phone"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Hotline 24/7 :</h6>
-                                        <h5>+91 888 104 2340</h5>
+                                        <h5>+XX XXX XXXX</h5>
                                     </div>
                                 </div>
                             </li>
@@ -185,7 +185,7 @@
                                     <i data-feather="mail"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Email Address :</h6>
-                                        <h5>fastkart@hotmail.com</h5>
+                                        <h5>wayshk@hotmail.com</h5>
                                     </div>
                                 </div>
                             </li>

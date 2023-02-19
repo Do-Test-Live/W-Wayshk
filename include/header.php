@@ -140,7 +140,7 @@
                                         </div>
                                         <div class="delivery-detail">
                                             <h6>24/7 Delivery</h6>
-                                            <h5>+91 888 104 2340</h5>
+                                            <h5>++XX XXX XXXX</h5>
                                         </div>
                                     </a>
                                 </li>
