@@ -5,7 +5,7 @@
                 <div class="col-xxl-3 d-xxl-block d-none">
                     <div class="top-left-header">
                         <i class="fa-solid fa-location-dot text text-white"></i>
-                        <span class="text-white">1418 Riverwood Drive, CA 96052, US</span>
+                        <span class="text-white">香港大圍成運路21-23號群力工業大廈3樓1室</span>
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@
                                         </div>
                                         <div class="delivery-detail">
                                             <h6>24/7 Delivery</h6>
-                                            <h5>++XX XXX XXXX</h5>
+                                            <h5>+852 52657359</h5>
                                         </div>
                                     </a>
                                 </li>

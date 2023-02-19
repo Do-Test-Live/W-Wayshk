@@ -68,11 +68,11 @@
                             <ul class="address">
                                 <li>
                                     <i data-feather="home"></i>
-                                    <a href="javascript:void(0)">1418 Riverwood Drive, CA 96052, US</a>
+                                    <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a>
                                 </li>
                                 <li>
                                     <i data-feather="mail"></i>
-                                    <a href="javascript:void(0)">support@wayshk.com</a>
+                                    <a href="javascript:void(0)">ways00.hk@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -175,7 +175,7 @@
                                     <i data-feather="phone"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Hotline 24/7 :</h6>
-                                        <h5>+XX XXX XXXX</h5>
+                                        <h5>+852 52657359</h5>
                                     </div>
                                 </div>
                             </li>
@@ -185,7 +185,7 @@
                                     <i data-feather="mail"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Email Address :</h6>
-                                        <h5>wayshk@hotmail.com</h5>
+                                        <h5>ways00.hk@gmail.com</h5>
                                     </div>
                                 </div>
                             </li>
@@ -196,38 +196,44 @@
         </div>
 
         <div class="sub-footer section-small-space">
-            <div class="reserve">
-                <h6 class="text-content">©2023 Wayshk All rights reserved</h6>
-            </div>
-
-            <div class="payment">
-                <img src="assets/images/payment/1.png" class="blur-up lazyload" alt="">
-            </div>
-
-            <div class="social-link">
-                <h6 class="text-content">Stay connected :</h6>
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/" target="_blank">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://in.pinterest.com/" target="_blank">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="reserve">
+                        <h6 class="text-content">©2023 Wayshk All rights reserved</h6>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="payment">
+                        <img src="assets/images/payment/1.png" class="blur-up lazyload img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-md-end justify-content-center">
+                    <div class="social-link">
+                        <h6 class="text-content">Stay connected :</h6>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://in.pinterest.com/" target="_blank">
+                                    <i class="fa-brands fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

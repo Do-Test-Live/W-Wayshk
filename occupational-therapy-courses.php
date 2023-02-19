@@ -196,7 +196,6 @@ include('include/header.php');
                 <div class="left-sidebar-box">
                     <div class="row">
 
-
                         <div class="col-xl-12">
                             <div class="contact-title">
                                 <h3>Get In Touch</h3>
@@ -214,7 +213,7 @@ include('include/header.php');
                                             </div>
 
                                             <div class="contact-detail-contain">
-                                                <p>(+1) 618 190 496</p>
+                                                <p>+852 52657359</p>
                                             </div>
                                         </div>
                                     </div>
@@ -229,7 +228,7 @@ include('include/header.php');
                                             </div>
 
                                             <div class="contact-detail-contain">
-                                                <p>geweto9420@chokxus.com</p>
+                                                <p>ways00.hk@gmail.com</p>
                                             </div>
                                         </div>
                                     </div>
@@ -240,26 +239,11 @@ include('include/header.php');
                                                 <i class="fa-solid fa-location-dot"></i>
                                             </div>
                                             <div class="contact-detail-title">
-                                                <h4>London Office</h4>
+                                                <h4>Address</h4>
                                             </div>
 
                                             <div class="contact-detail-contain">
-                                                <p>Cruce Casa de Postas 29</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                        <div class="contact-detail-box">
-                                            <div class="contact-icon">
-                                                <i class="fa-solid fa-building"></i>
-                                            </div>
-                                            <div class="contact-detail-title">
-                                                <h4>Bournemouth Office</h4>
-                                            </div>
-
-                                            <div class="contact-detail-contain">
-                                                <p>Visitación de la Encina 22</p>
+                                                <p>香港大圍成運路21-23號群力工業大廈3樓1室</p>
                                             </div>
                                         </div>
                                     </div>
@@ -345,7 +329,7 @@ include('include/header.php');
     <div class="container-fluid p-0">
         <div class="map-box">
             <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2994.3803116994895!2d55.29773782339708!3d25.222534631321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!3m2!1d25.2048493!2d55.2707828!4m0!5e1!3m2!1sen!2sin!4v1652217109535!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.351643148881!2d114.18058410077128!3d22.376025312012693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340407a864400001%3A0x15f7365383c741b2!2z5qiT5LiKIC0g5aSn5ZyN5bqX!5e0!3m2!1sen!2sbd!4v1676801133926!5m2!1sen!2sbd"
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
