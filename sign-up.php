@@ -52,15 +52,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadscrumb-contain">
-                        <h2>Sign In</h2>
+                        <h2>Sign Up</h2>
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
-                                    <a href="index.php">
+                                    <a href="Home">
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item active">Sign In</li>
+                                <li class="breadcrumb-item active">Sign Up</li>
                             </ol>
                         </nav>
                     </div>
@@ -83,29 +83,35 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3>Welcome To Fastkart</h3>
+                            <h3>Welcome To WAY'S</h3>
                             <h4>Create New Account</h4>
                         </div>
 
                         <div class="input-box">
-                            <form class="row g-4">
+                            <form class="row g-4" action="admin/insert.php" method="post">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="text" class="form-control" id="fullname" placeholder="Full Name">
+                                        <input type="text" class="form-control" id="fullname" placeholder="Full Name" name="customer_name" required>
                                         <label for="fullname">Full Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                        <input type="email" class="form-control" id="email" placeholder="Email Address" name="customer_email" required>
                                         <label for="email">Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating theme-form-floating">
+                                        <input type="text" class="form-control" id="email" placeholder="Contact Number" name="customer_number" required>
+                                        <label for="text">Contact Number</label>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
                                         <input type="password" class="form-control" id="password"
-                                            placeholder="Password">
+                                            placeholder="Password" name="password" required>
                                         <label for="password">Password</label>
                                     </div>
                                 </div>
@@ -114,7 +120,7 @@
                                     <div class="forgot-box">
                                         <div class="form-check ps-0 m-0 remember-box">
                                             <input class="checkbox_animated check-box" type="checkbox"
-                                                id="flexCheckDefault">
+                                                id="flexCheckDefault" required>
                                             <label class="form-check-label" for="flexCheckDefault">I agree with
                                                 <span>Terms</span> and <span>Privacy</span></label>
                                         </div>
@@ -122,12 +128,12 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100" type="submit">Sign Up</button>
+                                    <button class="btn btn-animation w-100" type="submit" name="customer_signup">Sign Up</button>
                                 </div>
                             </form>
                         </div>
 
-                        <div class="other-log-in">
+                        <!--<div class="other-log-in">
                             <h6>or</h6>
                         </div>
 
@@ -148,7 +154,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
 
                         <div class="other-log-in">
                             <h6></h6>
@@ -156,7 +162,7 @@
 
                         <div class="sign-up-box">
                             <h4>Already have an account?</h4>
-                            <a href="login.php">Log In</a>
+                            <a href="index.php">Log In</a>
                         </div>
                     </div>
                 </div>

@@ -87,7 +87,7 @@
                                     <i class="fa-solid fa-bars"></i>
                                 </span>
                         </button>
-                        <a href="index.php" class="web-logo nav-logo">
+                        <a href="Home" class="web-logo nav-logo">
                             <img src="assets/images/logo/2.png" class="img-fluid blur-up lazyload" alt="">
                         </a>
 
@@ -216,11 +216,11 @@
                                         <ul class="user-box-name">
                                             <li class="product-box-contain">
                                                 <i></i>
-                                                <a href="login.php">Log In</a>
+                                                <a href="Login">Log In</a>
                                             </li>
 
                                             <li class="product-box-contain">
-                                                <a href="sign-up.php">Register</a>
+                                                <a href="Register">Register</a>
                                             </li>
 
                                             <li class="product-box-contain">
