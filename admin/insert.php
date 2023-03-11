@@ -181,6 +181,6 @@ VALUES ('$customer_name','$customer_email','$customer_number','$password','$inse
 
     echo "<script>
                 document.cookie = 'alert = 3;';
-                window.location.href='../index.php';
+                window.location.href='../login.php';
                 </script>";
 }

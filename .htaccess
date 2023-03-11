@@ -2,11 +2,11 @@ ErrorDocument 404 http://localhost/W-Wayshk-Admin/404.php
 
 RewriteEngine on
 
-RewriteRule ^Login index.php [NE,L]
+RewriteRule ^Login login.php [NE,L]
 
 RewriteRule ^Logout logout.php [NE,L]
 
-RewriteRule ^Home home.php [NE,L]
+RewriteRule ^Home index.php [NE,L]
 
 RewriteRule ^Register sign-up.php [NE,L]
 
