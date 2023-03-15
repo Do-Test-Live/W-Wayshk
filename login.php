@@ -1,5 +1,28 @@
 <?php
-include ('admin/include/dbController.php');
+include('admin/include/dbController.php');
+$db_handle = new DBController();
+
+
+if(isset($_POST['login'])){
+    $email = $db_handle->checkValue($_POST['email']);
+    $password = $db_handle->checkValue($_POST['password']);
+
+    $customer = $db_handle->runQuery("select * from customer where email='$email' AND password='$password'");
+    $row = $db_handle->numRows("select * from customer where email='$email' AND password='$password'");
+
+    if($row > 0){
+        for ($i=0; $i<$row; $i++){
+            $customer_id = $customer[$i]['id'];
+        }
+        session_start();
+        $_SESSION['id'] = $customer_id;
+        header('Location: Home');
+    }else{
+        echo "Something went wrong";
+    }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -92,10 +115,10 @@ include ('admin/include/dbController.php');
                         </div>
 
                         <div class="input-box">
-                            <form class="row g-4" action="admin/insert.php">
+                            <form class="row g-4" action="#" method="post">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                        <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
                                         <label for="email">Email Address</label>
                                     </div>
                                 </div>
@@ -103,7 +126,7 @@ include ('admin/include/dbController.php');
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
                                         <input type="password" class="form-control" id="password"
-                                            placeholder="Password">
+                                            placeholder="Password" name="password">
                                         <label for="password">Password</label>
                                     </div>
                                 </div>
@@ -120,7 +143,7 @@ include ('admin/include/dbController.php');
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100 justify-content-center" type="submit">Log
+                                    <button class="btn btn-animation w-100 justify-content-center" name="login" type="submit">Log
                                         In</button>
                                 </div>
                             </form>

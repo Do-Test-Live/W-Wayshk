@@ -54,3 +54,7 @@ RewriteRule ^Update update.php [NE,L]
 
 RewriteRule ^Delete delete.php [NE,L]
 
+RewriteRule ^Add-Stock addStock.php [NE,L]
+
+RewriteRule ^Stock stock.php [NE,L]
+

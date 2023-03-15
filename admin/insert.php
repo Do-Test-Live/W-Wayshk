@@ -40,6 +40,7 @@ if (isset($_POST["add_cat"])) {
 if (isset($_POST["add_product"])) {
     $product_name = $db_handle->checkValue($_POST['product_name']);
     $product_code = $db_handle->checkValue($_POST['product_code']);
+    $product_weight = $db_handle->checkValue($_POST['product_weight']);
     $product_category = $db_handle->checkValue($_POST['product_category']);
     $selling_price = $db_handle->checkValue($_POST['selling_price']);
     $product_status = $db_handle->checkValue($_POST['product_status']);
@@ -70,7 +71,7 @@ if (isset($_POST["add_product"])) {
         $products_image = '';
     }
 
-    $insert = $db_handle->insertQuery("INSERT INTO `product`(`category_id`, `product_code`, `p_name`,`product_price`, `description`, `p_image`,`status`, `inserted_at`) VALUES ('$product_category','$product_code','$product_name','$selling_price','$product_description','$products_image','$product_status','$inserted_at')");
+    $insert = $db_handle->insertQuery("INSERT INTO `product`(`category_id`, `product_code`,`product_weight`, `p_name`,`product_price`, `description`, `p_image`,`status`, `inserted_at`) VALUES ('$product_category','$product_code','$product_weight','$product_name','$selling_price','$product_description','$products_image','$product_status','$inserted_at')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';
@@ -174,13 +175,43 @@ if(isset($_POST['customer_signup'])){
     $customer_email = $db_handle->checkValue($_POST['customer_email']);
     $password = $db_handle->checkValue($_POST['password']);
     $customer_number = $db_handle->checkValue($_POST['customer_number']);
+    $membership_point = 200;
     $inserted_at = date("Y-m-d H:i:s");
 
-    $insert = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `password`, `inserted_at`) 
-VALUES ('$customer_name','$customer_email','$customer_number','$password','$inserted_at')");
+    $insert = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `password`, `inserted_at`,`membership_point`) 
+VALUES ('$customer_name','$customer_email','$customer_number','$password','$inserted_at','$membership_point')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='../login.php';
                 </script>";
+}
+
+
+if(isset($_POST['add_quantity'])){
+    $category_id = $db_handle->checkValue($_POST['category_id']);
+    $product_id = $db_handle->checkValue($_POST['product_id']);
+    $product_quantity = $db_handle->checkValue($_POST['product_quantity']);
+
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $check_value = $db_handle->runQuery("SELECT `quantity` FROM `stock` WHERE category_id='$category_id' AND product_id='$product_id'");
+    $row = $db_handle->numRows("SELECT `quantity` FROM `stock` WHERE category_id='$category_id' AND product_id='$product_id'");
+    if($row > 0){
+        for($i=0; $i<$row; $i++){
+            $previous_quantity = $check_value[$i]['quantity'];
+        }
+        $updated_quantity = $product_quantity + $previous_quantity;
+        $update = $db_handle ->insertQuery("UPDATE `stock` SET `quantity`='$updated_quantity',`inserted_at`='$inserted_at' WHERE category_id='$category_id' AND product_id='$product_id'");
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Stock';
+                </script>";
+    }else{
+        $insert_stock = $db_handle->insertQuery("INSERT INTO `stock`(`category_id`, `product_id`, `quantity`, `inserted_at`) VALUES ('$category_id','$product_id','$product_quantity','$inserted_at')");
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Stock';
+                </script>";
+    }
 }

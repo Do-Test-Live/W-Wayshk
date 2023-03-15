@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION['id'])){
+    $customer_id = $_SESSION['id'];
+}
 include('admin/include/dbController.php');
 $db_handle = new DBController();
 ?>

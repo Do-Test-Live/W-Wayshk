@@ -208,26 +208,57 @@
                                         </div>
                                         <div class="delivery-detail">
                                             <h6>Hello,</h6>
-                                            <h5>My Account</h5>
+                                            <?php
+                                            if(isset($customer_id)){
+                                                $fetch_customer_name = $db_handle->runQuery("select customer_name from customer where id = '$customer_id'");
+                                                $data = $db_handle->numrows("select customer_name from customer where id = '$customer_id'");
+                                                for($j = 0; $j < $data; $j++){
+                                                    $customer_name = $fetch_customer_name[$j]['customer_name'];
+                                                }?>
+                                                <h5><?php echo $customer_name;?></h5>
+                                                <?php
+                                            }else{
+                                                ?>
+                                                <h5>Guest</h5>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
+                                    <?php
+                                    if(isset($customer_id)){
+                                        ?>
+                                        <div class="onhover-div onhover-div-login">
+                                            <ul class="user-box-name">
+                                                <li class="product-box-contain">
+                                                    <i></i>
+                                                    <a href="logout.php">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <div class="onhover-div onhover-div-login">
+                                            <ul class="user-box-name">
+                                                <li class="product-box-contain">
+                                                    <i></i>
+                                                    <a href="Login">Log In</a>
+                                                </li>
 
-                                    <div class="onhover-div onhover-div-login">
-                                        <ul class="user-box-name">
-                                            <li class="product-box-contain">
-                                                <i></i>
-                                                <a href="Login">Log In</a>
-                                            </li>
+                                                <li class="product-box-contain">
+                                                    <a href="Register">Register</a>
+                                                </li>
 
-                                            <li class="product-box-contain">
-                                                <a href="Register">Register</a>
-                                            </li>
+                                                <li class="product-box-contain">
+                                                    <a href="forgot.php">Forgot Password</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
 
-                                            <li class="product-box-contain">
-                                                <a href="forgot.php">Forgot Password</a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </li>
                             </ul>
                         </div>

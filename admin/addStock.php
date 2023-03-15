@@ -13,6 +13,8 @@ if (!isset($_SESSION['userid'])) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Add Product | Wayshk Admin</title>
     <?php include 'include/css.php'; ?>
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -50,27 +52,16 @@ if (!isset($_SESSION['userid'])) {
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Add Product</h4>
+                            <h4 class="card-title">Add Stock</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
                                 <form action="Insert" method="post" enctype="multipart/form-data">
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
-                                            <label>Product Name *</label>
-                                            <input type="text" class="form-control" name="product_name" placeholder="" required>
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label>Product Code</label>
-                                            <input type="text" class="form-control" name="product_code" placeholder="">
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label>Product Weight</label>
-                                            <input type="text" class="form-control" name="product_weight" placeholder="">
-                                        </div>
-                                        <div class="form-group col-md-12">
                                             <label>Select Product Category *</label>
-                                            <select class="form-control default-select" id="sel1" name="product_category" required>
+                                            <select class="form-control default-select" id="sel1"
+                                                    name="category_id" required>
                                                 <?php
                                                 $cat = $db_handle->runQuery("SELECT * FROM `category`");
                                                 $row_count = $db_handle->numRows("SELECT * FROM `category`");
@@ -82,36 +73,24 @@ if (!isset($_SESSION['userid'])) {
                                                 ?>
                                             </select>
                                         </div>
+
                                         <div class="form-group col-md-12">
-                                            <label>Product Selling Price *</label>
-                                            <input type="number" class="form-control" placeholder="" name="selling_price" required>
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label>Product Image *</label>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Upload</span>
-                                                </div>
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="product_image[]" multiple required>
-                                                    <label class="custom-file-label">Choose file</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label>Product Status *</label>
-                                            <select class="form-control default-select" id="sel1" name="product_status" required>
-                                                <option value="1" selected>Active</option>
-                                                <option value="0">Deactivate</option>
+                                            <label>Product Code</label>
+                                            <select id="single" class="js-states form-control" name="product_id">
+                                                <option>Select your option</option>
                                             </select>
                                         </div>
+
                                         <div class="form-group col-md-12">
-                                            <label>Product Description *</label>
-                                            <textarea class="form-control" rows="4" id="comment" name="product_description" required></textarea>
+                                            <label>Quantity</label>
+                                            <input type="number" class="form-control" name="product_quantity" placeholder="">
                                         </div>
+
+
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" name="add_product" class="btn btn-primary w-50">Submit</button>
+                                        <button type="submit" name="add_quantity" class="btn btn-primary w-50">Submit
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -132,7 +111,56 @@ if (!isset($_SESSION['userid'])) {
     Main wrapper end
 ***********************************-->
 
+
+
 <?php include 'include/js.php'; ?>
+
+
+<!-- Select2 -->
+
+<script>
+    $("#single").select2({
+        placeholder: "Select a programming language",
+        allowClear: true
+    });
+</script>
+
+<script>
+    const select1 = document.getElementById('sel1');
+    const select2 = document.getElementById('single');
+
+    select1.addEventListener('change', () => {
+        // Get the selected value from the first select field
+        const selectedValue = select1.value;
+
+        // Make an AJAX request to your PHP script to fetch the values for the second select field
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'fetch-product.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Parse the response as JSON
+                    const response = JSON.parse(xhr.responseText);
+
+                    // Clear the options in the second select field
+                    select2.innerHTML = '';
+
+                    // Add the new options to the second select field
+                    response.forEach(option => {
+                        const newOption = document.createElement('option');
+                        newOption.value = option.id;
+                        newOption.textContent = option.p_name;
+                        select2.appendChild(newOption);
+                    });
+                } else {
+                    console.error('Error fetching values');
+                }
+            }
+        };
+        xhr.send(`selectedValue=${selectedValue}`);
+    });
+</script>
 
 </body>
 </html>

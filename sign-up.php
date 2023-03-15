@@ -1,3 +1,8 @@
+<?php
+include('admin/include/dbController.php');
+$db_handle = new DBController();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
