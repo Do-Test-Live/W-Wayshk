@@ -62,17 +62,19 @@ include('include/header.php');
     <div class="container-fluid-lg">
         <div class="row g-4">
             <div class="col-xxl-3 col-lg-4 col-sm-6 ratio_180 d-sm-block d-none">
+                <?php
+                $banner_one = $db_handle->runQuery("select * from banner where id = '1'");
+                ?>
                 <div class="home-contain rounded">
                     <div class="h-100">
-                        <img src="assets/images/cake/banner/1.jpg" class="bg-img blur-up lazyload" alt="">
+                        <img src="<?php echo $banner_one[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                     </div>
                     <div class="home-detail p-top-left home-p-medium">
                         <div>
-                            <h6 class="text-danger mb-2 fw-bold">Fresh & Delicious</h6>
-                            <h2 class="theme-color fw-bold">Fresh Bread</h2>
-                            <p class="text-content d-md-block d-none">Bento box burritos cherry bomb pepper dark and
-                                stormy with ginger..</p>
-                            <a href="shop.php" class="shop-button">Shop Now <i
+                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_one[0]['heading_one'];?></h6>
+                            <h2 class="theme-color fw-bold"><?php echo $banner_one[0]['heading_two'];?></h2>
+                            <p class="text-content d-md-block d-none"><?php echo $banner_one[0]['details'];?></p>
+                            <a href="<?php echo $banner_one[0]['link_one'];?>" class="shop-button">Shop Now <i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -80,22 +82,24 @@ include('include/header.php');
             </div>
 
             <div class="col-xxl-6 col-lg-8 order-xxl-0 ratio_87">
+                <?php
+                $banner_two = $db_handle->runQuery("select * from banner where id = '2'");
+                ?>
                 <div class="home-contain rounded">
                     <div class="h-100">
-                        <img src="assets/images/cake/banner/2.jpg" class="bg-img blur-up lazyload" alt="">
+                        <img src="<?php echo $banner_two[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                     </div>
                     <div class="home-detail p-center-left home-p-sm">
                         <div>
-                            <h6>Exclusive offer <span>30% Off</span></h6>
+                            <h6><?php echo $banner_two[0]['heading_one'];?></h6>
                             <h1 class="w-75 text-uppercase name-title poster-2 my-2">
-                                we'll make <span class="name">handmade</span> your
-                                <span class="name-2">sweet</span>
+                                <span class="name-2"><?php echo $banner_two[0]['heading_two'];?></span>
                             </h1>
-                            <p class="w-50">Earl grey latte Thai basil curry grains alfalfa sprouts banana bread
-                                ginger carrot...</p>
-                            <button onclick="location.href = '#';"
-                                    class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
-                                Shop Now <i class="fa-solid fa-right-long icon ms-2"></i></button>
+                            <p class="w-50"><?php echo $banner_two[0]['details'];?></p>
+                            <a href="<?php echo $banner_two[0]['link_one'];?>">
+                                <button class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                                    Shop Now <i class="fa-solid fa-right-long icon ms-2"></i></button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -103,14 +107,16 @@ include('include/header.php');
 
             <div class="col-xxl-3 col-xl-4 col-sm-6 ratio_180 custom-ratio d-xxl-block d-lg-none d-sm-block d-none">
                 <div class="home-contain rounded">
-                    <img src="assets/images/cake/banner/3.jpg" class="bg-img blur-up lazyload" alt="">
+                    <?php
+                    $banner_three = $db_handle->runQuery("select * from banner where id = '3'");
+                    ?>
+                    <img src="<?php echo $banner_three[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                     <div class="home-detail p-top-left home-p-medium">
                         <div>
-                            <h6 class="text-danger mb-2 fw-bold">Fresh & Delicious</h6>
-                            <h2 class="theme-color fw-bold">Bakery Sweet</h2>
-                            <p class="text-content d-md-block d-none">Peanut butter crunch chia seeds red parsley
-                                basil overflowing..</p>
-                            <a href="shop.php" class="shop-button">Shop Now <i
+                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_three[0]['heading_one'];?></h6>
+                            <h2 class="theme-color fw-bold"><?php echo $banner_three[0]['heading_two'];?></h2>
+                            <p class="text-content d-md-block d-none"><?php echo $banner_three[0]['details'];?></p>
+                            <a href="<?php echo $banner_three[0]['link_one'];?>" class="shop-button">Shop Now <i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -129,15 +135,18 @@ include('include/header.php');
 <section>
     <div class="container-fluid-lg">
         <div class="row">
+            <?php
+            $cupon_banner = $db_handle->runQuery("select * from banner where id = '4'");
+            ?>
             <div class="col-12">
                 <div class="banner-contain hover-effect">
-                    <img src="assets/images/cake/banner/4.jpg" class="bg-img blur-up lazyload" alt="">
+                    <img src="<?php echo $cupon_banner[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                     <div class="banner-details p-center p-sm-4 p-3 text-white text-center">
                         <div>
                             <h3 class="lh-base fw-bold text-white">
-                                Get $3 Cashback! Min Order of $30
+                                <?php echo $cupon_banner[0]['heading_one'];?>
                             </h3>
-                            <h6 class="coupon-code code-2">Use Code : GROCERY1920</h6>
+                            <h6 class="coupon-code code-2">Use Code : <?php echo $cupon_banner[0]['details'];?></h6>
                         </div>
                     </div>
                 </div>
@@ -502,28 +511,30 @@ include('include/header.php');
                 <div class="position-sticky top-0">
                     <div class="ratio_209 rounded wow fadeIn">
                         <div class="banner-contain-2 rounded hover-effect">
-                            <img src="assets/images/cake/banner/10.jpg" class="bg-img blur-up lazyload" alt="">
+                            <?php
+                            $first_add = $db_handle->runQuery("select * from banner where id = '5'");
+                            ?>
+                            <img src="<?php echo $first_add[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                             <div class="banner-detail p-top-left">
                                 <div>
-                                    <h6 class="text-uppercase theme-color fw-500">seafood</h6>
+                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $first_add[0]['heading_one'];?></h6>
                                     <h3 class="text-uppercase">
-                                        special <span class="brand-name">brand</span>
+                                       <span class="brand-name"><?php echo $first_add[0]['heading_two'];?></span>
                                     </h3>
-                                    <p class="text-content fw-500 mt-3 lh-lg">Special offer on the discount very
-                                        hungry cake and sweets</p>
+                                    <p class="text-content fw-500 mt-3 lh-lg"><?php echo $first_add[0]['details'];?></p>
 
                                     <div class="banner-detail-box banner-detail-box-2 mb-md-3 mb-1">
-                                        <h4 class="text-uppercase">up to</h4>
-                                        <h2 class="mt-2">50%</h2>
-                                        <h3 class="text-uppercase">off</h3>
+                                        <h4 class="text-uppercase"><?php echo $first_add[0]['heading_three'];?></h4>
                                     </div>
 
                                     <div>
-                                        <button onclick="location.href = '#';"
-                                                class="btn text-white btn-md mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
-                                            Shop
-                                            Now<i class="fa-solid fa-right-long icon ms-2"></i>
-                                        </button>
+                                        <a href="<?php echo $first_add[0]['link_one'];?>">
+                                            <button class="btn text-white btn-md mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                                                Shop
+                                                Now<i class="fa-solid fa-right-long icon ms-2"></i>
+                                            </button>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
@@ -532,18 +543,22 @@ include('include/header.php');
 
                     <div class="ratio_125 section-t-space wow fadeIn">
                         <div class="banner-contain-2 rounded hover-effect">
-                            <img src="assets/images/cake/banner/9.jpg" class="bg-img blur-up lazyload" alt="">
+                            <?php
+                            $second_add = $db_handle->runQuery("select * from banner where id = '6'");
+                            ?>
+                            <img src="<?php echo $second_add[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                             <div class="banner-detail p-top-left">
                                 <div>
-                                    <h6 class="text-uppercase theme-color fw-500">Freash Every Day!</h6>
-                                    <h3 class="text-pacifico mt-2">Delicioud <span class="theme-color">Bread</span>
+                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $second_add[0]['heading_one'];?></h6>
+                                    <h3 class="text-pacifico mt-2"><?php echo $second_add[0]['heading_two'];?>
                                     </h3>
-                                    <p class="text-content fw-500 mt-3 w-75 mend-auto">Delicioud Bread and Brend new
-                                        fresh bread.</p>
-                                    <button onclick="location.href = '#';"
-                                            class="btn text-white btn-md mt-2 home-button mend-auto theme-bg-color">
-                                        Shop Now <i class="fa-solid fa-right-long icon ms-2"></i>
-                                    </button>
+                                    <p class="text-content fw-500 mt-3 w-75 mend-auto"><?php echo $second_add[0]['details'];?></p>
+                                    <a href="<?php echo $second_add[0]['link_one'];?>">
+                                        <button class="btn text-white btn-md mt-2 home-button mend-auto theme-bg-color">
+                                            Shop Now <i class="fa-solid fa-right-long icon ms-2"></i>
+                                        </button>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -588,18 +603,21 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="home-contain hover-effect">
-                    <img src="assets/images/cake/banner/11.jpg" class="bg-img blur-up lazyload" alt="">
+                    <?php
+                    $banner_middle = $db_handle->runQuery("select * from banner where id = '7'");
+                    ?>
+                    <img src="<?php echo $banner_middle[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
                     <div class="home-detail p-center position-relative text-center">
                         <div>
                             <h3 class="text-danger text-uppercase fw-bold mb-0">
-                                limited Time Offer
+                                <?php echo $banner_middle[0]['heading_one'];?>
                             </h3>
                             <h2 class="theme-color text-pacifico fw-normal mb-0 super-sale text-center">
-                                Super
+                                <?php echo $banner_middle[0]['heading_two'];?>
                             </h2>
-                            <h2 class="home-name text-uppercase">sale</h2>
+                            <h2 class="home-name text-uppercase"><?php echo $banner_middle[0]['heading_three'];?></h2>
                             <h3 class="text-pacifico fw-normal text-content text-center">
-                                www.wayshk.com
+                                <?php echo $banner_middle[0]['details'];?>
                             </h3>
                             <ul class="social-icon">
                                 <li>

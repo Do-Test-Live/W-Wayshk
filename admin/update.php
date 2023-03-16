@@ -154,3 +154,41 @@ if (isset($_POST['updateAdmin'])) {
                 </script>";
 }
 
+if (isset($_POST['updateHomeBanner'])) {
+    $id = $db_handle->checkValue($_POST['id']);
+    $banner_name = $db_handle->checkValue($_POST['banner_name']);
+    $heading_one = $db_handle->checkValue($_POST['heading_one']);
+    $heading_two = $db_handle->checkValue($_POST['heading_two']);
+    $heading_three = $db_handle->checkValue($_POST['heading_three']);
+    $details = $db_handle->checkValue($_POST['details']);
+    $link_one = $db_handle->checkValue($_POST['link_one']);
+    $updated_at = date("Y-m-d H:i:s");
+    $image = '';
+    $query = '';
+    if (!empty($_FILES['banner_img']['name'])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['banner_img']['name'];
+        $file_size = $_FILES['banner_img']['size'];
+        $file_tmp = $_FILES['banner_img']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg" && $file_type != "gif") {
+            $image = '';
+        } else {
+            $data = $db_handle->runQuery("SELECT * FROM banner WHERE id='{$id}'");
+            unlink("../".$data[0]['banner_img']);
+            move_uploaded_file($file_tmp, "../assets/images/banner/" . $file_name);
+            $image = "assets/images/banner/" . $file_name;
+            $query .= ",`banner_img`='" . $image . "'";
+        }
+    }
+
+    $data = $db_handle->insertQuery("update banner set `banner_name`='$banner_name',`heading_one`='$heading_one',`heading_two`='$heading_two',`heading_three`='$heading_three',`details`='$details',`link_one`='$link_one',`updated_at`='$updated_at'" . $query . " where id={$id}");
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Banner';
+                </script>";
+
+
+}
+
