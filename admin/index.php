@@ -76,7 +76,7 @@ if (isset($_SESSION['userid'])) {
 
             ?>
             <script>
-                window.location.href = "dashboard.php";
+                window.location.href = "Dashboard";
             </script>
         <?php
         }else{

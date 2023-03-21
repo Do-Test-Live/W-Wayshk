@@ -5,7 +5,7 @@
     <a href="Dashboard" class="brand-logo">
         <div class="header-left">
             <div class="dashboard_bar">
-                Your Logo
+                <img src="../assets/images/logo/2.png" alt="logo" style="width: 200px;">
             </div>
         </div>
     </a>
@@ -34,7 +34,11 @@
                         $url=$_SERVER["REQUEST_URI"];
                         $str = substr($url, strrpos($url, '/') + 1);
                         $string = str_replace("-", " ", $str);
-                        echo $string;
+                        $newString = strstr($string, '?', true);
+                        if($newString === false){
+                            $newString = $string;
+                        }
+                        echo $newString;
                         ?>
                         <span>Welcome to Admin!</span>
                     </div>
@@ -42,9 +46,13 @@
                 <ul class="navbar-nav header-right">
                     <li class="nav-item dropdown header-profile">
                         <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-                            <img src="images/profile/17.jpg" width="20" alt=""/>
+                            <?php
+                            $admin = $_SESSION['userid'];
+                            $fetch_admin = $db_handle->runQuery("select * from admin_login where id = '$admin'");
+                            ?>
+                            <img src="<?php echo $fetch_admin[0]['image'];?>" width="20" alt=""/>
                             <div class="header-info">
-                                <span class="text-black"><strong>Brian Lee</strong></span>
+                                <span class="text-black"><strong><?php echo $fetch_admin[0]['name'];?></strong></span>
                                 <p class="fs-12 mb-0">Admin</p>
                             </div>
                         </a>

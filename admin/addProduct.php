@@ -62,11 +62,11 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Product Code</label>
-                                            <input type="text" class="form-control" name="product_code" placeholder="">
+                                            <input type="text" class="form-control" name="product_code" placeholder="" required>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Product Weight</label>
-                                            <input type="text" class="form-control" name="product_weight" placeholder="">
+                                            <input type="text" class="form-control" name="product_weight" placeholder="" required>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Select Product Category *</label>

@@ -5,8 +5,6 @@ if(isset($_SESSION['id'])){
 }
 include('admin/include/dbController.php');
 $db_handle = new DBController();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -215,20 +213,20 @@ include('include/header.php');
 
                 <div class="product-box-slider-2 no-arrow">
                     <?php
-                    $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand()");
-                    $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand()");
+                    $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 20");
+                    $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 20");
                     for ($i = 0; $i < $row; $i = $i + 2) {
                         ?>
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="#">
+                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
                                         <img src="admin/<?php echo $fetch_product [$i]['p_image'] ?>"
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="">
+                                            <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>" data-bs-toggle="modal" data-bs-target="">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -241,7 +239,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="#">
+                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
                                         <h6 class="name">
                                             <?php echo $fetch_product [$i]['p_name'] ?>
                                         </h6>
@@ -274,7 +272,7 @@ include('include/header.php');
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
-                                        <a href="#">
+                                        <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
                                             <button class="btn btn-add-cart addcart-button">Add
                                             </button>
                                         </a>
@@ -286,13 +284,13 @@ include('include/header.php');
                                 ?>
                                 <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="product-image">
-                                        <a href="#">
+                                        <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
                                             <img src="admin/<?php echo $fetch_product [$i + 1]['p_image'] ?>"
                                                  class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                         <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#view">
+                                                <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>" data-bs-toggle="modal" data-bs-target="#view">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
@@ -305,7 +303,7 @@ include('include/header.php');
                                         </ul>
                                     </div>
                                     <div class="product-detail">
-                                        <a href="#">
+                                        <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
                                             <h6 class="name">
                                                 <?php echo $fetch_product [$i + 1]['p_name'] ?>
                                             </h6>
@@ -366,20 +364,20 @@ include('include/header.php');
 
                 <div class="product-box-slider-2 no-arrow">
                     <?php
-                    $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand(id)");
-                    $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand(id)");
+                    $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 20");
+                    $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 20");
                     for ($i = 0; $i < $row; $i = $i + 2) {
                         ?>
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="#">
+                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
                                         <img src="admin/<?php echo $fetch_product [$i]['p_image'] ?>"
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="">
+                                            <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>" data-bs-toggle="modal" data-bs-target="">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -392,7 +390,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="#">
+                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
                                         <h6 class="name">
                                             <?php echo $fetch_product [$i]['p_name'] ?>
                                         </h6>
@@ -437,13 +435,13 @@ include('include/header.php');
                             ?>
                             <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="product-image">
-                                    <a href="#">
+                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
                                         <img src="admin/<?php echo $fetch_product [$i + 1]['p_image'] ?>"
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
+                                            <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>" data-bs-toggle="modal" data-bs-target="#view">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -456,7 +454,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="#">
+                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
                                         <h6 class="name">
                                             <?php echo $fetch_product [$i + 1]['p_name'] ?>
                                         </h6>
@@ -464,7 +462,6 @@ include('include/header.php');
 
                                     <h5 class="sold text-content">
                                         <span class="theme-color price"><?php echo $fetch_product [$i + 1]['product_price'] ?></span>
-                                        <del>28.56</del>
                                     </h5>
 
                                     <div class="product-rating mt-2">
@@ -665,8 +662,8 @@ include('include/header.php');
                                 <h3>Top Selling</h3>
                             </div>
                             <?php
-                            $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand(id) limit 3");
-                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand(id) limit 3");
+                            $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 3");
+                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 3");
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
@@ -719,8 +716,8 @@ include('include/header.php');
                                 <h3>Trending Products</h3>
                             </div>
                             <?php
-                            $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand(id) limit 3");
-                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand(id) limit 3");
+                            $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 3");
+                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 3");
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
@@ -774,20 +771,20 @@ include('include/header.php');
                             </div>
 
                             <?php
-                            $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by id desc limit 3");
+                            $fetch_product3 = $db_handle->runQuery("select * from product WHERE status= '1' order by id desc limit 3");
                             $row = $db_handle->numRows("select * from product WHERE status= '1' order by id desc limit 3");
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
-                                        <img src="admin/<?php echo $fetch_product[$i]['p_image']; ?>"
+                                        <img src="admin/<?php echo $fetch_product3[$i]['p_image']; ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
                                     </a>
 
                                     <div class="top-selling-detail">
                                         <a href="#">
-                                            <h5><?php echo $fetch_product[$i]['p_name']; ?></h5>
+                                            <h5><?php echo $fetch_product3[$i]['p_name']; ?></h5>
                                         </a>
                                         <div class="product-rating">
                                             <ul class="rating">
@@ -809,7 +806,7 @@ include('include/header.php');
                                             </ul>
                                             <span>(34)</span>
                                         </div>
-                                        <h6><?php echo $fetch_product[$i]['product_price']; ?></h6>
+                                        <h6><?php echo $fetch_product3[$i]['product_price']; ?></h6>
                                     </div>
                                 </div>
                                 <?php
@@ -829,20 +826,20 @@ include('include/header.php');
                             </div>
 
                             <?php
-                            $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand(id) limit 3");
-                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand(id) limit 3");
+                            $fetch_product2 = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 3");
+                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 3");
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
-                                        <img src="admin/<?php echo $fetch_product[$i]['p_image']; ?>"
+                                        <img src="admin/<?php echo $fetch_product2[$i]['p_image']; ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
                                     </a>
 
                                     <div class="top-selling-detail">
                                         <a href="#">
-                                            <h5><?php echo $fetch_product[$i]['p_name']; ?></h5>
+                                            <h5><?php echo $fetch_product2[$i]['p_name']; ?></h5>
                                         </a>
                                         <div class="product-rating">
                                             <ul class="rating">
@@ -864,7 +861,7 @@ include('include/header.php');
                                             </ul>
                                             <span>(34)</span>
                                         </div>
-                                        <h6><?php echo $fetch_product[$i]['product_price']; ?></h6>
+                                        <h6><?php echo $fetch_product2[$i]['product_price']; ?></h6>
                                     </div>
                                 </div>
                                 <?php

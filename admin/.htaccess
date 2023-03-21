@@ -8,7 +8,7 @@ RewriteRule ^Logout logout.php [NE,L]
 
 RewriteRule ^Dashboard dashboard.php [NE,L]
 
-RewriteRule ^Banner banner.php [NE,L]
+RewriteRule ^Banner home_banner.php [NE,L]
 
 RewriteRule ^Product\-Analysis productAnalysis.php [NE,L]
 
