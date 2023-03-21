@@ -106,7 +106,7 @@ include('include/header.php');
 
                     <div>
                         <div class="banner-contain-2 hover-effect">
-                            <img src="assets/images/shop/1.jpg" class="bg-img rounded-3 blur-up lazyload" alt="">
+                            <img src="assets/images/shop/2.jpg" class="bg-img rounded-3 blur-up lazyload" alt="">
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
@@ -119,7 +119,7 @@ include('include/header.php');
 
                     <div>
                         <div class="banner-contain-2 hover-effect">
-                            <img src="assets/images/shop/1.jpg" class="bg-img rounded-3 blur-up lazyload" alt="">
+                            <img src="assets/images/shop/3.jpg" class="bg-img rounded-3 blur-up lazyload" alt="">
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
@@ -231,23 +231,22 @@ include('include/header.php');
 
                     <div class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
-                        $fetch_products = $db_handle->runQuery("SELECT * FROM `product`,category WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id'");
-                        $num_rows = $db_handle->numRows("SELECT * FROM `product`,category WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id'");
+                        $fetch_products = $db_handle->runQuery("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id'");
+                        $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id'");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
                             <div>
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="#">
+                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <img src="admin/<?php echo $fetch_products[$i]['p_image']; ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <ul class="product-option">
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                       data-bs-target="#view">
+                                                    <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
@@ -263,7 +262,7 @@ include('include/header.php');
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
-                                            <a href="#">
+                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
                                             <p class="text-content mt-1 mb-2 product-content"><?php echo $fetch_products[$i]['description'] ?></p>
@@ -288,7 +287,6 @@ include('include/header.php');
                                             </div>
                                             <h5 class="price"><span
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
-                                                <del>$15.15</del>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
                                                 <button class="btn btn-add-cart addcart-button">Add
@@ -334,22 +332,22 @@ include('include/header.php');
 
                     <div class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
-                        $fetch_products = $db_handle->runQuery("SELECT * FROM `product`,category WHERE product.status = '1' and product.category_id = category.id AND category.status = '1'");
-                        $num_rows = $db_handle->numRows("SELECT * FROM `product`,category WHERE product.status = '1' and product.category_id = category.id AND category.status = '1'");
+                        $fetch_products = $db_handle->runQuery("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' order by rand () limit 40;");
+                        $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' order by rand () limit 40;");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
                             <div>
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="#">
+                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <img src="admin/<?php echo $fetch_products[$i]['p_image']; ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <ul class="product-option">
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>" data-bs-toggle="modal"
                                                        data-bs-target="#view">
                                                         <i data-feather="eye"></i>
                                                     </a>
@@ -366,7 +364,7 @@ include('include/header.php');
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
-                                            <a href="#">
+                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
                                             <p class="text-content mt-1 mb-2 product-content"><?php echo $fetch_products[$i]['description'] ?></p>
@@ -391,7 +389,6 @@ include('include/header.php');
                                             </div>
                                             <h5 class="price"><span
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
-                                                <del>$15.15</del>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
                                                 <button class="btn btn-add-cart addcart-button">Add
