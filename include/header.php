@@ -25,7 +25,7 @@
                             <div>
                                 <div class="timer-notification">
                                     <h6>Something you love is now on sale!
-                                        <a href="shop.html" class="text-white">Buy Now
+                                        <a href="Shop" class="text-white">Buy Now
                                             !</a>
                                     </h6>
                                 </div>
@@ -87,7 +87,7 @@
                                     <i class="fa-solid fa-bars"></i>
                                 </span>
                         </button>
-                        <a href="index.php" class="web-logo nav-logo">
+                        <a href="Home" class="web-logo nav-logo">
                             <img src="assets/images/logo/2.png" class="img-fluid blur-up lazyload" alt="">
                         </a>
 
@@ -139,12 +139,12 @@
                                 </li>
                                 <li class="right-side">
                                     <div class="onhover-dropdown header-badge">
-                                        <button type="button" class="btn p-0 position-relative header-wishlist">
+                                        <a href="Cart" class="btn p-0 position-relative header-wishlist">
                                             <i data-feather="shopping-cart"></i>
                                             <span class="position-absolute top-0 start-100 translate-middle badge">2
                                                     <span class="visually-hidden">unread messages</span>
                                                 </span>
-                                        </button>
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="right-side onhover-dropdown">
@@ -178,7 +178,7 @@
                                             <ul class="user-box-name">
                                                 <li class="product-box-contain">
                                                     <i></i>
-                                                    <a href="logout.php">Logout</a>
+                                                    <a href="Logout">Logout</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -197,7 +197,7 @@
                                                 </li>
 
                                                 <li class="product-box-contain">
-                                                    <a href="forgot.php">Forgot Password</a>
+                                                    <a href="Forgot">Forgot Password</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -239,7 +239,7 @@
                                 for ($i = 0; $i < $row; $i++) {
                                     ?>
                                     <li class="onhover-category-list">
-                                        <a href="shop.php?catId=<?php echo $fetch_cat[$i]['id']?>" class="category-name">
+                                        <a href="Shop?catId=<?php echo $fetch_cat[$i]['id']?>" class="category-name">
                                             <img src="admin/<?php echo $fetch_cat[$i]['image'];?>"
                                                  alt="">
                                             <h6><?php echo $fetch_cat[$i]['c_name'];?></h6>
@@ -264,26 +264,26 @@
                                 <div class="offcanvas-body">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.php">首頁</a>
+                                            <a class="nav-link" href="Home">首頁</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="shop.php">所有產品</i></a>
+                                            <a class="nav-link" href="Shop">所有產品</i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="about-us.php">關於</a>
+                                            <a class="nav-link" href="About-Us">關於</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="order.php">訂購方法</a>
+                                            <a class="nav-link" href="Order">訂購方法</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="living-seeds-children.php">活籽兒童服務社</a>
+                                            <a class="nav-link" href="Living-Seeds-Children">活籽兒童服務社</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link"
-                                               href="occupational-therapy-courses.php">線上職業治療課程</a>
+                                               href="Occupational-Therapy-Courses">線上職業治療課程</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="purchasing-service.php">代購服務</a>
+                                            <a class="nav-link" href="Purchasing-Service">代購服務</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -307,7 +307,7 @@
 <div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
     <ul>
         <li class="active">
-            <a href="index.php">
+            <a href="Home">
                 <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
             </a>
         </li>
@@ -323,15 +323,8 @@
                 <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
             </a>
         </li>
-
-        <!--            <li>
-                        <a href="#" class="notifi-wishlist">
-                            <i class="fa-regular fa-heart text-white" style="font-size: 18px"></i>
-                        </a>
-                    </li>-->
-
         <li>
-            <a href="cart.php">
+            <a href="Cart">
                 <i class="fa-solid fa-cart-shopping text-white" style="font-size: 18px"></i>
             </a>
         </li>

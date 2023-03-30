@@ -165,11 +165,6 @@ include('include/header.php');
                 <div class="title title-flex">
                     <div>
                         <h2>Top Save Today</h2>
-                        <span class="title-leaf">
-                                <svg class="icon-width">
-                                    <use xlink:href="https://themes.pixelstrap.com/fastkart/assets/svg/leaf.svg#cake"></use>
-                                </svg>
-                            </span>
                     </div>
                     <div class="timing-box">
                         <div class="timing theme-bg-color">
@@ -355,11 +350,6 @@ include('include/header.php');
                 </div>
                 <div class="title section-t-space">
                     <h2>Your Daily Staples</h2>
-                    <span class="title-leaf">
-                            <svg class="icon-width">
-                                <use xlink:href="https://themes.pixelstrap.com/fastkart/assets/svg/leaf.svg#cake"></use>
-                            </svg>
-                        </span>
                 </div>
 
                 <div class="product-box-slider-2 no-arrow">

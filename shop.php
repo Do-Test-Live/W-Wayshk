@@ -173,7 +173,7 @@ include('include/header.php');
                                             for ($i = 0; $i < $row; $i++) {
                                                 ?>
                                                 <li>
-                                                    <a href="shop.php?catId=<?php echo $fetch_cat[$i]['id']; ?>">
+                                                    <a href="Shop?catId=<?php echo $fetch_cat[$i]['id']; ?>">
                                                         <div class="form-check ps-0 m-0 category-list-box">
                                                             <label class="form-check-label" for="fruit"
                                                                    style="cursor: pointer;">

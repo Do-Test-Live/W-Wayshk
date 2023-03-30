@@ -215,11 +215,6 @@ include('include/header.php');
     <div class="container-fluid-lg">
         <div class="title">
             <h2>Related Products</h2>
-            <span class="title-leaf">
-                    <svg class="icon-width">
-                        <use xlink:href="https://themes.pixelstrap.com/fastkart/assets/svg/leaf.svg#leaf"></use>
-                    </svg>
-                </span>
         </div>
         <div class="row">
             <div class="col-12">
