@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 }
 include('admin/include/dbController.php');
@@ -64,7 +64,7 @@ include('include/header.php');
                     <?php
                     $product = $db_handle->runQuery("select * from product where id = '$product_id'");
                     ?>
-                    <h2><?php echo $product[0]['p_name'];?></h2>
+                    <h2><?php echo $product[0]['p_name']; ?></h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -73,7 +73,7 @@ include('include/header.php');
                                 </a>
                             </li>
 
-                            <li class="breadcrumb-item active"><?php echo $product[0]['p_name'];?></li>
+                            <li class="breadcrumb-item active"><?php echo $product[0]['p_name']; ?></li>
                         </ol>
                     </nav>
                 </div>
@@ -96,7 +96,7 @@ include('include/header.php');
                                     <div class="product-main-1 no-arrow">
                                         <div>
                                             <div class="slider-image">
-                                                <img src="admin/<?php echo $product[0]['p_image'];?>" id="img-1"
+                                                <img src="admin/<?php echo $product[0]['p_image']; ?>" id="img-1"
                                                      data-zoom-image="../assets/images/product/category/1.jpg"
                                                      class="img-fluid image_zoom_cls-0 blur-up lazyload" alt="">
                                             </div>
@@ -109,11 +109,11 @@ include('include/header.php');
 
                     <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="right-box-contain">
-                            <h2 class="name"><?php echo $product[0]['p_name'];?></h2>
+                            <h2 class="name"><?php echo $product[0]['p_name']; ?></h2>
                             <div class="price-rating">
-                                <h3 class="theme-color price"><?php echo $product[0]['product_price'];?>
+                                <h3 class="theme-color price"><?php echo $product[0]['product_price']; ?>
                                     <span
-                                        class="offer theme-color">(8% off)</span></h3>
+                                            class="offer theme-color">(8% off)</span></h3>
                                 <div class="product-rating custom-rate">
                                     <ul class="rating">
                                         <li>
@@ -137,28 +137,31 @@ include('include/header.php');
                             </div>
 
                             <div class="procuct-contain">
-                                <p><?php echo $product[0]['description'];?>
+                                <p><?php echo $product[0]['description']; ?>
                                 </p>
                             </div>
 
 
                             <div class="note-box product-packege">
-                                <div class="cart_qty qty-box product-qty">
-                                    <div class="input-group">
-                                        <button type="button" class="qty-right-plus" data-type="plus" data-field="">
-                                            <i class="fa fa-plus" aria-hidden="true"></i>
-                                        </button>
-                                        <input class="form-control input-number qty-input" type="text"
-                                               name="quantity" value="0">
-                                        <button type="button" class="qty-left-minus" data-type="minus"
-                                                data-field="">
-                                            <i class="fa fa-minus" aria-hidden="true"></i>
-                                        </button>
+                                <form method="post" action="Product-Details?action=add&product_id=<?php echo $_GET['product_id']; ?>">
+                                    <div class="cart_qty qty-box product-qty">
+                                        <div class="input-group">
+                                            <button type="button" class="qty-right-plus" data-type="plus" data-field="">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </button>
+                                            <input class="form-control input-number qty-input" type="text"
+                                                   name="quantity" value="0">
+                                            <button type="button" class="qty-left-minus" data-type="minus"
+                                                    data-field="">
+                                                <i class="fa fa-minus" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <button class="btn btn-md bg-dark cart-button text-white w-100">Add To Cart
-                                </button>
+                                    <button class="btn btn-md bg-dark cart-button text-white w-100" type="submit">Add To
+                                        Cart
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -178,21 +181,22 @@ include('include/header.php');
                                 $tranding_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 3");
                                 $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 3");
 
-                                for($i = 0; $i < $row; $i++){
+                                for ($i = 0; $i < $row; $i++) {
                                     ?>
                                     <li>
                                         <div class="offer-product">
-                                            <a href="product_details.php?product_id=<?php echo $tranding_product[$i]['id'];?>" class="offer-image">
-                                                <img src="admin/<?php echo $tranding_product[$i]['p_image'];?>"
+                                            <a href="Product-Details?product_id=<?php echo $tranding_product[$i]['id']; ?>"
+                                               class="offer-image">
+                                                <img src="admin/<?php echo $tranding_product[$i]['p_image']; ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <div class="offer-detail">
                                                 <div>
-                                                    <a href="product_details.php?product_id=<?php echo $tranding_product[$i]['id'];?>">
-                                                        <h6 class="name"><?php echo $tranding_product[$i]['p_name'];?></h6>
+                                                    <a href="Product-Details?product_id=<?php echo $tranding_product[$i]['id']; ?>">
+                                                        <h6 class="name"><?php echo $tranding_product[$i]['p_name']; ?></h6>
                                                     </a>
-                                                    <h6 class="price theme-color"><?php echo $tranding_product[$i]['product_price'];?></h6>
+                                                    <h6 class="price theme-color"><?php echo $tranding_product[$i]['product_price']; ?></h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -223,18 +227,19 @@ include('include/header.php');
                     $cat_id = $product[0]['category_id'];
                     $related_products = $db_handle->runQuery("select * from product WHERE status= '1' and category_id = '$cat_id' order by rand() limit 20");
                     $row = $db_handle->numRows("select * from product WHERE status= '1' and category_id = '$cat_id' order by rand() limit 20");
-                    for($i=0; $i<$row; $i++){
+                    for ($i = 0; $i < $row; $i++) {
                         ?>
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="product_details.php?product_id=<?php echo  $related_products [$i]['id'];?>">
+                                    <a href="Product-Details?product_id=<?php echo $related_products [$i]['id']; ?>">
                                         <img src="admin/<?php echo $related_products [$i]['p_image'] ?>"
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="product_details.php?product_id=<?php echo  $related_products [$i]['id'];?>" data-bs-toggle="modal" data-bs-target="">
+                                            <a href="Product-Details?product_id=<?php echo $related_products [$i]['id']; ?>"
+                                               data-bs-toggle="modal" data-bs-target="">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -247,7 +252,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="product_details.php?product_id=<?php echo  $related_products [$i]['id'];?>">
+                                    <a href="Product-Details?product_id=<?php echo $related_products [$i]['id']; ?>">
                                         <h6 class="name">
                                             <?php echo $related_products [$i]['p_name'] ?>
                                         </h6>

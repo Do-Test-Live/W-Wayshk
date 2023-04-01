@@ -1,3 +1,62 @@
+<?php
+if (!empty($_GET["action"])) {
+    switch ($_GET["action"]) {
+        case "add":
+            if (!empty($_POST["quantity"])) {
+
+                $productByCode = $db_handle->runQuery("SELECT * FROM product WHERE id ='" . $_GET["product_id"] . "'");
+                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'image' => $productByCode[0]["p_image"], 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
+
+                if (!empty($_SESSION["cart_item"])) {
+                    if (in_array($productByCode[0]["id"], array_keys($_SESSION["cart_item"]))) {
+                        foreach ($_SESSION["cart_item"] as $k => $v) {
+                            if ($productByCode[0]["id"] == $k) {
+                                if (empty($_SESSION["cart_item"][$k]["quantity"])) {
+                                    $_SESSION["cart_item"][$k]["quantity"] = 0;
+                                }
+                                $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
+                            }
+                        }
+                    } else {
+                        $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"], $itemArray);
+                    }
+                } else {
+                    $_SESSION["cart_item"] = $itemArray;
+                }
+
+                echo "<script>
+                document.cookie = 'alert = 10;';
+                </script>";
+
+            }
+            break;
+        case "remove":
+            if (!empty($_SESSION["cart_item"])) {
+                foreach ($_SESSION["cart_item"] as $k => $v) {
+                    if ($_GET["product_id"] == $v['id']){
+                        unset($_SESSION["cart_item"][$k]);
+                    }
+                    if (empty($_SESSION["cart_item"]))
+                        unset($_SESSION["cart_item"]);
+                }
+            }
+            break;
+        case "empty":
+            unset($_SESSION["cart_item"]);
+            break;
+    }
+}
+
+$total_quantity = 0;
+$total_price = 0;
+if (isset($_SESSION["cart_item"])) {
+    foreach ($_SESSION["cart_item"] as $item) {
+        $item_price = $item["quantity"] * $item["price"];
+        $total_quantity += $item["quantity"];
+        $total_price += ($item["price"] * $item["quantity"]);
+    }
+}
+?>
 <header class="pb-md-4 pb-0">
     <div class="header-top bg-dark">
         <div class="container-fluid-lg">
@@ -141,7 +200,7 @@
                                     <div class="onhover-dropdown header-badge">
                                         <a href="Cart" class="btn p-0 position-relative header-wishlist">
                                             <i data-feather="shopping-cart"></i>
-                                            <span class="position-absolute top-0 start-100 translate-middle badge">2
+                                            <span class="position-absolute top-0 start-100 translate-middle badge"><?php echo $total_quantity; ?>
                                                     <span class="visually-hidden">unread messages</span>
                                                 </span>
                                         </a>
@@ -155,15 +214,15 @@
                                         <div class="delivery-detail">
                                             <h6>Hello,</h6>
                                             <?php
-                                            if(isset($customer_id)){
+                                            if (isset($customer_id)) {
                                                 $fetch_customer_name = $db_handle->runQuery("select customer_name from customer where id = '$customer_id'");
                                                 $data = $db_handle->numrows("select customer_name from customer where id = '$customer_id'");
-                                                for($j = 0; $j < $data; $j++){
+                                                for ($j = 0; $j < $data; $j++) {
                                                     $customer_name = $fetch_customer_name[$j]['customer_name'];
-                                                }?>
-                                                <h5><?php echo $customer_name;?></h5>
+                                                } ?>
+                                                <h5><?php echo $customer_name; ?></h5>
                                                 <?php
-                                            }else{
+                                            } else {
                                                 ?>
                                                 <h5>Guest</h5>
                                                 <?php
@@ -172,7 +231,7 @@
                                         </div>
                                     </div>
                                     <?php
-                                    if(isset($customer_id)){
+                                    if (isset($customer_id)) {
                                         ?>
                                         <div class="onhover-div onhover-div-login">
                                             <ul class="user-box-name">
@@ -183,7 +242,7 @@
                                             </ul>
                                         </div>
                                         <?php
-                                    }else{
+                                    } else {
                                         ?>
                                         <div class="onhover-div onhover-div-login">
                                             <ul class="user-box-name">
@@ -239,10 +298,10 @@
                                 for ($i = 0; $i < $row; $i++) {
                                     ?>
                                     <li class="onhover-category-list">
-                                        <a href="Shop?catId=<?php echo $fetch_cat[$i]['id']?>" class="category-name">
-                                            <img src="admin/<?php echo $fetch_cat[$i]['image'];?>"
+                                        <a href="Shop?catId=<?php echo $fetch_cat[$i]['id'] ?>" class="category-name">
+                                            <img src="admin/<?php echo $fetch_cat[$i]['image']; ?>"
                                                  alt="">
-                                            <h6><?php echo $fetch_cat[$i]['c_name'];?></h6>
+                                            <h6><?php echo $fetch_cat[$i]['c_name']; ?></h6>
                                         </a>
                                     </li>
                                     <?php

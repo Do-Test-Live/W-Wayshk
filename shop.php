@@ -239,14 +239,16 @@ include('include/header.php');
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
-                                                <img src="admin/<?php echo $fetch_products[$i]['p_image']; ?>"
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                                <img src="admin/<?php
+                                                echo str_replace("650", "250", $fetch_products [$i]['p_image']);
+                                                ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <ul class="product-option">
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                    <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                                    <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
@@ -262,7 +264,7 @@ include('include/header.php');
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
-                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
                                             <p class="text-content mt-1 mb-2 product-content"><?php echo $fetch_products[$i]['description'] ?></p>
@@ -340,14 +342,16 @@ include('include/header.php');
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
-                                                <img src="admin/<?php echo $fetch_products[$i]['p_image']; ?>"
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                                <img src="admin/<?php
+                                                echo str_replace("650", "250", $fetch_products [$i]['p_image']);
+                                                ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <ul class="product-option">
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                    <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>" data-bs-toggle="modal"
+                                                    <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" data-bs-toggle="modal"
                                                        data-bs-target="#view">
                                                         <i data-feather="eye"></i>
                                                     </a>
@@ -364,7 +368,7 @@ include('include/header.php');
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
-                                            <a href="product_details.php?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
                                             <p class="text-content mt-1 mb-2 product-content"><?php echo $fetch_products[$i]['description'] ?></p>

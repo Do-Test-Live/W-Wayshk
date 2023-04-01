@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 }
 include('admin/include/dbController.php');
@@ -65,14 +65,14 @@ include('include/header.php');
                 ?>
                 <div class="home-contain rounded">
                     <div class="h-100">
-                        <img src="<?php echo $banner_one[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                        <img src="<?php echo $banner_one[0]['banner_img']; ?>" class="bg-img blur-up lazyload" alt="">
                     </div>
                     <div class="home-detail p-top-left home-p-medium">
                         <div>
-                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_one[0]['heading_one'];?></h6>
-                            <h2 class="theme-color fw-bold"><?php echo $banner_one[0]['heading_two'];?></h2>
-                            <p class="text-content d-md-block d-none"><?php echo $banner_one[0]['details'];?></p>
-                            <a href="<?php echo $banner_one[0]['link_one'];?>" class="shop-button">Shop Now <i
+                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_one[0]['heading_one']; ?></h6>
+                            <h2 class="theme-color fw-bold"><?php echo $banner_one[0]['heading_two']; ?></h2>
+                            <p class="text-content d-md-block d-none"><?php echo $banner_one[0]['details']; ?></p>
+                            <a href="<?php echo $banner_one[0]['link_one']; ?>" class="shop-button">Shop Now <i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -85,16 +85,16 @@ include('include/header.php');
                 ?>
                 <div class="home-contain rounded">
                     <div class="h-100">
-                        <img src="<?php echo $banner_two[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                        <img src="<?php echo $banner_two[0]['banner_img']; ?>" class="bg-img blur-up lazyload" alt="">
                     </div>
                     <div class="home-detail p-center-left home-p-sm">
                         <div>
-                            <h6><?php echo $banner_two[0]['heading_one'];?></h6>
+                            <h6><?php echo $banner_two[0]['heading_one']; ?></h6>
                             <h1 class="w-75 text-uppercase name-title poster-2 my-2">
-                                <span class="name-2"><?php echo $banner_two[0]['heading_two'];?></span>
+                                <span class="name-2"><?php echo $banner_two[0]['heading_two']; ?></span>
                             </h1>
-                            <p class="w-50"><?php echo $banner_two[0]['details'];?></p>
-                            <a href="<?php echo $banner_two[0]['link_one'];?>">
+                            <p class="w-50"><?php echo $banner_two[0]['details']; ?></p>
+                            <a href="<?php echo $banner_two[0]['link_one']; ?>">
                                 <button class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
                                     Shop Now <i class="fa-solid fa-right-long icon ms-2"></i></button>
                             </a>
@@ -108,13 +108,13 @@ include('include/header.php');
                     <?php
                     $banner_three = $db_handle->runQuery("select * from banner where id = '3'");
                     ?>
-                    <img src="<?php echo $banner_three[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                    <img src="<?php echo $banner_three[0]['banner_img']; ?>" class="bg-img blur-up lazyload" alt="">
                     <div class="home-detail p-top-left home-p-medium">
                         <div>
-                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_three[0]['heading_one'];?></h6>
-                            <h2 class="theme-color fw-bold"><?php echo $banner_three[0]['heading_two'];?></h2>
-                            <p class="text-content d-md-block d-none"><?php echo $banner_three[0]['details'];?></p>
-                            <a href="<?php echo $banner_three[0]['link_one'];?>" class="shop-button">Shop Now <i
+                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_three[0]['heading_one']; ?></h6>
+                            <h2 class="theme-color fw-bold"><?php echo $banner_three[0]['heading_two']; ?></h2>
+                            <p class="text-content d-md-block d-none"><?php echo $banner_three[0]['details']; ?></p>
+                            <a href="<?php echo $banner_three[0]['link_one']; ?>" class="shop-button">Shop Now <i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -138,13 +138,13 @@ include('include/header.php');
             ?>
             <div class="col-12">
                 <div class="banner-contain hover-effect">
-                    <img src="<?php echo $cupon_banner[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                    <img src="<?php echo $cupon_banner[0]['banner_img']; ?>" class="bg-img blur-up lazyload" alt="">
                     <div class="banner-details p-center p-sm-4 p-3 text-white text-center">
                         <div>
                             <h3 class="lh-base fw-bold text-white">
-                                <?php echo $cupon_banner[0]['heading_one'];?>
+                                <?php echo $cupon_banner[0]['heading_one']; ?>
                             </h3>
-                            <h6 class="coupon-code code-2">Use Code : <?php echo $cupon_banner[0]['details'];?></h6>
+                            <h6 class="coupon-code code-2">Use Code : <?php echo $cupon_banner[0]['details']; ?></h6>
                         </div>
                     </div>
                 </div>
@@ -215,13 +215,16 @@ include('include/header.php');
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
-                                        <img src="admin/<?php echo $fetch_product [$i]['p_image'] ?>"
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                        <img src="admin/<?php
+                                        echo str_replace("650", "250", $fetch_product [$i]['p_image']);
+                                        ?>"
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>" data-bs-toggle="modal" data-bs-target="">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>"
+                                               data-bs-toggle="modal" data-bs-target="">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -234,7 +237,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                         <h6 class="name">
                                             <?php echo $fetch_product [$i]['p_name'] ?>
                                         </h6>
@@ -267,7 +270,7 @@ include('include/header.php');
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
-                                        <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                             <button class="btn btn-add-cart addcart-button">Add
                                             </button>
                                         </a>
@@ -275,17 +278,20 @@ include('include/header.php');
                                 </div>
                             </div>
                             <?php
-                            if ($i+1 < $row) {
+                            if ($i + 1 < $row) {
                                 ?>
                                 <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="product-image">
-                                        <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
-                                            <img src="admin/<?php echo $fetch_product [$i + 1]['p_image'] ?>"
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                            <img src="admin/<?php
+                                            echo str_replace("650", "250", $fetch_product [$i+1]['p_image']);
+                                            ?>"
                                                  class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                         <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>" data-bs-toggle="modal" data-bs-target="#view">
+                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>"
+                                                   data-bs-toggle="modal" data-bs-target="#view">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
@@ -298,7 +304,7 @@ include('include/header.php');
                                         </ul>
                                     </div>
                                     <div class="product-detail">
-                                        <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                             <h6 class="name">
                                                 <?php echo $fetch_product [$i + 1]['p_name'] ?>
                                             </h6>
@@ -361,13 +367,16 @@ include('include/header.php');
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
-                                        <img src="admin/<?php echo $fetch_product [$i]['p_image'] ?>"
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                        <img src="admin/<?php
+                                        echo str_replace("650", "250", $fetch_product [$i]['p_image']);
+                                        ?>"
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>" data-bs-toggle="modal" data-bs-target="">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>"
+                                               data-bs-toggle="modal" data-bs-target="">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -380,7 +389,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i]['id'];?>">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                         <h6 class="name">
                                             <?php echo $fetch_product [$i]['p_name'] ?>
                                         </h6>
@@ -421,70 +430,73 @@ include('include/header.php');
                                 </div>
                             </div>
                             <?php
-                            if ($i+1 < $row) {
-                            ?>
-                            <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="product-image">
-                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
-                                        <img src="admin/<?php echo $fetch_product [$i + 1]['p_image'] ?>"
-                                             class="img-fluid blur-up lazyload" alt="">
-                                    </a>
-                                    <ul class="product-option">
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>" data-bs-toggle="modal" data-bs-target="#view">
-                                                <i data-feather="eye"></i>
-                                            </a>
-                                        </li>
+                            if ($i + 1 < $row) {
+                                ?>
+                                <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="product-image">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                            <img src="admin/<?php
+                                            echo str_replace("650", "250", $fetch_product [$i+1]['p_image']);
+                                            ?>"
+                                                 class="img-fluid blur-up lazyload" alt="">
+                                        </a>
+                                        <ul class="product-option">
+                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>"
+                                                   data-bs-toggle="modal" data-bs-target="#view">
+                                                    <i data-feather="eye"></i>
+                                                </a>
+                                            </li>
 
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                            <a href="#" class="notifi-wishlist">
-                                                <i data-feather="heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-detail">
-                                    <a href="product_details.php?product_id=<?php echo  $fetch_product [$i+1]['id'];?>">
-                                        <h6 class="name">
-                                            <?php echo $fetch_product [$i + 1]['p_name'] ?>
-                                        </h6>
-                                    </a>
-
-                                    <h5 class="sold text-content">
-                                        <span class="theme-color price"><?php echo $fetch_product [$i + 1]['product_price'] ?></span>
-                                    </h5>
-
-                                    <div class="product-rating mt-2">
-                                        <ul class="rating">
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star"></i>
+                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                                                <a href="#" class="notifi-wishlist">
+                                                    <i data-feather="heart"></i>
+                                                </a>
                                             </li>
                                         </ul>
-
-                                        <h6 class="theme-color">In Stock</h6>
                                     </div>
-
-                                    <div class="add-to-cart-box bg-white">
-                                        <a href="#">
-                                            <button class="btn btn-add-cart">Add
-                                            </button>
+                                    <div class="product-detail">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                            <h6 class="name">
+                                                <?php echo $fetch_product [$i + 1]['p_name'] ?>
+                                            </h6>
                                         </a>
+
+                                        <h5 class="sold text-content">
+                                            <span class="theme-color price"><?php echo $fetch_product [$i + 1]['product_price'] ?></span>
+                                        </h5>
+
+                                        <div class="product-rating mt-2">
+                                            <ul class="rating">
+                                                <li>
+                                                    <i data-feather="star" class="fill"></i>
+                                                </li>
+                                                <li>
+                                                    <i data-feather="star" class="fill"></i>
+                                                </li>
+                                                <li>
+                                                    <i data-feather="star" class="fill"></i>
+                                                </li>
+                                                <li>
+                                                    <i data-feather="star" class="fill"></i>
+                                                </li>
+                                                <li>
+                                                    <i data-feather="star"></i>
+                                                </li>
+                                            </ul>
+
+                                            <h6 class="theme-color">In Stock</h6>
+                                        </div>
+
+                                        <div class="add-to-cart-box bg-white">
+                                            <a href="#">
+                                                <button class="btn btn-add-cart">Add
+                                                </button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <?php
+                                <?php
                             }
                             ?>
                         </div>
@@ -501,21 +513,22 @@ include('include/header.php');
                             <?php
                             $first_add = $db_handle->runQuery("select * from banner where id = '5'");
                             ?>
-                            <img src="<?php echo $first_add[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                            <img src="<?php echo $first_add[0]['banner_img']; ?>" class="bg-img blur-up lazyload"
+                                 alt="">
                             <div class="banner-detail p-top-left">
                                 <div>
-                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $first_add[0]['heading_one'];?></h6>
+                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $first_add[0]['heading_one']; ?></h6>
                                     <h3 class="text-uppercase">
-                                       <span class="brand-name"><?php echo $first_add[0]['heading_two'];?></span>
+                                        <span class="brand-name"><?php echo $first_add[0]['heading_two']; ?></span>
                                     </h3>
-                                    <p class="text-content fw-500 mt-3 lh-lg"><?php echo $first_add[0]['details'];?></p>
+                                    <p class="text-content fw-500 mt-3 lh-lg"><?php echo $first_add[0]['details']; ?></p>
 
                                     <div class="banner-detail-box banner-detail-box-2 mb-md-3 mb-1">
-                                        <h4 class="text-uppercase"><?php echo $first_add[0]['heading_three'];?></h4>
+                                        <h4 class="text-uppercase"><?php echo $first_add[0]['heading_three']; ?></h4>
                                     </div>
 
                                     <div>
-                                        <a href="<?php echo $first_add[0]['link_one'];?>">
+                                        <a href="<?php echo $first_add[0]['link_one']; ?>">
                                             <button class="btn text-white btn-md mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
                                                 Shop
                                                 Now<i class="fa-solid fa-right-long icon ms-2"></i>
@@ -533,14 +546,15 @@ include('include/header.php');
                             <?php
                             $second_add = $db_handle->runQuery("select * from banner where id = '6'");
                             ?>
-                            <img src="<?php echo $second_add[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                            <img src="<?php echo $second_add[0]['banner_img']; ?>" class="bg-img blur-up lazyload"
+                                 alt="">
                             <div class="banner-detail p-top-left">
                                 <div>
-                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $second_add[0]['heading_one'];?></h6>
-                                    <h3 class="text-pacifico mt-2"><?php echo $second_add[0]['heading_two'];?>
+                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $second_add[0]['heading_one']; ?></h6>
+                                    <h3 class="text-pacifico mt-2"><?php echo $second_add[0]['heading_two']; ?>
                                     </h3>
-                                    <p class="text-content fw-500 mt-3 w-75 mend-auto"><?php echo $second_add[0]['details'];?></p>
-                                    <a href="<?php echo $second_add[0]['link_one'];?>">
+                                    <p class="text-content fw-500 mt-3 w-75 mend-auto"><?php echo $second_add[0]['details']; ?></p>
+                                    <a href="<?php echo $second_add[0]['link_one']; ?>">
                                         <button class="btn text-white btn-md mt-2 home-button mend-auto theme-bg-color">
                                             Shop Now <i class="fa-solid fa-right-long icon ms-2"></i>
                                         </button>
@@ -593,18 +607,18 @@ include('include/header.php');
                     <?php
                     $banner_middle = $db_handle->runQuery("select * from banner where id = '7'");
                     ?>
-                    <img src="<?php echo $banner_middle[0]['banner_img'];?>" class="bg-img blur-up lazyload" alt="">
+                    <img src="<?php echo $banner_middle[0]['banner_img']; ?>" class="bg-img blur-up lazyload" alt="">
                     <div class="home-detail p-center position-relative text-center">
                         <div>
                             <h3 class="text-danger text-uppercase fw-bold mb-0">
-                                <?php echo $banner_middle[0]['heading_one'];?>
+                                <?php echo $banner_middle[0]['heading_one']; ?>
                             </h3>
                             <h2 class="theme-color text-pacifico fw-normal mb-0 super-sale text-center">
-                                <?php echo $banner_middle[0]['heading_two'];?>
+                                <?php echo $banner_middle[0]['heading_two']; ?>
                             </h2>
-                            <h2 class="home-name text-uppercase"><?php echo $banner_middle[0]['heading_three'];?></h2>
+                            <h2 class="home-name text-uppercase"><?php echo $banner_middle[0]['heading_three']; ?></h2>
                             <h3 class="text-pacifico fw-normal text-content text-center">
-                                <?php echo $banner_middle[0]['details'];?>
+                                <?php echo $banner_middle[0]['details']; ?>
                             </h3>
                             <ul class="social-icon">
                                 <li>
@@ -658,7 +672,9 @@ include('include/header.php');
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
-                                        <img src="admin/<?php echo $fetch_product[$i]['p_image']; ?>"
+                                        <img src="admin/<?php
+                                        echo str_replace("650", "250", $fetch_product [$i]['p_image']);
+                                        ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
                                     </a>
@@ -712,7 +728,9 @@ include('include/header.php');
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
-                                        <img src="admin/<?php echo $product[$i]['p_image']; ?>"
+                                        <img src="admin/<?php
+                                        echo str_replace("650", "250", $fetch_product [$i]['p_image']);
+                                        ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
                                     </a>
@@ -767,7 +785,9 @@ include('include/header.php');
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
-                                        <img src="admin/<?php echo $fetch_product3[$i]['p_image']; ?>"
+                                        <img src="admin/<?php
+                                        echo str_replace("650", "250", $fetch_product3 [$i]['p_image']);
+                                        ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
                                     </a>
@@ -822,7 +842,9 @@ include('include/header.php');
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
-                                        <img src="admin/<?php echo $fetch_product2[$i]['p_image']; ?>"
+                                        <img src="admin/<?php
+                                        echo str_replace("650", "250", $fetch_product2 [$i]['p_image']);
+                                        ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
                                     </a>
