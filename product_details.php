@@ -146,19 +146,19 @@ include('include/header.php');
                                 <form method="post" action="Product-Details?action=add&product_id=<?php echo $_GET['product_id']; ?>">
                                     <div class="cart_qty qty-box product-qty">
                                         <div class="input-group">
-                                            <button type="button" class="qty-right-plus" data-type="plus" data-field="">
-                                                <i class="fa fa-plus" aria-hidden="true"></i>
-                                            </button>
-                                            <input class="form-control input-number qty-input" type="text"
-                                                   name="quantity" value="0">
                                             <button type="button" class="qty-left-minus" data-type="minus"
                                                     data-field="">
                                                 <i class="fa fa-minus" aria-hidden="true"></i>
                                             </button>
+                                            <input class="form-control input-number qty-input" type="text"
+                                                   name="quantity" min="1" value="1">
+                                            <button type="button" class="qty-right-plus" data-type="plus" data-field="">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </button>
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-md bg-dark cart-button text-white w-100" type="submit">Add To
+                                    <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit">Add To
                                         Cart
                                     </button>
                                 </form>

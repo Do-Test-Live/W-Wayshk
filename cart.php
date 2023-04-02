@@ -179,7 +179,7 @@ include('include/header.php');
 
                             <li class="align-items-start">
                                 <h4>Shipping</h4>
-                                <h4 class="price text-end">$6.90</h4>
+                                <h4 class="price text-end">0.00</h4>
                             </li>
                         </ul>
                     </div>
@@ -194,13 +194,13 @@ include('include/header.php');
                     <div class="button-group cart-button">
                         <ul>
                             <li>
-                                <button onclick="location.href = 'checkout.php';"
+                                <button onclick="location.href = 'Checkout';"
                                         class="btn btn-animation proceed-btn fw-bold">Process To Checkout
                                 </button>
                             </li>
 
                             <li>
-                                <button onclick="location.href = 'index.php';"
+                                <button onclick="location.href = 'Home';"
                                         class="btn btn-light shopping-button text-dark">
                                     <i class="fa-solid fa-arrow-left-long"></i>Return To Shopping
                                 </button>

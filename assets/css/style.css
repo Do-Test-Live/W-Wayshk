@@ -21771,7 +21771,6 @@ header .offcanvas-backdrop {
 }
 
 .checkout-section-2 .left-sidebar-checkout .checkout-detail-box > ul > li .checkout-box .checkout-detail .custom-accordion .accordion-item .accordion-header .accordion-button::before {
-    content: "";
     position: absolute;
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
