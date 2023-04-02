@@ -5,6 +5,12 @@ if (isset($_SESSION['id'])) {
 }
 include('admin/include/dbController.php');
 $db_handle = new DBController();
+
+if (!isset($_SESSION["cart_item"])) {
+    echo "<script>
+            window.location.href='Cart';
+        </script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -222,7 +228,7 @@ include('include/header.php');
                                             <img src="admin/<?php echo str_replace("650", "250", $item["image"]); ?>"
                                                  class="img-fluid blur-up lazyloaded checkout-image" alt="">
                                             <h4><?php echo $item["name"]; ?> <span>X <?php echo $item["quantity"]; ?></span></h4>
-                                            <h4 class="price"><?php echo "$ " . number_format($item_price, 2); ?></h4>
+                                            <h4 class="price"><?php echo "HK$ " . number_format($item_price, 2); ?></h4>
                                         </li>
                                         <?php
                                         $total_quantity_new += $item["quantity"];
@@ -235,19 +241,19 @@ include('include/header.php');
                             <ul class="summery-total">
                                 <li>
                                     <h4>Subtotal</h4>
-                                    <h4 class="price"><?php echo "$ " . number_format($total_price_new, 2); ?></h4>
+                                    <h4 class="price"><?php echo "HK$ " . number_format($total_price_new, 2); ?></h4>
                                 </li>
                                 <li>
                                     <h4>Shipping</h4>
-                                    <h4 class="price">$0.00</h4>
+                                    <h4 class="price">HK$ 0.00</h4>
                                 </li>
                                 <li>
                                     <h4>Coupon/Code</h4>
-                                    <h4 class="price">$0.00</h4>
+                                    <h4 class="price">HK$ 0.00</h4>
                                 </li>
                                 <li class="list-total">
-                                    <h4>Total (USD)</h4>
-                                    <h4 class="price"><?php echo "$ " . number_format($total_price_new, 2); ?></h4>
+                                    <h4>Total (HKD)</h4>
+                                    <h4 class="price"><?php echo "HK$ " . number_format($total_price_new, 2); ?></h4>
                                 </li>
                             </ul>
                         </div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("includes/dbConnect.php");
+require_once("admin/include/dbController.php");
 $db_handle = new DBController();
 // Include configuration file
 require_once 'config.php';
@@ -92,7 +92,7 @@ if (!empty($_GET['session_id'])) {
                     } else {
                         $user_id = $_SESSION['user_id'];
                         // Insert transaction data into the database
-                        $sqlQ = "INSERT INTO transactions (customer_name,customer_email,information_id,item_name,item_number,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,stripe_checkout_session_id,created,modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())";
+                        $sqlQ = "INSERT INTO transactions (customer_name,customer_email,billing_id,item_name,item_number,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,stripe_checkout_session_id,created,modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())";
                         $stmt = $db->prepare($sqlQ);
                         $stmt->bind_param("ssissdsdssss", $customer_name, $customer_email, $user_id, $productName, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id);
                         $insert = $stmt->execute();
@@ -227,7 +227,7 @@ if (!empty($_GET['session_id'])) {
         <h1 class="error">Your Payment been failed!</h1>
         <p class="error"><?php echo $statusMsg; ?></p>
         <p>Customer Mail Send Failed.</p>
-        
+
     <?php }
 } else { ?>
     <h1 class="error">Your Payment been failed!</h1>

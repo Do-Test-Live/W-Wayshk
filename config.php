@@ -14,12 +14,12 @@ $currency = "hkd";
  */
 define('STRIPE_API_KEY', 'sk_test_51Mb0kLCx2OyxlMM1Y6SQXMOJwhgvfopAE9uOV9rk98skPq1iMKH42NM0MsiWJjlaj6ZyzgCZPK95bQeKFgi7ajAI00e1cuwZaj');
 define('STRIPE_PUBLISHABLE_KEY', 'pk_test_51Mb0kLCx2OyxlMM1Fi0xLpDM3tbE7HQu5k2VdaWTooiHBMPf4NIS47hjtj5nGYZmrE91STnXUjzUhWXY5njF9skH0056LqRXCv');
-define('STRIPE_SUCCESS_URL', 'https://test.1-studiohk.com/payment-success.php'); //Payment success URL
-define('STRIPE_CANCEL_URL', 'https://test.1-studiohk.com/payment-cancel.php'); //Payment cancel URL
+define('STRIPE_SUCCESS_URL', 'https://localhost/W-Wayshk/payment-success.php'); //Payment success URL
+define('STRIPE_CANCEL_URL', 'https://localhost/W-Wayshk/payment-cancel.php'); //Payment cancel URL
 
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_USERNAME', 'u727820269_studio_demo');
-define('DB_PASSWORD', 'u3!GIE1=]#qm');
-define('DB_NAME', 'u727820269_studio_demo');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'wayshk');
 
