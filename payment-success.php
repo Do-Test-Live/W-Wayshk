@@ -122,50 +122,30 @@ if (!empty($_GET['session_id'])) {
 <?php if ($statusMsg=="Your Payment has been Successful!") {
 
     $email_to = $customer_email;
-    $subject = '1+ Studio';
+    $subject = 'Wayshk';
 
 
-    $headers = "From: 1+ Studio <" . $db_handle->from_email() . ">\r\n";
+    $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
     $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
     $messege = "
             <html>
                 <body style='background-color: #eee; font-size: 16px;'>
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <h3 style='color:black'>電郵回覆內容</h3>
+                    <h3 style='color:black'>Payment Successful</h3>
                     <p style='color:black;'>
-                    感謝閣下完成預約程序。<br/>
-                    預約費用支付經確認後，會在入場前兩小時以短訊及whatsapp發送給閣下已登記之手機號碼。<br/>
-                    再次感謝閣下選擇本館，希望使用過程開心，下次再見。
+                    Thank you for payment.
                     </p>
                 </div>
                 </body>
             </html>";
     if (mail($email_to, $subject, $messege, $headers)) {
 
-
-        $user_id = $_SESSION['user_id'];
-
-        $data = $db_handle->runQuery("SELECT * FROM information where id={$user_id}");
-
-        $f_name = $data[0]['f_name'];
-        $l_name = $data[0]['l_name'];
-        $phone = $data[0]['phone'];
-        $email = $data[0]['email'];
-        $schedule = $data[0]['schedule'];
-        $heart_problem = $data[0]['heart_problem'];
-        $chest_pain_physical_activity = $data[0]['chest_pain_physical_activity'];
-        $chest_pain_not_physical_activity = $data[0]['chest_pain_not_physical_activity'];
-        $felt_dizzy = $data[0]['felt_dizzy'];
-        $joint_problem = $data[0]['joint_problem'];
-        $blood_pressure = $data[0]['blood_pressure'];
-        $other_reason = $data[0]['other_reason'];
-
         $email_to = $db_handle->notify_email();
-        $subject = '1+ Studio';
+        $subject = 'Wayshk';
 
 
-        $headers = "From: 1+ Studio <" . $db_handle->from_email() . ">\r\n";
+        $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
         $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
         $messege = "
@@ -173,51 +153,18 @@ if (!empty($_GET['session_id'])) {
                 <body style='background-color: #eee; font-size: 16px;'>
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
                     <p style='color:black;'>
-                        Name: $f_name $l_name
-                    </p>
-                    <p style='color:black;'>
-                        Phone: $phone
-                    </p>
-                    <p style='color:black;'>
-                        Email: $email
-                    </p>
-                    <p style='color:black;'>
-                        Booked session: $schedule
-                    </p>
-                    <p style='color:black;'>
-                        1. 醫生曾否說過你的心臟有問題，以及只可進行醫生建議的體能活動？<br/>
-                        Ans: $heart_problem
-                    </p>
-                    <p style='color:black;'>
-                        2. 你進行體能活動時會否感到胸口痛？<br/>
-                        Ans: $chest_pain_physical_activity
-                    </p>
-                    <p style='color:black;'>
-                        3. 過去一個月內，你曾否在沒有進行體能活動時也感到胸口痛？<br/>
-                        Ans: $chest_pain_not_physical_activity
-                    </p>
-                    <p style='color:black;'>
-                        4. 你曾否因感到暈眩而失去平衡，或曾否失去知覺？ <br/>
-                        Ans: $felt_dizzy
-                    </p>
-                    <p style='color:black;'>
-                        5. 你的骨骼或關節(例如脊骨、膝蓋或髖關節)是否有毛病，且會因改變體能活動而惡化？<br/>
-                        Ans: $joint_problem
-                    </p>
-                    <p style='color:black;'>
-                        6. 醫生現時是否有開血壓或心臟藥物（例如water pills）給你服用？<br/>
-                        Ans: $blood_pressure
-                    </p>
-                    <p style='color:black;'>
-                        7. 是否有其他理由令你不應進行體能活動？<br/>
-                        Ans: $other_reason
+                        New Order Arrive.
                     </p>
                 </div>
                 </body>
             </html>";
 
         if (mail($email_to, $subject, $messege, $headers)) {
-            header('location:index.php?confirm=1#confirmation');
+            ?>
+            <script>
+                location.href = "Home";
+            </script>
+            <?php
         } else { ?>
             <h1 class="error">Your Payment been failed!</h1>
             <p class="error"><?php echo $statusMsg; ?></p>
