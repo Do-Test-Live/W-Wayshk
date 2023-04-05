@@ -87,22 +87,22 @@
                     <div class="footer-contain">
                         <ul>
                             <li>
-                                <a href="shop.html" class="text-content">Vegetables & Fruit</a>
+                                <a href="#" class="text-content">Vegetables & Fruit</a>
                             </li>
                             <li>
-                                <a href="shop.html" class="text-content">Beverages</a>
+                                <a href="#" class="text-content">Beverages</a>
                             </li>
                             <li>
-                                <a href="shop.html" class="text-content">Meats & Seafood</a>
+                                <a href="#" class="text-content">Meats & Seafood</a>
                             </li>
                             <li>
-                                <a href="shop.html" class="text-content">Frozen Foods</a>
+                                <a href="#" class="text-content">Frozen Foods</a>
                             </li>
                             <li>
-                                <a href="shop.html" class="text-content">Biscuits & Snacks</a>
+                                <a href="#" class="text-content">Biscuits & Snacks</a>
                             </li>
                             <li>
-                                <a href="shop.html" class="text-content">Grocery & Staples</a>
+                                <a href="#" class="text-content">Grocery & Staples</a>
                             </li>
                         </ul>
                     </div>
@@ -119,16 +119,16 @@
                                 <a href="index.php" class="text-content">Home</a>
                             </li>
                             <li>
-                                <a href="shop.html" class="text-content">Shop</a>
+                                <a href="#" class="text-content">Shop</a>
                             </li>
                             <li>
-                                <a href="about-us.html" class="text-content">About Us</a>
+                                <a href="#" class="text-content">About Us</a>
                             </li>
                             <li>
-                                <a href="blog-list.html" class="text-content">Blog</a>
+                                <a href="#" class="text-content">Blog</a>
                             </li>
                             <li>
-                                <a href="contact-us.html" class="text-content">Contact Us</a>
+                                <a href="#" class="text-content">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -142,22 +142,22 @@
                     <div class="footer-contain">
                         <ul>
                             <li>
-                                <a href="order-success.html" class="text-content">Your Order</a>
+                                <a href="#" class="text-content">Your Order</a>
                             </li>
                             <li>
-                                <a href="user-dashboard.html" class="text-content">Your Account</a>
+                                <a href="#" class="text-content">Your Account</a>
                             </li>
                             <li>
-                                <a href="order-tracking.html" class="text-content">Track Order</a>
+                                <a href="#" class="text-content">Track Order</a>
                             </li>
                             <li>
                                 <a href="#" class="text-content">Your Wishlist</a>
                             </li>
                             <li>
-                                <a href="search.html" class="text-content">Search</a>
+                                <a href="privacy_policy.php" class="text-content">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="faq.html" class="text-content">FAQ</a>
+                                <a href="terms_condition.php" class="text-content">Terms and Condition</a>
                             </li>
                         </ul>
                     </div>

@@ -16,7 +16,7 @@ if(isset($_POST['login'])){
         }
         session_start();
         $_SESSION['id'] = $customer_id;
-        header('Location: Home');
+        header('Location: profile.php');
     }else{
         echo "Something went wrong";
     }

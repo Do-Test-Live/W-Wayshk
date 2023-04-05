@@ -237,8 +237,13 @@ if (isset($_SESSION["cart_item"])) {
                                             <ul class="user-box-name">
                                                 <li class="product-box-contain">
                                                     <i></i>
+                                                    <a href="profile.php">Profile</a>
+                                                </li>
+                                                <li class="product-box-contain">
+                                                    <i></i>
                                                     <a href="Logout">Logout</a>
                                                 </li>
+
                                             </ul>
                                         </div>
                                         <?php

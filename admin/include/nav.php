@@ -99,6 +99,12 @@
                 </ul>
             </li>
             <li>
+                <a href="Review" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-settings-6"></i>
+                    <span class="nav-text">Review</span>
+                </a>
+            </li>
+            <li>
                 <a href="Report" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
                     <span class="nav-text">Report</span>

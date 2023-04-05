@@ -60,3 +60,5 @@ RewriteRule ^Add-Stock addStock.php [NE,L]
 
 RewriteRule ^Stock stock.php [NE,L]
 
+RewriteRule ^Review review.php [NE,L]
+
