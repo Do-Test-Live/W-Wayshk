@@ -223,8 +223,7 @@ include('include/header.php');
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>"
-                                               data-bs-toggle="modal" data-bs-target="">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id'];?>">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -290,8 +289,7 @@ include('include/header.php');
                                         </a>
                                         <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>"
-                                                   data-bs-toggle="modal" data-bs-target="#view">
+                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
@@ -375,8 +373,7 @@ include('include/header.php');
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>"
-                                               data-bs-toggle="modal" data-bs-target="">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -442,8 +439,7 @@ include('include/header.php');
                                         </a>
                                         <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>"
-                                                   data-bs-toggle="modal" data-bs-target="#view">
+                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
