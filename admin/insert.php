@@ -39,12 +39,15 @@ if (isset($_POST["add_cat"])) {
 
 if (isset($_POST["add_product"])) {
     $product_name = $db_handle->checkValue($_POST['product_name']);
+    $product_name_en = $db_handle->checkValue($_POST['product_name_en']);
     $product_code = $db_handle->checkValue($_POST['product_code']);
     $product_weight = $db_handle->checkValue($_POST['product_weight']);
     $product_category = $db_handle->checkValue($_POST['product_category']);
     $selling_price = $db_handle->checkValue($_POST['selling_price']);
+    $cost = $db_handle->checkValue($_POST['cost']);
     $product_status = $db_handle->checkValue($_POST['product_status']);
     $product_description = $db_handle->checkValue($_POST['product_description']);
+    $product_description_en = $db_handle->checkValue($_POST['product_description_en']);
     $inserted_at = date("Y-m-d H:i:s");
 
     $products_image='';
@@ -71,12 +74,16 @@ if (isset($_POST["add_product"])) {
         $products_image = '';
     }
 
-    $insert = $db_handle->insertQuery("INSERT INTO `product`(`category_id`, `product_code`,`product_weight`, `p_name`,`product_price`, `description`, `p_image`,`status`, `inserted_at`) VALUES ('$product_category','$product_code','$product_weight','$product_name','$selling_price','$product_description','$products_image','$product_status','$inserted_at')");
-
-    echo "<script>
+    $insert = $db_handle->insertQuery("INSERT INTO `product` (`category_id`, `product_code`,`product_weight`, `p_name`,`p_name_en`,`product_price`, `description`,`description_en`, `p_image`,`status`, `inserted_at`,`cost`) VALUES 
+                ('$product_category','$product_code','$product_weight','$product_name','$product_name_en','$selling_price','$product_description','$product_description_en','$products_image','$product_status','$inserted_at','$cost')");
+    if($insert){
+        echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Add-Product';
                 </script>";
+    }
+
+
 }
 
 if(isset($_POST['add_course'])){
