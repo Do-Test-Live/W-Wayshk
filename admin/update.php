@@ -48,16 +48,19 @@ if (isset($_POST['updateCategory'])) {
 if (isset($_POST['updateProduct'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $p_name = $db_handle->checkValue($_POST['p_name']);
+    $p_name_en = $db_handle->checkValue($_POST['p_name_en']);
     $product_code = $db_handle->checkValue($_POST['p_code']);
     $product_description = $db_handle->checkValue($_POST['product_description']);
     $product_category = $db_handle->checkValue($_POST['product_category']);
     $status = $db_handle->checkValue($_POST['status']);
     $product_price = $db_handle->checkValue($_POST['product_price']);
+    $cost = $db_handle->checkValue($_POST['cost']);
+    $product_weight = $db_handle->checkValue($_POST['product_weight']);
 
     $updated_at = date("Y-m-d H:i:s");
 
     $data = $db_handle->insertQuery("UPDATE `product` SET `category_id`='$product_category',`product_code`='$product_code',`p_name`='$p_name',`description`='$product_description',
-                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price' WHERE id={$id}");
+                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`p_name_en` = '$p_name_en',`cost` = '$cost',`product_weight` = '$product_weight' WHERE id={$id}");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Product';
