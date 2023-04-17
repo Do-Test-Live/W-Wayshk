@@ -107,10 +107,10 @@ include('include/header.php');
                             </p>
                             <div class="row mt-5">
                                 <div class="col-6">
-                                    <b>中文版</b> <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;">下載</a>
+                                    <b>中文版</b> <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;"><b>下載</b></a>
                                 </div>
                                 <div class="col-6">
-                                    <b>English order form</b> <a href="assets/document/b05373_fb2f515896dd4ac995d91ea42cb82c54.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;">Download</a>
+                                    <b>English order form</b> <a href="assets/document/b05373_fb2f515896dd4ac995d91ea42cb82c54.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;"><b>Download</b></a>
                                 </div>
                             </div>
                         </div>

@@ -77,7 +77,7 @@ include('include/header.php');
                         <div class="blog-box wow fadeInUp">
                             <div class="blog-image">
                                 <a href="blog-detail.html">
-                                    <img src="assets/images/inner-page/blog/1.jpg"
+                                    <img src="assets/images/about_us/1.webp"
                                          class="bg-img blur-up lazyload" alt="">
                                 </a>
                             </div>
@@ -106,7 +106,7 @@ include('include/header.php');
                         <div class="blog-box wow fadeInUp" data-wow-delay="0.05s">
                             <div class="blog-image">
                                 <a href="blog-detail.html">
-                                    <img src="assets/images/inner-page/blog/2.jpg"
+                                    <img src="assets/images/about_us/2.webp"
                                          class="bg-img blur-up lazyload" alt="">
                                 </a>
                             </div>

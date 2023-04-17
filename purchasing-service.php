@@ -92,25 +92,25 @@ include ('include/header.php');
             </div>
         </div>
         <div class="row text-center mt-5">
-            <p style="font-weight: bold;">出貨方式：</p>
+            <h4 style="font-size: 24px; font-weight: bold">出貨方式：</h4>
             <p>1. 大圍倉庫自取 （需要預約） 地址：大圍成運路21-23號群力工業大廈3樓1室  </p>
             <p>2. 灣仔合作點自取 （需要預約） 地址：灣仔軒尼詩道237-239號25樓兒璞兒童學習及發展中心 </p>
             <p>3. 速遞送貨（運費到付/取得運費報價） </p>
         </div>
         <div class="row text-center mt-5">
-            <p style="font-weight: bold;">送貨時間：</p>
+            <p style="font-size: 24px; font-weight: bold">送貨時間：</p>
             <p>由一至八星期不等，歡迎先聯絡本公司查詢現貨庫存。</p>
             <p>如需大量訂購產品，建議及早確認訂單。貨品到港後我們會盡快安排送貨。</p>
         </div>
         <div class="row text-center mt-5">
-            <p style="font-weight: bold;">付款方式：</p>
+            <p style="font-size: 24px; font-weight: bold">付款方式：</p>
             <p>1. 自取點取貨時以現金付款</p>
             <p>2. PayMe/轉數快</p>
             <p>3. 郵寄支票 （支票抬頭：WAYSHK） 寄往：大圍成運路21-23號群力工業大廈3樓1室   【Attn：WAYSHK】</p>
             <p>4. 銀行過數 (恆生銀行：769-334699-883 戶口名稱：WASYHK) * 可於貨到後30日內支付費用</p>
         </div>
         <div class="row text-center mt-5">
-            <p style="font-weight: bold;">機構/學校訂購優惠：</p>
+            <p style="font-size: 24px; font-weight: bold">機構/學校訂購優惠：</p>
             <p>1. 訂購滿$2000享有香港島、九龍及新界免費送貨服務，不包括離島及偏遠地區</p>
             <p>2. 歡迎向我們查詢其他推廣優惠</p>
         </div>
