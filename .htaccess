@@ -1,4 +1,4 @@
-ErrorDocument 404 http://localhost/W-Wayshk/404.php
+ErrorDocument 404 https://wayshk.ngt.hk/W-Wayshk/404.php
 
 RewriteEngine on
 
@@ -22,7 +22,7 @@ RewriteRule ^Order order.php [NE,L]
 
 RewriteRule ^Product-Details product_details.php [NE,L]
 
-RewriteRule ^Purchasing-Service purchasing-service.php [NE,L]
+RewriteRule ^Institution purchasing-service.php [NE,L]
 
 RewriteRule ^Shop shop.php [NE,L]
 
@@ -31,5 +31,9 @@ RewriteRule ^Cart cart.php [NE,L]
 RewriteRule ^Checkout checkout.php [NE,L]
 
 RewriteRule ^Payment payment.php [NE,L]
+
+RewriteRule ^1-Course course_details.php [NE,L]
+
+RewriteRule ^2-Course second_course_details.php [NE,L]
 
 

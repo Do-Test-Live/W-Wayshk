@@ -4,16 +4,16 @@ class DBController {
     private $user = "root";
     private $password = "";
     private $database = "wayshk";
-    private $from_email='noreply@ngt-tech.io';
-    private $notification_email='francis@ngttech.io';
+    private $from_email='noreply@wayshk.ngt.hk';
+    private $notification_email='mingowhk@gmail.com';
     private $conn;
 
     function __construct() {
-        if($_SERVER['SERVER_NAME']=="www.wayshk.techs.hk"||$_SERVER['SERVER_NAME']=="wayshk.techs.hk"){
+        if($_SERVER['SERVER_NAME']=="www.wayshk.ngt.hk"||$_SERVER['SERVER_NAME']=="wayshk.ngt.hk"){
             $this->host = "localhost";
-            $this->user = "u727820269_wayshk";
+            $this->user = "u7srwmfa411z5";
             $this->password = "i6nLwN&~N*";
-            $this->database = "u727820269_wayshk";
+            $this->database = "db72eae0bb6d7f";
         }
 
         $this->conn = $this->connectDB();

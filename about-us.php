@@ -59,26 +59,10 @@ $db_handle = new DBController();
     <section class="fresh-vegetable-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
-                <div class="col-xl-6 col-12">
-                    <div class="row g-sm-4 g-2">
-                        <div class="col-6">
-                            <div class="fresh-image-2">
-                                <div>
-                                    <img src="assets/images/inner-page/about-us/1.jpg"
-                                        class="bg-img blur-up lazyload" alt="">
-                                </div>
-                            </div>
+                <div class="col-6">
+                        <div>
+                            <img src="assets/images/about_us/p.png" class="img-fluid" alt="">
                         </div>
-
-                        <div class="col-6">
-                            <div class="fresh-image">
-                                <div>
-                                    <img src="assets/images/inner-page/about-us/2.jpg"
-                                        class="bg-img blur-up lazyload" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
               <!--  come from demo website about us page-->
@@ -149,10 +133,9 @@ $db_handle = new DBController();
     <!-- Fresh Vegetable Section End -->
 
     <!-- Fresh Vegetable Section Start -->
-    <section class="fresh-vegetable-section section-lg-space">
+    <!--<section class="fresh-vegetable-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
-                <!--  come from demo website about us page-->
                 <div class="col-12">
                     <div class="fresh-contain">
                         <div>
@@ -173,11 +156,11 @@ $db_handle = new DBController();
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Fresh Vegetable Section End -->
 
     <!-- Review Section Start -->
-    <section class="review-section section-lg-space">
+    <!--<section class="review-section section-lg-space">
         <div class="container-fluid">
             <div class="about-us-title text-center">
                 <h4 class="text-content">Latest Testimonals</h4>
@@ -527,7 +510,7 @@ $db_handle = new DBController();
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Review Section End -->
 
     <!-- Footer Section Start -->
@@ -538,7 +521,7 @@ $db_handle = new DBController();
 
     <!-- Deal Box Modal Start -->
     <div class="modal fade theme-modal deal-modal" id="deal-box" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
             <div class="modal-content">
                 <div class="modal-header">
@@ -553,61 +536,28 @@ $db_handle = new DBController();
                 <div class="modal-body">
                     <div class="deal-offer-box">
                         <ul class="deal-offer-list">
-                            <li class="list-1">
-                                <div class="deal-offer-contain">
-                                    <a href="#" class="deal-image">
-                                        <img src="assets/images/vegetable/product/10.png" class="blur-up lazyload"
-                                             alt="">
-                                    </a>
+                            <?php
+                            $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
+                            $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
+                            for ($i = 0; $i < $row; $i++) {
+                                $image = explode(',',$product[$i]['p_image'])
+                                ?>
+                                <li class="list-1">
+                                    <div class="deal-offer-contain">
+                                        <a href="shop.php" class="deal-image">
+                                            <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                                 alt="">
+                                        </a>
 
-                                    <a href="#" class="deal-contain">
-                                        <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                        <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                    </a>
-                                </div>
-                            </li>
-
-                            <li class="list-2">
-                                <div class="deal-offer-contain">
-                                    <a href="#" class="deal-image">
-                                        <img src="assets/images/vegetable/product/11.png" class="blur-up lazyload"
-                                             alt="">
-                                    </a>
-
-                                    <a href="#" class="deal-contain">
-                                        <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                        <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                    </a>
-                                </div>
-                            </li>
-
-                            <li class="list-3">
-                                <div class="deal-offer-contain">
-                                    <a href="#" class="deal-image">
-                                        <img src="assets/images/vegetable/product/12.png" class="blur-up lazyload"
-                                             alt="">
-                                    </a>
-
-                                    <a href="#" class="deal-contain">
-                                        <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                        <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                    </a>
-                                </div>
-                            </li>
-
-                            <li class="list-1">
-                                <div class="deal-offer-contain">
-                                    <a href="#" class="deal-image">
-                                        <img src="assets/images/vegetable/product/13.png" class="blur-up lazyload"
-                                             alt="">
-                                    </a>
-
-                                    <a href="#" class="deal-contain">
-                                        <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                        <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                    </a>
-                                </div>
-                            </li>
+                                        <a href="shop.php" class="deal-contain">
+                                            <h5><?php echo $product[$i]['p_name']?></h5>
+                                            <h6><?php echo $product[$i]['product_price']?></h6>
+                                        </a>
+                                    </div>
+                                </li>
+                                <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                 </div>

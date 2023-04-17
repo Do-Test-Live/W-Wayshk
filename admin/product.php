@@ -90,7 +90,7 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Product Cost</label>
                                             <div class="col-sm-9">
-                                                <input type="number" class="form-control" name="cost"
+                                                <input type="text" class="form-control" name="cost"
                                                        placeholder="Category Name"
                                                        value="<?php echo $data[0]["cost"]; ?>" required>
                                             </div>

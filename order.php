@@ -105,6 +105,14 @@ include('include/header.php');
                             <p>
                                 點擊按鈕下載產品訂購表格，電郵到 wayshk.order@gmail.com 或以 Whatsapp 發給 +852 52657359
                             </p>
+                            <div class="row mt-5">
+                                <div class="col-6">
+                                    <b>中文版</b> <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;">下載</a>
+                                </div>
+                                <div class="col-6">
+                                    <b>English order form</b> <a href="assets/document/b05373_fb2f515896dd4ac995d91ea42cb82c54.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;">Download</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,69 +267,28 @@ include('include/footer.php');
             <div class="modal-body">
                 <div class="deal-offer-box">
                     <ul class="deal-offer-list">
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/10.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
+                        <?php
+                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
+                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
+                        for ($i = 0; $i < $row; $i++) {
+                            $image = explode(',',$product[$i]['p_image'])
+                            ?>
+                            <li class="list-1">
+                                <div class="deal-offer-contain">
+                                    <a href="shop.php" class="deal-image">
+                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                             alt="">
+                                    </a>
 
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-2">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/11.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-3">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/12.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/13.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
+                                    <a href="shop.php" class="deal-contain">
+                                        <h5><?php echo $product[$i]['p_name']?></h5>
+                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                    </a>
+                                </div>
+                            </li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

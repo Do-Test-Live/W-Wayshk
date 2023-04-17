@@ -5,7 +5,8 @@ if (!empty($_GET["action"])) {
             if (!empty($_POST["quantity"])) {
 
                 $productByCode = $db_handle->runQuery("SELECT * FROM product WHERE id ='" . $_GET["product_id"] . "'");
-                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'image' => $productByCode[0]["p_image"], 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
+                //echo strtok($productByCode[0]["p_image"],',');
+                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'image' => strtok($productByCode[0]["p_image"],','), 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
 
                 if (!empty($_SESSION["cart_item"])) {
                     if (in_array($productByCode[0]["id"], array_keys($_SESSION["cart_item"]))) {
@@ -302,9 +303,9 @@ if (isset($_SESSION["cart_item"])) {
                                 $row = $db_handle->numRows("SELECT * FROM `category` where status = '1'");
                                 for ($i = 0; $i < $row; $i++) {
                                     ?>
-                                    <li class="onhover-category-list">
+                                    <li class="">
                                         <a href="Shop?catId=<?php echo $fetch_cat[$i]['id'] ?>" class="category-name">
-                                            <img src="admin/<?php echo $fetch_cat[$i]['image']; ?>"
+                                            <img src="assets/images/about_us/ways.png"
                                                  alt="">
                                             <h6><?php echo $fetch_cat[$i]['c_name']; ?></h6>
                                         </a>
@@ -340,14 +341,14 @@ if (isset($_SESSION["cart_item"])) {
                                             <a class="nav-link" href="Order">訂購方法</a>
                                         </li>
                                         <li class="nav-item">
+                                            <a class="nav-link" href="Institution">機構/校令</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" href="Living-Seeds-Children">活籽兒童服務社</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link"
                                                href="Occupational-Therapy-Courses">線上職業治療課程</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Purchasing-Service">代購服務</a>
                                         </li>
                                     </ul>
                                 </div>

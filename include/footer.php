@@ -20,7 +20,7 @@
                             </div>
 
                             <div class="service-detail">
-                                <h5>Free Delivery For Order Over $50</h5>
+                                <h5>Free Delivery For Order Over 500 HKD</h5>
                             </div>
                         </div>
 
@@ -50,7 +50,7 @@
 
         <div class="main-footer section-b-space section-t-space">
             <div class="row g-md-4 g-3">
-                <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="col-xl-6 col-lg-6 col-sm-6">
                     <div class="footer-logo">
                         <div class="theme-logo">
                             <a href="index.php">
@@ -60,9 +60,8 @@
 
                         <div class="footer-logo-contain">
                             <p>
-                                In publishing and graphic design, Lorem ipsum is a
-                                placeholder text commonly used to demonstrate the visual
-                                form.
+                                Wayshk 以小店形式經營，以職業治療師的專業角度精心挑選兒童治療用品及設計教材，
+                                協助有需要的孩子更投入日常生活活動中。
                             </p>
 
                             <ul class="address">
@@ -79,80 +78,13 @@
                     </div>
                 </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="footer-title">
-                        <h4>Categories</h4>
-                    </div>
-
-                    <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="#" class="text-content">Vegetables & Fruit</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Beverages</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Meats & Seafood</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Frozen Foods</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Biscuits & Snacks</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Grocery & Staples</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl col-lg-2 col-sm-3">
-                    <div class="footer-title">
-                        <h4>Useful Links</h4>
-                    </div>
-
-                    <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="index.php" class="text-content">Home</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Shop</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-2 col-sm-3">
+                <div class="col-xl-3 col-sm-3">
                     <div class="footer-title">
                         <h4>Help Center</h4>
                     </div>
 
                     <div class="footer-contain">
                         <ul>
-                            <li>
-                                <a href="#" class="text-content">Your Order</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Your Account</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Track Order</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-content">Your Wishlist</a>
-                            </li>
                             <li>
                                 <a href="privacy_policy.php" class="text-content">Privacy Policy</a>
                             </li>
@@ -212,23 +144,13 @@
                         <h6 class="text-content">Stay connected :</h6>
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/" target="_blank">
+                                <a href="https://www.facebook.com/wayshk000?mibextid=LQQJ4d" target="_blank">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/" target="_blank">
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="https://instagram.com/ways_hk?igshid=YmMyMTA2M2Y=" target="_blank">
                                     <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://in.pinterest.com/" target="_blank">
-                                    <i class="fa-brands fa-pinterest-p"></i>
                                 </a>
                             </li>
                         </ul>

@@ -225,7 +225,7 @@ include('include/header.php');
                                         $item_price = $item["quantity"] * $item["price"];
                                         ?>
                                         <li>
-                                            <img src="admin/<?php echo str_replace("650", "250", $item["image"]); ?>"
+                                            <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'],',')); ?>"
                                                  class="img-fluid blur-up lazyloaded checkout-image" alt="">
                                             <h4><?php echo $item["name"]; ?> <span>X <?php echo $item["quantity"]; ?></span></h4>
                                             <h4 class="price"><?php echo "HK$ " . number_format($item_price, 2); ?></h4>

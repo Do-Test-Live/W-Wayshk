@@ -200,25 +200,6 @@ include('include/header.php');
                                     </div>
                                 </div>
                             </div>
-
-
-                            <!--<div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                        <span>Price</span>
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse show"
-                                     aria-labelledby="headingThree">
-                                    <div class="accordion-body">
-                                        <div class="range-slider">
-                                            <input type="text" class="js-range-slider" value="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -231,8 +212,11 @@ include('include/header.php');
 
                     <div class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
-                        $fetch_products = $db_handle->runQuery("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id'");
-                        $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id'");
+                        $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        // calculate the offset for the SQL query
+                        $offset = ($current_page - 1) * 8;
+                        $fetch_products = $db_handle->runQuery("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id' limit 8 OFFSET $offset");
+                        $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id' limit 8 OFFSET $offset");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
                             <div>
@@ -241,7 +225,7 @@ include('include/header.php');
                                         <div class="product-image">
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <img src="admin/<?php
-                                                echo str_replace("650", "250", $fetch_products [$i]['p_image']);
+                                                echo str_replace("650", "250", strtok($fetch_products [$i]['p_image'],','));
                                                 ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
@@ -265,7 +249,7 @@ include('include/header.php');
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
-                                                <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
+                                                <h5 class="name"><?php  echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
                                             <div class="product-rating mt-2">
                                                 <ul class="rating">
@@ -304,22 +288,36 @@ include('include/header.php');
 
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">
+                            <li class="page-item">
+                                <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=1" tabindex="-1" aria-disabled="true">
                                     <i class="fa-solid fa-angles-left"></i>
                                 </a>
                             </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="javascript:void(0)">1</a>
-                            </li>
-                            <li class="page-item" aria-current="page">
-                                <a class="page-link" href="javascript:void(0)">2</a>
-                            </li>
+                            <?php
+                            // calculate the total number of pages
+                            $new = $db_handle->runQuery("SELECT COUNT(id) as c FROM `product` WHERE category_id = '$id'");
+                            $no_new = $db_handle->numRows("SELECT COUNT(id) as c FROM `product` WHERE category_id = '$id'");
+
+                            $total_pages = ceil($new[0]['c'] / 8);
+                            if(isset($_GET['page'])){
+                                $page = $_GET['page'];
+                            }else{
+                                $page = 1;
+                            }
+                            for ($i = $page; $i <= $total_pages; $i++) {
+                                if($i == $page + 5){
+                                    echo "......";
+                                    $i=$total_pages;
+                                }
+                                ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $i; ?>"><?php echo $i;?></a>
+                                </li>
+                                <?php
+                            }
+                            ?>
                             <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">
+                                <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $i-1; ?>">
                                     <i class="fa-solid fa-angles-right"></i>
                                 </a>
                             </li>
@@ -333,8 +331,11 @@ include('include/header.php');
 
                     <div class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
-                        $fetch_products = $db_handle->runQuery("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' order by rand () limit 40;");
-                        $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' order by rand () limit 40;");
+                        $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        // calculate the offset for the SQL query
+                        $offset = ($current_page - 1) * 8;
+                        $fetch_products = $db_handle->runQuery("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' limit 12 OFFSET $offset;");
+                        $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' limit 12 OFFSET $offset;");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
                             <div>
@@ -343,7 +344,7 @@ include('include/header.php');
                                         <div class="product-image">
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <img src="admin/<?php
-                                                echo str_replace("650", "250", $fetch_products [$i]['p_image']);
+                                                echo str_replace("650", "250", strtok($fetch_products [$i]['p_image'],','));
                                                 ?>"
                                                      class="img-fluid blur-up lazyload" alt="">
                                             </a>
@@ -371,25 +372,6 @@ include('include/header.php');
                                                 <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
 
-                                            <div class="product-rating mt-2">
-                                                <ul class="rating">
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
                                             <h5 class="price"><span
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
@@ -405,25 +387,38 @@ include('include/header.php');
                         }
                         ?>
                     </div>
-
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">
+                            <li class="page-item">
+                                <a class="page-link" href="Shop?page=1" tabindex="-1" aria-disabled="true">
                                     <i class="fa-solid fa-angles-left"></i>
                                 </a>
                             </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="javascript:void(0)">1</a>
-                            </li>
-                            <li class="page-item" aria-current="page">
-                                <a class="page-link" href="javascript:void(0)">2</a>
-                            </li>
+                            <?php
+                            // calculate the total number of pages
+                            $new = $db_handle->runQuery("SELECT COUNT('id') as c FROM product");
+                            $no_new = $db_handle->numRows("SELECT COUNT('id') as c FROM product");
+
+                            $total_pages = ceil($new[0]['c'] / 8);
+                            if(isset($_GET['page'])){
+                                $page = $_GET['page'];
+                            }else{
+                                $page = 1;
+                            }
+                            for ($i = $page; $i <= $total_pages; $i++) {
+                                if($i == $page + 5){
+                                    echo "......";
+                                    $i=$total_pages;
+                                }
+                                ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="Shop?page=<?php echo $i; ?>"><?php echo $i;?></a>
+                                </li>
+                                <?php
+                            }
+                            ?>
                             <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">
+                                <a class="page-link" href="Shop?page=<?php echo $i-1; ?>">
                                     <i class="fa-solid fa-angles-right"></i>
                                 </a>
                             </li>
@@ -563,69 +558,28 @@ include('include/footer.php');
             <div class="modal-body">
                 <div class="deal-offer-box">
                     <ul class="deal-offer-list">
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="shop.html" class="deal-image">
-                                    <img src="assets/images/vegetable/product/10.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
+                        <?php
+                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
+                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
+                        for ($i = 0; $i < $row; $i++) {
+                            $image = explode(',',$product[$i]['p_image'])
+                            ?>
+                            <li class="list-1">
+                                <div class="deal-offer-contain">
+                                    <a href="shop.php" class="deal-image">
+                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                             alt="">
+                                    </a>
 
-                                <a href="shop.html" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-2">
-                            <div class="deal-offer-contain">
-                                <a href="shop.html" class="deal-image">
-                                    <img src="assets/images/vegetable/product/11.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="shop.html" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-3">
-                            <div class="deal-offer-contain">
-                                <a href="shop.html" class="deal-image">
-                                    <img src="assets/images/vegetable/product/12.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="shop.html" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="shop.html" class="deal-image">
-                                    <img src="assets/images/vegetable/product/13.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="shop.html" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
+                                    <a href="shop.php" class="deal-contain">
+                                        <h5><?php echo $product[$i]['p_name']?></h5>
+                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                    </a>
+                                </div>
+                            </li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

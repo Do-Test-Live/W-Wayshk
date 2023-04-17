@@ -97,7 +97,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>低收入家庭 $500</span></span>
                                 </div>
-                                <button onclick="location.href = 'blog-detail.html';" class="blog-button">查看課程<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="location.href = '1-Course';" class="blog-button">查看課程<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@ include('include/header.php');
                                     <span class="time"><span>$300；</span></span>
                                     <span class="super"><span>低收入家庭 $150</span></span>
                                 </div>
-                                <button onclick="location.href = 'blog-detail.html';" class="blog-button">查看課程<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="location.href = '2-Course';" class="blog-button">查看課程<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ include('include/header.php');
 </section>
 <!-- Blog Section End -->
 <!-- Breadcrumb Section Start -->
-<section class="breadscrumb-section pt-0">
+<!--<section class="breadscrumb-section pt-0">
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12">
@@ -159,11 +159,11 @@ include('include/header.php');
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Breadcrumb Section End -->
 
 <!-- Contact Box Section Start -->
-<section class="contact-box-section">
+<!--<section class="contact-box-section">
     <div class="container-fluid-lg">
         <div class="row g-lg-5 g-3">
             <div class="col-lg-6">
@@ -295,11 +295,11 @@ include('include/header.php');
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Contact Box Section End -->
 
 <!-- Map Section Start -->
-<section class="map-section">
+<!--<section class="map-section">
     <div class="container-fluid p-0">
         <div class="map-box">
             <iframe
@@ -308,7 +308,7 @@ include('include/header.php');
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Map Section End -->
 
 
@@ -436,69 +436,28 @@ include('include/footer.php');
             <div class="modal-body">
                 <div class="deal-offer-box">
                     <ul class="deal-offer-list">
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/10.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
+                        <?php
+                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
+                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
+                        for ($i = 0; $i < $row; $i++) {
+                            $image = explode(',',$product[$i]['p_image'])
+                            ?>
+                            <li class="list-1">
+                                <div class="deal-offer-contain">
+                                    <a href="shop.php" class="deal-image">
+                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                             alt="">
+                                    </a>
 
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-2">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/11.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-3">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/12.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/13.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57
-                                        <del>57.62</del>
-                                        <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
+                                    <a href="shop.php" class="deal-contain">
+                                        <h5><?php echo $product[$i]['p_name']?></h5>
+                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                    </a>
+                                </div>
+                            </li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

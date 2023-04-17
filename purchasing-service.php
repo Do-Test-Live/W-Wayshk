@@ -60,20 +60,11 @@ include ('include/header.php');
         <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
             <div class="col-xl-6 col-12">
                 <div class="row g-sm-4 g-2">
-                    <div class="col-6">
-                        <div class="fresh-image-2">
+                    <div class="col-12">
+                        <div class="">
                             <div>
-                                <img src="assets/images/inner-page/about-us/1.jpg"
-                                     class="bg-img blur-up lazyload" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="fresh-image">
-                            <div>
-                                <img src="assets/images/inner-page/about-us/2.jpg"
-                                     class="bg-img blur-up lazyload" alt="">
+                                <img src="assets/images/about_us/11.png"
+                                     class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -85,27 +76,50 @@ include ('include/header.php');
                 <div class="fresh-contain p-center-left">
                     <div>
                         <div class="review-title">
-                            <h2>
-                                Wayshk
-                            </h2>
+                            <h2>Wayshk</h2>
                         </div>
 
-                        <div class="delivery-list">
-                            <p class="text-content">
-                                我們亦提供代購服務，協助客人訂購不同國家不同平台的評估工具及治療用品，歡迎私訊洽詢詳情。
-                            </p>
-                            <button onclick="location.href = 'blog-detail.html';" class="btn simple-button">Shop Now<i class="fa-solid fa-right-long"></i></button>
+                        <div class="delivery-list mb-4" style="max-width: 200px;">
+                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn simple-button">下載 <i class="fa-solid fa-right-long"></i></a>
                         </div>
+                        <p>請填妥產品訂購表格後電郵到</p>
+                        <p>wayshk.order@gmail.com 或以 Whatsapp 傳送給 +852 5605 8389，我們將盡快為貴機構/貴校報價。</p>
+                        <p>代購項目： </p>
+                        <p>我們亦提供代購服務，協助客人訂購不同國家不同平台的評估工具及治療用品，歡迎私訊洽詢詳情。</p>
+
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row text-center mt-5">
+            <p style="font-weight: bold;">出貨方式：</p>
+            <p>1. 大圍倉庫自取 （需要預約） 地址：大圍成運路21-23號群力工業大廈3樓1室  </p>
+            <p>2. 灣仔合作點自取 （需要預約） 地址：灣仔軒尼詩道237-239號25樓兒璞兒童學習及發展中心 </p>
+            <p>3. 速遞送貨（運費到付/取得運費報價） </p>
+        </div>
+        <div class="row text-center mt-5">
+            <p style="font-weight: bold;">送貨時間：</p>
+            <p>由一至八星期不等，歡迎先聯絡本公司查詢現貨庫存。</p>
+            <p>如需大量訂購產品，建議及早確認訂單。貨品到港後我們會盡快安排送貨。</p>
+        </div>
+        <div class="row text-center mt-5">
+            <p style="font-weight: bold;">付款方式：</p>
+            <p>1. 自取點取貨時以現金付款</p>
+            <p>2. PayMe/轉數快</p>
+            <p>3. 郵寄支票 （支票抬頭：WAYSHK） 寄往：大圍成運路21-23號群力工業大廈3樓1室   【Attn：WAYSHK】</p>
+            <p>4. 銀行過數 (恆生銀行：769-334699-883 戶口名稱：WASYHK) * 可於貨到後30日內支付費用</p>
+        </div>
+        <div class="row text-center mt-5">
+            <p style="font-weight: bold;">機構/學校訂購優惠：</p>
+            <p>1. 訂購滿$2000享有香港島、九龍及新界免費送貨服務，不包括離島及偏遠地區</p>
+            <p>2. 歡迎向我們查詢其他推廣優惠</p>
         </div>
     </div>
 </section>
 <!-- Fresh Vegetable Section End -->
 
 <!-- Contact Box Section Start -->
-<section class="contact-box-section">
+<!--<section class="contact-box-section">
     <div class="container-fluid-lg">
         <div class="row g-lg-5 g-3">
             <div class="col-lg-6">
@@ -237,11 +251,11 @@ include ('include/header.php');
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Contact Box Section End -->
 
 <!-- Map Section Start -->
-<section class="map-section">
+<!--<section class="map-section">
     <div class="container-fluid p-0">
         <div class="map-box">
             <iframe
@@ -250,7 +264,7 @@ include ('include/header.php');
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Map Section End -->
 
 
@@ -378,61 +392,28 @@ include ('include/footer.php');
             <div class="modal-body">
                 <div class="deal-offer-box">
                     <ul class="deal-offer-list">
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/10.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
+                        <?php
+                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
+                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
+                        for ($i = 0; $i < $row; $i++) {
+                            $image = explode(',',$product[$i]['p_image'])
+                            ?>
+                            <li class="list-1">
+                                <div class="deal-offer-contain">
+                                    <a href="shop.php" class="deal-image">
+                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                             alt="">
+                                    </a>
 
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-2">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/11.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-3">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/12.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="list-1">
-                            <div class="deal-offer-contain">
-                                <a href="#" class="deal-image">
-                                    <img src="assets/images/vegetable/product/13.png" class="blur-up lazyload"
-                                         alt="">
-                                </a>
-
-                                <a href="#" class="deal-contain">
-                                    <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                    <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                </a>
-                            </div>
-                        </li>
+                                    <a href="shop.php" class="deal-contain">
+                                        <h5><?php echo $product[$i]['p_name']?></h5>
+                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                    </a>
+                                </div>
+                            </li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

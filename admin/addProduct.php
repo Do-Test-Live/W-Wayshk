@@ -83,7 +83,7 @@ if (!isset($_SESSION['userid'])) {
                                                 $row_count = $db_handle->numRows("SELECT * FROM `category`");
                                                 for ($i = 0; $i < $row_count; $i++) {
                                                     ?>
-                                                    <option value="<?php echo $cat[$i]["id"]; ?>"><?php echo $cat[$i]["c_name"]; ?></option>
+                                                    <option value="<?php echo $cat[$i]["id"]; ?>"><?php echo $cat[$i]["id"]; ?> <?php echo $cat[$i]["c_name"]; ?></option>
                                                     <?php
                                                 }
                                                 ?>
