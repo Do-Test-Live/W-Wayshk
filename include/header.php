@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION['language'])){
+    $_SESSION['language'] = 'CN';
+}
+
 if (!empty($_GET["action"])) {
     switch ($_GET["action"]) {
         case "add":
@@ -98,22 +102,38 @@ if (isset($_SESSION["cart_item"])) {
                     <ul class="about-list right-nav-about">
                         <li class="right-nav-list">
                             <div class="dropdown theme-form-select">
-                                <button class="btn dropdown-toggle" type="button" id="select-language"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/images/country/hk-flag.png"
-                                         class="img-fluid blur-up lazyload" alt="">
-                                    <span>Hong Kong</span>
-                                </button>
+                                <?php
+                                if($_SESSION['language'] === 'CN'){
+                                    ?>
+                                    <button class="btn dropdown-toggle" type="button" id="select-language"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="assets/images/country/hk-flag.png"
+                                             class="img-fluid blur-up lazyload" alt="">
+                                        <span>Hong Kong</span>
+                                    </button>
+                                    <?php
+                                }else{
+                                    ?>
+                                    <button class="btn dropdown-toggle" type="button" id="select-language"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="assets/images/country/united-kingdom.png"
+                                             class="img-fluid blur-up lazyload" alt="">
+                                        <span>English</span>
+                                    </button>
+                                    <?php
+                                }
+                                ?>
+
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
                                     <li>
-                                        <a class="dropdown-item" href="javascript:void(0)" id="english">
+                                        <a class="dropdown-item" href="language.php?language=EN" id="english">
                                             <img src="assets/images/country/united-kingdom.png"
                                                  class="img-fluid blur-up lazyload" alt="">
                                             <span>English</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="javascript:void(0)" id="france">
+                                        <a class="dropdown-item" href="language.php?language=CN" id="france">
                                             <img src="assets/images/country/hk-flag.png"
                                                  class="img-fluid blur-up lazyload" alt="">
                                             <span>Hong Kong</span>
@@ -233,39 +253,83 @@ if (isset($_SESSION["cart_item"])) {
                                     </div>
                                     <?php
                                     if (isset($customer_id)) {
-                                        ?>
-                                        <div class="onhover-div onhover-div-login">
-                                            <ul class="user-box-name">
-                                                <li class="product-box-contain">
-                                                    <i></i>
-                                                    <a href="profile.php">Profile</a>
-                                                </li>
-                                                <li class="product-box-contain">
-                                                    <i></i>
-                                                    <a href="Logout">Logout</a>
-                                                </li>
+                                        if($_SESSION['language'] === 'EN'){
+                                            ?>
+                                            <div class="onhover-div onhover-div-login">
+                                                <ul class="user-box-name">
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a href="profile.php">Profile</a>
+                                                    </li>
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a href="Logout">Logout</a>
+                                                    </li>
 
-                                            </ul>
-                                        </div>
+                                                </ul>
+                                            </div>
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <div class="onhover-div onhover-div-login">
+                                                <ul class="user-box-name">
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a href="profile.php">輪廓</a>
+                                                    </li>
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a href="Logout">登出</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
                                         <?php
                                     } else {
+                                        if($_SESSION['language'] === 'EN'){
+                                            ?>
+                                            <div class="onhover-div onhover-div-login">
+                                                <ul class="user-box-name">
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a href="Login">Log In</a>
+                                                    </li>
+
+                                                    <li class="product-box-contain">
+                                                        <a href="Register">Register</a>
+                                                    </li>
+
+                                                    <li class="product-box-contain">
+                                                        <a href="Forgot">Forgot Password</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <div class="onhover-div onhover-div-login">
+                                                <ul class="user-box-name">
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a href="Login">登錄</a>
+                                                    </li>
+
+                                                    <li class="product-box-contain">
+                                                        <a href="Register">登記</a>
+                                                    </li>
+
+                                                    <li class="product-box-contain">
+                                                        <a href="Forgot">忘記密碼</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <?php
+                                        }
                                         ?>
-                                        <div class="onhover-div onhover-div-login">
-                                            <ul class="user-box-name">
-                                                <li class="product-box-contain">
-                                                    <i></i>
-                                                    <a href="Login">Log In</a>
-                                                </li>
 
-                                                <li class="product-box-contain">
-                                                    <a href="Register">Register</a>
-                                                </li>
-
-                                                <li class="product-box-contain">
-                                                    <a href="Forgot">Forgot Password</a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                         <?php
                                     }
                                     ?>
@@ -307,7 +371,7 @@ if (isset($_SESSION["cart_item"])) {
                                         <a href="Shop?catId=<?php echo $fetch_cat[$i]['id'] ?>" class="category-name">
                                             <img src="assets/images/about_us/ways.png"
                                                  alt="">
-                                            <h6><?php echo $fetch_cat[$i]['c_name']; ?></h6>
+                                            <h6><?php if($_SESSION['language'] === 'CN') echo $fetch_cat[$i]['c_name']; else echo $fetch_cat[$i]['c_name_en']; ?></h6>
                                         </a>
                                     </li>
                                     <?php
@@ -327,30 +391,64 @@ if (isset($_SESSION["cart_item"])) {
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="offcanvas-body">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Home">首頁</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Shop">所有產品</i></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="About-Us">關於</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Order">訂購方法</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Institution">機構/學校訂購</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Living-Seeds-Children">精選課程</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link"
-                                               href="Occupational-Therapy-Courses">線上職業治療課程</a>
-                                        </li>
-                                    </ul>
+                                    <?php
+                                    if($_SESSION['language'] === 'CN'){
+                                        ?>
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Home">首頁</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Shop">所有產品</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="About-Us">關於</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Order">訂購方法</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Institution">機構/學校訂購</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Living-Seeds-Children">精選課程</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link"
+                                                   href="Occupational-Therapy-Courses">線上職業治療課程</a>
+                                            </li>
+                                        </ul>
+                                        <?php
+                                    } else{
+                                        ?>
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Home">Frontpage</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Shop">All products</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="About-Us-EN">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Order-EN">How to order</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Institution-EN">Institution/School Order</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Living-Seeds-Children-EN">Wayshk Children Service Society</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link"
+                                                   href="Occupational-Therapy-Courses-EN">Featured Courses</a>
+                                            </li>
+                                        </ul>
+                                        <?php
+                                    }
+                                    ?>
+
                                 </div>
                             </div>
                         </div>

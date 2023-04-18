@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2023 at 02:04 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Apr 19, 2023 at 12:06 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,7 +37,7 @@ CREATE TABLE `admin_login` (
   `role` varchar(15) NOT NULL DEFAULT 'sales',
   `status` int(11) NOT NULL DEFAULT 1,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin_login`
@@ -66,7 +66,7 @@ CREATE TABLE `banner` (
   `link_4` varchar(255) NOT NULL,
   `banner_img` varchar(500) NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `banner`
@@ -102,7 +102,7 @@ CREATE TABLE `billing_details` (
   `approve` int(11) NOT NULL DEFAULT 3,
   `purchase_points` int(11) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `billing_details`
@@ -138,31 +138,31 @@ CREATE TABLE `category` (
   `status` int(11) NOT NULL DEFAULT 1,
   `inserted_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id`, `c_name`, `c_name_en`, `image`, `status`, `inserted_at`, `updated_at`) VALUES
-(1, 'Wayshk自製教材', 'Wayshk self-made teaching materials', 'assets/cat_img/72390_6qW2XkuI_400x400.png', 1, '2023-03-20 14:14:53', '0000-00-00 00:00:00'),
-(2, ' 治療膠及配件', 'Therapeutic Gels and Accessories', 'assets/cat_img/66266_6qW2XkuI_400x400.png', 1, '2023-03-20 14:15:15', '0000-00-00 00:00:00'),
-(3, '小肌肉訓練工具', ' Small Muscle Training Tool', 'assets/cat_img/88170_6qW2XkuI_400x400.png', 1, '2023-03-20 14:15:31', '0000-00-00 00:00:00'),
+(1, 'Wayshk自製教材', 'Wayshk Teaching Materials', 'assets/cat_img/72390_6qW2XkuI_400x400.png', 1, '2023-03-20 14:14:53', '0000-00-00 00:00:00'),
+(2, ' 治療膠及配件', 'Therapy putty and Accessories ', 'assets/cat_img/66266_6qW2XkuI_400x400.png', 1, '2023-03-20 14:15:15', '0000-00-00 00:00:00'),
+(3, '小肌肉訓練工具', 'Fine Motor Training', 'assets/cat_img/88170_6qW2XkuI_400x400.png', 1, '2023-03-20 14:15:31', '0000-00-00 00:00:00'),
 (4, '抓夾及配件', 'Clamps and accessories', 'assets/cat_img/30180_6qW2XkuI_400x400.png', 1, '2023-03-20 14:15:45', '0000-00-00 00:00:00'),
 (5, '貼紙&印章', ' Sticker & stamp', 'assets/cat_img/90626_6qW2XkuI_400x400.png', 1, '2023-03-20 14:16:05', '0000-00-00 00:00:00'),
 (6, '剪刀', 'Scissors', 'assets/cat_img/78728_6qW2XkuI_400x400.png', 1, '2023-03-20 14:16:19', '0000-00-00 00:00:00'),
 (7, '其他文具', 'Other stationery', 'assets/cat_img/93084_6qW2XkuI_400x400.png', 1, '2023-03-20 14:16:36', '0000-00-00 00:00:00'),
-(8, '小肌肉訓練盒裝玩具', 'Small muscle training boxed toy', 'assets/cat_img/52093_6qW2XkuI_400x400.png', 1, '2023-03-20 14:16:49', '0000-00-00 00:00:00'),
-(9, '視覺感知', 'Visual perception', 'assets/cat_img/77095_6qW2XkuI_400x400.png', 1, '2023-03-20 14:17:02', '0000-00-00 00:00:00'),
-(10, '書寫訓練', ' Writing training', 'assets/cat_img/89122_6qW2XkuI_400x400.png', 1, '2023-03-20 14:17:15', '0000-00-00 00:00:00'),
-(11, '執筆膠', 'Pen glue', 'assets/cat_img/80572_6qW2XkuI_400x400.png', 1, '2023-03-20 14:17:32', '0000-00-00 00:00:00'),
-(12, '自理訓練', 'Self-care training', 'assets/cat_img/99015_6qW2XkuI_400x400.png', 1, '2023-03-20 14:18:19', '0000-00-00 00:00:00'),
-(13, '情緒及社交', 'Emotional and social', 'assets/cat_img/81876_6qW2XkuI_400x400.png', 1, '2023-03-20 14:18:37', '0000-00-00 00:00:00'),
-(14, '口肌訓練_口腔覺刺激', 'Oral Muscle Training_Oral Sensation Stimulation', 'assets/cat_img/34861_6qW2XkuI_400x400.png', 1, '2023-03-20 14:18:50', '0000-00-00 00:00:00'),
-(15, '聽樂治療', 'Music therapy', 'assets/cat_img/3863_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:02', '0000-00-00 00:00:00'),
-(16, '重力輸入', 'Gravity input', 'assets/cat_img/66422_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:15', '0000-00-00 00:00:00'),
-(17, '觸覺刺激', 'Tactile stimulation', 'assets/cat_img/86191_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:32', '0000-00-00 00:00:00'),
-(18, '前庭_本體刺激_大肌肉訓練', ' Vestibular_Proprietary Stimulation_Great Muscle Training', 'assets/cat_img/621_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:44', '0000-00-00 00:00:00'),
+(8, '小肌肉訓練盒裝玩具', 'ine Motor Training (Box set)', 'assets/cat_img/52093_6qW2XkuI_400x400.png', 1, '2023-03-20 14:16:49', '0000-00-00 00:00:00'),
+(9, '視覺感知', 'Handwriting Training', 'assets/cat_img/77095_6qW2XkuI_400x400.png', 1, '2023-03-20 14:17:02', '0000-00-00 00:00:00'),
+(10, '書寫訓練', 'Pencil grips', 'assets/cat_img/89122_6qW2XkuI_400x400.png', 1, '2023-03-20 14:17:15', '0000-00-00 00:00:00'),
+(11, '執筆膠', 'Visual Perception Training', 'assets/cat_img/80572_6qW2XkuI_400x400.png', 1, '2023-03-20 14:17:32', '0000-00-00 00:00:00'),
+(12, '自理訓練', 'Emotion and Social', 'assets/cat_img/99015_6qW2XkuI_400x400.png', 1, '2023-03-20 14:18:19', '0000-00-00 00:00:00'),
+(13, '情緒及社交', 'Self-care Training', 'assets/cat_img/81876_6qW2XkuI_400x400.png', 1, '2023-03-20 14:18:37', '0000-00-00 00:00:00'),
+(14, '口肌訓練_口腔覺刺激', 'Oral Muscle Training / Oral Stimulation', 'assets/cat_img/34861_6qW2XkuI_400x400.png', 1, '2023-03-20 14:18:50', '0000-00-00 00:00:00'),
+(15, '聽樂治療', 'Therapeutic Listening', 'assets/cat_img/3863_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:02', '0000-00-00 00:00:00'),
+(16, '重力輸入', 'Weighted toys/ blankets', 'assets/cat_img/66422_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:15', '0000-00-00 00:00:00'),
+(17, '觸覺刺激', 'Tactile Stimulation', 'assets/cat_img/86191_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:32', '0000-00-00 00:00:00'),
+(18, '前庭_本體刺激_大肌肉訓練', 'Vestibular & Proprioceptive inputs/ Gross Motor Training', 'assets/cat_img/621_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:44', '0000-00-00 00:00:00'),
 (19, '評估工具', 'Assessment tools', 'assets/cat_img/281_6qW2XkuI_400x400.png', 1, '2023-03-20 14:19:57', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
@@ -181,7 +181,7 @@ CREATE TABLE `course` (
   `status` int(11) NOT NULL DEFAULT 1,
   `inserted_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `course`
@@ -212,7 +212,7 @@ CREATE TABLE `customer` (
   `membership_point` int(10) NOT NULL,
   `inserted_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `customer`
@@ -237,7 +237,7 @@ CREATE TABLE `inventory` (
   `stock_in` int(11) NOT NULL,
   `stock_out` int(11) NOT NULL,
   `stock_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -254,7 +254,7 @@ CREATE TABLE `invoice_details` (
   `product_unit_price` double(10,2) NOT NULL,
   `product_total_price` double(10,2) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `invoice_details`
@@ -299,7 +299,7 @@ CREATE TABLE `product` (
   `status` int(10) NOT NULL,
   `inserted_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
@@ -594,7 +594,7 @@ CREATE TABLE `promo_code` (
   `status` int(10) NOT NULL DEFAULT 1,
   `inserted_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `promo_code`
@@ -618,7 +618,7 @@ CREATE TABLE `review` (
   `description` text NOT NULL,
   `status` int(11) NOT NULL DEFAULT 0,
   `inserted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `review`
@@ -639,7 +639,7 @@ CREATE TABLE `stock` (
   `product_id` int(10) NOT NULL,
   `quantity` int(10) NOT NULL,
   `inserted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `stock`
@@ -663,7 +663,7 @@ CREATE TABLE `store` (
   `s_image` varchar(200) NOT NULL,
   `inserted_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -674,17 +674,17 @@ CREATE TABLE `store` (
 CREATE TABLE `transactions` (
   `id` int(11) NOT NULL,
   `billing_id` int(11) NOT NULL,
-  `customer_name` varchar(50) NOT NULL,
-  `customer_email` varchar(50) NOT NULL,
-  `item_name` varchar(255) NOT NULL,
-  `item_number` varchar(50) NOT NULL,
+  `customer_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `item_price` float(10,2) NOT NULL,
-  `item_price_currency` varchar(10) NOT NULL,
+  `item_price_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `paid_amount` float(10,2) NOT NULL,
-  `paid_amount_currency` varchar(10) NOT NULL,
-  `txn_id` varchar(50) NOT NULL,
-  `payment_status` varchar(25) NOT NULL,
-  `stripe_checkout_session_id` varchar(100) DEFAULT NULL,
+  `paid_amount_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `txn_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `payment_status` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `stripe_checkout_session_id` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -708,7 +708,7 @@ CREATE TABLE `wishlist` (
   `customer_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `inserted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables

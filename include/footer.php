@@ -53,16 +53,30 @@
                 <div class="col-xl-4 col-lg-6 col-sm-6">
                     <div class="footer-logo">
                         <div class="theme-logo">
-                            <a href="index.php">
+                            <a href="Home">
                                 <img src="assets/images/logo/2.png" class="blur-up lazyload" alt="">
                             </a>
                         </div>
+                        <?php
+                        if($_SESSION['language'] === 'CN'){
+                            ?>
+                            <div class="footer-logo-contain">
+                                <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a></br></br>
+                                <a href="javascript:void(0)">訂購產品：wayshk.order@gmail.com </br>+852 56058389 (Whatsapp )</a></br></br>
+                                <a href="javascript:void(0)">其他查詢：ways00.hk@gmail.com</br>+852 52657359 (Whatsapp )</a>
+                            </div>
+                            <?php
+                        }else{
+                            ?>
+                            <div class="footer-logo-contain">
+                                <a href="javascript:void(0)">Room 1, 3rd Floor, Qunli Industrial Building, 21-23 Shing Wan Road, Tai Wai, Hong Kong</a></br></br>
+                                <a href="javascript:void(0)">Order products: waysshk.order@gmail.com </br>+852 56058389 (Whatsapp)</a></br></br>
+                                <a href="javascript:void(0)">Other inquiries: ways00.hk@gmail.com</br>+852 52657359 (Whatsapp)</a>
+                            </div>
+                            <?php
+                        }
+                        ?>
 
-                        <div class="footer-logo-contain">
-                            <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a></br></br>
-                            <a href="javascript:void(0)">訂購產品：wayshk.order@gmail.com </br>+852 56058389 (Whatsapp )</a></br></br>
-                            <a href="javascript:void(0)">其他查詢：ways00.hk@gmail.com</br>+852 52657359 (Whatsapp )</a>
-                        </div>
                     </div>
                 </div>
 
@@ -72,29 +86,61 @@
                     </div>
 
                     <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="Home" class="text-content">首頁</a>
-                            </li>
-                            <li>
-                                <a href="Shop" class="text-content">所有產品</a>
-                            </li>
-                            <li>
-                                <a href="About-Us" class="text-content">關於</a>
-                            </li>
-                            <li>
-                                <a href="Order" class="text-content">訂購方法</a>
-                            </li>
-                            <li>
-                                <a href="Institution" class="text-content">機構/學校訂購</a>
-                            </li>
-                            <li>
-                                <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
-                            </li>
-                            <li>
-                                <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
-                            </li>
-                        </ul>
+                        <?php
+                        if($_SESSION['language'] === 'CN'){
+                            ?>
+                            <ul>
+                                <li>
+                                    <a href="Home" class="text-content">首頁</a>
+                                </li>
+                                <li>
+                                    <a href="Shop" class="text-content">所有產品</a>
+                                </li>
+                                <li>
+                                    <a href="About-Us" class="text-content">關於</a>
+                                </li>
+                                <li>
+                                    <a href="Order" class="text-content">訂購方法</a>
+                                </li>
+                                <li>
+                                    <a href="Institution" class="text-content">機構/學校訂購</a>
+                                </li>
+                                <li>
+                                    <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
+                                </li>
+                                <li>
+                                    <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
+                                </li>
+                            </ul>
+                            <?php
+                        } else{ ?>
+                            <ul>
+                                <li>
+                                    <a href="Home" class="text-content">Frontpage</a>
+                                </li>
+                                <li>
+                                    <a href="Shop" class="text-content">All products</a>
+                                </li>
+                                <li>
+                                    <a href="About-Us-EN" class="text-content">About</a>
+                                </li>
+                                <li>
+                                    <a href="Order-EN" class="text-content">How to order</a>
+                                </li>
+                                <li>
+                                    <a href="Institution-EN" class="text-content">Institution/School Order</a>
+                                </li>
+                                <li>
+                                    <a href="Living-Seeds-Children-EN" class="text-content">Wayshk Children Service Society</a>
+                                </li>
+                                <li>
+                                    <a href="Occupational-Therapy-Courses-EN" class="text-content">Featured Courses</a>
+                                </li>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+
                     </div>
                 </div>
 
