@@ -251,7 +251,7 @@ include('include/header.php');
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php  echo $fetch_products[$i]['p_name'] ?></h5>
                                             </a>
-                                            <div class="product-rating mt-2">
+                                            <!--<div class="product-rating mt-2">
                                                 <ul class="rating">
                                                     <li>
                                                         <i data-feather="star" class="fill"></i>
@@ -269,7 +269,7 @@ include('include/header.php');
                                                         <i data-feather="star"></i>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </div>-->
                                             <h5 class="price"><span
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>

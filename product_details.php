@@ -143,10 +143,10 @@ include('include/header.php');
                             <h2 class="name"><?php echo $product[0]['p_name']; ?></h2>
                             <div class="price-rating">
                                 <h3 class="theme-color price"><?php echo $product[0]['product_price']; ?>
-                                    <span
-                                            class="offer theme-color">(8% off)</span></h3>
+                                    <!--<span
+                                            class="offer theme-color">(8% off)</span>--></h3>
                                 <div class="product-rating custom-rate">
-                                    <ul class="rating">
+                                    <!--<ul class="rating">
                                         <li>
                                             <i data-feather="star" class="fill"></i>
                                         </li>
@@ -162,8 +162,8 @@ include('include/header.php');
                                         <li>
                                             <i data-feather="star"></i>
                                         </li>
-                                    </ul>
-                                    <span class="review">23 Customer Review</span>
+                                    </ul>-->
+                                    <!--<span class="review">23 Customer Review</span>-->
                                 </div>
                             </div>
 
@@ -293,7 +293,7 @@ include('include/header.php');
                                     </h5>
 
                                     <div class="product-rating mt-2">
-                                        <ul class="rating">
+                                        <!--<ul class="rating">
                                             <li>
                                                 <i data-feather="star" class="fill"></i>
                                             </li>
@@ -309,7 +309,7 @@ include('include/header.php');
                                             <li>
                                                 <i data-feather="star"></i>
                                             </li>
-                                        </ul>
+                                        </ul>-->
 
                                         <h6 class="theme-color">In Stock</h6>
                                     </div>
