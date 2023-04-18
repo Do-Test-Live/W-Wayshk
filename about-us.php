@@ -70,59 +70,21 @@ $db_handle = new DBController();
                     <div class="fresh-contain p-center-left">
                         <div>
                             <div class="review-title">
-                                <h2>Wayshk 活籽兒童治療用品店</h2>
+                                <h2>公司簡介</h2>
                             </div>
 
                             <div class="delivery-list">
                                 <ul class="delivery-box">
                                     <li>
                                         <div class="delivery-box">
-                                            <div class="delivery-icon">
-                                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/delivery.svg" class="blur-up lazyload" alt="">
-                                            </div>
-
                                             <div class="delivery-detail">
-                                                <h5 class="text">Wayshk 以小店形式經營，以職業治療師的專業角度精心挑選兒童治療用品及設計教材，</h5>
+                                                <h5 class="text">Wayshk活籽兒童用品店以小店形式經營，職業治療師運用專業角度，在全球各地精心搜羅有訓練價值的兒童用品及玩具，方便顧客一站式選購。我們亦有售許多自家設計的創意教材，讓孩子在有趣的遊戲中學習，快樂成長。
+                                                    之所以命名為「Ways」，意味著這間店鋪可以提供許多選擇, 以突破框框的方法來使用不同產品達至訓練目的。孩子成長的路上會遇上不少困難，但總會有很多方法解決。更重要的是，孩子將來要走的路也有無限的可能！
+                                                    我們同時希望在香港這個小小的都市，推廣職業治療服務及產品，讓正在經歷困難的人們，能過著獨立和更有意義的生活。
+                                                </h5>
                                             </div>
                                         </div>
                                     </li>
-
-                                    <li>
-                                        <div class="delivery-box">
-                                            <div class="delivery-icon">
-                                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg" class="blur-up lazyload" alt="">
-                                            </div>
-
-                                            <div class="delivery-detail">
-                                                <h5 class="text">協助有需要的孩子更投入日常生活活動中。</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="delivery-box">
-                                            <div class="delivery-icon">
-                                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/delivery.svg" class="blur-up lazyload" alt="">
-                                            </div>
-
-                                            <div class="delivery-detail">
-                                                <h5 class="text">請讚好我們的Facebook，留意最新的免費自製教材及優惠詳情。</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li id="order">
-                                        <div class="delivery-box">
-                                            <div class="delivery-icon">
-                                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg" class="blur-up lazyload" alt="">
-                                            </div>
-
-                                            <div class="delivery-detail">
-                                                <h5 class="text">https://www.facebook.com/wayshk000</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

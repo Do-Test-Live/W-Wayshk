@@ -20,7 +20,7 @@
                             </div>
 
                             <div class="service-detail">
-                                <h5>Free Delivery For Order Over 500 HKD</h5>
+                                <h5>Free Delivery For Order Over 2000 HKD</h5>
                             </div>
                         </div>
 
@@ -50,7 +50,7 @@
 
         <div class="main-footer section-b-space section-t-space">
             <div class="row g-md-4 g-3">
-                <div class="col-xl-6 col-lg-6 col-sm-6">
+                <div class="col-xl-4 col-lg-6 col-sm-6">
                     <div class="footer-logo">
                         <div class="theme-logo">
                             <a href="index.php">
@@ -59,22 +59,42 @@
                         </div>
 
                         <div class="footer-logo-contain">
-                            <p>
-                                Wayshk 以小店形式經營，以職業治療師的專業角度精心挑選兒童治療用品及設計教材，
-                                協助有需要的孩子更投入日常生活活動中。
-                            </p>
-
-                            <ul class="address">
-                                <li>
-                                    <i data-feather="home"></i>
-                                    <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a>
-                                </li>
-                                <li>
-                                    <i data-feather="mail"></i>
-                                    <a href="javascript:void(0)">ways00.hk@gmail.com</a>
-                                </li>
-                            </ul>
+                            <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a></br></br>
+                            <a href="javascript:void(0)">訂購產品：wayshk.order@gmail.com </br>+852 56058389 (Whatsapp )</a></br></br>
+                            <a href="javascript:void(0)">其他查詢：ways00.hk@gmail.com</br>+852 52657359 (Whatsapp )</a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-sm-3">
+                    <div class="footer-title">
+                        <h4>Quick Link</h4>
+                    </div>
+
+                    <div class="footer-contain">
+                        <ul>
+                            <li>
+                                <a href="Home" class="text-content">首頁</a>
+                            </li>
+                            <li>
+                                <a href="Shop" class="text-content">所有產品</a>
+                            </li>
+                            <li>
+                                <a href="About-Us" class="text-content">關於</a>
+                            </li>
+                            <li>
+                                <a href="Order" class="text-content">訂購方法</a>
+                            </li>
+                            <li>
+                                <a href="Institution" class="text-content">機構/學校訂購</a>
+                            </li>
+                            <li>
+                                <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
+                            </li>
+                            <li>
+                                <a href="Occupational-Therapy-Courses" class="text-content">線上職業治療課程</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
