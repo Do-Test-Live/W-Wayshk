@@ -344,7 +344,7 @@ if (isset($_SESSION["cart_item"])) {
                                             <a class="nav-link" href="Institution">機構/學校訂購</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="Living-Seeds-Children">活籽兒童服務社</a>
+                                            <a class="nav-link" href="Living-Seeds-Children">精選課程</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link"

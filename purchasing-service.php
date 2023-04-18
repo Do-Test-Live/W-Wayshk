@@ -58,61 +58,69 @@ include ('include/header.php');
 <section class="fresh-vegetable-section section-lg-space">
     <div class="container-fluid-lg">
         <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
-            <div class="col-xl-6 col-12">
-                <div class="row g-sm-4 g-2">
-                    <div class="col-12">
-                        <div class="">
-                            <div>
-                                <img src="assets/images/about_us/11.png"
-                                     class="img-fluid" alt="">
-                            </div>
+            <div class="col-12 text-center">
+                <h2>機構/學校訂購</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 text-end">
+                    <div class="row">
+                        <div class="col-6 my-auto">
+                            <p>產品目錄</p>
+                        </div>
+                        <div class="col-6">
+                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                                下載 <i class="fa-solid fa-right-long icon ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>產品訂購表格</p>
+                        </div>
+                        <div class="col-6">
+                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                                下載 <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!--  come from demo website about us page-->
-            <div class="col-xl-6 col-12">
-                <div class="fresh-contain p-center-left">
-                    <div>
-                        <div class="review-title">
-                            <h2>Wayshk</h2>
-                        </div>
-
-                        <div class="delivery-list mb-4" style="max-width: 200px;">
-                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn simple-button">下載 <i class="fa-solid fa-right-long"></i></a>
-                        </div>
-                        <p>請填妥產品訂購表格後電郵到</p>
-                        <p>wayshk.order@gmail.com 或以 Whatsapp 傳送給 +852 5605 8389，我們將盡快為貴機構/貴校報價。</p>
-                        <p>代購項目： </p>
-                        <p>我們亦提供代購服務，協助客人訂購不同國家不同平台的評估工具及治療用品，歡迎私訊洽詢詳情。</p>
-
-                    </div>
+                <div class="col-md-6">
+                    <p style="font-weight: bold;">請填妥產品訂購表格後</p>
+                    <p>1.  電郵到wayshk.order@gmail.com</p>
+                    <p>2.  以 Whatsapp 傳送給 +852 5605 8389</p>
+                    <p>我們將盡快為貴機構/貴校報價</p>
                 </div>
             </div>
+
         </div>
-        <div class="row text-center mt-5">
-            <h4 style="font-size: 24px; font-weight: bold">出貨方式：</h4>
-            <p>1. 大圍倉庫自取 （需要預約） 地址：大圍成運路21-23號群力工業大廈3樓1室  </p>
-            <p>2. 灣仔合作點自取 （需要預約） 地址：灣仔軒尼詩道237-239號25樓兒璞兒童學習及發展中心 </p>
-            <p>3. 速遞送貨（運費到付/取得運費報價） </p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">出貨方式</h2>
+                    <p>大圍倉庫自取（需要預約）地址：大圍成運路21-23號群力工業大廈3樓1室</p>
+                    <p>灣仔合作點自取（需要預約）<br>地址：灣仔軒尼詩道237-239號25樓兒璞兒童學習及發展中心</p>
+                    <p>速遞送貨（滿$2000免費送貨/運費到付/取得運費報價）</p>
+            </div>
         </div>
-        <div class="row text-center mt-5">
-            <p style="font-size: 24px; font-weight: bold">送貨時間：</p>
-            <p>由一至八星期不等，歡迎先聯絡本公司查詢現貨庫存。</p>
-            <p>如需大量訂購產品，建議及早確認訂單。貨品到港後我們會盡快安排送貨。</p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">送貨時間 </h2>
+                <p>由一至八星期不等，歡迎先聯絡本公司查詢現貨庫存。</p>
+                <p>如需大量訂購產品，建議及早確認訂單。貨品到港後我們會盡快安排送貨。</p>
+            </div>
         </div>
-        <div class="row text-center mt-5">
-            <p style="font-size: 24px; font-weight: bold">付款方式：</p>
-            <p>1. 自取點取貨時以現金付款</p>
-            <p>2. PayMe/轉數快</p>
-            <p>3. 郵寄支票 （支票抬頭：WAYSHK） 寄往：大圍成運路21-23號群力工業大廈3樓1室   【Attn：WAYSHK】</p>
-            <p>4. 銀行過數 (恆生銀行：769-334699-883 戶口名稱：WASYHK) * 可於貨到後30日內支付費用</p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">付款方法</h2>
+                <p>自取點取貨時以現金付款</p>
+                <p>PayMe/轉數快</p>
+                <p>郵寄支票 （支票抬頭：WAYSHK）<br> 寄往：大圍成運路21-23號群力工業大廈3樓1室 【Attn：WAYSHK】</p>
+                <p>銀行過數 (恆生銀行：769-334699-883 戶口名稱：WASYHK)</p>
+            </div>
         </div>
-        <div class="row text-center mt-5">
-            <p style="font-size: 24px; font-weight: bold">機構/學校訂購優惠：</p>
-            <p>1. 訂購滿$2000享有香港島、九龍及新界免費送貨服務，不包括離島及偏遠地區</p>
-            <p>2. 歡迎向我們查詢其他推廣優惠</p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">機構/學校訂購優惠</h2>
+                <p>訂購滿$2000享有香港島、九龍及新界免費送貨服務，不包括離島及偏遠地區</p>
+                <p>歡迎向我們查詢其他推廣優惠</p>
+            </div>
         </div>
     </div>
 </section>

@@ -92,7 +92,7 @@
                                 <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
                             </li>
                             <li>
-                                <a href="Occupational-Therapy-Courses" class="text-content">線上職業治療課程</a>
+                                <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
                             </li>
                         </ul>
                     </div>
@@ -127,7 +127,7 @@
                                     <i data-feather="phone"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Hotline 24/7 :</h6>
-                                        <h5>+852 52657359</h5>
+                                        <a href="http://wa.me/85252657359" target="_blank">+852 52657359</a>
                                     </div>
                                 </div>
                             </li>
@@ -137,7 +137,7 @@
                                     <i data-feather="mail"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Email Address :</h6>
-                                        <h5>ways00.hk@gmail.com</h5>
+                                        <a href="mailto:ways00.hk@gmail.com">ways00.hk@gmail.com</a>
                                     </div>
                                 </div>
                             </li>
@@ -165,12 +165,12 @@
                         <ul>
                             <li>
                                 <a href="https://www.facebook.com/wayshk000?mibextid=LQQJ4d" target="_blank">
-                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-2x fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://instagram.com/ways_hk?igshid=YmMyMTA2M2Y=" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
+                                    <i class="fa-brands fa-2x fa-instagram"></i>
                                 </a>
                             </li>
                         </ul>

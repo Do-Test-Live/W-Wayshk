@@ -16,7 +16,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>Product purchasing service | Wayshk</title>
+    <title>產品代購服務 | Wayshk</title>
 
     <?php include ('include/css.php');?>
     <style>
@@ -58,63 +58,69 @@ include ('include/header.php');
 <section class="fresh-vegetable-section section-lg-space">
     <div class="container-fluid-lg">
         <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
-            <div class="col-xl-6 col-12">
-                <div class="row g-sm-4 g-2">
-                    <div class="col-12">
-                        <div class="">
-                            <div>
-                                <img src="assets/images/about_us/11.png"
-                                     class="img-fluid" alt="">
-                            </div>
+            <div class="col-12 text-center">
+                <h2>Institution/School Order</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 text-end">
+                    <div class="row">
+                        <div class="col-6 my-auto">
+                            <p>Product list</p>
+                        </div>
+                        <div class="col-6">
+                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                                Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Product Order Form</p>
+                        </div>
+                        <div class="col-6">
+                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                                Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!--  come from demo website about us page-->
-            <div class="col-xl-6 col-12">
-                <div class="fresh-contain p-center-left">
-                    <div>
-                        <div class="review-title">
-                            <h2>Wayshk</h2>
-                        </div>
-
-                        <div class="delivery-list mb-4" style="max-width: 200px;">
-                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn simple-button">Download <i class="fa-solid fa-right-long"></i></a>
-                        </div>
-                        <p>Please complete the product order form and email to</p>
-                        <p>wayshk.order@gmail.com or Whatsapp to +852 5605 8389, we will quote your institution/school as soon as possible.</p>
-                        <p>Purchasing items: </p>
-                        <p>We also provide purchasing services to assist customers in ordering assessment tools and treatment supplies from different platforms in different countries. Welcome to private message for details.</p>
-
-                    </div>
+                <div class="col-md-6">
+                    <p style="font-weight: bold;">Please complete the product order form</p>
+                    <p>1. Email to waysshk.order@gmail.com</p>
+                    <p>2. Whatsapp to +852 5605 8389</p>
+                    <p>We will quote your institution/school as soon as possible</p>
                 </div>
             </div>
+
         </div>
-        <div class="row text-center mt-5">
-            <h4 style="font-size: 24px; font-weight: bold">Shipping method:</h4>
-            <p>1. Self-pickup at Dawei Warehouse (reservation required) Address: Room 1, 3rd Floor, Qunli Industrial Building, No. 21-23, Chengyun Road, Dawei</p>
-            <p>2. Self-pickup at Wanchai cooperation point (reservation required) Address: Erpu Children's Learning and Development Center, 25/F, 237-239 Hennessy Road, Wanchai</p>
-            <p>3. Express Delivery (Freight Collect/Get Freight Quote) </p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">Shipping method</h2>
+                <p>Dawei warehouse self-pickup (reservation required) Address: Room 1, 3rd Floor, Qunli Industrial Building, No. 21-23, Chengyun Road, Dawei</p>
+                <p>Self-pickup at Wanchai cooperation point (reservation required)<br>Address: Erpu Children's Learning and Development Center, 25/F, 237-239 Hennessy Road, Wanchai</p>
+                <p>Express Shipping (Free Shipping over $2000/Freight Collect/Get a Shipping Quote)</p>
+            </div>
         </div>
-        <div class="row text-center mt-5">
-            <p style="font-size: 24px; font-weight: bold">Delivery time:</p>
-            <p>From one to eight weeks, welcome to contact our company first to check the stock.</p>
-            <p>If you need to order products in large quantities, it is recommended to confirm the order early. We will arrange delivery as soon as possible after the goods arrive at the port.
-            </p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">Delivery time</h2>
+                <p>From one to eight weeks, welcome to contact our company first to check the stock.</p>
+                <p>If you need to order products in large quantities, it is recommended to confirm the order early. We will arrange delivery as soon as possible after the goods arrive at the port.</p>
+            </div>
         </div>
-        <div class="row text-center mt-5">
-            <p style="font-size: 24px; font-weight: bold">Payment method:</p>
-            <p>
-                1. Pay in cash when picking up the goods at the self-pickup point</p>
-            <p>2. PayMe/FPS</p>
-            <p>3. Mail a check (check payable to: WAYSHK) to: Room 1, 3rd Floor, Qunli Industrial Building, No. 21-23, Chengyun Road, Dawei [Attn: WAYSHK]</p>
-            <p>4. Bank transfer (Hang Seng Bank: 769-334699-883 Account Name: WASYHK) * Payment can be made within 30 days after the goods arrive</p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">Payment methods</h2>
+                <p>Pay in cash when picking up at a self-pickup point</p>
+                <p>PayMe/FPS</p>
+                <p>Mail check (check payable to: WAYSHK) <br> Mail to: Room 1, 3rd Floor, Qunli Industrial Building, No. 21-23, Chengyun Road, Tai Wai [Attn: WAYSHK]</p>
+                <p>Bank transfer (Hang Seng Bank: 769-334699-883 Account name: WASYHK)</p>
+            </div>
         </div>
-        <div class="row text-center mt-5">
-            <p style="font-size: 24px; font-weight: bold">Institution/School Subscription Discount:</p>
-            <p>1. Free delivery service on Hong Kong Island, Kowloon and New Territories for orders over $2000, excluding outlying islands and remote areas</p>
-            <p>2. Welcome to inquire about other promotional offers from us</p>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">Institution/School Subscription Discount</h2>
+                <p>Free delivery service on Hong Kong Island, Kowloon and the New Territories for orders over $2000, excluding outlying islands and remote areas</p>
+                <p>Welcome to inquire about other promotional offers from us</p>
+            </div>
         </div>
     </div>
 </section>
