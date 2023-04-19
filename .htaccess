@@ -50,4 +50,8 @@ RewriteRule ^2-Course-EN en_second_course_details.php [NE,L]
 
 RewriteRule ^2-Course second_course_details.php [NE,L]
 
+RewriteRule ^Membership-Program-EN en_membership.php [NE,L]
+
+RewriteRule ^Membership-Program membership.php [NE,L]
+
 

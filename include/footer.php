@@ -63,7 +63,6 @@
                             <div class="footer-logo-contain">
                                 <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a></br></br>
                                 <a href="javascript:void(0)">訂購產品：wayshk.order@gmail.com </br>+852 56058389 (Whatsapp )</a></br></br>
-                                <a href="javascript:void(0)">其他查詢：ways00.hk@gmail.com</br>+852 52657359 (Whatsapp )</a>
                             </div>
                             <?php
                         }else{
@@ -71,7 +70,6 @@
                             <div class="footer-logo-contain">
                                 <a href="javascript:void(0)">Room 1, 3rd Floor, Qunli Industrial Building, 21-23 Shing Wan Road, Tai Wai, Hong Kong</a></br></br>
                                 <a href="javascript:void(0)">Order products: waysshk.order@gmail.com </br>+852 56058389 (Whatsapp)</a></br></br>
-                                <a href="javascript:void(0)">Other inquiries: ways00.hk@gmail.com</br>+852 52657359 (Whatsapp)</a>
                             </div>
                             <?php
                         }
@@ -100,7 +98,7 @@
                                     <a href="About-Us" class="text-content">關於</a>
                                 </li>
                                 <li>
-                                    <a href="Order" class="text-content">訂購方法</a>
+                                    <a href="order_old.php" class="text-content">訂購方法</a>
                                 </li>
                                 <li>
                                     <a href="Institution" class="text-content">機構/學校訂購</a>
@@ -152,10 +150,10 @@
                     <div class="footer-contain">
                         <ul>
                             <li>
-                                <a href="privacy_policy.php" class="text-content">Privacy Policy</a>
+                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="terms_condition.php" class="text-content">Terms and Condition</a>
+                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">Terms and Condition</a>
                             </li>
                         </ul>
                     </div>
@@ -217,6 +215,12 @@
                             <li>
                                 <a href="https://instagram.com/ways_hk?igshid=YmMyMTA2M2Y=" target="_blank">
                                     <i class="fa-brands fa-2x fa-instagram"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://wa.me/85252657359" target="_blank">
+                                    <i class="fa-brands fa-2x fa-whatsapp"></i>
                                 </a>
                             </li>
                         </ul>

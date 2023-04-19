@@ -81,15 +81,18 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-5">Personal Data Collection and Privacy Policy Statement
+                <h1 class="mb-5" style="font-size: 40px">Personal Data Collection and Privacy Policy Statement
                 </h1>
-                <p>The statement was written in Chinese and translated to English. In case of any dispute, the Chinese version shall prevail.
-                </p>
-                <p>Wayshk children’goods store takes personal privacy seriously and ensures that the procedures for the collection, use, storage, transfer and access of personal data by its services in all circumstances comply with the requirements of the Personal Data (Privacy) Ordinance of Hong Kong. We will ensure that our staff comply strictly with this Personal Information Collection Statement and our Privacy Statement. Please read below to understand our personal data collection policy.
-                </p>
-                <h4>I. Scope of the Privacy Policy</h4>
-                <P>The Privacy Policy covers how this website handles personally identifiable information collected during your use of the website services. The Privacy Policy does not apply to linked sites outside of this website, nor to persons not entrusted or involved in the management of this website. </P>
-                <h4>II. Collection, Processing and Use of Personal Information</h4>
+                <h4>The statement was written in Chinese and translated to English. In case of any dispute, the Chinese version shall prevail.
+                </h4>
+                <ul>
+                    <li>Wayshk children’goods store takes personal privacy seriously and ensures that the procedures for the collection, use, storage, transfer and access of personal data by its services in all circumstances comply with the requirements of the Personal Data (Privacy) Ordinance of Hong Kong. We will ensure that our staff comply strictly with this Personal Information Collection Statement and our Privacy Statement. Please read below to understand our personal data collection policy.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">I. Scope of the Privacy Policy</h4>
+                <ul>
+                    <li>The Privacy Policy covers how this website handles personally identifiable information collected during your use of the website services. The Privacy Policy does not apply to linked sites outside of this website, nor to persons not entrusted or involved in the management of this website.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">II. Collection, Processing and Use of Personal Information</h4>
                 <ul>
                     <li>When you visit this website or use the functional services provided by this website, we will ask you to provide the necessary personal information depending on the functional nature of the service, and we will process and use your personal information within the scope of that specific purpose.
                     </li>
@@ -106,7 +109,7 @@ include('include/header.php');
                     </li>
 
                 </ul>
-                <h4>III Protection of data
+                <h4 class="mt-3" style="font-weight: bold">III Protection of data
                 </h4>
                 <ul>
                     <li>The host of this website is equipped with firewalls, anti-virus systems and other related information security equipment and necessary security measures to protect the website and your personal information using strict protection measures, only authorized personnel can access your personal information, the relevant personnel have signed a confidentiality contract, any breach of confidentiality obligations will be subject to relevant legal sanctions Any breach of confidentiality will be subject to legal action.
@@ -114,21 +117,27 @@ include('include/header.php');
                     <li>If it is necessary to engage other parties to provide services for business purposes, this website will also strictly require them to comply with their confidentiality obligations and take necessary checks to ensure that they do so.
                     </li>
                 </ul>
-                <h4>IV．External links to the website</h4>
-                <p>Some of the pages of this website link to other websites. However, the linked sites do not apply to the privacy policy of this website and you must refer to the privacy policy of the linked sites.
-                </p>
-                <h4>V. Policy on sharing personal information with third parties</h4>
-                <p>This website will not provide, exchange, rent or sell any of your personal information to other individuals, organisations, private businesses or public authorities, except where there is a legal basis or contractual obligation to do so.
-                </p>
-                <h4>VI. Use of Cookies</h4>
-                <p>In order to provide you with the best possible service, this website may place and access our cookies on your computer. If you do not wish to accept the inclusion of cookies, you can set the privacy level in the function of the browser you are using to refuse the inclusion of cookies, but this may result in some functions of the website not working properly.
-                </p>
-                <h4>VII. Amendments to the Privacy Policy</h4>
-                <p>The privacy policy of this website will be amended from time to time in response to demand and the amended terms will be posted on the website.
-                </p>
-                <h4>VIII. Contact information</h4>
-                <p>If you have any questions about our privacy policy, or would like to make a request to change or remove personal information, please go to the "Contact Us" page of this website and submit a form. </p>
-                <p>Or email to: ways00.hk@gmail.com</p>
+                <h4 class="mt-3" style="font-weight: bold">IV．External links to the website</h4>
+                <ul>
+                    <li>Some of the pages of this website link to other websites. However, the linked sites do not apply to the privacy policy of this website and you must refer to the privacy policy of the linked sites.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">V. Policy on sharing personal information with third parties</h4>
+                <ul>
+                    <li>This website will not provide, exchange, rent or sell any of your personal information to other individuals, organisations, private businesses or public authorities, except where there is a legal basis or contractual obligation to do so.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">VI. Use of Cookies</h4>
+                <ul>
+                    <li>In order to provide you with the best possible service, this website may place and access our cookies on your computer. If you do not wish to accept the inclusion of cookies, you can set the privacy level in the function of the browser you are using to refuse the inclusion of cookies, but this may result in some functions of the website not working properly.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">VII. Amendments to the Privacy Policy</h4>
+                <ul>
+                    <li>The privacy policy of this website will be amended from time to time in response to demand and the amended terms will be posted on the website.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">VIII. Contact information</h4>
+                <ul>
+                    <li>If you have any questions about our privacy policy, or would like to make a request to change or remove personal information, please go to the "Contact Us" page of this website and submit a form.</li>
+                    <li>Or email to: ways00.hk@gmail.com</li>
+                </ul>
             </div>
         </div>
     </div>

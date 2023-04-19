@@ -81,24 +81,27 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-5">Terms and Conditions
+                <h1 class="mb-5" style="font-size: 40px;">Terms and Conditions
                 </h1>
-                <p>This page was written in Chinese and translated to English. In case of any dispute, the Chinese
-                    version shall prevail.
-                </p>
-                <p>By submitting and/or confirming the order, it means that you understand and accept the terms and
-                    conditions of Wayshk Children's Goods Store (hereinafter referred to as our shop ). Submission and
-                    confirmation of orders are not limited to online shopping platform, but also include orders made
-                    through telephone, email or in person .
-                </p>
-                <P>1. All items are available while stock lasts. No prior notice will be given if any item is sold out.
+                <ul>
+                    <li>This page was written in Chinese and translated to English. In case of any dispute, the Chinese
+                        version shall prevail.</li>
+
+                </ul>
+                <ul>
+                    <li>By submitting and/or confirming the order, it means that you understand and accept the terms and
+                        conditions of Wayshk Children's Goods Store (hereinafter referred to as our shop ). Submission and
+                        confirmation of orders are not limited to online shopping platform, but also include orders made
+                        through telephone, email or in person .</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold">1. All items are available while stock lasts. No prior notice will be given if any item is sold out.
                     We also reserve the right to refuse and limit the number of orders without giving any explanation.
-                    In such cases, we will notify you by phone or email.</P>
-                <p>2. All paid orders cannot be cancelled or refunded except for items that are chronically out of
+                    In such cases, we will notify you by phone or email.</h4>
+                <h4 class="mt-3" style="font-weight: bold">2. All paid orders cannot be cancelled or refunded except for items that are chronically out of
                     stock.
-                </p>
-                <p>3. Return and exchange guarantee terms:
-                </p>
+                </h4>
+                <h4 class="mt-3" style="font-weight: bold">3. Return and exchange guarantee terms:
+                </h4>
                 <ul>
                     <li>Items found to be different from the ordered item upon arrival (only unopened brand new items
                         will be accepted) / items found to be visibly defective or damaged after opening the packaging
@@ -127,12 +130,13 @@ include('include/header.php');
                     </li>
 
                 </ul>
-                <p>4. Some orders may be returned due to unknown delivery address, repeated deliveries with no recipient or the recipient refusing to accept the parcel. When a parcel is returned to us by the courier, the original shipping cost and the return shipping cost will be deducted from the refund to cover the return order processing fee.
-                </p>
-                <p>5. Coupon codes, offers and freebies are only applicable to selected customers or promotion periods. In case of incorrect usage, whether caused by human error or system failure, the shop will automatically correct and notify you by phone or email to reconfirm. If customers do not enter the promotion code before submitting the order, they will be considered as a waiver of the benefits of using the coupon.</p>
-                <p>Please consult our shop staff on the usage of the product before purchase. Our shop will not hold any responsibility for any problems arising from incorrect or improper use of the product.
-                </p>
-                <p>7. We reserve the right to amend the prices, delivery charges and online shopping terms and conditions from time to time without prior notice. In case of any dispute, our decision shall be final.</p>
+                <h4 class="mt-3" style="font-weight: bold">4. Some orders may be returned due to unknown delivery address, repeated deliveries with no recipient or the recipient refusing to accept the parcel. When a parcel is returned to us by the courier, the original shipping cost and the return shipping cost will be deducted from the refund to cover the return order processing fee.
+                </h4>
+                <h4 class="mt-3" style="font-weight: bold">5. Coupon codes, offers and freebies are only applicable to selected customers or promotion periods. In case of incorrect usage, whether caused by human error or system failure, the shop will automatically correct and notify you by phone or email to reconfirm. If customers do not enter the promotion code before submitting the order, they will be considered as a waiver of the benefits of using the coupon.</h4>
+                <ul>
+                    <li>Please consult our shop staff on the usage of the product before purchase. Our shop will not hold any responsibility for any problems arising from incorrect or improper use of the product.</li>
+                </ul>
+                <h4 class="mt-3" style="font-weight: bold" >7. We reserve the right to amend the prices, delivery charges and online shopping terms and conditions from time to time without prior notice. In case of any dispute, our decision shall be final.</h4>
             </div>
         </div>
     </div>
