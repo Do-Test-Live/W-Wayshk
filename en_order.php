@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 }
-include ('admin/include/dbController.php');
+include('admin/include/dbController.php');
 $db_handle = new DBController();
 ?>
 
@@ -43,7 +43,7 @@ $db_handle = new DBController();
             background: rgba(0, 0, 0, 0);
         }
 
-        .about-us-title .second{
+        .about-us-title .second {
             margin-bottom: 17px;
         }
     </style>
@@ -75,121 +75,94 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="about-us-title text-center">
-                    <h2 class="center" style="color: #ffa53b">Ordering method and terms and conditions</h2>
+                    <h2 class="center" style="color: #ffa53b">Order method</h2>
                 </div>
-                <div class="about-us-title text-center">
-                    <h2 class="center second">place an order</h2>
-                </div>
+
                 <div class="slider-3_1 product-wrapper">
                     <div>
                         <div class="clint-contain" style="background: #f8eab3">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>Online order (you can enjoy the preferential price on the website if you place an order on the website yourself)</h4>
+                            <h4>Online order</h4>
                             <p>
-                                Step 1: Put the desired products directly into the shopping cart on the website<br/>
-                                Step 2: A. Online payment, the default is to pay by SF Express (each order needs to charge $25 online transaction fee)
-                                B. After placing the order, whatsapp the order number to + 852 52657359 for offline payment
+                                1. Put the required items into the shopping cart<br/>
+                                2. Check out as a Guest or as Member
                             </p>
+                            <p style="font-weight: bold;">3. Select the shipping method: </p>
+                            <p style="padding-left: 10px;">A. S.F. Express to pay on delivery (Free shipping over
+                                $2000)</p>
+                            <p style="padding-left: 10px;">B. Self-pickup at Tai Wai Warehouse (Please make an
+                                appointment)</p>
+                            <p style="padding-left: 10px;">C. Self-pickup at the Wanchai cooperation point (please make
+                                an appointment)</p>
                         </div>
                     </div>
                     <div>
                         <div class="clint-contain" style="background: #f8eab3">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/buy.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>Complete the product order form</h4>
-                            <p>
-                                Click the button to download the product order form, email to waysshk.order@gmail.com or Whatsapp to +852 52657359
-                            </p>
-                            <div class="row mt-5">
-                                <div class="col-6">
-                                    <b>中文版</b> <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;"><b>下載</b></a>
-                                </div>
-                                <div class="col-6">
-                                    <b>English order form</b> <a href="assets/document/b05373_fb2f515896dd4ac995d91ea42cb82c54.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;"><b>Download</b></a>
-                                </div>
-                            </div>
+                            <h4>Select payment method</h4>
+                            <p>A. Pay by cash when picking up</p>
+                            <p>B. PayMe (Tel: +852 5265 7359)</p>
+                            <p style="padding-left: 10px;">* Send proof of payment to +852 5605 8389 via Whatsapp</p>
+                            <p>C. Transfer FPS (Tel: +852 5265 7359)</p>
+                            <p style="padding-left: 10px;">* Send proof of payment to +852 5605 8389 via Whatsapp</p>
+                            <p>D. Bank deposit</p>
+                            <p style="padding-left: 10px;">Account number : 769-334699-883 (Hang Seng Bank)<br>
+                                Account name : Wayshk</p>
+                            <p style="padding-left: 10px;">* After payment, send the deposit proof to +852 5605 8389 via
+                                Whatsapp</p>
+                            <p>E. Credit card payment [an additional 5% handling fee is required]</p>
+                            <p>F. Payment by Check (for Institutional/School Orders Only)</p>
+                            <p>Please make the check payable to "Wayshk", and indicate Attn: Wayshk on the envelope.
+                                Mail the check to RM1, 3/F, Kinglet Industrial Building, 21-23 Shing Wan Rd, Tai Wai</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">Payment</h2>
+                <div class="about-us-title text-center mt-5 mb-5">
+                    <h2 class="center second" style="font-size: 20px;">There are electronic documents for all orders
+                        placed online; if you need
+                        the true copy of company stamp on the quotation/invoice/receipt, please specify before placing
+                        the order.</h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
                         <div class="clint-contain" style="background: #e1e193">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>Welcome to pay in the following ways</h4>
-                            <p>
-                                Online Payment: Credit Card<br/>
-                                Offline Payment: FPS/PayMe/Hang Seng Bank Deposit/Cheque by Mail/Cash<br/>
-                                ***Electronic receipts are available for online orders; if you need a quotation/bill/receipt when placing an order by other methods, please specify it before placing the order
-                            </p>
+                            <h4>Shipping</h4>
+                            <p>1. The delivery period of stock products is 0-7 days; and uncertain for pre-order
+                                products is uncertain. Welcome to contact us for details.</p>
+                            <p>2. The color and style of the products will be distributed randomly. If you have any
+                                requirements for the color/style of the product. Please fill in the description box.
+                                Wayshk will try to meet your request. There is no return or exchange once the products
+                                are delivered. </p>
+                            <p>3. If you accidentally fill in the wrong address, please contact us as soon as possible
+                                for amendment. If the shipment has been arranged, you will not be able to change the
+                                address.</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">To Ship</h2>
+                    <h2 class="center second">Self - Pick up </h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
                         <div class="clint-contain" style="background: #ddf0ff">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>Shipping method (free shipping on orders over $2000)</h4>
-                            <p>
-                                ● SF Express to pay/self-pay postage<br/>
-                                ● ​Self Pickup
-                            </p>
-                            <p>
-                                *** Items with the label "coming soon" or shown as out of stock are pre-ordered products, and the arrival date is uncertain.
-                                Will wait for the goods in the order to be complete before shipping. Welcome to ask us for details.<br/>
-
-                                *** The color and style of the product will be distributed randomly; but Wayshk understands children's obsession with color,
-                                If you have any special requirements, you can fill in the new description. Wayshk will try to cooperate as much as possible.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">Self pick-up point</h2>
-                </div>
-                <div class="slider-3_1 product-wrapper mt-1">
-                    <div>
-                        <div class="clint-contain" style="background: #e2caca">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
                             <h4>Tai Wai Warehouse</h4>
-                            <p>
-                                Address: Room 1, 3rd Floor, Qunli Industrial Building, 21-23 Shing Wan Road, Tai Wai, New Territories, Hong Kong [Tai Wai Railway Station Exit A, walk for about 5 minutes]<br/>
-                                An appointment is required to pick up the goods, place an order first to confirm the pick-up time, please call when you arrive, and deliver at the door, accept cash payment
-                            </p>
+                            <p>Address: RM1, 3/F, Kinglet Industrial Building, 21-23 Shing Wan Rd, Tai Wai</p>
+                            <p style="font-weight: bold;">How to get there: </p>
+                            <p>Turn right at Exit A of Tai Wai Station and walk for about 5 minutes</p>
+                            <p>Opening hours: Variable (10:30 – 18:15)</p>
+                            <p>There is no on-site selection of goods. Make an appointment to pick up the goods in
+                                advance and confirm the pick-up time with us. When you arrive, please call and we will
+                                bring to you at the door.</p>
                         </div>
                     </div>
                     <div>
-                        <div class="clint-contain" style="background: #e2caca">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>Erpu Children's Learning and Development Center</h4>
-                            <p>
-                                Address: 25th Floor, 237-239 Hennessy Road, Wanchai [Wanchai MTR Station Exit A2, walk for about 5 minutes]<br/>
-                                Opening hours: Monday to Friday 09:00 - 18:00; Saturday 09:00 - 16:00 [Closed during lunch time 12:30-13:45]<br/>
-                                Tel: 2877 8787<br/>
-                                Please check the inventory first, place an order first to confirm the pick-up time, and accept cash payment
-                            </p>
+                        <div class="clint-contain" style="background: #ddf0ff">
+                            <h4>Cooperation point --- Eporh Child Learning and Development Center</h4>
+                            <p>Address: 25/F, 237-239 Hennessy Road, Wan Chai</p>
+                            <p style="font-weight: bold;">How to get there: </p>
+                            <p>Exit A2 of Wanchai MTR Station and walk for about 5 minutes</p>
+                            <p>Exhibition Station Exit A3, walk for about 6 minutes</p>
+                            <p>Opening hours: Monday to Friday 09:00 - 18:00; Saturday 09:00 - 16:00</p>
+                            <p>【Closed during lunch time 12:30-13:45】.    Tel: 2877 8787</p>
+                            <p>Please check the stock with us first and make an appointment in advance. </p>
                         </div>
                     </div>
                 </div>
@@ -208,32 +181,24 @@ include('include/header.php');
                 <div class="fresh-contain">
                     <div>
                         <div class="review-title text-center">
-                            <p style="font-size: 28px;font-weight: bold">Terms and Conditions</p>
+                            <p style="font-size: 28px;font-weight: bold">Overseas orders</p>
                         </div>
 
                         <div class="delivery-list">
                             <p class="text-content">
-                                By submitting and/or confirming the order, it means that you understand and accept the shopping terms and conditions of Wayshk (hereinafter referred to as the store). The methods of submission and confirmation are not limited to online shopping platforms, but also include submission and confirmation by telephone, email or in person at the consignment store. orders.
+                                Overseas orders are delivered by SF EXPRESS, and the shipping fee will be paid on delivery
                                 <br/>
-                                1. All items are subject to availability. If any items are sold out, the store will not give prior notice. The store also reserves the right to refuse and/or limit the quantity of orders without giving any explanation. In the event of the above, our store will notify you by phone or email.
+                                Currently accept orders from: Macau, Taiwan, Singapore, Malaysia, China
                                 <br/>
-                                2. Return guarantee within 5 days after arrival:
+                                Overseas orders can only be settled by credit card. The transaction fee, exchange rate and refund fee are in accordance with the regulations of the issuing bank. If you have any questions, please contact your credit card issuing bank
                                 <br/>
-                                - After the arrival of the goods, it is found that it is different from the ordered product (only new unopened products are accepted)/the product has obvious defects or damage can be returned or exchanged
+                                Overseas orders do not apply to free shipping activities
                                 <br/>
-                                - Only applicable to non-artificial damage products, not acceptable due to unsatisfactory product performance and other reasons
+                                Import tariffs vary from country to country. If you need to collect tariffs when you pick up the package, the tariffs must be paid by the buyer
                                 <br/>
-                                - Any returned goods can only be replaced with goods of the same value or higher value, and the customer must pay the difference of the higher value goods. If you replace the item with lower value, all balance will not be refunded
+                                It is recommended to confirm whether the product can be delivered to the designated country before purchasing. If the product is detained during entry no refund will be issued.
                                 <br/>
-                                - Return fee: subject to the delivery address, the store will bear the return shipping fee, but administrative fees may be charged according to the actual situation
-                                <br/>
-                                - Products or accessories related to personal hygiene will not be returned or exchanged under any circumstances (e.g. teethers, treatment brushes)
-                                <br/>
-                                - Our store reserves the right to make the final decision on product replacement
-                                <br/>
-                                3. Coupon codes, discounts, and gifts are only applicable to designated customers or promotions. If there is a wrong use, whether it is caused by human error or system failure, our store will automatically correct it and notify you by phone or email for confirmation. If the customer does not enter the coupon code prior to submitting the order, it will be deemed to have forfeited the offer to use the coupon.
-                                <br/>
-                                4. Please consult the store staff about the usage of the product before purchasing. The store will not be responsible for any problems caused by wrong or improper use of the product; the store reserves the right to modify and revise the price, delivery charges and online shopping terms and conditions from time to time rights without prior notice; in case of any dispute, Wayshk reserves the right of final decision.
+                                Returns and exchanges are not accepted for overseas orders
                             </p>
                         </div>
                     </div>
@@ -272,18 +237,18 @@ include('include/footer.php');
                         $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
                         $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
                         for ($i = 0; $i < $row; $i++) {
-                            $image = explode(',',$product[$i]['p_image'])
+                            $image = explode(',', $product[$i]['p_image'])
                             ?>
                             <li class="list-1">
                                 <div class="deal-offer-contain">
                                     <a href="shop.php" class="deal-image">
-                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                        <img src="admin/<?php echo $image[0]; ?>" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
                                     <a href="shop.php" class="deal-contain">
-                                        <h5><?php echo $product[$i]['p_name']?></h5>
-                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                        <h5><?php echo $product[$i]['p_name'] ?></h5>
+                                        <h6><?php echo $product[$i]['product_price'] ?></h6>
                                     </a>
                                 </div>
                             </li>

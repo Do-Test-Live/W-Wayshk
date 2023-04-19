@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 }
-include ('admin/include/dbController.php');
+include('admin/include/dbController.php');
 $db_handle = new DBController();
 ?>
 
@@ -17,7 +17,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>訂購方法 | Wayshk</title>
+    <title>Order Method | Wayshk</title>
 
     <?php include('include/css.php'); ?>
     <style>
@@ -43,7 +43,7 @@ $db_handle = new DBController();
             background: rgba(0, 0, 0, 0);
         }
 
-        .about-us-title .second{
+        .about-us-title .second {
             margin-bottom: 17px;
         }
     </style>
@@ -75,120 +75,94 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="about-us-title text-center">
-                    <h2 class="center" style="color: #ffa53b">訂購方法及條款細則</h2>
+                    <h2 class="center" style="color: #ffa53b">Order method</h2>
                 </div>
-                <div class="about-us-title text-center">
-                    <h2 class="center second">投下訂單</h2>
-                </div>
+
                 <div class="slider-3_1 product-wrapper">
                     <div>
                         <div class="clint-contain" style="background: #f8eab3">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>網上下單 （自行於網站下單可享網站優惠價）</h4>
+                            <h4>Online order</h4>
                             <p>
-                                第一步： 於網站直接把需要的貨品放進購物車<br/>
-                                第二步： A. 網上付款，默認以順豐到付出貨 （每筆訂單需收取 $25 網上交易手續費）
-                                B. 下單後將訂單編號 Whatsapp 發給+ 852 52657359 離線付款
+                                1. Put the required items into the shopping cart<br/>
+                                2. Check out as a Guest or as Member
                             </p>
+                            <p style="font-weight: bold;">3. Select the shipping method: </p>
+                            <p style="padding-left: 10px;">A. S.F. Express to pay on delivery (Free shipping over
+                                $2000)</p>
+                            <p style="padding-left: 10px;">B. Self-pickup at Tai Wai Warehouse (Please make an
+                                appointment)</p>
+                            <p style="padding-left: 10px;">C. Self-pickup at the Wanchai cooperation point (please make
+                                an appointment)</p>
                         </div>
                     </div>
                     <div>
                         <div class="clint-contain" style="background: #f8eab3">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/buy.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>填妥產品訂購表格</h4>
-                            <p>
-                                點擊按鈕下載產品訂購表格，電郵到 wayshk.order@gmail.com 或以 Whatsapp 發給 +852 52657359
-                            </p>
-                            <div class="row mt-5">
-                                <div class="col-6">
-                                    <b>中文版</b> <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;"><b>下載</b></a>
-                                </div>
-                                <div class="col-6">
-                                    <b>English order form</b> <a href="assets/document/b05373_fb2f515896dd4ac995d91ea42cb82c54.pdf" target="_blank" class="btn btn-warning mt-3" style="background-color: #ffa53b;"><b>Download</b></a>
-                                </div>
-                            </div>
+                            <h4>Select payment method</h4>
+                            <p>A. Pay by cash when picking up</p>
+                            <p>B. PayMe (Tel: +852 5265 7359)</p>
+                            <p style="padding-left: 10px;">* Send proof of payment to +852 5605 8389 via Whatsapp</p>
+                            <p>C. Transfer FPS (Tel: +852 5265 7359)</p>
+                            <p style="padding-left: 10px;">* Send proof of payment to +852 5605 8389 via Whatsapp</p>
+                            <p>D. Bank deposit</p>
+                            <p style="padding-left: 10px;">Account number : 769-334699-883 (Hang Seng Bank)<br>
+                                Account name : Wayshk</p>
+                            <p style="padding-left: 10px;">* After payment, send the deposit proof to +852 5605 8389 via
+                                Whatsapp</p>
+                            <p>E. Credit card payment [an additional 5% handling fee is required]</p>
+                            <p>F. Payment by Check (for Institutional/School Orders Only)</p>
+                            <p>Please make the check payable to "Wayshk", and indicate Attn: Wayshk on the envelope.
+                                Mail the check to RM1, 3/F, Kinglet Industrial Building, 21-23 Shing Wan Rd, Tai Wai</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">付款</h2>
+                <div class="about-us-title text-center mt-5 mb-5">
+                    <h2 class="center second" style="font-size: 20px;">There are electronic documents for all orders
+                        placed online; if you need
+                        the true copy of company stamp on the quotation/invoice/receipt, please specify before placing
+                        the order.</h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
                         <div class="clint-contain" style="background: #e1e193">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>歡迎以以下方式付款</h4>
-                            <p>
-                                線上付款：信用卡<br/>
-                                離線付款： 轉數快 FPS/PayMe/恆生銀行入數/郵寄支票/現金<br/>
-                                *** 於網上下單均有電子單據 ； 以其他方法下單如需報價單/收帳單/收據，先於下單時列明提出
-                            </p>
+                            <h4>Shipping</h4>
+                            <p>1. The delivery period of stock products is 0-7 days; and uncertain for pre-order
+                                products is uncertain. Welcome to contact us for details.</p>
+                            <p>2. The color and style of the products will be distributed randomly. If you have any
+                                requirements for the color/style of the product. Please fill in the description box.
+                                Wayshk will try to meet your request. There is no return or exchange once the products
+                                are delivered. </p>
+                            <p>3. If you accidentally fill in the wrong address, please contact us as soon as possible
+                                for amendment. If the shipment has been arranged, you will not be able to change the
+                                address.</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">出貨</h2>
+                    <h2 class="center second">Self - Pick up </h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
                         <div class="clint-contain" style="background: #ddf0ff">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>出貨方式 （滿$2000免費送貨）</h4>
-                            <p>
-                                ● 順豐到付/自付郵費郵寄<br/>
-                                ● ​自取
-                            </p>
-                            <p>
-                                *** 帶有標籤「即將到貨」或顯示為沒有庫存的貨品， 即為預購產品， 到貨期不定。
-                                將會等候訂單內貨品齊全後才出貨。 歡迎向我們查詢詳情。<br/>
-                                *** 貨品顏色及款色將隨機發放； 但Wayshk明白孩子對顏色的執著，
-                                如有任何特別要求可以在新增說明裏填寫。Wayshk會嘗試盡量配合。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">​自取點</h2>
-                </div>
-                <div class="slider-3_1 product-wrapper mt-1">
-                    <div>
-                        <div class="clint-contain" style="background: #e2caca">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>大圍倉庫</h4>
-                            <p>
-                                地址：香港新界大圍成運路21-23號群力工業大廈3樓1室 【大圍火車站A出口，步行約5分鐘】<br/>
-                                取貨需預約，先行下單確認領取時間，到達後請致電，並於門口交收，接受現金付款
-                            </p>
+                            <h4>Tai Wai Warehouse</h4>
+                            <p>Address: RM1, 3/F, Kinglet Industrial Building, 21-23 Shing Wan Rd, Tai Wai</p>
+                            <p style="font-weight: bold;">How to get there: </p>
+                            <p>Turn right at Exit A of Tai Wai Station and walk for about 5 minutes</p>
+                            <p>Opening hours: Variable (10:30 – 18:15)</p>
+                            <p>There is no on-site selection of goods. Make an appointment to pick up the goods in
+                                advance and confirm the pick-up time with us. When you arrive, please call and we will
+                                bring to you at the door.</p>
                         </div>
                     </div>
                     <div>
-                        <div class="clint-contain" style="background: #e2caca">
-                            <div class="client-icon">
-                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
-                                     class="blur-up lazyload" alt="">
-                            </div>
-                            <h4>兒璞兒童學習及發展中心</h4>
-                            <p>
-                                地址：灣仔軒尼詩道237-239號25樓【灣仔地鐵站A2出口，步行約5分鐘】<br/>
-                                開放時間：星期一至五 09:00 - 18:00；星期六 09:00 - 16:00  【午餐時間 12:30-13:45 不開放】<br/>
-                                電話：2877 8787<br/>
-                                請先查詢庫存，先行下單確認領取時間，接受現金付款
-                            </p>
+                        <div class="clint-contain" style="background: #ddf0ff">
+                            <h4>Cooperation point --- Eporh Child Learning and Development Center</h4>
+                            <p>Address: 25/F, 237-239 Hennessy Road, Wan Chai</p>
+                            <p style="font-weight: bold;">How to get there: </p>
+                            <p>Exit A2 of Wanchai MTR Station and walk for about 5 minutes</p>
+                            <p>Exhibition Station Exit A3, walk for about 6 minutes</p>
+                            <p>Opening hours: Monday to Friday 09:00 - 18:00; Saturday 09:00 - 16:00</p>
+                            <p>【Closed during lunch time 12:30-13:45】.    Tel: 2877 8787</p>
+                            <p>Please check the stock with us first and make an appointment in advance. </p>
                         </div>
                     </div>
                 </div>
@@ -207,32 +181,24 @@ include('include/header.php');
                 <div class="fresh-contain">
                     <div>
                         <div class="review-title text-center">
-                            <p style="font-size: 28px;font-weight: bold">條款細則</p>
+                            <p style="font-size: 28px;font-weight: bold">Overseas orders</p>
                         </div>
 
                         <div class="delivery-list">
                             <p class="text-content">
-                                閣下遞交及/或確認訂單即表示閣下明白並接受Wayshk（下稱本店）的購物條款及細則，遞交及確認方式不限於網上購物平台，亦包括透過電話、電郵或親臨寄賣店等遞交及確認的訂單。
+                                Overseas orders are delivered by SF EXPRESS, and the shipping fee will be paid on delivery
                                 <br/>
-                                1. 所有貨品售完即止。如有任何貨品售罄，本店將不會作出事前通知。本店亦保留拒絕接受及/或限制訂單數量的權利，且毋須給予任何解釋。如有上述情況，本店將以透過電話或電郵通知閣下。
+                                Currently accept orders from: Macau, Taiwan, Singapore, Malaysia, China
                                 <br/>
-                                2. 到貨後5天之內退換保證條款：
+                                Overseas orders can only be settled by credit card. The transaction fee, exchange rate and refund fee are in accordance with the regulations of the issuing bank. If you have any questions, please contact your credit card issuing bank
                                 <br/>
-                                - 到貨後發現與訂購商品不同 (只接受未開封之全新商品)/商品有明顯瑕疵或損壞可以退換
+                                Overseas orders do not apply to free shipping activities
                                 <br/>
-                                - 只適用於非人為損毀產品，因不滿意貨品表現等原因恕不接受
+                                Import tariffs vary from country to country. If you need to collect tariffs when you pick up the package, the tariffs must be paid by the buyer
                                 <br/>
-                                - 任何被退換貨品只限更換同等價值或價值更高之貨品，客戶須支付價值較高之貨品差額。如更換價值較低之貨品，所有餘額將不獲退回
+                                It is recommended to confirm whether the product can be delivered to the designated country before purchasing. If the product is detained during entry no refund will be issued.
                                 <br/>
-                                - 退貨費用：以送貨地址為準，由本店負擔退貨運費，但可能會按實際情況收取行政費用
-                                <br/>
-                                - 涉及個人衞生的產品或配件在任何情況下都不設退換服務（如: 牙膠，治療刷）
-                                <br/>
-                                - 本店保留更換產品之最終決定權
-                                <br/>
-                                3.  優惠券代碼、優惠、贈品只適用於指定客戶或推廣，如有錯誤的使用情況下，不論是人為出錯或系統故障造成，本店將自動更正並會以電話        或電郵通知閣下再確認。如果客戶在提交訂單之前未輸入優惠券代碼，則將被視為放棄使用優惠券的優惠。
-                                <br/>
-                                4. 購買前請先諮詢店員有關產品用法，本店不會就錯誤或不當使用產品而引至任何問題承擔任何責任；本店保留不時修改和修訂售價、送貨收      費及網上購物條款及細則的權利，並毋須作出事前通知；如有任何爭議，Wayshk保留最終決定權。
+                                Returns and exchanges are not accepted for overseas orders
                             </p>
                         </div>
                     </div>
@@ -271,18 +237,18 @@ include('include/footer.php');
                         $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
                         $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
                         for ($i = 0; $i < $row; $i++) {
-                            $image = explode(',',$product[$i]['p_image'])
+                            $image = explode(',', $product[$i]['p_image'])
                             ?>
                             <li class="list-1">
                                 <div class="deal-offer-contain">
                                     <a href="shop.php" class="deal-image">
-                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                        <img src="admin/<?php echo $image[0]; ?>" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
                                     <a href="shop.php" class="deal-contain">
-                                        <h5><?php echo $product[$i]['p_name']?></h5>
-                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                        <h5><?php echo $product[$i]['p_name'] ?></h5>
+                                        <h6><?php echo $product[$i]['product_price'] ?></h6>
                                     </a>
                                 </div>
                             </li>
