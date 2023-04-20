@@ -61,7 +61,7 @@ include('include/header.php');
         <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
             <div class="col-6">
                 <div>
-                    <img src="assets/images/about_us/p.png" class="img-fluid" alt="">
+                    <img src="assets/images/about_us/ways.png" class="img-fluid" alt="">
                 </div>
             </div>
 

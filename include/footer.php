@@ -80,7 +80,7 @@
 
                 <div class="col-xl-2 col-sm-3">
                     <div class="footer-title">
-                        <h4>Quick Link</h4>
+                        <h4><?php if($_SESSION['language'] === 'CN') echo '快速鏈接'; else echo 'Quick Link';?></h4>
                     </div>
 
                     <div class="footer-contain">
@@ -144,16 +144,18 @@
 
                 <div class="col-xl-3 col-sm-3">
                     <div class="footer-title">
-                        <h4>Help Center</h4>
+                        <h4><?php if($_SESSION['language'] === 'CN') echo '幫助中心'; else echo 'Help Center';?></h4>
                     </div>
 
                     <div class="footer-contain">
                         <ul>
                             <li>
-                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">Privacy Policy</a>
+                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
+                                    <?php if($_SESSION['language'] === 'CN') echo '隱私政策'; else echo 'Privacy Policy';?></a>
                             </li>
                             <li>
-                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">Terms and Condition</a>
+                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
+                                    <?php if($_SESSION['language'] === 'CN') echo '附帶條約'; else echo 'Terms and Condition';?></a>
                             </li>
                         </ul>
                     </div>
@@ -161,7 +163,7 @@
 
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="footer-title">
-                        <h4>Contact Us</h4>
+                        <h4><?php if($_SESSION['language'] === 'CN') echo '聯繫我們'; else echo 'Contact Us';?></h4>
                     </div>
 
                     <div class="footer-contact">
@@ -170,7 +172,7 @@
                                 <div class="footer-number">
                                     <i data-feather="phone"></i>
                                     <div class="contact-number">
-                                        <h6 class="text-content">Hotline 24/7 :</h6>
+                                        <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '熱線 24/7 :'; else echo 'Hotline 24/7 :';?></h6>
                                         <a href="http://wa.me/85252657359" target="_blank">+852 52657359</a>
                                     </div>
                                 </div>
@@ -180,7 +182,7 @@
                                 <div class="footer-number">
                                     <i data-feather="mail"></i>
                                     <div class="contact-number">
-                                        <h6 class="text-content">Email Address :</h6>
+                                        <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '電子郵件地址 ：'; else echo 'Email Address :';?></h6>
                                         <a href="mailto:ways00.hk@gmail.com">ways00.hk@gmail.com</a>
                                     </div>
                                 </div>
