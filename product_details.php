@@ -64,7 +64,7 @@ include('include/header.php');
                     <?php
                     $product = $db_handle->runQuery("select * from product where id = '$product_id'");
                     ?>
-                    <h2><?php echo $product[0]['p_name']; ?></h2>
+                    <h2><?php if($_SESSION['language'] === 'CN') echo $product[0]['p_name']; else echo $product[0]['p_name_en'];?></h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -73,7 +73,7 @@ include('include/header.php');
                                 </a>
                             </li>
 
-                            <li class="breadcrumb-item active"><?php echo $product[0]['p_name']; ?></li>
+                            <li class="breadcrumb-item active"><?php if($_SESSION['language'] === 'CN') echo $product[0]['p_name']; else echo $product[0]['p_name_en'];?></li>
                         </ol>
                     </nav>
                 </div>
@@ -98,7 +98,6 @@ include('include/header.php');
                                             <div class="col-xxl-10 col-lg-12 col-md-10 order-xxl-2 order-lg-1 order-md-2">
                                                 <div class="product-main-2 no-arrow">
                                                     <?php
-
                                                     $image = explode(',',$product[0]['p_image']);
                                                     foreach ($image as $img){
                                                         ?>
@@ -140,7 +139,7 @@ include('include/header.php');
 
                     <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="right-box-contain">
-                            <h2 class="name"><?php echo $product[0]['p_name']; ?></h2>
+                            <h2 class="name"><?php if($_SESSION['language'] === 'CN') echo $product[0]['p_name']; else echo $product[0]['p_name_en'];?></h2>
                             <div class="price-rating">
                                 <h3 class="theme-color price"><?php echo $product[0]['product_price']; ?>
                                     <!--<span
@@ -168,7 +167,7 @@ include('include/header.php');
                             </div>
 
                             <div class="procuct-contain">
-                                <p><?php echo $product[0]['description']; ?>
+                                <p><?php if($_SESSION['language'] === 'CN') echo $product[0]['description']; else echo $product[0]['description_en'];?>
                                 </p>
                             </div>
 
@@ -225,7 +224,7 @@ include('include/header.php');
                                             <div class="offer-detail">
                                                 <div>
                                                     <a href="Product-Details?product_id=<?php echo $tranding_product[$i]['id']; ?>">
-                                                        <h6 class="name"><?php echo $tranding_product[$i]['p_name']; ?></h6>
+                                                        <h6 class="name"><?php if($_SESSION['language'] === 'CN') echo $tranding_product[$i]['p_name']; else  echo $tranding_product[$i]['p_name_en'];?></h6>
                                                     </a>
                                                     <h6 class="price theme-color"><?php echo $tranding_product[$i]['product_price']; ?></h6>
                                                 </div>
@@ -284,7 +283,7 @@ include('include/header.php');
                                 <div class="product-detail">
                                     <a href="Product-Details?product_id=<?php echo $related_products [$i]['id']; ?>">
                                         <h6 class="name">
-                                            <?php echo $related_products [$i]['p_name'] ?>
+                                            <?php if($_SESSION['language'] == 'CN') echo $related_products [$i]['p_name']; else echo $related_products [$i]['p_name_en'];?>
                                         </h6>
                                     </a>
 

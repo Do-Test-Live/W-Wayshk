@@ -177,7 +177,7 @@ include('include/header.php');
                                                         <div class="form-check ps-0 m-0 category-list-box">
                                                             <label class="form-check-label" for="fruit"
                                                                    style="cursor: pointer;">
-                                                                <span class="name"><?php echo $fetch_cat[$i]['c_name']; ?></span>
+                                                                <span class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_cat[$i]['c_name']; else echo $fetch_cat[$i]['c_name_en']; ?></span>
                                                                 <?php
                                                                 $product_id = $fetch_cat[$i]['id'];
                                                                 $fetch_number_of_products = $db_handle->runQuery("SELECT COUNT(id) as total_number FROM `product` WHERE category_id = '$product_id';");
@@ -249,7 +249,7 @@ include('include/header.php');
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
-                                                <h5 class="name"><?php  echo $fetch_products[$i]['p_name'] ?></h5>
+                                                <h5 class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['p_name']; else echo $fetch_products[$i]['p_name_en'];?></h5>
                                             </a>
                                             <!--<div class="product-rating mt-2">
                                                 <ul class="rating">
@@ -369,7 +369,7 @@ include('include/header.php');
                                         <div class="product-detail">
                                             <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
-                                                <h5 class="name"><?php echo $fetch_products[$i]['p_name'] ?></h5>
+                                                <h5 class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['p_name']; else echo $fetch_products[$i]['p_name_en'];?></h5>
                                             </a>
 
                                             <h5 class="price"><span

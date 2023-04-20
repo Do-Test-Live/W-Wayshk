@@ -238,7 +238,7 @@ include('include/header.php');
                                 <div class="product-detail">
                                     <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                         <h6 class="name">
-                                            <?php echo $fetch_product [$i]['p_name'] ?>
+                                            <?php if($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en'];?>
                                         </h6>
                                     </a>
 
@@ -304,7 +304,7 @@ include('include/header.php');
                                     <div class="product-detail">
                                         <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                             <h6 class="name">
-                                                <?php echo $fetch_product [$i + 1]['p_name'] ?>
+                                                <?php if($_SESSION['language'] === 'CN') echo $fetch_product [$i + 1]['p_name']; else echo $fetch_product [$i + 1]['p_name_en'];?>
                                             </h6>
                                         </a>
 
@@ -388,7 +388,7 @@ include('include/header.php');
                                 <div class="product-detail">
                                     <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                         <h6 class="name">
-                                            <?php echo $fetch_product [$i]['p_name'] ?>
+                                            <?php if($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en'];?>
                                         </h6>
                                     </a>
 
@@ -454,7 +454,7 @@ include('include/header.php');
                                     <div class="product-detail">
                                         <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                             <h6 class="name">
-                                                <?php echo $fetch_product [$i + 1]['p_name'] ?>
+                                                <?php if($_SESSION['language'] === 'CN') echo $fetch_product [$i + 1]['p_name']; else echo $fetch_product [$i + 1]['p_name_en'];?>
                                             </h6>
                                         </a>
 
@@ -677,7 +677,7 @@ include('include/header.php');
 
                                     <div class="top-selling-detail">
                                         <a href="#">
-                                            <h5><?php echo $fetch_product[$i]['p_name']; ?></h5>
+                                            <h5><?php if($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en'];?></h5>
                                         </a>
                                         <!--<div class="product-rating">
                                             <ul class="rating">
@@ -725,7 +725,7 @@ include('include/header.php');
                                 <div class="top-selling-contain wow fadeInUp">
                                     <a href="#" class="top-selling-image">
                                         <img src="admin/<?php
-                                        echo str_replace("650", "250", strtok($fetch_product [$i]['p_image'],','));
+                                        echo str_replace("650", "250", strtok($product [$i]['p_image'],','));
                                         ?>"
                                              class="img-fluid blur-up lazyload"
                                              alt="">
@@ -733,7 +733,7 @@ include('include/header.php');
 
                                     <div class="top-selling-detail">
                                         <a href="#">
-                                            <h5><?php echo $product[$i]['p_name']; ?></h5>
+                                            <h5><?php if($_SESSION['language'] === 'CN') echo $product [$i]['p_name']; else echo $product [$i]['p_name_en'];?></h5>
                                         </a>
                                         <!--<div class="product-rating">
                                             <ul class="rating">
@@ -790,7 +790,7 @@ include('include/header.php');
 
                                     <div class="top-selling-detail">
                                         <a href="#">
-                                            <h5><?php echo $fetch_product3[$i]['p_name']; ?></h5>
+                                            <h5><?php if($_SESSION['language'] === 'CN') echo $fetch_product3 [$i]['p_name']; else echo $fetch_product3 [$i]['p_name_en'];?></h5>
                                         </a>
                                         <!--<div class="product-rating">
                                             <ul class="rating">
@@ -847,7 +847,7 @@ include('include/header.php');
 
                                     <div class="top-selling-detail">
                                         <a href="#">
-                                            <h5><?php echo $fetch_product2[$i]['p_name']; ?></h5>
+                                            <h5><?php if($_SESSION['language'] === 'CN') echo $fetch_product2 [$i]['p_name']; else echo $fetch_product2 [$i]['p_name_en'];?></h5>
                                         </a>
                                         <!--<div class="product-rating">
                                             <ul class="rating">
