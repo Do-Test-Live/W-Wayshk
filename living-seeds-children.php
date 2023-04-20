@@ -65,7 +65,7 @@ include('include/header.php');
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="contact-title text-center mb-5">
-                                <h2>
+                                <h2 class="inner-header">
                                     活籽兒童服務社---職業治療服務
                                 </h2>
                                 <h4 class="mt-3">
@@ -159,7 +159,7 @@ include('include/header.php');
                                 </div>
                             </div>-->
                             <div class="row mb-5 mt-5">
-                                <h2 class="mb-3 text-center">訓練內容例子 : </h2>
+                                <h2 class="mb-3 text-center inner-header">訓練內容例子 : </h2>
                             </div>
                             <div class="row mb-5 mt-5">
                                 <h2 class="mb-3">1. 感覺統合訓練</h2>

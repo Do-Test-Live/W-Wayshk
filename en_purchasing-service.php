@@ -59,7 +59,7 @@ include ('include/header.php');
     <div class="container-fluid-lg">
         <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
             <div class="col-12 text-center">
-                <h2>School and Institutional Orders</h2>
+                <h2 class="inner-header">School and Institutional Orders</h2>
             </div>
             <div class="row mt-5">
                 <div class="col-md-6 text-end">

@@ -156,7 +156,7 @@ h6, .h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: -0.2rem;
 }
 
 abbr[title], abbr[data-bs-original-title] {
@@ -5348,7 +5348,7 @@ textarea.form-control-lg {
     align-items: center;
     width: 100%;
     padding: 1rem 1.25rem;
-    font-size: 1rem;
+    font-size: 18px;
     color: #212529;
     text-align: left;
     background-color: #fff;
@@ -5356,7 +5356,7 @@ textarea.form-control-lg {
     border-radius: 0;
     overflow-anchor: none;
     -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

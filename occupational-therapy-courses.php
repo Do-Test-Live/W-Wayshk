@@ -17,7 +17,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
 
-    <title>網路預訂 | Wayshk</title>
+    <title>Online booking | Wayshk</title>
 
     <?php include('include/css.php'); ?>
     <style>
@@ -56,81 +56,871 @@ include('include/header.php');
 
 
 <!-- Breadcrumb Section Start -->
-<section class="breadscrumb-section pt-0">
+<!--<section class="breadscrumb-section pt-0">
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12 text-center pt-5 pb-5">
-                <h2>職業治療服務</h2>
+                <h2>Occupational Therapy Services</h2>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Breadcrumb Section End -->
 
 <!-- Blog Section Start -->
 <section class="blog-section section-b-space">
     <div class="container-fluid-lg">
         <div class="row g-4">
-            <div class="col-xxl-12">
+            <div class="col-12 text-center">
+                <h2 class="inner-header">Occupational Therapy Services</h2>
+            </div>
+            <div class="col-xxl-12 mt-5">
                 <div class="row g-4 ratio_65">
                     <div class="col-xxl-4 col-sm-6 ms-auto">
                         <div class="blog-box wow fadeInUp">
                             <div class="blog-image">
-                                <a href="blog-detail.html">
-                                    <img src="assets/images/about_us/1.webp"
+                                <a href="#">
+                                    <img src="assets/images/courses/1.jpg"
                                          class="bg-img blur-up lazyload" alt="">
                                 </a>
                             </div>
 
                             <div class="blog-contain">
-                                <a href="blog-detail.html">
-                                    <h3>治療膠練習基礎8節</h3>
-                                    <p>
-                                        以香港地道小食為主題，配合治療膠及其他訓練工具，訓練手指力量、靈活性、手眼及雙手協調等等，提升書寫及自理技巧。【幼稚園組】
-                                    </p>
+                                <a href="#">
+                                    <h3>Wayhk_小火車貼貼紙</h3>
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
                                     <p>
-                                        已結束
+                                        Over
                                     </p>
                                     <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>低收入家庭 $500</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="location.href = '1-Course';" class="blog-button">查看課程<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-xxl-4 col-sm-6 me-auto">
-                        <div class="blog-box wow fadeInUp" data-wow-delay="0.05s">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
                             <div class="blog-image">
-                                <a href="blog-detail.html">
-                                    <img src="assets/images/about_us/2.webp"
+                                <a href="#">
+                                    <img src="assets/images/courses/2.jpg"
                                          class="bg-img blur-up lazyload" alt="">
                                 </a>
                             </div>
 
                             <div class="blog-contain">
-                                <a href="blog-detail.html">
-                                    <h3>治療膠練習3節</h3>
-                                    <p>
-                                        有可愛的小動物/ 昆蟲為主題，以有趣的方式學習基本的治療膠使用方法，訓練小肌肉能力 【幼稚園組】
-                                    </p>
+                                <a href="#">
+                                    <h3>Wayshk 恐龍蓋印路線</h3>
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
                                     <p>
-                                        已結束
+                                        Over
                                     </p>
-                                    <span class="time"><span>$300；</span></span>
-                                    <span class="super"><span>低收入家庭 $150</span></span>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="location.href = '2-Course';" class="blog-button">查看課程<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/3.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
 
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk 新年補正方形筆控</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/4.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk 空間關係圖形連線</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/5.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk 點點連線</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/6.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_中文形狀卡</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/7.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_南瓜補筆畫 </h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/8.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_圖形扣環 紙樣</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/9.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_圖形數數看</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/10.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_寫前概念 </h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/11.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_彩虹積木</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/12.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_復活蛋剪紙練習</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/13.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_復活蛋塗顏色</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/14.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_復活蛋對稱圖案</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/15.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_復活蛋畫鬼腳</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/16.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_復活蛋筆控練習</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/17.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_恐龍連線練習.pdf</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/18.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_方格填色</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/19.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_線條追蹤(難) </h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/20.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_線條追蹤（難）</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/21.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_老虎填格仔拼圖</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/22.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_老虎帽子手工 </h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/23.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_老虎筆控</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/24.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_聖誕樹小圓</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/25.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_蘋果數數看 Level 2</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/26.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_蘋果數數看 Level 3</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/27.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_蘋果數數看 Level 5</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/28.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_蜘蛛筆控</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/29.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_補圖形</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/30.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_雪球筆控</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/31.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_鴨靈號桌座標</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/32.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk專注力圈數字</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/33.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk聖誕數字蓋印</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -466,60 +1256,6 @@ include('include/footer.php');
 </div>
 <!-- Deal Box Modal End -->
 
-<!-- Tap to top start -->
-<div class="theme-option">
-    <div class="setting-box">
-        <button class="btn setting-button">
-            <i class="fa-solid fa-gear"></i>
-        </button>
-
-        <div class="theme-setting-2">
-            <div class="theme-box">
-                <ul>
-                    <li>
-                        <div class="setting-name">
-                            <h4>Color</h4>
-                        </div>
-                        <div class="theme-setting-button color-picker">
-                            <form class="form-control">
-                                <label for="colorPick" class="form-label mb-0">Theme Color</label>
-                                <input type="color" class="form-control form-control-color" id="colorPick"
-                                       value="#0da487" title="Choose your color">
-                            </form>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="setting-name">
-                            <h4>Dark</h4>
-                        </div>
-                        <div class="theme-setting-button">
-                            <button class="btn btn-2 outline" id="darkButton">Dark</button>
-                            <button class="btn btn-2 unline" id="lightButton">Light</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="setting-name">
-                            <h4>RTL</h4>
-                        </div>
-                        <div class="theme-setting-button rtl">
-                            <button class="btn btn-2 rtl-unline">LTR</button>
-                            <button class="btn btn-2 rtl-outline">RTL</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="back-to-top">
-        <a id="back-to-top" href="#">
-            <i class="fas fa-chevron-up"></i>
-        </a>
-    </div>
-</div>
-<!-- Tap to top end -->
 
 <!-- Bg overlay Start -->
 <div class="bg-overlay"></div>

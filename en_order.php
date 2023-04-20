@@ -75,7 +75,7 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="about-us-title text-center">
-                    <h2 class="center" style="color: #ffa53b">Order method</h2>
+                    <h2 class="center inner-header">Order method</h2>
                 </div>
 
                 <div class="slider-3_1 product-wrapper">
@@ -116,7 +116,7 @@ include('include/header.php');
                     </div>
                 </div>
                 <div class="about-us-title text-center mt-5 mb-5">
-                    <h2 class="center second" style="font-size: 20px;">There are electronic documents for all orders
+                    <h2 class="center second inner-header">There are electronic documents for all orders
                         placed online; if you need
                         the true copy of company stamp on the quotation/invoice/receipt, please specify before placing
                         the order.</h2>
@@ -138,7 +138,7 @@ include('include/header.php');
                     </div>
                 </div>
                 <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">Self - Pick up </h2>
+                    <h2 class="center second inner-header">Self - Pick up </h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
@@ -181,7 +181,7 @@ include('include/header.php');
                 <div class="fresh-contain">
                     <div>
                         <div class="review-title text-center">
-                            <p style="font-size: 28px;font-weight: bold">Overseas orders</p>
+                            <p class="inner-header">Overseas orders</p>
                         </div>
 
                         <div class="delivery-list">

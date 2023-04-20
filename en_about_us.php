@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 }
-include ('admin/include/dbController.php');
+include('admin/include/dbController.php');
 $db_handle = new DBController();
 ?>
 
@@ -19,7 +19,7 @@ $db_handle = new DBController();
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
     <title>About Us | Wayshk </title>
 
-    <?php include ('include/css.php');?>
+    <?php include('include/css.php'); ?>
     <style>
         header .header-top .about-list .right-nav-list .theme-form-select .dropdown-toggle.hkd::before {
             content: " ";
@@ -50,7 +50,7 @@ $db_handle = new DBController();
 
 <!-- Header Start -->
 <?php
-include ('include/header.php');
+include('include/header.php');
 ?>
 <!-- Header End -->
 
@@ -70,7 +70,7 @@ include ('include/header.php');
                 <div class="fresh-contain p-center-left">
                     <div>
                         <div class="review-title">
-                            <h2>Company Profile</h2>
+                            <h2 class="inner-header">Company Profile</h2>
                         </div>
 
                         <div class="delivery-list">
@@ -78,9 +78,30 @@ include ('include/header.php');
                                 <li>
                                     <div class="delivery-box">
                                         <div class="delivery-detail">
-                                            <h5 class="text">Wayshk children's products store is operated in the form of a small store. Occupational therapists use professional perspectives to carefully search for children's products and toys with training value from all over the world, which is convenient for customers to purchase in one stop. We also sell many creative teaching materials designed by ourselves, so that children can learn and grow up happily in interesting games.
-                                                The reason why it is named "Ways" means that this store can provide many options, and use different products to achieve training purposes in a way that breaks through the box. Children will encounter many difficulties on the way of growth, but there are always many ways to solve them. More importantly, there are infinite possibilities for the children's future path!
-                                                At the same time, we hope to promote occupational therapy services and products in this small city of Hong Kong, so that people who are experiencing difficulties can live an independent and meaningful life.
+                                            <h5 class="text">Wayshk children's goods store operates in a small scale. We
+                                                have professional occupational therapists who have carefully sourced
+                                                training materials and toys from around the world for customers. We also
+                                                sell self-designed creative educational materials to help children learn
+                                                and grow happily through play.
+                                            </h5>
+                                        </div>
+                                        <div class="delivery-detail">
+                                            <h5 class="text">Our name 'Ways' means that the shop offers a wide range of
+                                                options for customers. We provided ways to use products innovatively for
+                                                different training purposes.
+                                            </h5>
+                                        </div>
+                                        <div class="delivery-detail">
+                                            <h5 class="text">Children may encounter many difficulties along their
+                                                developmental pathway, but there are always ways to overcome the
+                                                obstacles. More importantly, there are endless possibilities for the
+                                                future of kids!
+                                            </h5>
+                                        </div>
+                                        <div class="delivery-detail">
+                                            <h5 class="text">We also hope to promote occupational therapy services and
+                                                products in Hong Kong, so that people who are experiencing difficulties
+                                                can live a life in a more independent and meaningful way.
                                             </h5>
                                         </div>
                                     </div>
@@ -477,7 +498,7 @@ include ('include/header.php');
 
 <!-- Footer Section Start -->
 <?php
-include ('include/footer.php');
+include('include/footer.php');
 ?>
 <!-- Footer Section End -->
 
@@ -502,18 +523,18 @@ include ('include/footer.php');
                         $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
                         $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
                         for ($i = 0; $i < $row; $i++) {
-                            $image = explode(',',$product[$i]['p_image'])
+                            $image = explode(',', $product[$i]['p_image'])
                             ?>
                             <li class="list-1">
                                 <div class="deal-offer-contain">
                                     <a href="shop.php" class="deal-image">
-                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
+                                        <img src="admin/<?php echo $image[0]; ?>" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
                                     <a href="shop.php" class="deal-contain">
-                                        <h5><?php echo $product[$i]['p_name']?></h5>
-                                        <h6><?php echo $product[$i]['product_price']?></h6>
+                                        <h5><?php echo $product[$i]['p_name'] ?></h5>
+                                        <h6><?php echo $product[$i]['product_price'] ?></h6>
                                     </a>
                                 </div>
                             </li>

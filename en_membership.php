@@ -53,7 +53,7 @@ include('include/header.php');
 
 
 <!-- Breadcrumb Section Start -->
-<section class="breadscrumb-section pt-0">
+<!--<section class="breadscrumb-section pt-0">
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12">
@@ -73,7 +73,7 @@ include('include/header.php');
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Breadcrumb Section End -->
 
 <!-- log in section start -->
@@ -81,7 +81,7 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mt-3 mb-3" style="font-weight: bold; font-size: 40px;">Frequently Asked Questions </h1>
+                <h1 class="mt-3 mb-3 inner-header">Frequently Asked Questions </h1>
             </div>
             <div class="col-12">
                 <div class="faq-accordion">
@@ -248,7 +248,7 @@ include('include/header.php');
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <h1 class="mt-3 mb-3" style="font-weight: bold; font-size: 40px;">Terms and Conditions</h1>
+                <h1 class="mt-3 mb-3 inner-header">Terms and Conditions</h1>
                 <h2 class="mb-3" style="font-weight: bold;">Wayshk O Membership Program</h2>
                 <p>1. Each applicant can only apply for one Wayshk Online Shop membership.</p>
                 <p>2. The application fee for Wayshk Online Shop Membership is free of charge.</p>

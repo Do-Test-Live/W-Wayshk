@@ -81,7 +81,7 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-5">條款細則</h1>
+                <h1 class="mb-5 inner-header">條款細則</h1>
                 <ul>
                     <li>閣下遞交及/或確認訂單即表示閣下明白並接受活籽兒童用品店（下稱本店）的購物條款及細則，遞交及確認方式不限於網上購物平台，亦包括透過電話、電郵或親臨自取點等遞交及確認的訂單。</li>
                 </ul>

@@ -53,7 +53,7 @@ include('include/header.php');
 
 
 <!-- Breadcrumb Section Start -->
-<section class="breadscrumb-section pt-0">
+<!--<section class="breadscrumb-section pt-0">
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12">
@@ -73,7 +73,7 @@ include('include/header.php');
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Breadcrumb Section End -->
 
 <!-- log in section start -->
@@ -81,7 +81,7 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-5" style="font-size: 40px;">Terms and Conditions
+                <h1 class="mb-5 inner-header">Terms and Conditions
                 </h1>
                 <ul>
                     <li>This page was written in Chinese and translated to English. In case of any dispute, the Chinese

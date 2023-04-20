@@ -405,17 +405,28 @@ if (isset($_SESSION["cart_item"])) {
                                                 <a class="nav-link" href="About-Us">關於</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="order_old.php">訂購方法</a>
+                                                <a class="nav-link" href="Order">訂購方法</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="Institution">機構/學校訂購</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="Living-Seeds-Children">精選課程</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                   href="Occupational-Therapy-Courses">線上職業治療課程</a>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                                   data-bs-toggle="dropdown">更多的 <i class="fa-solid fa-angle-down"></i></a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="Institution">機構/學校訂購</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="Living-Seeds-Children">精選課程</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                           href="Occupational-Therapy-Courses">線上職業治療課程</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                           href="Membership-Program">會員計劃</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                         <?php
@@ -434,19 +445,27 @@ if (isset($_SESSION["cart_item"])) {
                                             <li class="nav-item">
                                                 <a class="nav-link" href="Order-EN">How to order</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="Institution-EN">Institution/School Order</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="Living-Seeds-Children-EN">Wayshk Children Service Society</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                   href="Occupational-Therapy-Courses-EN">Featured Courses</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                   href="Membership-Program-EN">Membership Program</a>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                                   data-bs-toggle="dropdown">More <i class="fa-solid fa-angle-down"></i></a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="Institution-EN">Institution/School Order</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="Living-Seeds-Children-EN">Wayshk Children Service Society</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                           href="Occupational-Therapy-Courses-EN">Featured Courses</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                           href="Membership-Program-EN">Membership Program</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                         <?php

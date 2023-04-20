@@ -81,8 +81,8 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-5" style="font-size: 40px">收集個人資料及私隱政策聲明</h1>
-                <h4 class="mb-3">隱私權保護政策的適用範圍</h4>
+                <h1 class="mb-5 inner-header">收集個人資料及私隱政策聲明</h1>
+                <h4 class="mb-3" style="font-weight: bold;">隱私權保護政策的適用範圍</h4>
                 <ul>
                     <li>隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。</li>
                 </ul>

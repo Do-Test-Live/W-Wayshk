@@ -81,7 +81,7 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mt-3 mb-3" style="font-weight: bold; font-size: 40px;">常見問題  </h1>
+                <h1 class="mt-3 mb-3 inner-header">常見問題  </h1>
             </div>
             <div class="col-12">
                 <div class="faq-accordion">
@@ -227,7 +227,7 @@ include('include/header.php');
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <h1 class="mt-3 mb-3" style="font-weight: bold; font-size: 40px;">條款及細則</h1>
+                <h1 class="mt-3 mb-3 inner-header">條款及細則</h1>
                 <h2 class="mb-3" style="font-weight: bold;">Wayshk網店會員計劃</h2>
                 <p>1. 每位申請人只限申請Wayshk網店會籍乙個。</p>
                 <p>2. 申請Wayshk網店會籍費用全免。</p>

@@ -75,7 +75,7 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="about-us-title text-center">
-                    <h2 class="center" style="color: #ffa53b">訂購方法</h2>
+                    <h2 class="center inner-header">訂購方法</h2>
                 </div>
 
                 <div class="slider-3_1 product-wrapper">
@@ -111,7 +111,7 @@ include('include/header.php');
                     </div>
                 </div>
                 <div class="about-us-title text-center mt-5 mb-5">
-                    <h2 class="center second" style="font-size: 20px;">於網上下單均有電子單據 ；如需公司蓋印報價單/收帳單/收據，先於下單時列明提出/以電郵查詢</h2>
+                    <h2 class="center second inner-header">於網上下單均有電子單據 ；如需公司蓋印報價單/收帳單/收據，先於下單時列明提出/以電郵查詢</h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
@@ -127,7 +127,7 @@ include('include/header.php');
                     </div>
                 </div>
                 <div class="about-us-title text-center mt-5">
-                    <h2 class="center second">自取點資料  </h2>
+                    <h2 class="center second inner-header">自取點資料  </h2>
                 </div>
                 <div class="slider-3_1 product-wrapper mt-1">
                     <div>
@@ -172,11 +172,11 @@ include('include/header.php');
             <div class="col-12">
                 <div class="fresh-contain">
                     <div>
-                        <div class="review-title text-center">
-                            <p style="font-size: 28px;font-weight: bold">海外訂單 </p>
+                        <div class="text-center">
+                            <h5 class="inner-header">海外訂單 </h5>
                         </div>
 
-                        <div class="delivery-list">
+                        <div class="delivery-list mt-5">
                             <p class="text-content">
                                 ．海外訂單以順豐快遞 SF EXPRESS配送，運費貨到付款
                                 <br/>
