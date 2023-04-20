@@ -66,14 +66,15 @@ include('include/header.php');
                         <div class="col-xl-12">
                             <div class="contact-title text-center mb-5">
                                 <h2>
-                                    Liveseed Children's Services - Occupational Therapy Services
+                                    Wayshk Children Service Society - Occupational Therapy Service
                                 </h2>
                                 <h4 class="mt-3">
-                                    The experienced occupational therapists of Seeds for Children can provide school-based occupational therapy services to needy school children. Through diversified therapeutic activities, we help students with different learning abilities to participate in campus and daily life. In addition, teachers/parents interactive workshops or lectures on different topics can also be organized for schools.
+                                    Our experienced occupational therapists are available to provide school-based occupational therapy service for students in need. Through a wide range of therapeutic activities, we help students with disabilities to engage better in school and daily life. In addition, we can organize interactive teacher/parent workshops on various topics for schools.
+
                                 </h4>
                             </div>
 
-                            <div class="contact-detail mt-5">
+                           <!-- <div class="contact-detail mt-5">
                                 <div class="row g-4">
                                     <div class="col-md-4">
                                         <h2 class="mb-3">Services include:</h2>
@@ -156,27 +157,30 @@ include('include/header.php');
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="row mb-5 mt-5">
-                                <h2 class="mb-3">1. Sensory integration training</h2>
+                                <h2 class="mb-3 text-center">Examples of training content: </h2>
+                            </div>
+
+                            <div class="row mb-5 mt-5">
+                                <h2 class="mb-3">1. Sensory Integration Training</h2>
                                 <p>
-                                    Through various dynamic activities, improve the overall sensory adjustment ability. Reduce hyperesthesia/weakness; adjust wakefulness, assist students with abnormally high or low activity levels to maintain a good state of wakefulness, improve concentration; improve posture control, balance, movement planning, and large muscle coordination, etc.
-                                    To assist students in meeting their daily life and learning needs.</p>
+                                    To improve overall sensory regulation through various dynamic activities. Reduce the condition of sensory hypersensitivity/hyposensitivity; regulate arousal level, help students with abnormally high or low activity levels to maintain good alertness and improve concentration; improve postural control, balance, motor planning and motor coordination, etc. Assist students to cope with their daily living and learning needs.
+                                </p>
                             </div>
                             <div class="row mb-5">
-                                <h2 class="mb-3">2. Sensory processing and eye control training</h2>
-                                <p>Activities based on the "Astronaut Training-A Sound Activated Vestibular-Visual Protocol" (Astronaut Training-A Sound Activated Vestibular-Visual Protocol) fundamentally improve sensory regulation.
-                                    Cooperate with other specially designed teaching materials to improve students' eye control/hand-eye coordination/visual concentration ability. Target students: have obvious reading and writing difficulties, skip lines and words when reading/copying, easily miss questions, often have copying errors, weak visual concentration, etc.</p>
+                                <h2 class="mb-3">2. Sensory Processing and Occulo-motor Control Training</h2>
+                                <p>Activities based on the principals of “Astronaut Training” (A Sound Activated Vestibular-Visual Protocol) are designed to improve sensory regulation fundamentally. Combined with other specially designed materials to improve eye control/ eye-hand coordination/visual attention.
+                                    Target students: students with significant dyslexia or weak visual concentration；students would skip lines and words when reading/copying, tend to omit questions, make frequent transcription errors, etc.</p>
                             </div>
                             <div class="row mb-5">
-                                <h2 class="mb-3">3. Small muscle and writing ability training</h2>
-                                <p>Identify students' writing difficulties through various assessments, and provide follow-up or test adjustment suggestions. Warm up with multi-sensory activities to improve sitting posture/concentration/upper body stability and other prerequisite elements for writing. Improve finger strength/finger flexibility, improve writing posture and spatial relationship,
-                                    Thereby improving the speed/endurance of writing and the aesthetics of fonts</p>
+                                <h2 class="mb-3">3. Fine Motor and Writing Skills Training </h2>
+                                <p>Students' writing difficulties are identified through various assessments. Professional recommendations are made for follow-up or examination adaptation. The sessions will be started with multi-sensory activities to improve sitting posture/attention /stability of the upper limbs, etc. ,which are the prerequisites for writing. Improve finger strength/dexterity, pencil grip and spatial relationships to enhance writing speed, endurance and legibility.</p>
                             </div>
                             <div class="row mb-5">
-                                <h2 class="mb-3">4. Concentration and executive function training </h2>
-                                <p>Carry out various dynamic and static concentration training activities in groups. Learn teamwork in interactive games, and at the same time strengthen students' ability to perform tasks, improve working memory, emotional control, flexibility, time management, organizational skills, etc. In addition, we will also discuss with students and design individualized plans for weekdays,
-                                    Improve behavior in different situations.</p>
+                                <h2 class="mb-3">4. Attention and Executive functions training</h2>
+                                <p>A variety of dynamic and static attention training activities are conducted in groups. Students will learn to work in teams through interactive games, while enhancing their task executing skills, working memory, emotional control, flexibility, time management, organizational skills and more. In addition, individualized programmed will be discussed and designed for students to improve their behavior in adapting different situations during the day.</p>
+                                <p class="text-center">For more information, please contact us or send us your tender for a quotation.</p>
                             </div>
                         </div>
                     </div>

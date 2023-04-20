@@ -59,13 +59,13 @@ include ('include/header.php');
     <div class="container-fluid-lg">
         <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
             <div class="col-12 text-center">
-                <h2>Institution/School Order</h2>
+                <h2>School and Institutional Orders</h2>
             </div>
             <div class="row mt-5">
                 <div class="col-md-6 text-end">
                     <div class="row">
                         <div class="col-6 my-auto">
-                            <p>Product list</p>
+                            <p>Product Catalogue </p>
                         </div>
                         <div class="col-6">
                             <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
@@ -83,7 +83,7 @@ include ('include/header.php');
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <p style="font-weight: bold;">Please complete the product order form</p>
+                    <p style="font-weight: bold;">Please fill in the product order form and email it to</p>
                     <p>1. Email to waysshk.order@gmail.com</p>
                     <p>2. Whatsapp to +852 5605 8389</p>
                     <p>We will quote your institution/school as soon as possible</p>
@@ -93,33 +93,51 @@ include ('include/header.php');
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <h2 class="mb-3">Shipping method</h2>
-                <p>Dawei warehouse self-pickup (reservation required) Address: Room 1, 3rd Floor, Qunli Industrial Building, No. 21-23, Chengyun Road, Dawei</p>
-                <p>Self-pickup at Wanchai cooperation point (reservation required)<br>Address: Erpu Children's Learning and Development Center, 25/F, 237-239 Hennessy Road, Wanchai</p>
-                <p>Express Shipping (Free Shipping over $2000/Freight Collect/Get a Shipping Quote)</p>
+                <h2 class="mb-3">Purchasing service：</h2>
+                <p>We also offer purchasing service, helping customers to order assessment tools and training products from different countries and platforms.</p>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <h2 class="mb-3">Delivery time</h2>
-                <p>From one to eight weeks, welcome to contact our company first to check the stock.</p>
-                <p>If you need to order products in large quantities, it is recommended to confirm the order early. We will arrange delivery as soon as possible after the goods arrive at the port.</p>
+                <h2 class="mb-3">Delivery methods :</h2>
+                <p>1. Pick up from Tai Wai Warehouse (by appointment only)
+                    Address: Unit 1, 3/F, Kingslet Industrial Building, 21-23 Shing Wan Road, Tai Wai</p>
+                <p> 2. Pick up from our cooperative center in Wan Chai (by appointment only)
+                    Address: Epoch Child Learning and Development Centre, 25/F, 237-239 Hennessy Road, Wanchai</p>
+                <p>3. Courier Delivery (Paid on delivery / Get quotation on delivery fee)</p>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <h2 class="mb-3">Payment methods</h2>
-                <p>Pay in cash when picking up at a self-pickup point</p>
-                <p>PayMe/FPS</p>
-                <p>Mail check (check payable to: WAYSHK) <br> Mail to: Room 1, 3rd Floor, Qunli Industrial Building, No. 21-23, Chengyun Road, Tai Wai [Attn: WAYSHK]</p>
-                <p>Bank transfer (Hang Seng Bank: 769-334699-883 Account name: WASYHK)</p>
+                <h2 class="mb-3">
+                    Shipping time：</h2>
+                <p>Ranging from 1 to 8 weeks. Please contact us to check our stock.
+                    For bulk orders, early placement and confirmation are recommended.
+                    We will arrange delivery as soon as possible upon product arrival.
+                </p>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <h2 class="mb-3">Institution/School Subscription Discount</h2>
-                <p>Free delivery service on Hong Kong Island, Kowloon and the New Territories for orders over $2000, excluding outlying islands and remote areas</p>
-                <p>Welcome to inquire about other promotional offers from us</p>
+                <h2 class="mb-3">Payment methods :</h2>
+                <p>1. Pay in cash at the pick-up points</p>
+                <p>2. PayMe/FPS</p>
+                <p>3. Mailing cheque
+                    - Cheque payable to：WAYSHK)
+                    - Mail to: Room 1, 3/F, Kingslet Industrial Building, 21-23 Shing Wan Road, Tai Wai  [Attn: WAYSHK].
+                </p>
+                <p>4. Bank transfer
+                    - Hang Seng Bank: 769-334699-883, account name: WASYHK)
+                    * Payment can be made within 30 days of delivery
+                </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-3">
+                    Institutional / School Order Offer：</h2>
+                <p>1. Free delivery to Hong Kong Island, Kowloon and New Territories for orders over $2000, excluding outlying islands and remote areas</p>
+                <p>2. Contact us for other existing promotional offers</p>
             </div>
         </div>
     </div>
