@@ -922,6 +922,83 @@ include('include/header.php');
                         </div>
                     </div>
                 </div>
+                <div class="row g-4 ratio_65 mt-5">
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/34.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk_鴨靈號桌座標</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/35.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk專注力圈數字</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 ms-auto">
+                        <div class="blog-box wow fadeInUp">
+                            <div class="blog-image">
+                                <a href="#">
+                                    <img src="assets/images/courses/36.jpg"
+                                         class="bg-img blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="blog-contain">
+                                <a href="#">
+                                    <h3>Wayshk聖誕數字蓋印</h3>
+                                </a>
+                                <hr/>
+                                <div class="blog-label">
+                                    <p>
+                                        Over
+                                    </p>
+                                    <span class="time"><span>$1000；</span></span>
+                                    <span class="super"><span>Low-income families $500</span></span>
+                                </div>
+                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
