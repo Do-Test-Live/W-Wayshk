@@ -62,14 +62,65 @@
                             ?>
                             <div class="footer-logo-contain">
                                 <a href="javascript:void(0)">香港大圍成運路21-23號群力工業大廈3樓1室</a></br></br>
-                                <a href="javascript:void(0)">訂購產品：wayshk.order@gmail.com </br>+852 56058389 (Whatsapp )</a></br></br>
+                                <div class="footer-title">
+                                    <h4>產品訂購</h4>
+                                </div>
+                                <div class="footer-contact">
+                                    <ul>
+                                        <li>
+                                            <div class="footer-number">
+                                                <i data-feather="phone"></i>
+                                                <div class="contact-number">
+                                                    <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo 'Whatsapp'; else echo 'Whatsapp';?></h6>
+                                                    <a href="http://wa.me/85256058389" target="_blank">+852 56058389</a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="footer-number">
+                                                <i data-feather="mail"></i>
+                                                <div class="contact-number">
+                                                    <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '電郵地址'; else echo 'Email Address :';?></h6>
+                                                    <a href="mailto:ways00.hk@gmail.com">wayshk.order@gmail.com</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <?php
                         }else{
                             ?>
                             <div class="footer-logo-contain">
                                 <a href="javascript:void(0)">Room 1, 3rd Floor, Qunli Industrial Building, 21-23 Shing Wan Road, Tai Wai, Hong Kong</a></br></br>
-                                <a href="javascript:void(0)">Order products: waysshk.order@gmail.com </br>+852 56058389 (Whatsapp)</a></br></br>
+                                <div class="footer-title">
+                                    <h4>Ordering Product:</h4>
+                                </div>
+
+                                <div class="footer-contact">
+                                    <ul>
+                                        <li>
+                                            <div class="footer-number">
+                                                <i data-feather="phone"></i>
+                                                <div class="contact-number">
+                                                    <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo 'Whatsapp'; else echo 'Whatsapp';?></h6>
+                                                    <a href="http://wa.me/85256058389" target="_blank">+852 56058389</a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="footer-number">
+                                                <i data-feather="mail"></i>
+                                                <div class="contact-number">
+                                                    <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '電郵地址'; else echo 'Email Address :';?></h6>
+                                                    <a href="mailto:ways00.hk@gmail.com">wayshk.order@gmail.com</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <?php
                         }
@@ -163,7 +214,7 @@
 
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="footer-title">
-                        <h4><?php if($_SESSION['language'] === 'CN') echo '聯繫我們'; else echo 'Contact Us';?></h4>
+                        <h4><?php if($_SESSION['language'] === 'CN') echo '其他查詢'; else echo 'Other Inquiries';?></h4>
                     </div>
 
                     <div class="footer-contact">
@@ -172,7 +223,7 @@
                                 <div class="footer-number">
                                     <i data-feather="phone"></i>
                                     <div class="contact-number">
-                                        <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '熱線 24/7 :'; else echo 'Hotline 24/7 :';?></h6>
+                                        <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo 'Whatsapp'; else echo 'Whatsapp';?></h6>
                                         <a href="http://wa.me/85252657359" target="_blank">+852 52657359</a>
                                     </div>
                                 </div>
@@ -182,7 +233,7 @@
                                 <div class="footer-number">
                                     <i data-feather="mail"></i>
                                     <div class="contact-number">
-                                        <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '電子郵件地址 ：'; else echo 'Email Address :';?></h6>
+                                        <h6 class="text-content"><?php if($_SESSION['language'] === 'CN') echo '電郵地址'; else echo 'Email Address :';?></h6>
                                         <a href="mailto:ways00.hk@gmail.com">ways00.hk@gmail.com</a>
                                     </div>
                                 </div>

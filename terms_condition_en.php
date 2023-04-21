@@ -14,7 +14,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>User Profile</title>
+    <title>Terms and Conditions</title>
 
     <?php include('include/css.php'); ?>
     <style>

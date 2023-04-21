@@ -14,7 +14,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>User Profile</title>
+    <title>條款細則</title>
 
     <?php include('include/css.php'); ?>
     <style>
@@ -53,12 +53,12 @@ include('include/header.php');
 
 
 <!-- Breadcrumb Section Start -->
-<section class="breadscrumb-section pt-0">
+<!--<section class="breadscrumb-section pt-0">
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12">
                 <div class="breadscrumb-contain">
-                    <h2 class="mb-2">條款細則</h2>
+                    <h2 class="mb-2">Terms and Conditions</h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -66,14 +66,14 @@ include('include/header.php');
                                     <i class="fa-solid fa-house"></i>
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active"><a href="terms_condition_en.php">EN</a></li>
+                            <li class="breadcrumb-item active"><a href="terms_condition.php">CN</a></li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- Breadcrumb Section End -->
 
 <!-- log in section start -->
@@ -81,41 +81,44 @@ include('include/header.php');
     <div class="container-fluid-lg w-100">
         <div class="row">
             <div class="col-12">
-                <h1 class="mb-5 inner-header">條款細則</h1>
+                <h1 class="mb-5 inner-header">條款細則
+                </h1>
                 <ul>
                     <li>閣下遞交及/或確認訂單即表示閣下明白並接受活籽兒童用品店（下稱本店）的購物條款及細則，遞交及確認方式不限於網上購物平台，亦包括透過電話、電郵或親臨自取點等遞交及確認的訂單。</li>
+
                 </ul>
+                <h4 class="mt-3" style="font-weight: bold">1. 所有貨品售完即止。如有任何貨品售罄，本店將不會作出事前通知。本店亦保留拒絕接受及或限制訂單數量的權利，且毋須給予任何解釋。如有上述情況，本店將以透過電話或電郵通知閣下。</h4>
+                <h4 class="mt-3" style="font-weight: bold">2. 除貨品長期缺貨外，所有已付款的訂單都不能取消或退款。
+                </h4>
+                <h4 class="mt-3" style="font-weight: bold">3. 退換保證條款：
+                </h4>
                 <ul>
-                    <li>所有貨品售完即止。如有任何貨品售罄，本店將不會作出事前通知。本店亦保留拒絕接受及或限制訂單數量的權利，且毋須給予任何解釋。如有上述情況，本店將以透過電話或電郵通知閣下。
+                    <li>到貨後發現與訂購商品不同 (只接受未開封之全新商品) / 打開包裝後，商品有明顯瑕疵或損壞接受退換。請於收貨後5日之內告知我們，逾期一概不受理。
                     </li>
-                    <li>除貨品長期缺貨外，所有已付款的訂單都不能取消或退款。
+                    <li>貨品或會因運送途中，外盒出現一些輕微損壞(如爛角或撞凹)，而不影響正常使用，本店 -概恕不受理或補發產品。
                     </li>
-                    <li>退換保證條款：</li>
-                    <ul>
-                        <li>到貨後發現與訂購商品不同 (只接受未開封之全新商品) / 打開包裝後，商品有明顯瑕疵或損壞接受退換。請於收貨後5日之內告知我們，逾期一概不受理。</li>
-                        <li>貨品或會因運送途中，外盒出現一些輕微損壞(如爛角或撞凹)，而不影響正常使用，本店一概恕不受理或補發產品。 </li>
-                    </ul>
-                    <li>涉及個人衞生的產品或配件（如: 牙膠，治療刷）；任何顯示折扣產品、清貨產品、</li>
-                </ul>
-                <h4 class="mt-3" style="font-weight: bold;">特賣</h4>
-                <h4 class="mt-3" style="font-weight: bold;">產品及免費贈品都不設退換服務。</h4>
-                <ul>
-                    <li>只適用於非人為損毀產品，因不滿意貨品表現等原因恕不接受。</li>
+
+                    <li>涉及個人衞生的產品或配件（如: 牙膠，治療刷）；任何顯示折扣產品、清貨產品、特賣
+                        產品及免費贈品都不設退換服務。
+                    </li>
+                    <li>只適用於非人為損毀產品，因不滿意貨品表現等原因恕不接受。
+                    </li>
                     <li>任何被退換貨品只限更換同等價值或價值更高之貨品，客戶須支付價值較高之貨
                         品差額。如更換價值較低之貨品，所有餘額將不獲退回。
                     </li>
-                    <li>退貨費用：以送貨地址為準，由本店負擔退貨運費，但可能會按實際情況收取行政費用 。
+
+                    <li>退貨費用：以送貨地址為準，由本店負擔退貨運費，但可能會按實際情況收取行政費用 。
                     </li>
-                    <li>本店保留更換產品之最終決定權。
+                    <li>
+                        本店保留更換產品之最終決定權 。
                     </li>
+
                 </ul>
-                <h4 class="mt-3" style="font-weight: bold;">部份訂單會因收貨地址不詳、多次派送均無人收件或收件人拒收包裹而被退回等。當速遞公司將包裹退回給我們時，我們會在退款中扣除原本的運費及退件的手運費，以作退回訂單處理費。</h4>
-                <h4 class="mt-3" style="font-weight: bold;">優惠券代碼、優惠、贈品只適用於指定客戶或推廣，如有錯誤的使用情況下，不論是人為出錯或系統故障造成，本店將自動更正並會以電話或電郵通知閣下再確認。如果客戶在提交訂單之前未輸入優惠券代碼，則將被視為放棄使用優惠券的優惠。
+                <h4 class="mt-3" style="font-weight: bold">4. 部份訂單會因收貨地址不詳、多次派送均無人收件或收件人拒收包裹而被退回等。當速遞公司將包裹退回給我們時，我們會在退款中扣除原本的運費及退件的手運費，以作退回訂單處理費。
                 </h4>
-                <ul>
-                    <li>購買前請先諮詢店員有關產品用法，本店不會就錯誤或不當使用產品而引至任何問題承擔任何責任。</li>
-                    <li>本店保留不時修改和修訂售價、送貨收費及網上購物條款及細則的權利，並毋須作出事前通知；如有任何爭議，本店保留最終決定權。</li>
-                </ul>
+                <h4 class="mt-3" style="font-weight: bold">5. 優惠券代碼、優惠、贈品只適用於指定客戶或推廣，如有錯誤的使用情況下，不論是人為出錯或系統故障造成，本店將自動更正並會以電話或電郵通知閣下再確認。如果客戶在提交訂單之前未輸入優惠券代碼，則將被視為放棄使用優惠券的優惠。</h4>
+                <h4 class="mt-3" style="font-weight: bold" >6. 購買前請先諮詢店員有關產品用法，本店不會就錯誤或不當使用產品而引至任何問題承擔任何責任。</h4>
+                <h4 class="mt-3" style="font-weight: bold" >7. 本店保留不時修改和修訂售價、送貨收費及網上購物條款及細則的權利，並毋須作出事前通知；如有任何爭議，本店保留最終決定權。</h4>
             </div>
         </div>
     </div>
@@ -127,6 +130,7 @@ include('include/header.php');
 include('include/footer.php');
 ?>
 <!-- Footer Section End -->
+
 
 <!-- Deal Box Modal Start -->
 <div class="modal fade theme-modal deal-modal" id="deal-box" tabindex="-1" aria-labelledby="exampleModalLabel"

@@ -61,22 +61,22 @@ include ('include/header.php');
             <div class="col-12 text-center">
                 <h2 class="inner-header">機構/學校訂購</h2>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-6 text-end">
+            <div class="row mt-5" style="padding-left: 21px !important;">
+                <div class="col-md-6">
                     <div class="row">
-                        <div class="col-6 my-auto">
+                        <div class="col-4 my-auto">
                             <p>產品目錄</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-8">
                             <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
                                 下載 <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                             <p>產品訂購表格</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-8">
                             <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
                                 下載 <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>

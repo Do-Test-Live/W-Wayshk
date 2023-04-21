@@ -66,7 +66,7 @@ include('include/header.php');
                         <div class="col-xl-12">
                             <div class="contact-title text-center mb-5">
                                 <h2 class="inner-header">
-                                    Wayshk Children Service Society - Occupational Therapy Service
+                                    Live Seed Children's Service Agency
                                 </h2>
                                 <h4 class="mt-3">
                                     Our experienced occupational therapists are available to provide school-based occupational therapy service for students in need. Through a wide range of therapeutic activities, we help students with disabilities to engage better in school and daily life. In addition, we can organize interactive teacher/parent workshops on various topics for schools.

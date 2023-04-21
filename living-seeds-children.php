@@ -66,7 +66,7 @@ include('include/header.php');
                         <div class="col-xl-12">
                             <div class="contact-title text-center mb-5">
                                 <h2 class="inner-header">
-                                    活籽兒童服務社---職業治療服務
+                                    活籽兒童 服務社
                                 </h2>
                                 <h4 class="mt-3">
                                     活籽兒童服務社的資深職業治療師可為有需要學童提供校本職業治療服務。透過多元化的治療活動，協助有學習能力差異的學生投入校園及日常生活中。另外，亦可為學校舉辦不同專題的教師/家長互動工作坊或講座。

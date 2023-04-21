@@ -10,7 +10,7 @@ if (!empty($_GET["action"])) {
 
                 $productByCode = $db_handle->runQuery("SELECT * FROM product WHERE id ='" . $_GET["product_id"] . "'");
                 //echo strtok($productByCode[0]["p_image"],',');
-                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'image' => strtok($productByCode[0]["p_image"],','), 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
+                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"],'en_name' => $productByCode[0]["p_name_en"], 'image' => strtok($productByCode[0]["p_image"],','), 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
 
                 if (!empty($_SESSION["cart_item"])) {
                     if (in_array($productByCode[0]["id"], array_keys($_SESSION["cart_item"]))) {
@@ -66,12 +66,12 @@ if (isset($_SESSION["cart_item"])) {
     <div class="header-top bg-dark">
         <div class="container-fluid-lg">
             <div class="row">
-                <div class="col-xxl-3 d-xxl-block d-none">
+                <!--<div class="col-xxl-3 d-xxl-block d-none">
                     <div class="top-left-header">
                         <i class="fa-solid fa-location-dot text text-white"></i>
                         <span class="text-white">香港大圍成運路21-23號群力工業大廈3樓1室</span>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="col-xxl-6 col-lg-9 d-lg-block d-none">
                     <div class="header-offer">
@@ -209,11 +209,8 @@ if (isset($_SESSION["cart_item"])) {
                                 <li class="right-side">
                                     <a href="contact.php" class="delivery-login-box">
                                         <div class="delivery-icon">
-                                            <i data-feather="phone-call"></i>
-                                        </div>
-                                        <div class="delivery-detail">
-                                            <h6>24/7 Delivery</h6>
-                                            <h5>+852 52657359</h5>
+                                            <a href="tel:852 52657359">
+                                            <i data-feather="phone-call"></i></a>
                                         </div>
                                     </a>
                                 </li>
@@ -420,7 +417,7 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                           href="Occupational-Therapy-Courses">線上職業治療課程</a>
+                                                           href="Textbook-Download">教材下載</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
@@ -459,7 +456,7 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                           href="Occupational-Therapy-Courses-EN">Featured Courses</a>
+                                                           href="Textbook-Download-EN">Textbook Download</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"

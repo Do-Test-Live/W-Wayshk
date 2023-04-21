@@ -72,7 +72,7 @@ include('include/header.php');
     <div class="container-fluid-lg">
         <div class="row g-4">
             <div class="col-12 text-center">
-                <h2 class="inner-header">Occupational Therapy Services</h2>
+                <h2 class="inner-header">Textbook Download</h2>
             </div>
             <div class="col-xxl-12 mt-5">
                 <div class="row g-4 ratio_65">

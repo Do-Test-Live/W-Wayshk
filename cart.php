@@ -61,7 +61,7 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="breadscrumb-contain">
-                    <h2>Cart</h2>
+                    <h2><?php if($_SESSION['language'] === 'CN') echo '大車'; else echo 'Cart';?></h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -69,7 +69,8 @@ include('include/header.php');
                                     <i class="fa-solid fa-house"></i>
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <?php if($_SESSION['language'] === 'CN') echo '大車'; else echo 'Cart';?></li>
                         </ol>
                     </nav>
                 </div>
@@ -99,14 +100,14 @@ include('include/header.php');
                                         <td class="product-detail">
                                             <div class="product border-0">
                                                 <a href="#" class="product-image">
-                                                    <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'],',')); ?>"
+                                                    <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'],','));?>"
                                                          class="img-fluid blur-up lazyload" alt="">
                                                 </a>
                                                 <div class="product-detail">
                                                     <ul>
                                                         <li class="name">
-                                                            <h4 class="table-title text-content">Name</h4>
-                                                            <a href="Product-Details?product_id=<?php echo $item["id"]; ?>"><?php echo $item["name"]; ?></a>
+                                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '產品名稱'; else echo 'Product Name'?> </h4>
+                                                            <a href="Product-Details?product_id=<?php echo $item["id"]; ?>"><?php if($_SESSION['language'] === 'CN') echo $item["name"]; else echo $item["en_name"]?></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -114,12 +115,12 @@ include('include/header.php');
                                         </td>
 
                                         <td class="price">
-                                            <h4 class="table-title text-content">Price</h4>
+                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '價格'; else echo 'Price'?></h4>
                                             <h5><?php echo "$ " . $item["price"]; ?></h5>
                                         </td>
 
                                         <td class="quantity">
-                                            <h4 class="table-title text-content">Qty</h4>
+                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '數量'; else echo 'Qty'?></h4>
                                             <div class="quantity-price">
                                                 <div class="cart_qty">
                                                     <div class="input-group">
@@ -130,13 +131,13 @@ include('include/header.php');
                                         </td>
 
                                         <td class="subtotal">
-                                            <h4 class="table-title text-content">Total</h4>
+                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '全部的'; else echo 'Total'?></h4>
                                             <h5><?php echo "$ " . number_format($item_price, 2); ?></h5>
                                         </td>
 
                                         <td class="save-remove">
-                                            <h4 class="table-title text-content">Action</h4>
-                                            <a class="remove close_button" href="Cart?action=remove&product_id=<?php echo $item["id"]; ?>">Remove</a>
+                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '行動'; else echo 'Action'?></h4>
+                                            <a class="remove close_button" href="Cart?action=remove&product_id=<?php echo $item["id"]; ?>"><?php if($_SESSION['language'] === 'CN') echo '消除'; else echo 'Remove'?></a>
                                         </td>
                                     </tr>
                                     <?php
@@ -154,31 +155,31 @@ include('include/header.php');
             <div class="col-xxl-3">
                 <div class="summery-box p-sticky">
                     <div class="summery-header">
-                        <h3>Cart Total</h3>
+                        <h3><?php if($_SESSION['language'] === 'CN') echo '購物車總計'; else echo 'Cart Total'?></h3>
                     </div>
 
                     <div class="summery-contain">
                         <div class="coupon-cart">
-                            <h6 class="text-content mb-2">Coupon Apply</h6>
+                            <h6 class="text-content mb-2"><?php if($_SESSION['language'] === 'CN') echo '優惠券申請'; else echo 'Coupon Apply'?></h6>
                             <div class="mb-3 coupon-box input-group">
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
-                                       placeholder="Enter Coupon Code Here...">
-                                <button class="btn-apply">Apply</button>
+                                       placeholder="">
+                                <button class="btn-apply"><?php if($_SESSION['language'] === 'CN') echo '申請'; else echo 'Apply'?></button>
                             </div>
                         </div>
                         <ul>
                             <li>
-                                <h4>Subtotal</h4>
+                                <h4><?php if($_SESSION['language'] === 'CN') echo '小計'; else echo 'Subtotal'?></h4>
                                 <h4 class="price"><?php echo "$ " . number_format($total_price_new, 2); ?></h4>
                             </li>
 
                             <li>
-                                <h4>Coupon Discount</h4>
+                                <h4><?php if($_SESSION['language'] === 'CN') echo '優惠券折扣'; else echo 'Coupon Discount'?></h4>
                                 <h4 class="price">(-) 0.00</h4>
                             </li>
 
                             <li class="align-items-start">
-                                <h4>Shipping</h4>
+                                <h4><?php if($_SESSION['language'] === 'CN') echo '船運'; else echo 'Shipping'?></h4>
                                 <h4 class="price text-end">0.00</h4>
                             </li>
                         </ul>
@@ -186,7 +187,7 @@ include('include/header.php');
 
                     <ul class="summery-total">
                         <li class="list-total border-top-0">
-                            <h4>Total (USD)</h4>
+                            <h4><?php if($_SESSION['language'] === 'CN') echo '總計 (HKD)'; else echo 'Total (HKD)'?></h4>
                             <h4 class="price theme-color"><?php echo "$ " . number_format($total_price_new, 2); ?></h4>
                         </li>
                     </ul>
@@ -195,14 +196,15 @@ include('include/header.php');
                         <ul>
                             <li>
                                 <button onclick="location.href = 'Checkout';"
-                                        class="btn btn-animation proceed-btn fw-bold">Process To Checkout
+                                        class="btn btn-animation proceed-btn fw-bold">
+                                    <?php if($_SESSION['language'] === 'CN') echo '進行結算'; else echo 'Proceed To Checkout'?>
                                 </button>
                             </li>
 
                             <li>
                                 <button onclick="location.href = 'Home';"
                                         class="btn btn-light shopping-button text-dark">
-                                    <i class="fa-solid fa-arrow-left-long"></i>Return To Shopping
+                                    <i class="fa-solid fa-arrow-left-long"></i> <?php if($_SESSION['language'] === 'CN') echo '返回購物'; else echo 'Return To Shopping'?>
                                 </button>
                             </li>
                         </ul>
