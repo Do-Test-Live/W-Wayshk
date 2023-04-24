@@ -82,8 +82,10 @@ if (isset($_SESSION["cart_item"])) {
                                         <?php
                                         if ($_SESSION['language'] === 'CN') {
                                             ?>
-                                            <strong class="me-1">歡迎來到匯匯香港！</strong>
-                                            在周末的每一天都包裝新的優惠/禮物。
+                                            <strong class="me-1">
+                                                歡迎來到Wayshk!
+                                            </strong>
+                                            於每星期都有新的優惠/禮物
                                             <strong class="ms-1">新優惠券代碼: Fast024
                                             </strong>
                                             <?php
@@ -246,7 +248,7 @@ if (isset($_SESSION["cart_item"])) {
                                             <i data-feather="user"></i>
                                         </div>
                                         <div class="delivery-detail">
-                                            <h6>Hello,</h6>
+                                            <h6><?php if($_SESSION['language'] === 'CN') echo '你好'; else echo 'Hello';?>,</h6>
                                             <?php
                                             if (isset($customer_id)) {
                                                 $fetch_customer_name = $db_handle->runQuery("select customer_name from customer where id = '$customer_id'");
@@ -430,7 +432,7 @@ if (isset($_SESSION["cart_item"])) {
                                             </li>
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                   data-bs-toggle="dropdown">更多的 <i
+                                                   data-bs-toggle="dropdown">更多 <i
                                                             class="fa-solid fa-angle-down"></i></a>
 
                                                 <ul class="dropdown-menu">
@@ -507,7 +509,7 @@ if (isset($_SESSION["cart_item"])) {
                             <i data-feather="zap"></i>
                             <?php
                             if($_SESSION['language'] === 'CN')
-                                echo '<span>今天交易</span>';
+                                echo '<span>今日推介</span>';
                             else
                                 echo '<span>Deal Today</span>';
                             ?>

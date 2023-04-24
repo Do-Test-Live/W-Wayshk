@@ -1,4 +1,4 @@
-<section class="newsletter-section section-b-space">
+<!--<section class="newsletter-section section-b-space">
     <div class="container-fluid-lg">
         <div class="newsletter-box newsletter-box-2 newsletter-box-3">
             <div class="newsletter-contain py-5">
@@ -24,4 +24,4 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->

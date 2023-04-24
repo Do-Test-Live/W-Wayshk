@@ -331,6 +331,10 @@ include('include/footer.php');
 <div class="bg-overlay"></div>
 <!-- Bg overlay End -->
 
+<!-- Deal Box Modal Start -->
+<?php include ('include/deal.php');?>
+<!-- Deal Box Modal End -->
+
 <!-- latest jquery-->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 

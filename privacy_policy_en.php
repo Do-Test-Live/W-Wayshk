@@ -151,50 +151,7 @@ include('include/footer.php');
 <!-- Footer Section End -->
 
 <!-- Deal Box Modal Start -->
-<div class="modal fade theme-modal deal-modal" id="deal-box" tabindex="-1" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h5 class="modal-title w-100" id="deal_today">Deal Today</h5>
-                    <p class="mt-1 text-content">Recommended deals for you.</p>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="deal-offer-box">
-                    <ul class="deal-offer-list">
-                        <?php
-                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
-                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
-                        for ($i = 0; $i < $row; $i++) {
-                            $image = explode(',',$product[$i]['p_image'])
-                            ?>
-                            <li class="list-1">
-                                <div class="deal-offer-contain">
-                                    <a href="shop.php" class="deal-image">
-                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
-                                             alt="">
-                                    </a>
-
-                                    <a href="shop.php" class="deal-contain">
-                                        <h5><?php echo $product[$i]['p_name']?></h5>
-                                        <h6><?php echo $product[$i]['product_price']?></h6>
-                                    </a>
-                                </div>
-                            </li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include ('include/deal.php');?>
 <!-- Deal Box Modal End -->
 <!-- Tap to top start -->
 <div class="theme-option">

@@ -1,4 +1,4 @@
-<footer class="section-t-space">
+<footer class="section-t-space mt-3">
     <div class="container-fluid-lg">
         <div class="service-section">
             <div class="row g-3">

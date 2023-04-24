@@ -61,7 +61,7 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="breadscrumb-contain">
-                    <h2><?php if($_SESSION['language'] === 'CN') echo '大車'; else echo 'Cart';?></h2>
+                    <h2><?php if($_SESSION['language'] === 'CN') echo '購物車'; else echo 'Cart';?></h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -70,7 +70,7 @@ include('include/header.php');
                                 </a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <?php if($_SESSION['language'] === 'CN') echo '大車'; else echo 'Cart';?></li>
+                                <?php if($_SESSION['language'] === 'CN') echo '購物車'; else echo 'Cart';?></li>
                         </ol>
                     </nav>
                 </div>
@@ -179,7 +179,7 @@ include('include/header.php');
                             </li>
 
                             <li class="align-items-start">
-                                <h4><?php if($_SESSION['language'] === 'CN') echo '船運'; else echo 'Shipping'?></h4>
+                                <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
                                 <h4 class="price text-end">0.00</h4>
                             </li>
                         </ul>
@@ -324,50 +324,7 @@ include('include/footer.php');
 <!-- Location Modal End -->
 
 <!-- Deal Box Modal Start -->
-<div class="modal fade theme-modal deal-modal" id="deal-box" tabindex="-1" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h5 class="modal-title w-100" id="deal_today">Deal Today</h5>
-                    <p class="mt-1 text-content">Recommended deals for you.</p>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="deal-offer-box">
-                    <ul class="deal-offer-list">
-                        <?php
-                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
-                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
-                        for ($i = 0; $i < $row; $i++) {
-                            $image = explode(',',$product[$i]['p_image'])
-                            ?>
-                            <li class="list-1">
-                                <div class="deal-offer-contain">
-                                    <a href="shop.php" class="deal-image">
-                                        <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
-                                             alt="">
-                                    </a>
-
-                                    <a href="shop.php" class="deal-contain">
-                                        <h5><?php echo $product[$i]['p_name']?></h5>
-                                        <h6><?php echo $product[$i]['product_price']?></h6>
-                                    </a>
-                                </div>
-                            </li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include ('include/deal.php');?>
 <!-- Deal Box Modal End -->
 
 <!-- Tap to top start -->
