@@ -247,7 +247,7 @@ include('include/header.php');
                                     </div>
                                     <div class="product-footer">
                                         <div class="product-detail">
-                                            <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
+                                            <span class="span-name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['c_name']; else echo $fetch_products[$i]['c_name_en'];?></span>
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['p_name']; else echo $fetch_products[$i]['p_name_en'];?></h5>
                                             </a>
@@ -367,7 +367,7 @@ include('include/header.php');
                                     </div>
                                     <div class="product-footer">
                                         <div class="product-detail">
-                                            <span class="span-name"><?php echo $fetch_products[$i]['c_name'] ?></span>
+                                            <span class="span-name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['c_name']; else echo $fetch_products[$i]['c_name_en'];?></span>
                                             <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
                                                 <h5 class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['p_name']; else echo $fetch_products[$i]['p_name_en'];?></h5>
                                             </a>

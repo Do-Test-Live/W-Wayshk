@@ -310,11 +310,7 @@ if (isset($_SESSION["cart_item"])) {
                                                 <ul class="user-box-name">
                                                     <li class="product-box-contain">
                                                         <i></i>
-                                                        <a href="Login">Log In</a>
-                                                    </li>
-
-                                                    <li class="product-box-contain">
-                                                        <a href="Register">Register</a>
+                                                        <a href="Login">Log In / Register</a>
                                                     </li>
 
                                                     <li class="product-box-contain">
@@ -329,11 +325,7 @@ if (isset($_SESSION["cart_item"])) {
                                                 <ul class="user-box-name">
                                                     <li class="product-box-contain">
                                                         <i></i>
-                                                        <a href="Login">登錄</a>
-                                                    </li>
-
-                                                    <li class="product-box-contain">
-                                                        <a href="Register">登記</a>
+                                                        <a href="Login">登錄 / 登記</a>
                                                     </li>
 
                                                     <li class="product-box-contain">

@@ -638,25 +638,19 @@ include('include/header.php');
                             </h3>
                             <ul class="social-icon">
                                 <li>
-                                    <a href="https://www.instagram.com/">
+                                    <a href="https://www.instagram.com/ways_hk/?igshid=YmMyMTA2M2Y%3D">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://www.facebook.com/">
+                                    <a href="https://www.facebook.com/wayshk000?mibextid=LQQJ4d">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://twitter.com/">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://www.whatsapp.com/">
+                                    <a href="http://wa.me/85252657359">
                                         <i class="fa-brands fa-whatsapp"></i>
                                     </a>
                                 </li>
