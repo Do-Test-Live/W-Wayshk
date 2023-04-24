@@ -63,26 +63,26 @@ include ('include/header.php');
             </div>
             <div class="row mt-5" style="padding-left: 21px !important;">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-4 my-auto">
-                            <p>產品目錄</p>
+                    <div class="row align-middle pt-2">
+                        <div class="col-4">
+                            <p style="padding-left: 5px">產品目錄</p>
                         </div>
                         <div class="col-8">
-                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 下載 <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-3 align-middle">
                         <div class="col-4">
-                            <p>產品訂購表格</p>
+                            <p style="padding-left: 5px">產品訂購表格</p>
                         </div>
                         <div class="col-8">
-                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 下載 <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 px-sm-0 px-md-5">
                     <p style="font-weight: bold;">請填妥產品訂購表格後</p>
                     <p>1.  電郵到wayshk.order@gmail.com</p>
                     <p>2.  以 Whatsapp 傳送給 +852 5605 8389</p>

@@ -63,26 +63,26 @@ include ('include/header.php');
             </div>
             <div class="row mt-5" style="padding-left: 21px !important;">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-4 my-auto">
-                            <p>Product Catalogue </p>
+                    <div class="row align-middle pt-2">
+                        <div class="col-4">
+                            <p style="padding-left: 5px">Product Catalogue </p>
                         </div>
                         <div class="col-8">
-                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-3 align-middle">
                         <div class="col-4">
-                            <p>Product Order Form</p>
+                            <p style="padding-left: 5px">Product Order Form</p>
                         </div>
                         <div class="col-8">
-                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
+                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 px-sm-0 px-md-5">
                     <p style="font-weight: bold;">Please fill in the product order form and email it to</p>
                     <p>1. Email to waysshk.order@gmail.com</p>
                     <p>2. Whatsapp to +852 5605 8389</p>

@@ -46,6 +46,9 @@ $db_handle = new DBController();
         .about-us-title .second {
             margin-bottom: 17px;
         }
+        h2{
+            font-size: 23px !important;
+        }
     </style>
 </head>
 
@@ -68,137 +71,99 @@ include('include/header.php');
 ?>
 <!-- Header End -->
 
-<!-- Client Section Start -->
-<section class="client-section section-lg-space">
-    <div class="container-fluid-lg">
-        <!-- come oder page-->
-        <div class="row">
-            <div class="col-12">
-                <div class="about-us-title text-center">
-                    <h2 class="center inner-header">訂購方法</h2>
-                </div>
-
-                <div class="slider-3_1 product-wrapper">
-                    <div>
-                        <div class="clint-contain" style="background: #f8eab3">
-                            <h4>網上下單</h4>
-                            <p>
-                                1. 把需要的貨品放進購物車<br/>
-                                2. 以訪客形式或登入會員結帳
-                            </p>
-                            <p style="font-weight: bold;">3. 選擇出貨方式  </p>
-                            <p style="padding-left: 10px;">A. 順豐速遞到付 （滿$2000免費送貨）</p>
-                            <p style="padding-left: 10px;">B. 大圍倉庫自取 （敬請預約）</p>
-                            <p style="padding-left: 10px;">C. 灣仔合作點自取 （敬請預約）</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="clint-contain" style="background: #f8eab3">
-                            <h4>選擇付款方式</h4>
-                            <p>A. 自取時以現金付款</p>
-                            <p>B. PayMe （電話： +852 5265 7359）</p>
-                            <p style="padding-left: 10px;">* 把付款證明以Whatsapp傳至+852 5605 8389</p>
-                            <p>C.轉數款 FPS （電話： +852 5265 7359）</p>
-                            <p style="padding-left: 10px;">* 把付款證明以Whatsapp傳至+852 5605 8389</p>
-                            <p>D. 銀行入數</p>
-                            <p style="padding-left: 10px;">戶口號碼為 769-334699-883 (恆生銀行)  戶口名稱: Wayshk</p>
-                            <p style="padding-left: 10px;">* 付款後把入數證明以Whatsapp傳至+852 5605 8389</p>
-                            <p>E. 信用卡支付 【需支付額外5% 手續費】</p>
-                            <p>F.  支票付款 （只限機構/學校訂單）</p>
-                            <p>支票抬頭請書明受款人為「 Wayshk」, 信封請註明 Attn: Wayshk ,
-                                並郵寄往大圍成運路21-23號群力工業大廈3樓1室      </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-us-title text-center mt-5 mb-5">
-                    <h2 class="center second inner-header">於網上下單均有電子單據 ；如需公司蓋印報價單/收帳單/收據，先於下單時列明提出/以電郵查詢</h2>
-                </div>
-                <div class="slider-3_1 product-wrapper mt-1">
-                    <div>
-                        <div class="clint-contain" style="background: #e1e193">
-                            <h4>出貨</h4>
-                            <p>1.現貨產品出貨期 0-7日；預購產品，到貨期不定。歡迎向我們查詢詳情。</p>
-                            <p>2.貨品顏色及款色將隨機發放；但若顧客對於貨品顏色/款色有任何要求，
-                                請在新增說明裏填寫。有存貨的話，Wayshk會嘗試盡量配合。一但送貨後
-                                對顏色款式不滿意，恕不退換。
-                            </p>
-                            <p>3. 如果不慎填錯地址，若您的訂單尚未出貨，請您盡快聯絡我們作出更改。如已為您安排出貨，將無法更改地址。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-us-title text-center mt-5">
-                    <h2 class="center second inner-header">自取點資料  </h2>
-                </div>
-                <div class="slider-3_1 product-wrapper mt-1">
-                    <div>
-                        <div class="clint-contain" style="background: #ddf0ff">
-                            <h4> 大圍倉庫</h4>
-                            <p>地址：大圍成運路21-23號群力工業大廈3樓1室 </p>
-                            <p style="font-weight: bold;">前往方法： </p>
-                            <p>大圍火車站A出口右轉，步行約5分鐘</p>
-                            <p>開放時間：不定 （10:30 – 18:15）</p>
-                            <p>   不設現場入內選貨。先行預約取貨，與我們確認領取時間，到達後請致電並於門口交收。</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="clint-contain" style="background: #ddf0ff">
-                            <h4>合作點 --- 兒璞兒童學習及發展中心</h4>
-                            <p>地址：灣仔軒尼詩道237-239號25樓</p>
-                            <p style="font-weight: bold;">前往方法： </p>
-                            <p> 灣仔地鐵站A2出口，步行約5分鐘
-                                會展站A3出口，步行約6分鐘</p>
-                            <p>  開放時間：  </p>
-                            <p> 星期一至五 09:00 - 18:00；星期六 09:00 - 16:00</p>
-                            <p>
-                                【午餐時間 12:30-13:45 不開放】
-                                電話：2877 8787
-                            </p>
-                            <p>請先查詢庫存，先行預約取貨並確認領取時間
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Client Section End -->
-
 <!-- Fresh Vegetable Section Start -->
 <section class="fresh-vegetable-section section-lg-space">
     <div class="container-fluid-lg">
-        <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
-            <!--  come from demo website about us page-->
-            <div class="col-12">
-                <div class="fresh-contain">
-                    <div>
-                        <div class="text-center">
-                            <h5 class="inner-header">海外訂單 </h5>
-                        </div>
-
-                        <div class="delivery-list mt-5">
-                            <p class="text-content">
-                                ．海外訂單以順豐快遞 SF EXPRESS配送，運費貨到付款
-                                <br/>
-                                ．目前開放配送地區為：澳門、台灣、新加坡、馬來西亞、中國
-                                <br/>
-                                ．海外訂單限以信用卡結帳，交易手續費、匯率與退款手續費依發卡銀行規定，如有任何疑問，請聯繫您的信用卡發卡銀行
-                                <br/>
-                                ．海外訂單不適用包郵活動
-
-                                <br/>
-                                ．各國進口關稅標準不同，若領取包裹時需收取關稅，關稅須由買家自行支付
-
-                                <br/>
-                                ．部分商品可能會有無法配送或清關等問題，建議先確認商品是否可送達指定國家後再購買。如商品被扣關，將不獲退款。
-                                <br/>
-                                ．海外訂單不受理退換貨服務
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="center inner-header">訂購方法</h2>
             </div>
+        </div>w
+        <div class="row mt-3">
+            <div class="col-12">
+                <h2>網上下單</h2>
+                <p>
+                    1. 把需要的貨品放進購物車<br>
+                    2. 以訪客形式或登入會員結帳
+                </p>
+                <p style="font-weight: bold;">3. 選擇出貨方式  </p>
+                <p style="padding-left: 10px;">A. 順豐速遞到付 （滿$2000免費送貨）</p>
+                <p style="padding-left: 10px;">大圍倉庫自取 （敬請預約）</p>
+                <p style="padding-left: 10px;">灣仔合作點自取 （敬請預約）
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <h2>選擇付款方式</h2>
+            <p>A. 自取時以現金付款</p>
+            <p>B. PayMe （電話： +852 5265 7359）</p>
+            <p style="padding-left: 10px;">*  把付款證明以Whatsapp傳至+852 5605 8389</p>
+            <p>C. 轉數款 FPS （電話： +852 5265 7359）</p>
+            <p style="padding-left: 10px;">* 把付款證明以Whatsapp傳至+852 5605 8389</p>
+            <p>D. 銀行入數 </p>
+            <p style="padding-left: 10px;">戶口號碼為 769-334699-883 (恆生銀行)  戶口名稱: Wayshk</p>
+            <p style="padding-left: 10px;">* 付款後把入數證明以Whatsapp傳至+852 5605 8389</p>
+            <p>E. 信用卡支付 【需支付額外5% 手續費】</p>
+            <p>F. 支票付款 （只限機構/學校訂單）</p>
+            <p>支票抬頭請書明受款人為「 Wayshk」, 信封請註明 Attn: Wayshk ,
+                並郵寄往大圍成運路21-23號群力工業大廈3樓1室</p>
+        </div>
+        <div class="row mt-3">
+            <h2>於網上下單均有電子單據 ；如需公司蓋印報價單/收帳單/收據，先於下單時列明提出/以電郵查詢</h2>
+        </div>
+        <div class="row mt-3">
+            <h4>出貨</h4>
+            <p>1. 現貨產品出貨期 0-7日；預購產品，到貨期不定。歡迎向我們查詢詳情。</p>
+            <p>2. 貨品顏色及款色將隨機發放；但若顧客對於貨品顏色/款色有任何要求，
+                請在新增說明裏填寫。有存貨的話，Wayshk會嘗試盡量配合。一但送貨後
+                對顏色款式不滿意，恕不退換。
+            </p>
+            <p>3. 如果不慎填錯地址，若您的訂單尚未出貨，請您盡快聯絡我們作出更改。如已為您安排出貨，將無法更改地址。</p>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <h2 class="center inner-header">自取點資料</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <h4> 大圍倉庫</h4>
+            <p>地址：大圍成運路21-23號群力工業大廈3樓1室</p>
+            <p style="font-weight: bold;">前往方法：</p>
+            <p>大圍火車站A出口右轉，步行約5分鐘</p>
+            <p>開放時間：不定 （10:30 – 18:15）</p>
+            <p>不設現場入內選貨。先行預約取貨，與我們確認領取時間，到達後請致電並於門口交收。 </p>
+        </div>
+        <div class="row mt-3">
+            <h4>合作點 --- 兒璞兒童學習及發展中心</h4>
+            <p>地址：灣仔軒尼詩道237-239號25樓</p>
+            <p style="font-weight: bold;">前往方法：</p>
+            <p>灣仔地鐵站A2出口，步行約5分鐘</p>
+            <p>會展站A3出口，步行約6分鐘</p>
+            <p>開放時間：  星期一至五 09:00 - 18:00；星期六 09:00 - 16:00  </p>
+            <p>【午餐時間 12:30-13:45 不開放】電話：2877 8787</p>
+            <p>請先查詢庫存，先行預約取貨並確認領取時間</p>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <h2 class="center inner-header">海外訂單</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <p class="text-content">
+                海外訂單以順豐快遞 SF EXPRESS配送，運費貨到付款
+                <br>
+                目前開放配送地區為：澳門、台灣、新加坡、馬來西亞、中國
+                <br>
+                海外訂單限以信用卡結帳，交易手續費、匯率與退款手續費依發卡銀行規定，如有任何疑問，請聯繫您的信用卡發卡銀行
+                <br>
+                海外訂單不適用包郵活動
+                <br>
+                各國進口關稅標準不同，若領取包裹時需收取關稅，關稅須由買家自行支付
+                <br>
+                部分商品可能會有無法配送或清關等問題，建議先確認商品是否可送達指定國家後再購買。如商品被扣關，將不獲退款。
+                <br>
+                海外訂單不受理退換貨服務
+            </p>
         </div>
     </div>
 </section>

@@ -22,7 +22,7 @@ RewriteRule ^Living-Seeds-Children living-seeds-children.php [NE,L]
 
 RewriteRule ^Textbook-Download-EN en_occupational-therapy-courses.php [NE,L]
 
-RewriteRule ^Textbook_Download occupational-therapy-courses.php [NE,L]
+RewriteRule ^Textbook-Download occupational-therapy-courses.php [NE,L]
 
 RewriteRule ^Order-EN en_order.php [NE,L]
 

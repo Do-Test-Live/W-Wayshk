@@ -164,12 +164,25 @@ include('include/header.php');
             <div class="col-xxl-9 col-xl-8">
                 <div class="title title-flex">
                     <div>
-                        <h2>Top Save Today</h2>
+                        <h2><?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '熱門保存今天';
+                            else
+                                echo 'Top Save Today';
+                            ?>
+                        </h2>
                     </div>
                     <div class="timing-box">
                         <div class="timing theme-bg-color">
                             <i data-feather="clock"></i>
-                            <h6 class="name">Expires in :</h6>
+                            <h6 class="name">
+                                <?php
+                                if($_SESSION['language'] === 'CN')
+                                    echo '過期日期在 ：';
+                                else
+                                    echo 'Expires in :';
+                                ?>
+                               </h6>
                             <div class="time" id="clockdiv-1" data-hours="1" data-minutes="2" data-seconds="3">
                                 <ul>
                                     <li>
@@ -353,7 +366,14 @@ include('include/header.php');
                     ?>
                 </div>
                 <div class="title section-t-space">
-                    <h2>Your Daily Staples</h2>
+                    <h2>
+                        <?php
+                        if($_SESSION['language'] === 'CN')
+                            echo '你的日常必需品';
+                        else
+                            echo 'Your Daily Staples';
+                        ?>
+                    </h2>
                 </div>
 
                 <div class="product-box-slider-2 no-arrow">
@@ -659,7 +679,14 @@ include('include/header.php');
                     <div class="col-12">
                         <div class="top-selling-box">
                             <div class="top-selling-title">
-                                <h3>Top Selling</h3>
+                                <h3>
+                                    <?php
+                                    if($_SESSION['language'] === 'CN')
+                                        echo '最暢銷';
+                                    else
+                                        echo 'Top Selling';
+                                    ?>
+                                </h3>
                             </div>
                             <?php
                             $fetch_product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 3");
@@ -715,7 +742,14 @@ include('include/header.php');
                     <div class="col-12">
                         <div class="top-selling-box">
                             <div class="top-selling-title">
-                                <h3>Trending Products</h3>
+                                <h3>
+                                    <?php
+                                    if($_SESSION['language'] === 'CN')
+                                        echo '熱門產品';
+                                    else
+                                        echo 'Trending Products';
+                                    ?>
+                                </h3>
                             </div>
                             <?php
                             $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 3");
@@ -771,7 +805,14 @@ include('include/header.php');
                     <div class="col-12">
                         <div class="top-selling-box">
                             <div class="top-selling-title">
-                                <h3>Recently added</h3>
+                                <h3>
+                                    <?php
+                                    if($_SESSION['language'] === 'CN')
+                                        echo '最近添加的';
+                                    else
+                                        echo 'Recently Added';
+                                    ?>
+                                </h3>
                             </div>
 
                             <?php
@@ -828,7 +869,14 @@ include('include/header.php');
                     <div class="col-12">
                         <div class="top-selling-box">
                             <div class="top-selling-title">
-                                <h3>Top Rated</h3>
+                                <h3>
+                                    <?php
+                                    if($_SESSION['language'] === 'CN')
+                                        echo '最高評價';
+                                    else
+                                        echo 'Top Rated';
+                                    ?>
+                                    </h3>
                             </div>
 
                             <?php

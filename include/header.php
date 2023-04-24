@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['language'])){
+if (!isset($_SESSION['language'])) {
     $_SESSION['language'] = 'CN';
 }
 
@@ -10,7 +10,7 @@ if (!empty($_GET["action"])) {
 
                 $productByCode = $db_handle->runQuery("SELECT * FROM product WHERE id ='" . $_GET["product_id"] . "'");
                 //echo strtok($productByCode[0]["p_image"],',');
-                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"],'en_name' => $productByCode[0]["p_name_en"], 'image' => strtok($productByCode[0]["p_image"],','), 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
+                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'en_name' => $productByCode[0]["p_name_en"], 'image' => strtok($productByCode[0]["p_image"], ','), 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
 
                 if (!empty($_SESSION["cart_item"])) {
                     if (in_array($productByCode[0]["id"], array_keys($_SESSION["cart_item"]))) {
@@ -38,7 +38,7 @@ if (!empty($_GET["action"])) {
         case "remove":
             if (!empty($_SESSION["cart_item"])) {
                 foreach ($_SESSION["cart_item"] as $k => $v) {
-                    if ($_GET["product_id"] == $v['id']){
+                    if ($_GET["product_id"] == $v['id']) {
                         unset($_SESSION["cart_item"][$k]);
                     }
                     if (empty($_SESSION["cart_item"]))
@@ -78,22 +78,38 @@ if (isset($_SESSION["cart_item"])) {
                         <div class="notification-slider">
                             <div>
                                 <div class="timer-notification">
-                                    <h6><strong class="me-1">Welcome to WaysHK!</strong>Wrap new offers/gift
-                                        every single day on Weekends.<strong class="ms-1">New Coupon Code: Fast024
-                                        </strong>
+                                    <h6>
+                                        <?php
+                                        if ($_SESSION['language'] === 'CN') {
+                                            ?>
+                                            <strong class="me-1">歡迎來到匯匯香港！</strong>
+                                            在周末的每一天都包裝新的優惠/禮物。
+                                            <strong class="ms-1">新優惠券代碼: Fast024
+                                            </strong>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <strong class="me-1">Welcome to WaysHK!</strong>Wrap new offers/gift
+                                                                                            every single day on Weekends.
+                                            <strong class="ms-1">New Coupon Code: Fast024
+                                            </strong>
+                                            <?php
+                                        }
+                                        ?>
+
 
                                     </h6>
                                 </div>
                             </div>
 
-                            <div>
+                            <!--<div>
                                 <div class="timer-notification">
                                     <h6>Something you love is now on sale!
                                         <a href="Shop" class="text-white">Buy Now
                                             !</a>
                                     </h6>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -103,7 +119,7 @@ if (isset($_SESSION["cart_item"])) {
                         <li class="right-nav-list">
                             <div class="dropdown theme-form-select">
                                 <?php
-                                if($_SESSION['language'] === 'CN'){
+                                if ($_SESSION['language'] === 'CN') {
                                     ?>
                                     <button class="btn dropdown-toggle" type="button" id="select-language"
                                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -112,7 +128,7 @@ if (isset($_SESSION["cart_item"])) {
                                         <span>Hong Kong</span>
                                     </button>
                                     <?php
-                                }else{
+                                } else {
                                     ?>
                                     <button class="btn dropdown-toggle" type="button" id="select-language"
                                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,7 +191,7 @@ if (isset($_SESSION["cart_item"])) {
 
                             <div class="search-box">
                                 <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="I'm searching for..."
+                                    <input type="search" class="form-control" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '我正在尋找'; else echo 'I am searching for';?>"
                                            aria-label="Recipient's username" aria-describedby="button-addon2">
                                     <button class="btn search-button-2" type="button" id="button-addon2">
                                         <i data-feather="search"></i>
@@ -210,7 +226,7 @@ if (isset($_SESSION["cart_item"])) {
                                     <a href="contact.php" class="delivery-login-box">
                                         <div class="delivery-icon">
                                             <a href="tel:852 52657359">
-                                            <i data-feather="phone-call"></i></a>
+                                                <i data-feather="phone-call"></i></a>
                                         </div>
                                     </a>
                                 </li>
@@ -242,7 +258,7 @@ if (isset($_SESSION["cart_item"])) {
                                                 <?php
                                             } else {
                                                 ?>
-                                                <h5>Guest</h5>
+                                                <h5><?php if ($_SESSION['language'] === 'CN') echo '客人'; else echo 'Guest'; ?></h5>
                                                 <?php
                                             }
                                             ?>
@@ -250,7 +266,7 @@ if (isset($_SESSION["cart_item"])) {
                                     </div>
                                     <?php
                                     if (isset($customer_id)) {
-                                        if($_SESSION['language'] === 'EN'){
+                                        if ($_SESSION['language'] === 'EN') {
                                             ?>
                                             <div class="onhover-div onhover-div-login">
                                                 <ul class="user-box-name">
@@ -266,7 +282,7 @@ if (isset($_SESSION["cart_item"])) {
                                                 </ul>
                                             </div>
                                             <?php
-                                        }else{
+                                        } else {
                                             ?>
                                             <div class="onhover-div onhover-div-login">
                                                 <ul class="user-box-name">
@@ -286,7 +302,7 @@ if (isset($_SESSION["cart_item"])) {
                                         ?>
                                         <?php
                                     } else {
-                                        if($_SESSION['language'] === 'EN'){
+                                        if ($_SESSION['language'] === 'EN') {
                                             ?>
                                             <div class="onhover-div onhover-div-login">
                                                 <ul class="user-box-name">
@@ -305,7 +321,7 @@ if (isset($_SESSION["cart_item"])) {
                                                 </ul>
                                             </div>
                                             <?php
-                                        }else{
+                                        } else {
                                             ?>
                                             <div class="onhover-div onhover-div-login">
                                                 <ul class="user-box-name">
@@ -347,7 +363,15 @@ if (isset($_SESSION["cart_item"])) {
                     <div class="header-nav-left">
                         <button class="dropdown-category dropdown-category-2">
                             <i data-feather="align-left"></i>
-                            <span>All Categories</span>
+                            <?php if ($_SESSION['language'] === 'CN') {
+                                ?>
+                                <span>所有類別</span>
+                                <?php
+                            } else {
+                                ?>
+                                <span>All Categories</span>
+                                <?php
+                            } ?>
                         </button>
 
                         <div class="category-dropdown">
@@ -368,7 +392,7 @@ if (isset($_SESSION["cart_item"])) {
                                         <a href="Shop?catId=<?php echo $fetch_cat[$i]['id'] ?>" class="category-name">
                                             <img src="assets/images/about_us/ways.png"
                                                  alt="">
-                                            <h6><?php if($_SESSION['language'] === 'CN') echo $fetch_cat[$i]['c_name']; else echo $fetch_cat[$i]['c_name_en']; ?></h6>
+                                            <h6><?php if ($_SESSION['language'] === 'CN') echo $fetch_cat[$i]['c_name']; else echo $fetch_cat[$i]['c_name_en']; ?></h6>
                                         </a>
                                     </li>
                                     <?php
@@ -389,7 +413,7 @@ if (isset($_SESSION["cart_item"])) {
                                 </div>
                                 <div class="offcanvas-body">
                                     <?php
-                                    if($_SESSION['language'] === 'CN'){
+                                    if ($_SESSION['language'] === 'CN') {
                                         ?>
                                         <ul class="navbar-nav">
                                             <li class="nav-item">
@@ -406,14 +430,16 @@ if (isset($_SESSION["cart_item"])) {
                                             </li>
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                   data-bs-toggle="dropdown">更多的 <i class="fa-solid fa-angle-down"></i></a>
+                                                   data-bs-toggle="dropdown">更多的 <i
+                                                            class="fa-solid fa-angle-down"></i></a>
 
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <a class="dropdown-item" href="Institution">機構/學校訂購</a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="Living-Seeds-Children">精選課程</a>
+                                                        <a class="dropdown-item"
+                                                           href="Living-Seeds-Children">精選課程</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
@@ -427,7 +453,7 @@ if (isset($_SESSION["cart_item"])) {
                                             </li>
                                         </ul>
                                         <?php
-                                    } else{
+                                    } else {
                                         ?>
                                         <ul class="navbar-nav">
                                             <li class="nav-item">
@@ -449,10 +475,12 @@ if (isset($_SESSION["cart_item"])) {
 
                                                 <ul class="dropdown-menu">
                                                     <li>
-                                                        <a class="dropdown-item" href="Institution-EN">Institution/School Order</a>
+                                                        <a class="dropdown-item" href="Institution-EN">Institution/School
+                                                            Order</a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="Living-Seeds-Children-EN">Wayshk Children Service Society</a>
+                                                        <a class="dropdown-item" href="Living-Seeds-Children-EN">Wayshk
+                                                            Children Service Society</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
@@ -477,7 +505,12 @@ if (isset($_SESSION["cart_item"])) {
                     <div class="header-nav-right">
                         <button class="btn deal-button" data-bs-toggle="modal" data-bs-target="#deal-box">
                             <i data-feather="zap"></i>
-                            <span>Deal Today</span>
+                            <?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '<span>今天交易</span>';
+                            else
+                                echo '<span>Deal Today</span>';
+                            ?>
                         </button>
                     </div>
                 </div>

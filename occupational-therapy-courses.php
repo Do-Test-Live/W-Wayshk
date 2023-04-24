@@ -97,7 +97,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -199,7 +199,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -251,7 +251,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -276,7 +276,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -301,7 +301,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -328,7 +328,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -353,7 +353,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -378,7 +378,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -405,7 +405,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -430,7 +430,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -455,7 +455,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -482,7 +482,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -507,7 +507,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -532,7 +532,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -559,7 +559,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -584,7 +584,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -609,7 +609,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -636,7 +636,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -661,7 +661,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -686,7 +686,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -713,7 +713,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -738,7 +738,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -763,7 +763,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -790,7 +790,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -815,7 +815,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -840,7 +840,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -867,7 +867,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -892,7 +892,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -917,7 +917,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -944,7 +944,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -969,7 +969,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -994,7 +994,7 @@ include('include/header.php');
                                     <span class="time"><span>$1000；</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button">View courses<i class="fa-solid fa-right-long"></i></button>
+                                <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
                         </div>
                     </div>
