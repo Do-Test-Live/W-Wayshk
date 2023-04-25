@@ -79,7 +79,7 @@ if(isset($_POST['login'])){
             <div class="row">
                 <div class="col-12">
                     <div class="breadscrumb-contain">
-                        <h2 class="mb-2">Log In</h2>
+                        <h2 class="mb-2"><?php if ($_SESSION['language'] === 'CN') echo '登錄'; else echo 'Log In';?></h2>
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
@@ -87,7 +87,7 @@ if(isset($_POST['login'])){
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item active">Log In</li>
+                                <li class="breadcrumb-item active"><?php if ($_SESSION['language'] === 'CN') echo '登錄'; else echo 'Log In';?></li>
                             </ol>
                         </nav>
                     </div>
@@ -110,16 +110,16 @@ if(isset($_POST['login'])){
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3>Welcome To WaysHK</h3>
-                            <h4>Log In Your Account</h4>
+                            <h3><?php if ($_SESSION['language'] === 'CN') echo '歡迎來到匯匯香港'; else echo 'Welcome To WaysHK';?></h3>
+                            <h4><?php if ($_SESSION['language'] === 'CN') echo '登錄您的帳戶'; else echo 'Log In Your Account';?></h4>
                         </div>
 
                         <div class="input-box">
                             <form class="row g-4" action="#" method="post">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
-                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?>" name="email">
+                                        <label for="email"><h4><?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?></h4></label>
                                     </div>
                                 </div>
 
@@ -127,24 +127,18 @@ if(isset($_POST['login'])){
                                     <div class="form-floating theme-form-floating log-in-form">
                                         <input type="password" class="form-control" id="password"
                                             placeholder="Password" name="password">
-                                        <label for="password">Password</label>
+                                        <label for="password"><?php if($_SESSION['language'] === 'CN') echo '密碼'; else echo 'Password';?></label>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="forgot-box">
-                                        <div class="form-check ps-0 m-0 remember-box">
-                                            <input class="checkbox_animated check-box" type="checkbox"
-                                                id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">Remember me</label>
-                                        </div>
-                                        <a href="forgot.php" class="forgot-password">Forgot Password?</a>
+                                        <a href="forgot.php" class="forgot-password"><?php if($_SESSION['language'] === 'CN') echo '忘記密碼？'; else echo 'Forgot Password?';?></a>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100 justify-content-center" name="login" type="submit">Log
-                                        In</button>
+                                    <button class="btn btn-animation w-100 justify-content-center" name="login" type="submit"><?php if($_SESSION['language'] === 'CN') echo '登錄'; else echo 'Log In'?></button>
                                 </div>
                             </form>
                         </div>
@@ -154,8 +148,8 @@ if(isset($_POST['login'])){
                         </div>
 
                         <div class="sign-up-box">
-                            <h4>Don't have an account?</h4>
-                            <a href="sign-up.php">Sign Up</a>
+                            <h4><?php if($_SESSION['language'] === 'CN') echo '沒有帳戶？'; else echo 'Do not have an account?'?></h4>
+                            <a href="Sign-Up"><?php if($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up'?></a>
                         </div>
                     </div>
                 </div>

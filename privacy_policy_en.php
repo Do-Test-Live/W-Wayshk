@@ -90,53 +90,53 @@ include('include/header.php');
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">I. Scope of the Privacy Policy</h4>
                 <ul>
-                    <li>The Privacy Policy covers how this website handles personally identifiable information collected during your use of the website services. The Privacy Policy does not apply to linked sites outside of this website, nor to persons not entrusted or involved in the management of this website.</li>
+                    <li><i class="fa-solid fa-check"></i> The Privacy Policy covers how this website handles personally identifiable information collected during your use of the website services. The Privacy Policy does not apply to linked sites outside of this website, nor to persons not entrusted or involved in the management of this website.</li>
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">II. Collection, Processing and Use of Personal Information</h4>
                 <ul>
-                    <li>When you visit this website or use the functional services provided by this website, we will ask you to provide the necessary personal information depending on the functional nature of the service, and we will process and use your personal information within the scope of that specific purpose.
+                    <li><i class="fa-solid fa-check"></i> When you visit this website or use the functional services provided by this website, we will ask you to provide the necessary personal information depending on the functional nature of the service, and we will process and use your personal information within the scope of that specific purpose.
                     </li>
-                    <li>This website will retain the name, email address, contact details and time of use provided by you when you use the shopping cart, service mailbox and other functions.
+                    <li><i class="fa-solid fa-check"></i> This website will retain the name, email address, contact details and time of use provided by you when you use the shopping cart, service mailbox and other functions.
                     </li>
 
                     <li>
-                        This website will use the personal information you provided to offer you the products, activities, courses or services you require, including the purposes associated with participating in all activities, courses or services, issuing receipts, collecting feedback and analysing data. Your personal data will also be used to provide you with promotional information about the activities, courses and services offered by the Wayshk Childrens’ Goods Shop and related units. It is your responsibility to provide the information listed as "required" on the application form or required to initiate the relevant process, otherwise we may not be able to provide the services you have requested.
+                        <i class="fa-solid fa-check"></i> This website will use the personal information you provided to offer you the products, activities, courses or services you require, including the purposes associated with participating in all activities, courses or services, issuing receipts, collecting feedback and analysing data. Your personal data will also be used to provide you with promotional information about the activities, courses and services offered by the Wayshk Childrens’ Goods Shop and related units. It is your responsibility to provide the information listed as "required" on the application form or required to initiate the relevant process, otherwise we may not be able to provide the services you have requested.
 
                     </li>
-                    <li>During general browsing, the server will record your IP address, time of use, browser used, browsing and clicking data, etc. for our reference in order to enhance our website services.
+                    <li><i class="fa-solid fa-check"></i> During general browsing, the server will record your IP address, time of use, browser used, browsing and clicking data, etc. for our reference in order to enhance our website services.
                     </li>
-                    <li>You may at any time request us to correct or delete your account or personal information collected by this website. Please see the contact details at the bottom of this page for contact details.
+                    <li><i class="fa-solid fa-check"></i> You may at any time request us to correct or delete your account or personal information collected by this website. Please see the contact details at the bottom of this page for contact details.
                     </li>
 
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">III Protection of data
                 </h4>
                 <ul>
-                    <li>The host of this website is equipped with firewalls, anti-virus systems and other related information security equipment and necessary security measures to protect the website and your personal information using strict protection measures, only authorized personnel can access your personal information, the relevant personnel have signed a confidentiality contract, any breach of confidentiality obligations will be subject to relevant legal sanctions Any breach of confidentiality will be subject to legal action.
+                    <li><i class="fa-solid fa-check"></i> The host of this website is equipped with firewalls, anti-virus systems and other related information security equipment and necessary security measures to protect the website and your personal information using strict protection measures, only authorized personnel can access your personal information, the relevant personnel have signed a confidentiality contract, any breach of confidentiality obligations will be subject to relevant legal sanctions Any breach of confidentiality will be subject to legal action.
                     </li>
-                    <li>If it is necessary to engage other parties to provide services for business purposes, this website will also strictly require them to comply with their confidentiality obligations and take necessary checks to ensure that they do so.
+                    <li><i class="fa-solid fa-check"></i> If it is necessary to engage other parties to provide services for business purposes, this website will also strictly require them to comply with their confidentiality obligations and take necessary checks to ensure that they do so.
                     </li>
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">IV．External links to the website</h4>
                 <ul>
-                    <li>Some of the pages of this website link to other websites. However, the linked sites do not apply to the privacy policy of this website and you must refer to the privacy policy of the linked sites.</li>
+                    <li><i class="fa-solid fa-check"></i> Some of the pages of this website link to other websites. However, the linked sites do not apply to the privacy policy of this website and you must refer to the privacy policy of the linked sites.</li>
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">V. Policy on sharing personal information with third parties</h4>
                 <ul>
-                    <li>This website will not provide, exchange, rent or sell any of your personal information to other individuals, organisations, private businesses or public authorities, except where there is a legal basis or contractual obligation to do so.</li>
+                    <li><i class="fa-solid fa-check"></i> This website will not provide, exchange, rent or sell any of your personal information to other individuals, organisations, private businesses or public authorities, except where there is a legal basis or contractual obligation to do so.</li>
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">VI. Use of Cookies</h4>
                 <ul>
-                    <li>In order to provide you with the best possible service, this website may place and access our cookies on your computer. If you do not wish to accept the inclusion of cookies, you can set the privacy level in the function of the browser you are using to refuse the inclusion of cookies, but this may result in some functions of the website not working properly.</li>
+                    <li><i class="fa-solid fa-check"></i> In order to provide you with the best possible service, this website may place and access our cookies on your computer. If you do not wish to accept the inclusion of cookies, you can set the privacy level in the function of the browser you are using to refuse the inclusion of cookies, but this may result in some functions of the website not working properly.</li>
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">VII. Amendments to the Privacy Policy</h4>
                 <ul>
-                    <li>The privacy policy of this website will be amended from time to time in response to demand and the amended terms will be posted on the website.</li>
+                    <li><i class="fa-solid fa-check"></i> The privacy policy of this website will be amended from time to time in response to demand and the amended terms will be posted on the website.</li>
                 </ul>
                 <h4 class="mt-3" style="font-weight: bold">VIII. Contact information</h4>
                 <ul>
-                    <li>If you have any questions about our privacy policy, or would like to make a request to change or remove personal information, please go to the "Contact Us" page of this website and submit a form.</li>
-                    <li>Or email to: ways00.hk@gmail.com</li>
+                    <li><i class="fa-solid fa-check"></i> If you have any questions about our privacy policy, or would like to make a request to change or remove personal information, please go to the "Contact Us" page of this website and submit a form.</li>
+                    <li><i class="fa-solid fa-check"></i> Or email to: ways00.hk@gmail.com</li>
                 </ul>
             </div>
         </div>

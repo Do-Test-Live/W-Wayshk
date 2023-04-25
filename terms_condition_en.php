@@ -103,30 +103,30 @@ include('include/header.php');
                 <h4 class="mt-3" style="font-weight: bold">3. Return and exchange guarantee terms:
                 </h4>
                 <ul>
-                    <li>Items found to be different from the ordered item upon arrival (only unopened brand new items
+                    <li><i class="fa-solid fa-check"></i> Items found to be different from the ordered item upon arrival (only unopened brand new items
                         will be accepted) / items found to be visibly defective or damaged after opening the packaging
                         will be accepted for exchange. Please inform us within 5 days of receipt of the goods, no
                         returns will be accepted after this period.
                     </li>
-                    <li>We will not accept or replace products that are slightly damaged in transit (e.g. dents) which
+                    <li><i class="fa-solid fa-check"></i> We will not accept or replace products that are slightly damaged in transit (e.g. dents) which
                         do not affect normal use.
                     </li>
 
-                    <li>Products or accessories related to personal hygiene (e.g. teethers, brushes); any discounted
+                    <li><i class="fa-solid fa-check"></i> Products or accessories related to personal hygiene (e.g. teethers, brushes); any discounted
                         /clearance/ free products, have no returns or exchanges.
                     </li>
-                    <li>Returns will only be accepted for products that have not been damaged by man-made and will not
+                    <li><i class="fa-solid fa-check"></i> Returns will only be accepted for products that have not been damaged by man-made and will not
                         be accepted for reasons such as dissatisfaction with the performance of the product.
                     </li>
-                    <li>Any returned item can only be exchanged for items of equal or greater value. Customer will be
+                    <li><i class="fa-solid fa-check"></i> Any returned item can only be exchanged for items of equal or greater value. Customer will be
                         required to pay the price difference if you choose to exchange items with higher value. No
                         refund will be made for any remaining balance if a lower value item is exchanged.
                     </li>
 
-                    <li>Return shipping cost: The return shipping cost will be borne by our shop based on the delivery address, but an administration fee may be charged depending on the actual situation.
+                    <li><i class="fa-solid fa-check"></i> Return shipping cost: The return shipping cost will be borne by our shop based on the delivery address, but an administration fee may be charged depending on the actual situation.
                     </li>
                     <li>
-                        We reserve the right to make final decision on replacement of products.
+                        <i class="fa-solid fa-check"></i> We reserve the right to make final decision on replacement of products.
                     </li>
 
                 </ul>

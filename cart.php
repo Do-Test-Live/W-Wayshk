@@ -131,7 +131,7 @@ include('include/header.php');
                                         </td>
 
                                         <td class="subtotal">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '全部的'; else echo 'Total'?></h4>
+                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '合計'; else echo 'Total'?></h4>
                                             <h5><?php echo "$ " . number_format($item_price, 2); ?></h5>
                                         </td>
 
@@ -174,7 +174,7 @@ include('include/header.php');
                             </li>
 
                             <li>
-                                <h4><?php if($_SESSION['language'] === 'CN') echo '優惠券折扣'; else echo 'Coupon Discount'?></h4>
+                                <h4><?php if($_SESSION['language'] === 'CN') echo '輸入優惠卷號碼'; else echo 'Coupon Discount'?></h4>
                                 <h4 class="price">(-) 0.00</h4>
                             </li>
 
@@ -188,7 +188,7 @@ include('include/header.php');
                     <ul class="summery-total">
                         <li class="list-total border-top-0">
                             <h4><?php if($_SESSION['language'] === 'CN') echo '總計 (HKD)'; else echo 'Total (HKD)'?></h4>
-                            <h4 class="price theme-color"><?php echo "$ " . number_format($total_price_new, 2); ?></h4>
+                            <h4 class="price theme-color"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
                         </li>
                     </ul>
 

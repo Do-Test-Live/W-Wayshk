@@ -13,7 +13,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>Register</title>
+    <title>Sign Up</title>
 
     <?php include ('include/css.php');?>
     <style>
@@ -57,7 +57,7 @@ $db_handle = new DBController();
             <div class="row">
                 <div class="col-12">
                     <div class="breadscrumb-contain">
-                        <h2>Sign Up</h2>
+                        <h2><?php if ($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up';?></h2>
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
@@ -65,7 +65,7 @@ $db_handle = new DBController();
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item active">Sign Up</li>
+                                <li class="breadcrumb-item active"><?php if ($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up';?></li>
                             </ol>
                         </nav>
                     </div>
@@ -88,28 +88,28 @@ $db_handle = new DBController();
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3>Welcome To WAY'S</h3>
-                            <h4>Create New Account</h4>
+                            <h3><?php if ($_SESSION['language'] === 'CN') echo '歡迎來到 WAYSHK'; else echo 'Welcome To WAYSHK';?></h3>
+                            <h4><?php if ($_SESSION['language'] === 'CN') echo '建立新帳戶'; else echo 'Create New Account';?></h4>
                         </div>
 
                         <div class="input-box">
                             <form class="row g-4" action="admin/insert.php" method="post">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="text" class="form-control" id="fullname" placeholder="Full Name" name="customer_name" required>
-                                        <label for="fullname">Full Name</label>
+                                        <input type="text" class="form-control" id="fullname" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '全名'; else echo 'Full Name';?>" name="customer_name" required>
+                                        <label for="fullname"><?php if ($_SESSION['language'] === 'CN') echo '全名'; else echo 'Full Name';?></label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address" name="customer_email" required>
-                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?>" name="customer_email" required>
+                                        <label for="email"><?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?></label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="text" class="form-control" id="email" placeholder="Contact Number" name="customer_number" required>
-                                        <label for="text">Contact Number</label>
+                                        <input type="text" class="form-control" id="email" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '聯繫電話'; else echo 'Contact Number';?>" name="customer_number" required>
+                                        <label for="text"><?php if ($_SESSION['language'] === 'CN') echo '聯繫電話'; else echo 'Contact Number';?></label>
                                     </div>
                                 </div>
 
@@ -117,7 +117,7 @@ $db_handle = new DBController();
                                     <div class="form-floating theme-form-floating">
                                         <input type="password" class="form-control" id="password"
                                             placeholder="Password" name="password" required>
-                                        <label for="password">Password</label>
+                                        <label for="password"><?php if ($_SESSION['language'] === 'CN') echo '密碼'; else echo 'Password';?></label>
                                     </div>
                                 </div>
 
@@ -126,14 +126,17 @@ $db_handle = new DBController();
                                         <div class="form-check ps-0 m-0 remember-box">
                                             <input class="checkbox_animated check-box" type="checkbox"
                                                 id="flexCheckDefault" required>
-                                            <label class="form-check-label" for="flexCheckDefault">I agree with
-                                                <span>Terms</span> and <span>Privacy</span></label>
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                <?php if($_SESSION['language'] === 'CN') echo '我同意
+                                                <span>條款</span> 和 <span>隱私</span>'; else echo 'I agree with
+                                                <span>Terms</span> and <span>Privacy</span>';?>
+                                                </label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100" type="submit" name="customer_signup">Sign Up</button>
+                                    <button class="btn btn-animation w-100" type="submit" name="customer_signup"><?php if ($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up';?></button>
                                 </div>
                             </form>
                         </div>
@@ -166,8 +169,8 @@ $db_handle = new DBController();
                         </div>
 
                         <div class="sign-up-box">
-                            <h4>Already have an account?</h4>
-                            <a href="login.php">Log In</a>
+                            <h4><?php if($_SESSION['language'] === 'CN') echo '已有帳戶？'; else echo 'Already have an account?';?></h4>
+                            <a href="login.php"><?php if($_SESSION['language'] === 'CN') echo '登錄'; else echo 'Log In';?></a>
                         </div>
                     </div>
                 </div>

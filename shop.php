@@ -153,7 +153,7 @@ include('include/header.php');
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true"
                                             aria-controls="collapseOne">
-                                        <span>Categories</span>
+                                        <span><?php if($_SESSION['language'] === 'CN') echo '類別'; else echo 'Categories';?></span>
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
@@ -161,8 +161,8 @@ include('include/header.php');
                                     <div class="accordion-body">
                                         <div class="form-floating theme-form-floating-2 search-box">
                                             <input type="search" class="form-control" id="search"
-                                                   placeholder="Search ..">
-                                            <label for="search">Search</label>
+                                                   placeholder="<?php if($_SESSION['language'] === 'CN') echo '搜索'; else echo 'Search ..';?>">
+                                            <label for="search"><?php if($_SESSION['language'] === 'CN') echo '搜索'; else echo 'Search ..';?></label>
                                         </div>
 
                                         <ul class="category-list custom-padding custom-height">

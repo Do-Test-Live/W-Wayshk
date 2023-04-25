@@ -66,7 +66,7 @@ include('include/header.php');
                         <div class="col-xl-12">
                             <div class="contact-title text-center mb-5">
                                 <h2 class="inner-header">
-                                    活籽兒童 服務社
+                                    活籽兒童服務社
                                 </h2>
                                 <h4 class="mt-3">
                                     活籽兒童服務社的資深職業治療師可為有需要學童提供校本職業治療服務。透過多元化的治療活動，協助有學習能力差異的學生投入校園及日常生活中。另外，亦可為學校舉辦不同專題的教師/家長互動工作坊或講座。
@@ -159,7 +159,7 @@ include('include/header.php');
                                 </div>
                             </div>-->
                             <div class="row mb-5 mt-5">
-                                <h2 class="mb-3 text-center inner-header">訓練內容例子 : </h2>
+                                <h2 class="mb-3 text-center inner-header" style="font-size: 25px !important;">訓練內容例子 : </h2>
                             </div>
                             <div class="row mb-5 mt-5">
                                 <h2 class="mb-3">1. 感覺統合訓練</h2>

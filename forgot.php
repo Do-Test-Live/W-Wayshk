@@ -61,7 +61,7 @@ $db_handle = new DBController();
             <div class="row">
                 <div class="col-12">
                     <div class="breadscrumb-contain">
-                        <h2>Forgot Password</h2>
+                        <h2><?php if($_SESSION['language'] === 'CN') echo '忘記密碼'; else echo 'Forgot Password';?></h2>
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
@@ -69,7 +69,7 @@ $db_handle = new DBController();
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item active">Forgot Password</li>
+                                <li class="breadcrumb-item active"><?php if($_SESSION['language'] === 'CN') echo '忘記密碼'; else echo 'Forgot Password';?></li>
                             </ol>
                         </nav>
                     </div>
@@ -93,8 +93,8 @@ $db_handle = new DBController();
                     <div class="d-flex align-items-center justify-content-center h-100">
                         <div class="log-in-box">
                             <div class="log-in-title">
-                                <h3>Welcome To Fastkart</h3>
-                                <h4>Forgot your password</h4>
+                                <h3><?php if($_SESSION['language'] === 'CN') echo '歡迎來到 WAYSHK'; else echo 'Welcome To WAYSHK';?></h3>
+                                <h4><?php if($_SESSION['language'] === 'CN') echo '忘記密碼了嗎'; else echo 'Forgot your password';?></h4>
                             </div>
 
                             <div class="input-box">
@@ -102,14 +102,13 @@ $db_handle = new DBController();
                                     <div class="col-12">
                                         <div class="form-floating theme-form-floating log-in-form">
                                             <input type="email" class="form-control" id="email"
-                                                placeholder="Email Address">
-                                            <label for="email">Email Address</label>
+                                                placeholder="<?php if($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?>">
+                                            <label for="email"><?php if($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?></label>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <button class="btn btn-animation w-100" type="submit">Forgot
-                                            Password</button>
+                                        <button class="btn btn-animation w-100" type="submit"><?php if($_SESSION['language'] === 'CN') echo '忘記密碼'; else echo 'Forgot Password';?></button>
                                     </div>
                                 </form>
                             </div>

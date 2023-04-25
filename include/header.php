@@ -85,16 +85,10 @@ if (isset($_SESSION["cart_item"])) {
                                             <strong class="me-1">
                                                 歡迎來到Wayshk!
                                             </strong>
-                                            於每星期都有新的優惠/禮物
-                                            <strong class="ms-1">新優惠券代碼: Fast024
-                                            </strong>
                                             <?php
                                         } else {
                                             ?>
-                                            <strong class="me-1">Welcome to WaysHK!</strong>Wrap new offers/gift
-                                                                                            every single day on Weekends.
-                                            <strong class="ms-1">New Coupon Code: Fast024
-                                            </strong>
+                                            <strong class="me-1">Welcome to WaysHK!</strong>
                                             <?php
                                         }
                                         ?>
@@ -359,7 +353,7 @@ if (isset($_SESSION["cart_item"])) {
                             <i data-feather="align-left"></i>
                             <?php if ($_SESSION['language'] === 'CN') {
                                 ?>
-                                <span>所有類別</span>
+                                <span>產品類別</span>
                                 <?php
                             } else {
                                 ?>

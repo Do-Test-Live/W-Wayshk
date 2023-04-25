@@ -159,7 +159,7 @@ include('include/header.php');
                                 </div>
                             </div>-->
                             <div class="row mb-5 mt-5">
-                                <h2 class="mb-3 text-center inner-header">Examples of training content: </h2>
+                                <h2 class="mb-3 text-center inner-header" style="font-size: 25px !important;">Examples of training content: </h2>
                             </div>
 
                             <div class="row mb-5 mt-5">
