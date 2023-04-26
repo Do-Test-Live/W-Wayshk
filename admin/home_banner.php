@@ -80,6 +80,14 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Heading One CN</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="heading_one_cn"
+                                                       placeholder="Heading One CN"
+                                                       value="<?php echo $data[0]["heading_one_cn"]; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Heading Two</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="heading_two"
@@ -88,11 +96,28 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Heading Two CN</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="heading_two_cn"
+                                                       placeholder="Heading Two CN"
+                                                       value="<?php echo $data[0]["heading_two_cn"]; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Heading Three</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="heading_three"
-                                                       placeholder="Heading Two"
+                                                       placeholder="Heading Three"
                                                        value="<?php echo $data[0]["heading_three"]; ?>">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Heading Three CN</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="heading_three_cn"
+                                                       placeholder="Heading Three CN"
+                                                       value="<?php echo $data[0]["heading_three_cn"]; ?>">
                                             </div>
                                         </div>
 
@@ -127,6 +152,12 @@ if (!isset($_SESSION['userid'])) {
                                             <label class="col-sm-3 col-form-label">Details</label>
                                             <div class="col-sm-9">
                                                 <textarea type="text" class="form-control" name="details"><?php echo $data[0]["details"]; ?>"</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Details CN</label>
+                                            <div class="col-sm-9">
+                                                <textarea type="text" class="form-control" name="details_cn"><?php echo $data[0]["details_cn"]; ?>"</textarea>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">

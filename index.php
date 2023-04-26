@@ -69,10 +69,10 @@ include('include/header.php');
                     </div>
                     <div class="home-detail p-top-left home-p-medium">
                         <div>
-                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_one[0]['heading_one']; ?></h6>
-                            <h2 class="theme-color fw-bold"><?php echo $banner_one[0]['heading_two']; ?></h2>
-                            <p class="text-content d-md-block d-none"><?php echo $banner_one[0]['details']; ?></p>
-                            <a href="<?php echo $banner_one[0]['link_one']; ?>" class="shop-button">Shop Now <i
+                            <h6 class="text-danger mb-2 fw-bold"><?php if($_SESSION['language'] === 'CN') echo $banner_one[0]['heading_one_cn']; else echo $banner_one[0]['heading_one'];?></h6>
+                            <h2 class="theme-color fw-bold"><?php if($_SESSION['language'] === 'CN') echo $banner_one[0]['heading_two_cn']; else echo $banner_one[0]['heading_two'];?></h2>
+                            <p class="text-content d-md-block d-none"><?php if($_SESSION['language'] === 'CN') echo $banner_one[0]['details_cn']; else echo $banner_one[0]['details'];?></p>
+                            <a href="<?php echo $banner_one[0]['link_one']; ?>" class="shop-button"><?php if($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now';?><i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -89,14 +89,14 @@ include('include/header.php');
                     </div>
                     <div class="home-detail p-center-left home-p-sm">
                         <div>
-                            <h6><?php echo $banner_two[0]['heading_one']; ?></h6>
+                            <h6><?php if($_SESSION['language'] === 'CN') echo $banner_two[0]['heading_one_cn']; else echo $banner_two[0]['heading_one'];?></h6>
                             <h1 class="w-75 text-uppercase name-title poster-2 my-2">
-                                <span class="name-2"><?php echo $banner_two[0]['heading_two']; ?></span>
+                                <span class="name-2"><?php if($_SESSION['language'] === 'CN') echo $banner_two[0]['heading_two_cn']; else echo $banner_two[0]['heading_two'];?></span>
                             </h1>
-                            <p class="w-50"><?php echo $banner_two[0]['details']; ?></p>
+                            <p class="w-50"><?php if($_SESSION['language'] === 'CN') echo $banner_two[0]['details_cn']; else echo $banner_two[0]['details'];?></p>
                             <a href="<?php echo $banner_two[0]['link_one']; ?>">
                                 <button class="btn text-white mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
-                                    Shop Now <i class="fa-solid fa-right-long icon ms-2"></i></button>
+                                    <?php if($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now';?> <i class="fa-solid fa-right-long icon ms-2"></i></button>
                             </a>
                         </div>
                     </div>
@@ -111,10 +111,10 @@ include('include/header.php');
                     <img src="<?php echo $banner_three[0]['banner_img']; ?>" class="bg-img blur-up lazyload" alt="">
                     <div class="home-detail p-top-left home-p-medium">
                         <div>
-                            <h6 class="text-danger mb-2 fw-bold"><?php echo $banner_three[0]['heading_one']; ?></h6>
-                            <h2 class="theme-color fw-bold"><?php echo $banner_three[0]['heading_two']; ?></h2>
-                            <p class="text-content d-md-block d-none"><?php echo $banner_three[0]['details']; ?></p>
-                            <a href="<?php echo $banner_three[0]['link_one']; ?>" class="shop-button">Shop Now <i
+                            <h6 class="text-danger mb-2 fw-bold"><?php if($_SESSION['language'] === 'CN') echo $banner_three[0]['heading_one_cn']; else echo $banner_three[0]['heading_one'];?></h6>
+                            <h2 class="theme-color fw-bold"><?php if($_SESSION['language'] === 'CN') echo $banner_three[0]['heading_two_cn']; else echo $banner_three[0]['heading_two'];?></h2>
+                            <p class="text-content d-md-block d-none"><?php if($_SESSION['language'] === 'CN') echo $banner_three[0]['details_cn']; else echo $banner_three[0]['details'];?></p>
+                            <a href="<?php echo $banner_three[0]['link_one']; ?>" class="shop-button"><?php if($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now';?> <i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -142,9 +142,9 @@ include('include/header.php');
                     <div class="banner-details p-center p-sm-4 p-3 text-white text-center">
                         <div>
                             <h3 class="lh-base fw-bold text-white">
-                                <?php echo $cupon_banner[0]['heading_one']; ?>
+                                <?php if($_SESSION['language'] === 'CN') echo $cupon_banner[0]['heading_one_cn']; else echo $cupon_banner[0]['heading_one'];?>
                             </h3>
-                            <h6 class="coupon-code code-2">Use Code : <?php echo $cupon_banner[0]['details']; ?></h6>
+                            <h6 class="coupon-code code-2"><?php if($_SESSION['language'] === 'CN') echo '使用代碼：'.$cupon_banner[0]['details_cn']; else echo 'Use Code :'.$cupon_banner[0]['details'];?></h6>
                         </div>
                     </div>
                 </div>
@@ -533,21 +533,20 @@ include('include/header.php');
                                  alt="">
                             <div class="banner-detail p-top-left">
                                 <div>
-                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $first_add[0]['heading_one']; ?></h6>
+                                    <h6 class="text-uppercase theme-color fw-500"><?php if($_SESSION['language'] === 'CN') echo $first_add[0]['heading_one_cn']; else echo $first_add[0]['heading_one'];?></h6>
                                     <h3 class="text-uppercase">
-                                        <span class="brand-name"><?php echo $first_add[0]['heading_two']; ?></span>
+                                        <span class="brand-name"><?php if($_SESSION['language'] === 'CN') echo $first_add[0]['heading_two_cn']; else echo $first_add[0]['heading_two'];?></span>
                                     </h3>
-                                    <p class="text-content fw-500 mt-3 lh-lg"><?php echo $first_add[0]['details']; ?></p>
+                                    <p class="text-content fw-500 mt-3 lh-lg"><?php if($_SESSION['language'] === 'CN') echo $first_add[0]['details_cn']; else echo $first_add[0]['details'];?></p>
 
                                     <div class="banner-detail-box banner-detail-box-2 mb-md-3 mb-1">
-                                        <h4 class="text-uppercase"><?php echo $first_add[0]['heading_three']; ?></h4>
+                                        <h4 class="text-uppercase"><?php if($_SESSION['language'] === 'CN') echo $first_add[0]['heading_three_cn']; else echo $first_add[0]['heading_three'];?></h4>
                                     </div>
 
                                     <div>
                                         <a href="<?php echo $first_add[0]['link_one']; ?>">
                                             <button class="btn text-white btn-md mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
-                                                Shop
-                                                Now<i class="fa-solid fa-right-long icon ms-2"></i>
+                                                <?php if($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now';?><i class="fa-solid fa-right-long icon ms-2"></i>
                                             </button>
                                         </a>
 
@@ -566,13 +565,13 @@ include('include/header.php');
                                  alt="">
                             <div class="banner-detail p-top-left">
                                 <div>
-                                    <h6 class="text-uppercase theme-color fw-500"><?php echo $second_add[0]['heading_one']; ?></h6>
-                                    <h3 class="text-pacifico mt-2"><?php echo $second_add[0]['heading_two']; ?>
+                                    <h6 class="text-uppercase theme-color fw-500"><?php if($_SESSION['language'] === 'CN') echo $second_add[0]['heading_one_cn']; else echo $second_add[0]['heading_one'];?></h6>
+                                    <h3 class="text-pacifico mt-2"><?php if($_SESSION['language'] === 'CN') echo $second_add[0]['heading_two_cn']; else echo $second_add[0]['heading_two'];?>
                                     </h3>
-                                    <p class="text-content fw-500 mt-3 w-75 mend-auto"><?php echo $second_add[0]['details']; ?></p>
+                                    <p class="text-content fw-500 mt-3 w-75 mend-auto"><?php if($_SESSION['language'] === 'CN') echo $second_add[0]['details_cn']; else echo $second_add[0]['details'];?></p>
                                     <a href="<?php echo $second_add[0]['link_one']; ?>">
                                         <button class="btn text-white btn-md mt-2 home-button mend-auto theme-bg-color">
-                                            Shop Now <i class="fa-solid fa-right-long icon ms-2"></i>
+                                            <?php if($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now';?> <i class="fa-solid fa-right-long icon ms-2"></i>
                                         </button>
                                     </a>
 
@@ -581,7 +580,7 @@ include('include/header.php');
                         </div>
                     </div>
 
-                    <div class="section-t-space wow fadeIn">
+                    <!--<div class="section-t-space wow fadeIn">
                         <div class="category-menu category-menu-2">
                             <h3>Customer Comment</h3>
 
@@ -606,7 +605,7 @@ include('include/header.php');
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -627,14 +626,14 @@ include('include/header.php');
                     <div class="home-detail p-center position-relative text-center">
                         <div>
                             <h3 class="text-danger text-uppercase fw-bold mb-0">
-                                <?php echo $banner_middle[0]['heading_one']; ?>
+                                <?php if($_SESSION['language'] === 'CN') echo $banner_middle[0]['heading_one_cn']; else echo $banner_middle[0]['heading_one'];?>
                             </h3>
                             <h2 class="theme-color text-pacifico fw-normal mb-0 super-sale text-center">
-                                <?php echo $banner_middle[0]['heading_two']; ?>
+                                <?php if($_SESSION['language'] === 'CN') echo $banner_middle[0]['heading_two_cn']; else echo $banner_middle[0]['heading_two'];?>
                             </h2>
-                            <h2 class="home-name text-uppercase"><?php echo $banner_middle[0]['heading_three']; ?></h2>
+                            <h2 class="home-name text-uppercase"> <?php if($_SESSION['language'] === 'CN') echo $banner_middle[0]['heading_three_cn']; else echo $banner_middle[0]['heading_three'];?></h2>
                             <h3 class="text-pacifico fw-normal text-content text-center">
-                                <?php echo $banner_middle[0]['details']; ?>
+                                <?php if($_SESSION['language'] === 'CN') echo $banner_middle[0]['details_cn']; else echo $banner_middle[0]['details'];?>
                             </h3>
                             <ul class="social-icon">
                                 <li>

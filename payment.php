@@ -68,10 +68,11 @@ if (isset($_POST["placeOrder"])) {
         $item_price = $item["quantity"] * $item["price"];
         $quantity = $item["quantity"];
         $unit_price = $item["price"];
+        $product_id = $item['id'];
 
-        $invoice = $db_handle->insertQuery("INSERT INTO `invoice_details`( `customer_id`, `billing_id`, `product_name`, 
+        $invoice = $db_handle->insertQuery("INSERT INTO `invoice_details`( `customer_id`, `billing_id`,`product_id`, `product_name`, 
                               `product_quantity`, `product_unit_price`,`product_total_price`, `updated_at`) 
-                              VALUES ('$customer_id','$id','$name','$quantity','$unit_price','$item_price', '$updated_at')");
+                              VALUES ('$customer_id','$id','$product_id','$name','$quantity','$unit_price','$item_price', '$updated_at')");
     }
     unset($_SESSION["cart_item"]);
 

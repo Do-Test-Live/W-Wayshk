@@ -62,3 +62,5 @@ RewriteRule ^Stock stock.php [NE,L]
 
 RewriteRule ^Review review.php [NE,L]
 
+RewriteRule ^Profit-Loss profit_loss_report.php [NE,L]
+

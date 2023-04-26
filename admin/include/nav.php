@@ -86,6 +86,7 @@
                     <li><a href="Product-Analysis">Product Analysis</a></li>
                     <li><a href="Business-Analysis">Business Analysis</a></li>
                     <li><a href="Store-Analysis">Store Analysis</a></li>
+                    <li><a href="Profit-Loss">Profit-Loss Analysis</a></li>
                 </ul>
             </li>
             <li>

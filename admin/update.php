@@ -161,9 +161,13 @@ if (isset($_POST['updateHomeBanner'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $banner_name = $db_handle->checkValue($_POST['banner_name']);
     $heading_one = $db_handle->checkValue($_POST['heading_one']);
+    $heading_one_cn = $db_handle->checkValue($_POST['heading_one_cn']);
     $heading_two = $db_handle->checkValue($_POST['heading_two']);
+    $heading_two_cn = $db_handle->checkValue($_POST['heading_two_cn']);
     $heading_three = $db_handle->checkValue($_POST['heading_three']);
+    $heading_three_cn = $db_handle->checkValue($_POST['heading_three_cn']);
     $details = $db_handle->checkValue($_POST['details']);
+    $details_cn = $db_handle->checkValue($_POST['details_cn']);
     $link_one = $db_handle->checkValue($_POST['link_one']);
     $updated_at = date("Y-m-d H:i:s");
     $image = '';
@@ -186,7 +190,7 @@ if (isset($_POST['updateHomeBanner'])) {
         }
     }
 
-    $data = $db_handle->insertQuery("update banner set `banner_name`='$banner_name',`heading_one`='$heading_one',`heading_two`='$heading_two',`heading_three`='$heading_three',`details`='$details',`link_one`='$link_one',`updated_at`='$updated_at'" . $query . " where id={$id}");
+    $data = $db_handle->insertQuery("update banner set `banner_name`='$banner_name',`heading_one`='$heading_one',`heading_two`='$heading_two',`heading_three`='$heading_three',`details`='$details',`link_one`='$link_one',`heading_one_cn` = '$heading_one_cn',`heading_two_cn` = '$heading_two_cn',`heading_three_cn` = '$heading_three_cn',`details_cn` = '$details_cn',`updated_at`='$updated_at'" . $query . " where id={$id}");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Banner';
