@@ -28,7 +28,7 @@
                     <li><a href="Category">Category List</a></li>
                 </ul>
             </li>
-            <li>
+            <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-upload"></i>
                     <span class="nav-text">Store</span>
@@ -37,10 +37,10 @@
                     <li><a href="Add-Store">Add Store</a></li>
                     <li><a href="Store">Store List</a></li>
                 </ul>
-            </li>
+            </li>-->
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-controls-3"></i>
+                    <i class="flaticon-381-promotion"></i>
                     <span class="nav-text">Product</span>
                 </a>
                 <ul aria-expanded="false">
@@ -50,7 +50,7 @@
             </li>
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-controls-3"></i>
+                    <i class="flaticon-381-controls-7"></i>
                     <span class="nav-text">Stock</span>
                 </a>
                 <ul aria-expanded="false">
@@ -117,7 +117,7 @@
                     <span class="nav-text">Customer</span>
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
                     <span class="nav-text">Admin</span>
@@ -126,7 +126,7 @@
                     <li><a href="Add-Admin">Add Admin</a></li>
                     <li><a href="Admin">Admin List & Role</a></li>
                 </ul>
-            </li>
+            </li>-->
         </ul>
     </div>
 </div>

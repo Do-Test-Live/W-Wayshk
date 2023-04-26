@@ -6,6 +6,7 @@ date_default_timezone_set("Asia/Hong_Kong");
 
 if (isset($_POST["add_cat"])) {
     $name = $db_handle->checkValue($_POST['cat_name']);
+    $name_cn = $db_handle->checkValue($_POST['cat_name_cn']);
     $image = '';
     if (!empty($_FILES['cat_image']['name'])) {
         $RandomAccountNumber = mt_rand(1, 99999);
@@ -29,7 +30,7 @@ if (isset($_POST["add_cat"])) {
 
     $inserted_at = date("Y-m-d H:i:s");
 
-    $insert = $db_handle->insertQuery("INSERT INTO `category`(`c_name`, `image`,  `inserted_at`) VALUES ('$name','$image','$inserted_at')");
+    $insert = $db_handle->insertQuery("INSERT INTO `category`(`c_name`,`c_name_en`, `image`,  `inserted_at`) VALUES ('$name_cn','$name','$image','$inserted_at')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';
@@ -88,9 +89,11 @@ if (isset($_POST["add_product"])) {
 
 if(isset($_POST['add_course'])){
     $course_name = $db_handle->checkValue($_POST['course_name']);
+    $course_name_en = $db_handle->checkValue($_POST['course_name_en']);
     $course_duration = $db_handle->checkValue($_POST['course_duration']);
     $course_price = $db_handle->checkValue($_POST['course_price']);
     $course_description = $db_handle->checkValue($_POST['course_description']);
+    $course_description_en = $db_handle->checkValue($_POST['course_description_en']);
     $inserted_at = date("Y-m-d H:i:s");
 
     $image = '';
@@ -113,7 +116,7 @@ if(isset($_POST['add_course'])){
         }
     }
 
-    $insert = $db_handle->insertQuery("INSERT INTO `course`(`course_name`, `course_duration`, `course_description`,`course_image`, `inserted_at`,`course_price`) VALUES ('$course_name','$course_description','$course_description','$image','$inserted_at','$course_price')");
+    $insert = $db_handle->insertQuery("INSERT INTO `course`(`course_name`,`course_name_en`, `course_duration`, `course_description`,`course_description_en`,`course_image`, `inserted_at`,`course_price`) VALUES ('$course_name','$course_name_en','$course_duration','$course_description','$course_description_en','$image','$inserted_at','$course_price')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';

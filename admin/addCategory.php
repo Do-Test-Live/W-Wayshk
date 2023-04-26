@@ -61,6 +61,10 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="text" class="form-control" placeholder="" name="cat_name" required>
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Category Name (CN)</label>
+                                            <input type="text" class="form-control" placeholder="" name="cat_name_cn" required>
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Category Image</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">

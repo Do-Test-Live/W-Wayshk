@@ -12,6 +12,8 @@ if (!isset($_SESSION['userid'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Pending Order | Wayshk Admin</title>
+    <!-- Datatable -->
+    <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <?php include 'include/css.php'; ?>
 </head>
 <body>
@@ -61,5 +63,8 @@ if (!isset($_SESSION['userid'])) {
 ***********************************-->
 
 <?php include 'include/js.php'; ?>
+<!-- Datatable -->
+<script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="js/plugins-init/datatables.init.js"></script>
 </body>
 </html>

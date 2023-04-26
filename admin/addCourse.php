@@ -13,6 +13,7 @@ if (!isset($_SESSION['userid'])) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Add Course | Wayshk Admin</title>
     <?php include 'include/css.php'; ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js" integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -61,6 +62,10 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="text" class="form-control" placeholder="" name="course_name" required>
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Course Name (EN)</label>
+                                            <input type="text" class="form-control" placeholder="" name="course_name_en" required>
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Course Duration</label>
                                             <input type="text" class="form-control" placeholder="" name="course_duration" required>
                                         </div>
@@ -83,6 +88,10 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="form-group col-md-12">
                                             <label>Course Description *</label>
                                             <textarea class="form-control" rows="4" id="comment" name="course_description" required></textarea>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Course Description * (EN)</label>
+                                            <textarea class="form-control" rows="4" id="comment" name="course_description_en" required></textarea>
                                         </div>
                                     </div>
                                     <div class="text-center">
@@ -108,5 +117,9 @@ if (!isset($_SESSION['userid'])) {
 ***********************************-->
 
 <?php include 'include/js.php'; ?>
+<script>
+    CKEDITOR.replace('course_description');
+    CKEDITOR.replace('course_description_en');
+</script>
 </body>
 </html>

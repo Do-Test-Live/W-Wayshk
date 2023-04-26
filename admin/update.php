@@ -14,6 +14,7 @@ if (!isset($_SESSION["userid"])) {
 if (isset($_POST['updateCategory'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $name = $db_handle->checkValue($_POST['c_name']);
+    $name_en = $db_handle->checkValue($_POST['c_name_en']);
     $status = $db_handle->checkValue($_POST['status']);
     $image = '';
     $query = '';
@@ -35,7 +36,7 @@ if (isset($_POST['updateCategory'])) {
         }
     }
 
-    $data = $db_handle->insertQuery("update category set c_name='$name', status='$status'" . $query . " where id={$id}");
+    $data = $db_handle->insertQuery("update category set c_name='$name',`c_name_en` = '$name_en', status='$status'" . $query . " where id={$id}");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Category';
@@ -51,6 +52,7 @@ if (isset($_POST['updateProduct'])) {
     $p_name_en = $db_handle->checkValue($_POST['p_name_en']);
     $product_code = $db_handle->checkValue($_POST['p_code']);
     $product_description = $db_handle->checkValue($_POST['product_description']);
+    $product_description_en = $db_handle->checkValue($_POST['product_description_en']);
     $product_category = $db_handle->checkValue($_POST['product_category']);
     $status = $db_handle->checkValue($_POST['status']);
     $product_price = $db_handle->checkValue($_POST['product_price']);
@@ -59,7 +61,7 @@ if (isset($_POST['updateProduct'])) {
 
     $updated_at = date("Y-m-d H:i:s");
 
-    $data = $db_handle->insertQuery("UPDATE `product` SET `category_id`='$product_category',`product_code`='$product_code',`p_name`='$p_name',`description`='$product_description',
+    $data = $db_handle->insertQuery("UPDATE `product` SET `category_id`='$product_category',`product_code`='$product_code',`p_name`='$p_name',`description`='$product_description',`description_en` = '$product_description_en',
                      `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`p_name_en` = '$p_name_en',`cost` = '$cost',`product_weight` = '$product_weight' WHERE id={$id}");
     echo "<script>
                 document.cookie = 'alert = 3;';
@@ -70,9 +72,11 @@ if (isset($_POST['updateProduct'])) {
 if (isset($_POST['updateCourse'])) {
     $course_id = $db_handle->checkValue($_POST['id']);
     $course_name = $db_handle->checkValue($_POST['course_name']);
+    $course_name_en = $db_handle->checkValue($_POST['course_name_en']);
     $course_duration = $db_handle->checkValue($_POST['course_duration']);
     $course_price = $db_handle->checkValue($_POST['course_price']);
     $course_description = $db_handle->checkValue($_POST['course_description']);
+    $course_description_en = $db_handle->checkValue($_POST['course_description_en']);
     $status = $db_handle->checkValue($_POST['status']);
     $updated_at = date("Y-m-d H:i:s");
     $image = '';
@@ -95,7 +99,7 @@ if (isset($_POST['updateCourse'])) {
         }
     }
 
-    $data = $db_handle->insertQuery("UPDATE `course` SET `course_name`='$course_name',`course_duration`='$course_duration',`course_price`='$course_price',`course_description`='$course_description',`status`='$status',`updated_at`='$updated_at'" . $query . " WHERE course_id='{$course_id}'");
+    $data = $db_handle->insertQuery("UPDATE `course` SET `course_name`='$course_name',`course_name_en`='$course_name_en',`course_duration`='$course_duration',`course_price`='$course_price',`course_description`='$course_description',`course_description_en`='$course_description_en',`status`='$status',`updated_at`='$updated_at'" . $query . " WHERE course_id='{$course_id}'");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Course';

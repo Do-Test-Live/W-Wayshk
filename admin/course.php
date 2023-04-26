@@ -15,6 +15,7 @@ if (!isset($_SESSION['userid'])) {
     <!-- Datatable -->
     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <?php include 'include/css.php'; ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js" integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -71,6 +72,14 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Course Name (EN)</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="course_name"
+                                                       placeholder="Course Name"
+                                                       value="<?php echo $data[0]["course_name_en"]; ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Course Duration</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="course_duration"
@@ -107,6 +116,10 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="form-group col-md-12 mb-3">
                                             <label>Course Description *</label>
                                             <textarea class="form-control" rows="4" id="comment" name="course_description" required><?php echo $data[0]["course_description"]; ?></textarea>
+                                        </div>
+                                        <div class="form-group col-md-12 mb-3">
+                                            <label>Course Description * (EN)</label>
+                                            <textarea class="form-control" rows="4" id="comment" name="course_description_en" required><?php echo $data[0]["course_description_en"]; ?></textarea>
                                         </div>
                                         <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Status</label>
@@ -273,5 +286,9 @@ if (!isset($_SESSION['userid'])) {
 <!-- Datatable -->
 <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="js/plugins-init/datatables.init.js"></script>
+<script>
+    CKEDITOR.replace('course_description');
+    CKEDITOR.replace('course_description_en');
+</script>
 </body>
 </html>

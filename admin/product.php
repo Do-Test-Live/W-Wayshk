@@ -15,6 +15,7 @@ if (!isset($_SESSION['userid'])) {
     <!-- Datatable -->
     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <?php include 'include/css.php'; ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js" integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -114,6 +115,10 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="form-group col-md-12">
                                             <label>Product Description *</label>
                                             <textarea class="form-control" rows="4" id="comment" name="product_description" required><?php echo $data[0]["description"]; ?></textarea>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Product Description * (EN)</label>
+                                            <textarea class="form-control" rows="4" id="comment" name="product_description_en" required><?php echo $data[0]["description_en"]; ?></textarea>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Select Product Category *</label>
@@ -313,5 +318,9 @@ if (!isset($_SESSION['userid'])) {
 <!-- Datatable -->
 <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="js/plugins-init/datatables.init.js"></script>
+<script>
+    CKEDITOR.replace('product_description');
+    CKEDITOR.replace('product_description_en');
+</script>
 </body>
 </html>

@@ -3,7 +3,7 @@ session_start();
 require_once("include/dbController.php");
 $db_handle = new DBController();
 date_default_timezone_set("Asia/Hong_Kong");
-$month= date("m");
+$month= date("m:Y");
 if (!isset($_SESSION['userid'])) {
     header("Location: Login");
 }?>
@@ -146,7 +146,7 @@ if (!isset($_SESSION['userid'])) {
                                         $row_count = $db_handle->numRows("SELECT * FROM `invoice_details`");
                                         for ($i = 0; $i < $row_count; $i++) {
                                             $date = date_create($invoice_details[$i]["updated_at"]);
-                                            $date_formatted = date_format($date, "m");
+                                            $date_formatted = date_format($date, "m:Y");
                                             if($date_formatted == $month){
                                                 $product_id = $invoice_details[$i]['product_id'];
                                                 $quantity = $invoice_details[$i]['product_quantity'];

@@ -72,6 +72,14 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Category Name (EN)</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="c_name_en"
+                                                       placeholder="Category Name"
+                                                       value="<?php echo $data[0]["c_name_en"]; ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Image</label>
                                             <div class="col-sm-6">
                                                 <div class="input-group mb-3">
@@ -128,6 +136,7 @@ if (!isset($_SESSION['userid'])) {
                                         <tr>
                                             <th>SL</th>
                                             <th>Category Name</th>
+                                            <th>Category Name (EN)</th>
                                             <th>Category Image</th>
                                             <th>Insert Date</th>
                                             <th>Status</th>
@@ -144,6 +153,7 @@ if (!isset($_SESSION['userid'])) {
                                             <tr>
                                                 <td><?php echo $i + 1; ?></td>
                                                 <td><?php echo $category_data[$i]["c_name"]; ?></td>
+                                                <td><?php echo $category_data[$i]["c_name_en"]; ?></td>
                                                 <td><a href="<?php echo $category_data[$i]["image"]; ?>"
                                                        target="_blank">Image</a></td>
                                                 <?php
