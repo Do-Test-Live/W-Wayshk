@@ -140,13 +140,13 @@
                             ?>
                             <ul>
                                 <li>
-                                    <a href="Home" class="text-content">首頁</a>
+                                    <a href="Home" class="text-content">主頁</a>
                                 </li>
                                 <li>
                                     <a href="Shop" class="text-content">所有產品</a>
                                 </li>
                                 <li>
-                                    <a href="About-Us" class="text-content">關於</a>
+                                    <a href="About-Us" class="text-content">關於我們</a>
                                 </li>
                                 <li>
                                     <a href="order_old.php" class="text-content">訂購方法</a>
@@ -165,7 +165,7 @@
                         } else{ ?>
                             <ul>
                                 <li>
-                                    <a href="Home" class="text-content">Frontpage</a>
+                                    <a href="Home" class="text-content">Home</a>
                                 </li>
                                 <li>
                                     <a href="Shop" class="text-content">All products</a>
@@ -202,11 +202,11 @@
                         <ul>
                             <li>
                                 <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
-                                    <?php if($_SESSION['language'] === 'CN') echo '隱私政策'; else echo 'Privacy Policy';?></a>
+                                    <?php if($_SESSION['language'] === 'CN') echo '私隱政策'; else echo 'Privacy Policy';?></a>
                             </li>
                             <li>
                                 <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
-                                    <?php if($_SESSION['language'] === 'CN') echo '附帶條約'; else echo 'Terms and Condition';?></a>
+                                    <?php if($_SESSION['language'] === 'CN') echo '條款細則'; else echo 'Terms and Condition';?></a>
                             </li>
                         </ul>
                     </div>

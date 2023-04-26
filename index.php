@@ -166,7 +166,7 @@ include('include/header.php');
                     <div>
                         <h2><?php
                             if ($_SESSION['language'] === 'CN')
-                                echo '熱門保存今天';
+                                echo ' 是日最優惠產品';
                             else
                                 echo 'Top Save Today';
                             ?>
@@ -178,7 +178,7 @@ include('include/header.php');
                             <h6 class="name">
                                 <?php
                                 if ($_SESSION['language'] === 'CN')
-                                    echo '過期日期在 ：';
+                                    echo '到期時間淨餘:';
                                 else
                                     echo 'Expires in :';
                                 ?>
@@ -278,12 +278,12 @@ include('include/header.php');
                                             </li>
                                         </ul>-->
 
-                                        <h6 class="theme-color">In Stock</h6>
+                                        <h6 class="theme-color"><?php if($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock';?></h6>
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
                                         <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
-                                            <button class="btn btn-add-cart addcart-button">Add
+                                            <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                             </button>
                                         </a>
                                     </div>
@@ -345,12 +345,12 @@ include('include/header.php');
                                                 </li>
                                             </ul>-->
 
-                                            <h6 class="theme-color">In Stock</h6>
+                                            <h6 class="theme-color"><?php if($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock';?></h6>
                                         </div>
 
                                         <div class="add-to-cart-box bg-white">
                                             <a href="#">
-                                                <button class="btn btn-add-cart">Add
+                                                <button class="btn btn-add-cart"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                                 </button>
                                             </a>
                                         </div>
@@ -435,12 +435,12 @@ include('include/header.php');
                                             </li>
                                         </ul>-->
 
-                                        <h6 class="theme-color">In Stock</h6>
+                                        <h6 class="theme-color"><?php if($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock';?></h6>
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
                                         <a href="#">
-                                            <button class="btn btn-add-cart addcart-button">Add
+                                            <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                             </button>
                                         </a>
                                     </div>
@@ -501,12 +501,12 @@ include('include/header.php');
                                                 </li>
                                             </ul>-->
 
-                                            <h6 class="theme-color">In Stock</h6>
+                                            <h6 class="theme-color"><?php if($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock';?></h6>
                                         </div>
 
                                         <div class="add-to-cart-box bg-white">
                                             <a href="#">
-                                                <button class="btn btn-add-cart">Add
+                                                <button class="btn btn-add-cart"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                                 </button>
                                             </a>
                                         </div>
@@ -802,7 +802,7 @@ include('include/header.php');
                                 <h3>
                                     <?php
                                     if ($_SESSION['language'] === 'CN')
-                                        echo '最近添加的';
+                                        echo '最新產品';
                                     else
                                         echo 'Recently Added';
                                     ?>

@@ -57,7 +57,7 @@ $db_handle = new DBController();
             <div class="row">
                 <div class="col-12">
                     <div class="breadscrumb-contain">
-                        <h2><?php if ($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up';?></h2>
+                        <h2><?php if ($_SESSION['language'] === 'CN') echo '註冊'; else echo 'Sign Up';?></h2>
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
@@ -65,7 +65,7 @@ $db_handle = new DBController();
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item active"><?php if ($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up';?></li>
+                                <li class="breadcrumb-item active"><?php if ($_SESSION['language'] === 'CN') echo '註冊'; else echo 'Sign Up';?></li>
                             </ol>
                         </nav>
                     </div>
@@ -128,7 +128,7 @@ $db_handle = new DBController();
                                                 id="flexCheckDefault" required>
                                             <label class="form-check-label" for="flexCheckDefault">
                                                 <?php if($_SESSION['language'] === 'CN') echo '我同意
-                                                <span>條款</span> 和 <span>隱私</span>'; else echo 'I agree with
+                                                <span>我同意 私隱</span> 政策 及 <span>條款細則</span>'; else echo 'I agree with
                                                 <span>Terms</span> and <span>Privacy</span>';?>
                                                 </label>
                                         </div>
@@ -136,7 +136,7 @@ $db_handle = new DBController();
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100" type="submit" name="customer_signup"><?php if ($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up';?></button>
+                                    <button class="btn btn-animation w-100" type="submit" name="customer_signup"><?php if ($_SESSION['language'] === 'CN') echo '註冊'; else echo 'Sign Up';?></button>
                                 </div>
                             </form>
                         </div>

@@ -160,11 +160,11 @@ include('include/header.php');
 
                     <div class="summery-contain">
                         <div class="coupon-cart">
-                            <h6 class="text-content mb-2"><?php if($_SESSION['language'] === 'CN') echo '優惠券申請'; else echo 'Coupon Apply'?></h6>
+                            <h6 class="text-content mb-2"><?php if($_SESSION['language'] === 'CN') echo '輸入優惠碼'; else echo 'Coupon Apply'?></h6>
                             <div class="mb-3 coupon-box input-group">
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                        placeholder="">
-                                <button class="btn-apply"><?php if($_SESSION['language'] === 'CN') echo '申請'; else echo 'Apply'?></button>
+                                <button class="btn-apply"><?php if($_SESSION['language'] === 'CN') echo '確定'; else echo 'Apply'?></button>
                             </div>
                         </div>
                         <ul>
@@ -187,7 +187,7 @@ include('include/header.php');
 
                     <ul class="summery-total">
                         <li class="list-total border-top-0">
-                            <h4><?php if($_SESSION['language'] === 'CN') echo '總計 (HKD)'; else echo 'Total (HKD)'?></h4>
+                            <h4><?php if($_SESSION['language'] === 'CN') echo '總額(港元)'; else echo 'Total (HKD)'?></h4>
                             <h4 class="price theme-color"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
                         </li>
                     </ul>
@@ -197,7 +197,7 @@ include('include/header.php');
                             <li>
                                 <button onclick="location.href = 'Checkout';"
                                         class="btn btn-animation proceed-btn fw-bold">
-                                    <?php if($_SESSION['language'] === 'CN') echo '進行結算'; else echo 'Proceed To Checkout'?>
+                                    <?php if($_SESSION['language'] === 'CN') echo '結帳'; else echo 'Proceed To Checkout'?>
                                 </button>
                             </li>
 

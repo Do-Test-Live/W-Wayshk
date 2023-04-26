@@ -405,13 +405,13 @@ if (isset($_SESSION["cart_item"])) {
                                         ?>
                                         <ul class="navbar-nav">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="Home">首頁</a>
+                                                <a class="nav-link" href="Home">主頁</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="Shop">所有產品</i></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="About-Us">關於</a>
+                                                <a class="nav-link" href="About-Us">關於我們</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="Order">訂購方法</a>
@@ -445,7 +445,7 @@ if (isset($_SESSION["cart_item"])) {
                                         ?>
                                         <ul class="navbar-nav">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="Home">Frontpage</a>
+                                                <a class="nav-link" href="Home">Home</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="Shop">All products</i></a>

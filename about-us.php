@@ -70,7 +70,7 @@ $db_handle = new DBController();
                     <div class="fresh-contain p-center-left">
                         <div>
                             <div class="review-title">
-                                <h2 class="inner-header">公司簡介</h2>
+                                <h2 class="inner-header">關於我們</h2>
                             </div>
 
                             <div class="delivery-list">
@@ -79,17 +79,22 @@ $db_handle = new DBController();
                                         <div class="delivery-box">
                                             <div class="delivery-detail">
                                                 <h5 class="text">
-                                                    Wayshk活籽兒童用品店以小店形式經營，職業治療師運用專業角度，在全球各地精心搜羅有訓練價值的兒童用品及玩具，方便顧客一站式選購。我們亦有售許多自家設計的創意教材，讓孩子在有趣的遊戲中學習，快樂成長。
+                                                    Wayshk活籽兒童用品店以小店形式經營，職業治療師運用專業角度，在全球各地精心搜羅有訓練價值的兒童用品及玩具，方便顧客一站式選購。我們亦有售許多自家設計的創意教材，讓孩子在有趣的遊戲中學習和快樂成長。
                                                 </h5>
                                             </div>
                                             <div class="delivery-detail">
                                                 <h5 class="text">
-                                                    之所以命名為「Ways」，意味著這間店鋪可以提供許多選擇, 以突破框框的方法來使用不同產品達至訓練目的。孩子成長的路上會遇上不少困難，但總會有很多方法解決。更重要的是，孩子將來要走的路也有無限的可能！
+                                                    本公司之所以命名為「Ways」，意味著這間店鋪可以提供許多選擇, 以突破框框的方法來使用不同產品達至訓練目的。
                                                 </h5>
                                             </div>
                                             <div class="delivery-detail">
                                                 <h5 class="text">
-                                                    我們同時希望在香港這個小小的都市，推廣職業治療服務及產品，讓正在經歷困難的人們，能過著獨立和更有意義的生活。
+                                                    孩子成長的路上可能會遇上不少挫折，但亦總有很多方法來克服困難。更重要的是，孩子們的將來有著無限的可能性！
+                                                </h5>
+                                            </div>
+                                            <div class="delivery-detail">
+                                                <h5 class="text">
+                                                    我們同時希望在香港這個小小的都市裡推廣職業治療服務及產品，讓正在經歷困難的人們，能過著獨立和更有意義的生活。
                                                 </h5>
                                             </div>
                                         </div>

@@ -111,7 +111,7 @@ if(isset($_POST['login'])){
                     <div class="log-in-box">
                         <div class="log-in-title">
                             <h3><?php if ($_SESSION['language'] === 'CN') echo '歡迎來到匯匯香港'; else echo 'Welcome To WaysHK';?></h3>
-                            <h4><?php if ($_SESSION['language'] === 'CN') echo '登錄您的帳戶'; else echo 'Log In Your Account';?></h4>
+                            <h4><?php if ($_SESSION['language'] === 'CN') echo '登入你的帳戶'; else echo 'Log In Your Account';?></h4>
                         </div>
 
                         <div class="input-box">
@@ -149,7 +149,7 @@ if(isset($_POST['login'])){
 
                         <div class="sign-up-box">
                             <h4><?php if($_SESSION['language'] === 'CN') echo '沒有帳戶？'; else echo 'Do not have an account?'?></h4>
-                            <a href="Sign-Up"><?php if($_SESSION['language'] === 'CN') echo '報名'; else echo 'Sign Up'?></a>
+                            <a href="Sign-Up"><?php if($_SESSION['language'] === 'CN') echo '註冊'; else echo 'Sign Up'?></a>
                         </div>
                     </div>
                 </div>
