@@ -427,7 +427,7 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                           href="Living-Seeds-Children">精選課程</a>
+                                                           href="Living-Seeds-Children">活籽兒童服務社</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"

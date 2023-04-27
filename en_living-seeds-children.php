@@ -58,7 +58,7 @@ include('include/header.php');
 
 <!-- Cart Section Start -->
 <section class="contact-box-section">
-    <div class="container-fluid-lg">
+    <div class="container">
         <div class="row g-lg-5 g-3">
             <div class="col-lg-12 mb-5">
                 <div class="left-sidebar-box">
@@ -159,7 +159,7 @@ include('include/header.php');
                                 </div>
                             </div>-->
                             <div class="row mb-5 mt-5">
-                                <h2 class="mb-3 text-center inner-header" style="font-size: 25px !important;">Examples of training content: </h2>
+                                <h2 class="mb-3 inner-header" style="font-size: 25px !important;">Examples of training content: </h2>
                             </div>
 
                             <div class="row mb-5 mt-5">

@@ -188,8 +188,7 @@ include('include/header.php');
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit">Add To
-                                        Cart
+                                    <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                     </button>
                                 </form>
                             </div>
@@ -204,7 +203,7 @@ include('include/header.php');
                     <!-- Trending Product -->
                     <div class="pt-25">
                         <div class="category-menu">
-                            <h3>Trending Products</h3>
+                            <h3><?php if($_SESSION['language'] === 'CN') echo '熱門產品'; else echo 'Trending Products';?></h3>
 
                             <ul class="product-list product-right-sidebar border-0 p-0">
                                 <?php
@@ -310,12 +309,12 @@ include('include/header.php');
                                             </li>
                                         </ul>-->
 
-                                        <h6 class="theme-color">In Stock</h6>
+                                        <h6 class="theme-color"><?php if($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock';?></h6>
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
                                         <a href="#">
-                                            <button class="btn btn-add-cart addcart-button">Add
+                                            <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                             </button>
                                         </a>
                                     </div>

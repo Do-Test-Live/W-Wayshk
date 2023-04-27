@@ -149,7 +149,7 @@
                                     <a href="About-Us" class="text-content">關於我們</a>
                                 </li>
                                 <li>
-                                    <a href="order_old.php" class="text-content">訂購方法</a>
+                                    <a href="Order" class="text-content">訂購方法</a>
                                 </li>
                                 <li>
                                     <a href="Institution" class="text-content">機構/學校訂購</a>
@@ -157,9 +157,9 @@
                                 <li>
                                     <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
-                                </li>
+                                </li>-->
                             </ul>
                             <?php
                         } else{ ?>

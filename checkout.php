@@ -66,7 +66,7 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="breadscrumb-contain">
-                    <h2>Checkout</h2>
+                    <h2><?php if($_SESSION['language'] === 'CN') echo '查看'; else echo 'Checkout';?></h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -74,7 +74,7 @@ include('include/header.php');
                                     <i class="fa-solid fa-house"></i>
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                            <li class="breadcrumb-item active" aria-current="page"><?php if($_SESSION['language'] === 'CN') echo '查看'; else echo 'Checkout';?></li>
                         </ol>
                     </nav>
                 </div>
@@ -103,7 +103,7 @@ include('include/header.php');
                                     </div>
                                     <div class="checkout-box">
                                         <div class="checkout-title">
-                                            <h4>Delivery Address</h4>
+                                            <h4><?php if($_SESSION['language'] === 'CN') echo '郵寄地址'; else echo 'Delivery Address';?></h4>
                                         </div>
 
                                         <div class="checkout-detail">
@@ -113,39 +113,39 @@ include('include/header.php');
                                                         <div class="row">
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="f_name"
-                                                                       value="" placeholder="First Name" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '名'; else echo 'First Name';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="l_name"
-                                                                       value="" placeholder="Last Name" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '姓'; else echo 'Last Name';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="email"
-                                                                       value="" placeholder="Email Address" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Last Name';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="phone_number"
-                                                                       value="" placeholder="Phone Number" maxlength="10"
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電話號碼'; else echo 'Phone Number';?>" maxlength="10"
                                                                        minlength="10" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="address"
-                                                                       value="" placeholder="Street Address" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '街道地址'; else echo 'Street Address';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="city" value=""
-                                                                       placeholder="City" required="">
+                                                                       placeholder="<?php if($_SESSION['language'] === 'CN') echo '城市'; else echo 'City';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="zip_code"
-                                                                       value="" placeholder="Zip Code" maxlength="5"
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼'; else echo 'Zip Code';?>" maxlength="5"
                                                                        minlength="5" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input class="form-check-input card-class" name="addInfo" type="checkbox"
                                                                        value="" id="flexCheckChecked">
                                                                 <label class="form-check-label ms-2" for="flexCheckChecked">
-                                                                    Add this data to customer info
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '將此數據添加到客戶信息'; else echo 'Add this data to customer info';?>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -165,7 +165,7 @@ include('include/header.php');
                                     </div>
                                     <div class="checkout-box">
                                         <div class="checkout-title">
-                                            <h4>Payment Option</h4>
+                                            <h4><?php if($_SESSION['language'] === 'CN') echo '付款方式'; else echo 'Payment Option';?></h4>
                                         </div>
 
                                         <div class="checkout-detail">
@@ -179,8 +179,8 @@ include('include/header.php');
                                                             <div class="custom-form-check form-check mb-0">
                                                                 <label class="form-check-label" for="cash"><input
                                                                             class="form-check-input mt-0" type="radio"
-                                                                            name="payment" value="Cash On" id="cash" checked> Cash
-                                                                    On Delivery</label>
+                                                                            name="payment" value="Cash On" id="cash" checked>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '貨到付款'; else echo 'Cash On Delivery';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,7 +195,21 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="credit"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Card" id="credit">
-                                                                    Credit or Debit Card</label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '在線支付'; else echo 'Online Payment';?></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <div class="accordion-header" id="flush-headingOne">
+                                                        <div class="accordion-button collapsed"
+                                                             data-bs-toggle="collapse"
+                                                             data-bs-target="#flush-collapseOne">
+                                                            <div class="custom-form-check form-check mb-0">
+                                                                <label class="form-check-label" for="credit"><input
+                                                                            class="form-check-input mt-0" type="radio"
+                                                                            name="payment" value="Bank" id="credit">
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '銀行轉帳'; else echo 'Bank Transfer';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -213,7 +227,7 @@ include('include/header.php');
                     <div class="right-side-summery-box">
                         <div class="summery-box-2">
                             <div class="summery-header">
-                                <h3>Order Summery</h3>
+                                <h3><?php if($_SESSION['language'] === 'CN') echo '訂單摘要'; else echo 'Order Summary';?></h3>
                             </div>
 
                             <ul class="summery-contain">
@@ -227,7 +241,7 @@ include('include/header.php');
                                         <li>
                                             <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'],',')); ?>"
                                                  class="img-fluid blur-up lazyloaded checkout-image" alt="">
-                                            <h4><?php echo $item["name"]; ?> <span>X <?php echo $item["quantity"]; ?></span></h4>
+                                            <h4><?php if($_SESSION['language'] === 'CN') echo $item["name"]; else echo $item["en_name"];?> <span>X <?php echo $item["quantity"]; ?></span></h4>
                                             <h4 class="price"><?php echo "HK$ " . number_format($item_price, 2); ?></h4>
                                         </li>
                                         <?php
@@ -240,24 +254,21 @@ include('include/header.php');
 
                             <ul class="summery-total">
                                 <li>
-                                    <h4>Subtotal</h4>
-                                    <h4 class="price"><?php echo "HK$ " . number_format($total_price_new, 2); ?></h4>
+                                    <h4><?php if($_SESSION['language'] === 'CN') echo '小計'; else echo 'Subtotal';?></h4>
+                                    <h4 class="price"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
                                 </li>
                                 <li>
-                                    <h4>Shipping</h4>
-                                    <h4 class="price">HK$ 0.00</h4>
-                                </li>
-                                <li>
-                                    <h4>Coupon/Code</h4>
-                                    <h4 class="price">HK$ 0.00</h4>
+                                    <h4><?php if($_SESSION['language'] === 'CN') echo '船運'; else echo 'Shipping';?></h4>
+                                    <h4 class="price">HKD 0.00</h4>
                                 </li>
                                 <li class="list-total">
-                                    <h4>Total (HKD)</h4>
-                                    <h4 class="price"><?php echo "HK$ " . number_format($total_price_new, 2); ?></h4>
+                                    <h4><?php if($_SESSION['language'] === 'CN') echo '全部的 (HKD)'; else echo 'Total (HKD)';?></h4>
+                                    <h4 class="price"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
                                 </li>
                             </ul>
                         </div>
-                        <button class="btn theme-bg-color text-white btn-md w-100 mt-4 fw-bold" name="placeOrder" type="submit">Place Order</button>
+                        <button class="btn theme-bg-color text-white btn-md w-100 mt-4 fw-bold" name="placeOrder" type="submit">
+                            <?php if($_SESSION['language'] === 'CN') echo '下訂單'; else echo 'Place Order';?></button>
                     </div>
                 </div>
             </div>
@@ -274,51 +285,6 @@ include('include/footer.php');
 
 <!-- Tap to top start -->
 <div class="theme-option">
-    <div class="setting-box">
-        <button class="btn setting-button">
-            <i class="fa-solid fa-gear"></i>
-        </button>
-
-        <div class="theme-setting-2">
-            <div class="theme-box">
-                <ul>
-                    <li>
-                        <div class="setting-name">
-                            <h4>Color</h4>
-                        </div>
-                        <div class="theme-setting-button color-picker">
-                            <form class="form-control">
-                                <label for="colorPick" class="form-label mb-0">Theme Color</label>
-                                <input type="color" class="form-control form-control-color" id="colorPick"
-                                       value="#0da487" title="Choose your color">
-                            </form>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="setting-name">
-                            <h4>Dark</h4>
-                        </div>
-                        <div class="theme-setting-button">
-                            <button class="btn btn-2 outline" id="darkButton">Dark</button>
-                            <button class="btn btn-2 unline" id="lightButton">Light</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="setting-name">
-                            <h4>RTL</h4>
-                        </div>
-                        <div class="theme-setting-button rtl">
-                            <button class="btn btn-2 rtl-unline">LTR</button>
-                            <button class="btn btn-2 rtl-outline">RTL</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <div class="back-to-top">
         <a id="back-to-top" href="#">
             <i class="fas fa-chevron-up"></i>

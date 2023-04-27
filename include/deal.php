@@ -4,8 +4,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div>
-                    <h5 class="modal-title w-100" id="deal_today">Deal Today</h5>
-                    <p class="mt-1 text-content">Recommended deals for you.</p>
+                    <h5 class="modal-title w-100" id="deal_today"><?php if($_SESSION['language'] === 'CN') echo '今天交易'; else echo 'Deal Today';?></h5>
+                    <p class="mt-1 text-content"><?php if($_SESSION['language'] === 'CN') echo '為您推薦優惠。'; else echo 'Recommended deals for you.';?></p>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <i class="fa-solid fa-xmark"></i>
