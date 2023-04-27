@@ -163,6 +163,20 @@ include('include/header.php');
                                         </li>
                                     </ul>-->
                                     <!--<span class="review">23 Customer Review</span>-->
+                                    <?php
+                                    $fetch_quantity_no = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
+                                    $fetch_quantity = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
+                                    $quantity = $fetch_quantity[0]['quantity'];
+                                    if($fetch_quantity_no > 0 && $quantity > 0){
+                                        ?>
+                                        <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock'; ?></h6>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '預購'; else echo 'Preorder'; ?></h6>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
 
@@ -257,6 +271,7 @@ include('include/header.php');
                     $related_products = $db_handle->runQuery("select * from product WHERE status= '1' and category_id = '$cat_id' order by rand() limit 20");
                     $row = $db_handle->numRows("select * from product WHERE status= '1' and category_id = '$cat_id' order by rand() limit 20");
                     for ($i = 0; $i < $row; $i++) {
+                        $product_id = $related_products[$i]['id'];
                         ?>
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
@@ -309,7 +324,20 @@ include('include/header.php');
                                             </li>
                                         </ul>-->
 
-                                        <h6 class="theme-color"><?php if($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock';?></h6>
+                                        <?php
+                                        $fetch_quantity_no = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
+                                        $fetch_quantity = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
+                                        $quantity = $fetch_quantity[0]['quantity'];
+                                        if($fetch_quantity_no > 0 && $quantity > 0){
+                                            ?>
+                                            <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock'; ?></h6>
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '預購'; else echo 'Preorder'; ?></h6>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
