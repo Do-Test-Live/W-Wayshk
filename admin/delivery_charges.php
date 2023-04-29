@@ -87,6 +87,14 @@ if (!isset($_SESSION['userid'])) {
                                                        value="<?php echo $data[0]["next_per_kg_weight"]; ?>" required>
                                             </div>
                                         </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Minimum Order for Free Delivery</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="min_order_amount"
+                                                       placeholder="Additional Charge"
+                                                       value="<?php echo $data[0]["min_order_free_delivery"]; ?>" required>
+                                            </div>
+                                        </div>
 
                                         <div class="mb-3 row">
                                             <div class="col-sm-6 mx-auto">
@@ -115,6 +123,7 @@ if (!isset($_SESSION['userid'])) {
                                             <th>Min. Delivery Charge</th>
                                             <th>Upto Weight (KG)</th>
                                             <th>Additional Delivery Charges (Per KG)</th>
+                                            <th>Min. Order Amount for Free Delivery</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
@@ -130,6 +139,7 @@ if (!isset($_SESSION['userid'])) {
                                                 <td><?php echo $delivery_charges[$i]["min_delivery_charge"]; ?></td>
                                                 <td><?php echo $delivery_charges[$i]["weight_upto"]; ?></td>
                                                 <td><?php echo $delivery_charges[$i]["next_per_kg_weight"]; ?></td>
+                                                <td><?php echo $delivery_charges[$i]["min_order_free_delivery"]; ?></td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="Delivery-Charges?deliveryId=<?php echo $delivery_charges[$i]["delivery_id"];?>"

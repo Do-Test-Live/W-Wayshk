@@ -209,8 +209,9 @@ if(isset($_POST['updateDeliveryCharges'])){
     $min_charge = $db_handle->checkValue($_POST['min_charge']);
     $weight_upto = $db_handle->checkValue($_POST['weight_upto']);
     $additional_charges = $db_handle->checkValue($_POST['additional_charges']);
+    $min_order_amount = $db_handle->checkValue($_POST['min_order_amount']);
 
-    $data = $db_handle->insertQuery("UPDATE `delivery_charges` SET `min_delivery_charge`='$min_charge',`weight_upto`='$weight_upto',`next_per_kg_weight`='$additional_charges' WHERE delivery_id = '$id'");
+    $data = $db_handle->insertQuery("UPDATE `delivery_charges` SET `min_delivery_charge`='$min_charge',`weight_upto`='$weight_upto',`next_per_kg_weight`='$additional_charges',`min_order_free_delivery`='$min_order_amount' WHERE delivery_id = '$id'");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Delivery-Charges';

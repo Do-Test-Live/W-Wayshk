@@ -234,6 +234,7 @@ include('include/header.php');
                                 <?php
                                 $total_quantity_new = 0;
                                 $total_price_new = 0;
+                                $total_weight = 0;
                                 if (isset($_SESSION["cart_item"])) {
                                     foreach ($_SESSION["cart_item"] as $item) {
                                         $item_price = $item["quantity"] * $item["price"];
@@ -247,6 +248,7 @@ include('include/header.php');
                                         <?php
                                         $total_quantity_new += $item["quantity"];
                                         $total_price_new += ($item["price"] * $item["quantity"]);
+                                        $total_weight += ($item["weight"] * $item['quantity']);
                                     }
                                 }
                                 ?>
@@ -258,8 +260,23 @@ include('include/header.php');
                                     <h4 class="price"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
                                 </li>
                                 <li>
-                                    <h4><?php if($_SESSION['language'] === 'CN') echo '船運'; else echo 'Shipping';?></h4>
-                                    <h4 class="price">HKD 0.00</h4>
+                                    <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
+                                    <h4 class="price text-end">
+                                        <?php
+                                        $delivery_charges = $db_handle->runQuery("select * from delivery_charges");
+                                        if ($total_price_new >= $delivery_charges[0]['min_order_free_delivery']){
+                                            $dCharge = 0;
+                                        }elseif($total_weight <= $delivery_charges[0]['weight_upto']){
+                                            $dCharge = $delivery_charges[0]['min_delivery_charge'];
+                                        }else{
+                                            $d_weight = $total_weight - $delivery_charges[0]['weight_upto'];
+                                            $dAdditional = $d_weight * $delivery_charges[0]['next_per_kg_weight'];
+                                            $dCharge = $dAdditional +  $delivery_charges[0]['min_delivery_charge'];
+                                        }
+                                        echo $dCharge;
+                                        $total_price_new = $total_price_new + $dCharge;
+                                        ?>
+                                    </h4>
                                 </li>
                                 <li class="list-total">
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '全部的 (HKD)'; else echo 'Total (HKD)';?></h4>

@@ -382,7 +382,7 @@ include('include/header.php');
                                         </div>
 
                                         <div class="add-to-cart-box bg-white">
-                                            <a href="#">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                                 <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                                 </button>
                                             </a>
@@ -486,7 +486,7 @@ include('include/header.php');
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
-                                        <a href="#">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                             <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                             </button>
                                         </a>
@@ -566,7 +566,7 @@ include('include/header.php');
                                         </div>
 
                                         <div class="add-to-cart-box bg-white">
-                                            <a href="#">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                                 <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                                 </button>
                                             </a>

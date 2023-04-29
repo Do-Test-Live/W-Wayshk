@@ -10,7 +10,8 @@ if (!empty($_GET["action"])) {
 
                 $productByCode = $db_handle->runQuery("SELECT * FROM product WHERE id ='" . $_GET["product_id"] . "'");
                 //echo strtok($productByCode[0]["p_image"],',');
-                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'en_name' => $productByCode[0]["p_name_en"], 'image' => strtok($productByCode[0]["p_image"], ','), 'id' => $productByCode[0]["id"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"]));
+                $itemArray = array($productByCode[0]["id"] => array('name' => $productByCode[0]["p_name"], 'en_name' => $productByCode[0]["p_name_en"], 'image' => strtok($productByCode[0]["p_image"], ','), 'id' => $productByCode[0]["id"],
+                    'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["product_price"], 'weight' => $productByCode[0]["product_weight"]));
 
                 if (!empty($_SESSION["cart_item"])) {
                     if (in_array($productByCode[0]["id"], array_keys($_SESSION["cart_item"]))) {

@@ -261,7 +261,9 @@ include('include/header.php');
 <section class="product-list-section section-b-space">
     <div class="container-fluid-lg">
         <div class="title">
-            <h2>Related Products</h2>
+            <h2>
+                <?php if($_SESSION['language'] === 'CN') echo '相關產品'; else echo 'Related Products';?>
+            </h2>
         </div>
         <div class="row">
             <div class="col-12">

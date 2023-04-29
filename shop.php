@@ -274,8 +274,8 @@ include('include/header.php');
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
-                                                <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
-                                                </button>
+                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -376,8 +376,8 @@ include('include/header.php');
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
-                                                <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
-                                                </button>
+                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
