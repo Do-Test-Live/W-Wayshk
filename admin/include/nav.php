@@ -117,6 +117,12 @@
                     <span class="nav-text">Customer</span>
                 </a>
             </li>
+            <li>
+                <a href="Delivery-Charges">
+                    <i class="flaticon-381-controls-3"></i>
+                    <span class="nav-text">Delivery Charges</span>
+                </a>
+            </li>
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>

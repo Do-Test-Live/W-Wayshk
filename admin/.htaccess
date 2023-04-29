@@ -64,3 +64,5 @@ RewriteRule ^Review review.php [NE,L]
 
 RewriteRule ^Profit-Loss profit_loss_report.php [NE,L]
 
+RewriteRule ^Delivery-Charges delivery_charges.php [NE,L]
+

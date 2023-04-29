@@ -203,3 +203,17 @@ if (isset($_POST['updateHomeBanner'])) {
 
 }
 
+
+if(isset($_POST['updateDeliveryCharges'])){
+    $id = $db_handle->checkValue($_POST['id']);
+    $min_charge = $db_handle->checkValue($_POST['min_charge']);
+    $weight_upto = $db_handle->checkValue($_POST['weight_upto']);
+    $additional_charges = $db_handle->checkValue($_POST['additional_charges']);
+
+    $data = $db_handle->insertQuery("UPDATE `delivery_charges` SET `min_delivery_charge`='$min_charge',`weight_upto`='$weight_upto',`next_per_kg_weight`='$additional_charges' WHERE delivery_id = '$id'");
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Delivery-Charges';
+                </script>";
+}
+
