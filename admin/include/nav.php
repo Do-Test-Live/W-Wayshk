@@ -96,7 +96,7 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="Pending-Order">Pending Order</a></li>
-                    <li><a href="Confirm-Order">Confirm order</a></li>
+                    <li><a href="Confirm-Order">Complete order</a></li>
                 </ul>
             </li>
             <li>

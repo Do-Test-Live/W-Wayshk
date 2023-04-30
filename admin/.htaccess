@@ -66,3 +66,5 @@ RewriteRule ^Profit-Loss profit_loss_report.php [NE,L]
 
 RewriteRule ^Delivery-Charges delivery_charges.php [NE,L]
 
+RewriteRule ^Order-Details order_details.php [NE,L]
+

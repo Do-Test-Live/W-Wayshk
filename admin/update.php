@@ -218,3 +218,26 @@ if(isset($_POST['updateDeliveryCharges'])){
                 </script>";
 }
 
+
+if(isset($_POST['delivery'])){
+    $id = $db_handle->checkValue($_POST['billing_id']);
+    $date = $db_handle->checkValue($_POST['date']);
+    $status = $db_handle->checkValue($_POST['status']);
+
+    $data = $db_handle->insertQuery("UPDATE `billing_details` SET `delivery_date`='$date',`approve` = '$status' WHERE id='$id'");
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Pending-Order';
+                </script>";
+}
+
+if(isset($_POST['approved'])){
+    $id = $db_handle->checkValue($_POST['billing_id']);
+
+    $data = $db_handle->insertQuery("UPDATE `billing_details` SET `approve` = '1' WHERE id='$id'");
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Confirm-Order';
+                </script>";
+}
+
