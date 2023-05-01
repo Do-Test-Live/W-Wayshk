@@ -13,8 +13,6 @@ if (!isset($_SESSION['userid'])) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Add Product | Wayshk Admin</title>
     <?php include 'include/css.php'; ?>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js" integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>

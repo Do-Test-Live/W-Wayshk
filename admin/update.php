@@ -241,3 +241,22 @@ if(isset($_POST['approved'])){
                 </script>";
 }
 
+if(isset($_POST['updatePassword'])){
+    $o_pass = $db_handle->checkValue($_POST['o_pass']);
+    $n_pass = $db_handle->checkValue($_POST['n_pass']);
+
+    $previous_pass = $db_handle->runQuery("select password from admin_login limit 1");
+    if($previous_pass[0]['password'] == $o_pass){
+        $update = $db_handle->insertQuery("update admin_login set password = '$n_pass' where id = 2");
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Profile';
+                </script>";
+    }else{
+        echo "<script>
+                document.cookie = 'alert = 5;';
+                window.location.href='Profile';
+                </script>";
+    }
+}
+
