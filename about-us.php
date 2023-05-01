@@ -136,7 +136,7 @@ $db_handle = new DBController();
     <!-- Fresh Vegetable Section End -->
 
     <!-- Review Section Start -->
-    <!--<section class="review-section section-lg-space">
+    <section class="review-section section-lg-space">
         <div class="container-fluid">
             <div class="about-us-title text-center">
                 <h4 class="text-content">Latest Testimonals</h4>
@@ -486,7 +486,7 @@ $db_handle = new DBController();
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
     <!-- Review Section End -->
 
     <!-- Footer Section Start -->
