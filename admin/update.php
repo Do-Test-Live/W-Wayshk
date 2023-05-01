@@ -221,24 +221,50 @@ if(isset($_POST['updateDeliveryCharges'])){
 
 if(isset($_POST['delivery'])){
     $id = $db_handle->checkValue($_POST['billing_id']);
+    $email = $db_handle->checkValue($_POST['email']);
     $date = $db_handle->checkValue($_POST['date']);
     $status = $db_handle->checkValue($_POST['status']);
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `delivery_date`='$date',`approve` = '$status' WHERE id='$id'");
-    echo "<script>
+    if($data){
+        $email_to = $email;
+        $subject = 'Wayshk';
+
+
+        $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
+        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+
+        $messege = "
+            <html>
+                <body style='background-color: #eee; font-size: 16px;'>
+                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
+                    <h3 style='color:black'>Order Update</h3>
+                    <p style='color:black;'>
+                    Your order is successfully received. Your approximate delivery date is: $date. Please contact us for more details.
+                    </p>
+                </div>
+                </body>
+            </html>";
+        if (mail($email_to, $subject, $messege, $headers)) {
+            echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Pending-Order';
                 </script>";
+        }
+    }
 }
 
 if(isset($_POST['approved'])){
     $id = $db_handle->checkValue($_POST['billing_id']);
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `approve` = '1' WHERE id='$id'");
-    echo "<script>
+    if($data){
+        echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Confirm-Order';
                 </script>";
+    }
+
 }
 
 if(isset($_POST['updatePassword'])){

@@ -372,6 +372,7 @@ include('include/header.php');
                                         echo $dCharge;
                                         $total_price_new = $total_price_new + $dCharge;
                                         ?>
+                                        <input type="hidden" value="<?php echo $delivery_charges;?>" name="delivery_charge">
                                     </h4>
                                 </li>
                                 <li class="list-total">

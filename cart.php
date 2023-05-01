@@ -84,7 +84,7 @@ include('include/header.php');
 <section class="cart-section section-b-space">
     <div class="container-fluid-lg">
         <div class="row g-sm-5 g-3">
-            <div class="col-xxl-9">
+            <div class="col-xxl-12">
                 <div class="cart-table">
                     <div class="table-responsive-xl">
                         <table class="table">
@@ -165,66 +165,13 @@ include('include/header.php');
                 </div>
             </div>
 
-            <div class="col-xxl-3">
+            <div class="col-xxl-3 mt-3">
                 <div class="summery-box p-sticky">
-                    <div class="summery-header">
-                        <h3><?php if($_SESSION['language'] === 'CN') echo '購物車總計'; else echo 'Cart Total'?></h3>
-                    </div>
-
-                    <div class="summery-contain">
-                        <div class="coupon-cart">
-                            <h6 class="text-content mb-2"><?php if($_SESSION['language'] === 'CN') echo '輸入優惠碼'; else echo 'Coupon Apply'?></h6>
-                            <div class="mb-3 coupon-box input-group">
-                                <input type="text" class="form-control" id="exampleFormControlInput1"
-                                       placeholder="">
-                                <button class="btn-apply"><?php if($_SESSION['language'] === 'CN') echo '確定'; else echo 'Apply'?></button>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <h4><?php if($_SESSION['language'] === 'CN') echo '小計'; else echo 'Subtotal'?></h4>
-                                <h4 class="price"><?php echo "$ " . number_format($total_price_new, 2); ?></h4>
-                            </li>
-
-                            <li>
-                                <h4><?php if($_SESSION['language'] === 'CN') echo '輸入優惠卷號碼'; else echo 'Coupon Discount'?></h4>
-                                <h4 class="price">(-) 0.00</h4>
-                            </li>
-
-                            <li class="align-items-start">
-                                <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
-                                <h4 class="price text-end">
-                                    <?php
-                                    $delivery_charges = $db_handle->runQuery("select * from delivery_charges");
-                                    if ($total_price_new >= $delivery_charges[0]['min_order_free_delivery']){
-                                        $dCharge = 0;
-                                    }elseif($total_weight <= $delivery_charges[0]['weight_upto']){
-                                        $dCharge = $delivery_charges[0]['min_delivery_charge'];
-                                    }else{
-                                        $d_weight = $total_weight - $delivery_charges[0]['weight_upto'];
-                                        $dAdditional = $d_weight * $delivery_charges[0]['next_per_kg_weight'];
-                                        $dCharge = $dAdditional +  $delivery_charges[0]['min_delivery_charge'];
-                                    }
-                                    echo $dCharge;
-                                    $total_price_new = $total_price_new + $dCharge;
-                                    ?>
-                                </h4>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <ul class="summery-total">
-                        <li class="list-total border-top-0">
-                            <h4><?php if($_SESSION['language'] === 'CN') echo '總額(港元)'; else echo 'Total (HKD)'?></h4>
-                            <h4 class="price theme-color"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
-                        </li>
-                    </ul>
-
                     <div class="button-group cart-button">
                         <ul>
                             <li>
                                 <button onclick="location.href = 'Checkout';"
-                                        class="btn btn-animation proceed-btn fw-bold">
+                                        class="btn btn-animation proceed-btn fw-bold mt-3">
                                     <?php if($_SESSION['language'] === 'CN') echo '結帳'; else echo 'Proceed To Checkout'?>
                                 </button>
                             </li>

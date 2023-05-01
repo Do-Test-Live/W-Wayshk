@@ -58,7 +58,7 @@ $id = $_GET['id'];
                             </div>
                             <div class="card-body">
                                 <?php
-                                $status = $db_handle->runQuery("select approve,delivery_date from billing_details where id='$id'");
+                                $status = $db_handle->runQuery("select approve,delivery_date,email from billing_details where id='$id'");
                                 if($status[0]['approve'] == 3){
                                     ?>
                                     <div class="basic-form">
@@ -76,6 +76,7 @@ $id = $_GET['id'];
                                             </div>
                                             <div class="mb-3 row">
                                                 <input type="hidden" value="<?php echo $id;?>" name="billing_id">
+                                                <input type="hidden" value="<?php echo $status[0]['email'];?>" name="email">
                                                 <label class="col-sm-3 col-form-label">Approximate Delivery Date</label>
                                                 <div class="col-sm-9">
                                                     <input type="date" class="form-control" name="date"

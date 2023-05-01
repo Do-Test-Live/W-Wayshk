@@ -31,6 +31,7 @@ if (isset($_POST["placeOrder"])) {
     $address = $db_handle->checkValue($_POST['address']);
     $city = $db_handle->checkValue($_POST['city']);
     $zip_code = $db_handle->checkValue($_POST['zip_code']);
+    $delivery_charge = $db_handle->checkValue($_POST['delivery_charge']);
     $addInfo = 0;
 
     if (!empty($_POST['addInfo'])) {
@@ -55,9 +56,9 @@ if (isset($_POST["placeOrder"])) {
 
     $insert_user = $db_handle->insertQuery("INSERT INTO `billing_details`(`customer_id`, `f_name`, `l_name`, 
                               `email`, `phone`, `address`, `city`, `zip_code`, `payment_type`,`shipping_method`, 
-                              `total_purchase`, `purchase_points`, `updated_at`) 
+                              `total_purchase`,`delivery_charges`, `purchase_points`, `updated_at`) 
                               VALUES ('$customer_id','$f_name','$l_name','$email','$phone'
-                              ,'$address','$city','$zip_code','$payment','$shipping','$total_purchase','$purchase_points','$updated_at')");
+                              ,'$address','$city','$zip_code','$payment','$shipping','$total_purchase','$delivery_charge','$purchase_points','$updated_at')");
 
 
     $billing_id = $db_handle->runQuery("SELECT * FROM billing_details order by id desc limit 1");
@@ -91,6 +92,55 @@ if (isset($_POST["placeOrder"])) {
         }
     }
 
+    if ($payment != 'Credit Card') {
+        $email_to = $email;
+        $subject = 'Wayshk';
+
+
+        $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
+        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+
+        $messege = "
+            <html>
+                <body style='background-color: #eee; font-size: 16px;'>
+                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
+                    <h3 style='color:black'>Order Placed Successfully</h3>
+                    <p style='color:black;'>
+                    Your order is successfully placed. We will inform you about the delivery status soon.
+                    </p>
+                </div>
+                </body>
+            </html>";
+        if (mail($email_to, $subject, $messege, $headers)) {
+
+            $email_to = $db_handle->notify_email();
+            $subject = 'Wayshk';
+
+
+            $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
+            $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+
+            $messege = "
+            <html>
+                <body style='background-color: #eee; font-size: 16px;'>
+                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
+                    <p style='color:black;'>
+                        New Order Arrive. Pyment option $payment .
+                    </p>
+                </div>
+                </body>
+            </html>";
+
+            if (mail($email_to, $subject, $messege, $headers)) {
+                ?>
+                echo "<script>
+                    window.location.href='Home';
+                </script>";
+                <?php
+            }
+        }
+    }
+
     $data = $db_handle->runQuery("SELECT id FROM billing_details order by id desc LIMIT  1");
 
     $id = $data[0]['id'];
@@ -113,6 +163,7 @@ if (isset($_POST["placeOrder"])) {
 
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html>
