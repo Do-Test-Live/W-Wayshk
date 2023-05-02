@@ -107,24 +107,26 @@ include('include/header.php');
                                 <thead>
                                 <tr>
                                     <th>SL No</th>
-                                    <th>Billing ID</th>
-                                    <th>Product Name</th>
-                                    <th>Quantity</th>
+                                    <th>Invoice Number</th>
+                                    <th>Payment Type</th>
+                                    <th>Shipping Method</th>
                                     <th>Price</th>
+                                    <th>Print Invoice</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php
-                                $fetch_data = $db_handle->runQuery("select * from customer, invoice_details where customer.id=invoice_details.customer_id and customer.id='$customer_id'");
-                                $no_fetch_data = $db_handle->numRows("select * from customer, invoice_details where customer.id=invoice_details.customer_id and customer.id='$customer_id'");
+                                $fetch_data = $db_handle->runQuery("select * from customer, billing_details where customer.id=billing_details.customer_id and customer.id='$customer_id'");
+                                $no_fetch_data = $db_handle->numRows("select * from customer, billing_details where customer.id=billing_details.customer_id and customer.id='$customer_id'");
                                 for($i=0; $i<$no_fetch_data;$i++){
                                     ?>
                                     <tr>
                                         <td><?php echo $i+1;?></td>
-                                        <td><?php echo $fetch_data[$i]['billing_id'];?></td>
-                                        <td><?php echo $fetch_data[$i]['product_name'];?></td>
-                                        <td><?php echo $fetch_data[$i]['product_quantity'];?></td>
-                                        <td><?php echo $fetch_data[$i]['product_total_price'];?></td>
+                                        <td>#WHK<?php echo $fetch_data[$i]['id'];?></td>
+                                        <td><?php echo $fetch_data[$i]['payment_type'];?></td>
+                                        <td><?php echo $fetch_data[$i]['shipping_method'];?></td>
+                                        <td><?php echo $fetch_data[$i]['total_purchase'];?></td>
+                                        <td><a href="admin/print_invoice.php?id=<?php echo $fetch_data[$i]['id'];?>" target="_blank"><i class="fa fa-print"></i></a></td>
                                     </tr>
                                     <?php
                                 }
@@ -138,6 +140,15 @@ include('include/header.php');
 
             <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                 <div class="log-in-box">
+                    <div class="log-in-title">
+                        <h3>Membership Points:</h3>
+                        <h3 class="text-warning">
+                            <?php
+                            $points = $db_handle->runQuery("select sum(purchase_points) as points from billing_details where customer_id = '$customer_id'");
+                            echo $points[0]['points'];
+                            ?>
+                         Points</h3>
+                    </div>
                     <div class="log-in-title">
                         <h3>Previous Comment</h3>
                     </div>

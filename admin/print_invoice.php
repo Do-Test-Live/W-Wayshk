@@ -139,7 +139,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
         }
 
         td, th {
-            padding: 10px 15px;
+            padding: 6px 10px;
             line-height: 1.55em
         }
 
@@ -579,9 +579,10 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
         <div class="cs-invoice_in" id="download_section">
             <div class="cs-invoice_head cs-type1 cs-mb25">
                 <div class="cs-invoice_left">
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">Invoice
-                            No:</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
-                    <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">Date: </b>
+
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收帳單 / Invoice</p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票號碼：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
+                    <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">日期: </b>
                         <?php
                         $date = date_create($billing_details[0]["updated_at"]);
                         echo date_format($date, "d F Y");
@@ -595,7 +596,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             </div>
             <div class="cs-invoice_head cs-mb10">
                 <div class="cs-invoice_left">
-                    <b class="cs-primary_color">Invoice To:</b>
+                    <b class="cs-primary_color">致： </b>
                     <p>
                         <?php echo $billing_details[0]['f_name'] . ' ' . $billing_details[0]['l_name']; ?><br>
                         <?php echo $billing_details[0]['address']; ?>,<br><?php echo $billing_details[0]['city']; ?>
@@ -604,12 +605,11 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </p>
                 </div>
                 <div class="cs-invoice_right cs-text_right">
-                    <b class="cs-primary_color">Pay To:</b>
+                    <b class="cs-primary_color">支付給:</b>
                     <p>
-                        Ways HK <br>
-                        Room 1, 3rd Floor, Qunli Industrial Building, <br>
-                        21-23 Shing Wan Road, Tai Wai, Hong Kong <br>
-                        ways00.hk@gmail.com
+                        Wayshk 活籽兒童用品店 <br>
+                        大圍成運路 21-23 號群力工業大廈 3 樓 1 室 <br>
+                        電話：5605 8389 / 電郵： wayshk.order@gmail.com
                     </p>
                 </div>
             </div>
@@ -619,21 +619,23 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                         <table>
                             <thead>
                             <tr>
-                                <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Item</th>
-                                <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg">Qty</th>
-                                <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg">Price</th>
-                                <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg cs-text_right">Total
+                                <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg" style="font-size: 12px;">產品名稱</th>
+                                <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg" style="font-size: 12px;">產品代碼</th>
+                                <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg" style="font-size: 12px;">數量</th>
+                                <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg" style="font-size: 12px;">價格</th>
+                                <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg cs-text_right" style="font-size: 12px;">合計
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php
-                            $invoice = $db_handle->runQuery("SELECT * FROM `invoice_details` WHERE billing_id = '$id'");
-                            $no_invoice = $db_handle->numRows("SELECT * FROM `invoice_details` WHERE billing_id = '$id'");
+                            $invoice = $db_handle->runQuery("SELECT * FROM `invoice_details`,`product` WHERE billing_id = '$id' and invoice_details.product_id = product.id");
+                            $no_invoice = $db_handle->numRows("SELECT * FROM `invoice_details`,`product` WHERE billing_id = '$id' and invoice_details.product_id = product.id");
                             for($i = 0; $i < $no_invoice; $i++){
                                 ?>
                                 <tr>
                                     <td class="cs-width_3"><?php echo $invoice[$i]['product_name'];?></td>
+                                    <td class="cs-width_3"><?php echo $invoice[$i]['product_code'];?></td>
                                     <td class="cs-width_2"><?php echo $invoice[$i]['product_quantity'];?></td>
                                     <td class="cs-width_1"><?php echo $invoice[$i]['product_unit_price'];?></td>
                                     <td class="cs-width_2 cs-text_right"><?php echo $invoice[$i]['product_total_price'];?></td>
@@ -646,30 +648,24 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </div>
                     <div class="cs-invoice_footer cs-border_top">
                         <div class="cs-left_footer cs-mobile_hide">
-                            <p class="cs-mb0"><b class="cs-primary_color">Shipping Method</b></p>
+                            <p class="cs-mb0"><b class="cs-primary_color">郵寄方式:</b></p>
                             <p class="cs-m0"><?php echo $billing_details[0]['shipping_method'];?></p>
-                            <p class="cs-mb0"><b class="cs-primary_color">Payment Method:</b></p>
+                            <p class="cs-mb0"><b class="cs-primary_color">付款方式:</b></p>
                             <p class="cs-m0"><?php echo $billing_details[0]['payment_type'];?></p>
                         </div>
                         <div class="cs-right_footer">
                             <table>
                                 <tbody>
                                 <tr class="cs-border_left">
-                                    <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Subtoal</td>
+                                    <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">小計</td>
                                     <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">
                                         <?php echo $billing_details[0]['total_purchase'];?> HKD
                                     </td>
                                 </tr>
                                 <tr class="cs-border_left">
-                                    <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Shipping Cost</td>
+                                    <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">運費</td>
                                     <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">
                                         <?php echo $billing_details[0]['delivery_charges'];?> HKD
-                                    </td>
-                                </tr>
-                                <tr class="cs-border_left">
-                                    <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Tax</td>
-                                    <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">
-                                        0 HKD
                                     </td>
                                 </tr>
                                 </tbody>
@@ -683,7 +679,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                         <table>
                             <tbody>
                             <tr class="cs-border_none">
-                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">Total Amount</td>
+                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">全部的</td>
                                 <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">
                                    <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
                                 </td>
@@ -703,9 +699,11 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </svg>
                 </div>
                 <div class="cs-note_right">
-                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">Note:</b></p>
-                    <p class="cs-m0">Here we can write a additional notes for the client to get a better understanding
-                        of this invoice.</p>
+                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方法:</b></p>
+                    <p class="cs-m0">1) 郵寄支票 ：支票抬頭請書明受款人為「 Wayshk」，信封請註明 Attn: Wayshk
+                        並郵寄往大圍成運路 21-23 號群力工業大廈 3 樓 1 室</p>
+                    <p class="cs-m0">2) 直接存款 ：銀行戶口號碼為 769-334699-883 （恆生銀行）
+                        銀行戶口名稱: Wayshk</p>
                 </div>
             </div>
         </div>
@@ -761,7 +759,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     pdf.addPage(pdfWidth, pdfHeight);
                     pdf.addImage(imgData, 'JPG', topLeftMargin, -(pdfHeight * i) + topLeftMargin * 0, canvasImageWidth, canvasImageHeight);
                 }
-                pdf.save('ivonne-invoice.html');
+                pdf.save('ivonne-invoice.pdf');
             });
         });
     })(jQuery);

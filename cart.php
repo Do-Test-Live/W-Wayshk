@@ -117,7 +117,7 @@ include('include/header.php');
 
                                         <td class="price">
                                             <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '價格'; else echo 'Price'?></h4>
-                                            <h5><?php echo "$ " . $item["price"]; ?></h5>
+                                            <h5><?php echo $item["price"] . ' HKD'; ?></h5>
                                         </td>
 
                                         <td class="quantity">
@@ -144,7 +144,7 @@ include('include/header.php');
 
                                         <td class="subtotal">
                                             <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '合計'; else echo 'Total'?></h4>
-                                            <h5><?php echo "$ " . number_format($item_price, 2); ?></h5>
+                                            <h5><?php echo number_format($item_price, 2) . ' HKD'; ?></h5>
                                         </td>
 
                                         <td class="save-remove">

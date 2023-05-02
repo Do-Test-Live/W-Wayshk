@@ -287,11 +287,11 @@ include('include/header.php');
                                         $fetch_quantity_no = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
                                         $fetch_quantity = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
                                         $quantity = $fetch_quantity[0]['quantity'];
-                                        if($fetch_quantity_no > 0 && $quantity > 0){
+                                        if ($fetch_quantity_no > 0 && $quantity > 0) {
                                             ?>
                                             <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock'; ?></h6>
                                             <?php
-                                        }else{
+                                        } else {
                                             ?>
                                             <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '預購'; else echo 'Preorder'; ?></h6>
                                             <?php
@@ -369,11 +369,11 @@ include('include/header.php');
                                             $fetch_quantity_no = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
                                             $fetch_quantity = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
                                             $quantity = $fetch_quantity[0]['quantity'];
-                                            if($fetch_quantity_no > 0 && $quantity > 0){
+                                            if ($fetch_quantity_no > 0 && $quantity > 0) {
                                                 ?>
                                                 <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock'; ?></h6>
                                                 <?php
-                                            }else{
+                                            } else {
                                                 ?>
                                                 <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '預購'; else echo 'Preorder'; ?></h6>
                                                 <?php
@@ -473,11 +473,11 @@ include('include/header.php');
                                         $fetch_quantity_no = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
                                         $fetch_quantity = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
                                         $quantity = $fetch_quantity[0]['quantity'];
-                                        if($fetch_quantity_no > 0 && $quantity > 0){
+                                        if ($fetch_quantity_no > 0 && $quantity > 0) {
                                             ?>
                                             <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock'; ?></h6>
                                             <?php
-                                        }else{
+                                        } else {
                                             ?>
                                             <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '預購'; else echo 'Preorder'; ?></h6>
                                             <?php
@@ -553,11 +553,11 @@ include('include/header.php');
                                             $fetch_quantity_no = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
                                             $fetch_quantity = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
                                             $quantity = $fetch_quantity[0]['quantity'];
-                                            if($fetch_quantity_no > 0 && $quantity > 0){
+                                            if ($fetch_quantity_no > 0 && $quantity > 0) {
                                                 ?>
                                                 <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '尚有存貨'; else echo 'In Stock'; ?></h6>
                                                 <?php
-                                            }else{
+                                            } else {
                                                 ?>
                                                 <h6 class="theme-color"><?php if ($_SESSION['language'] === 'CN') echo '預購'; else echo 'Preorder'; ?></h6>
                                                 <?php
@@ -750,7 +750,8 @@ include('include/header.php');
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
-                                    <a href="#" class="top-selling-image">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>"
+                                       class="top-selling-image">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($fetch_product [$i]['p_image'], ','));
                                         ?>"
@@ -759,7 +760,7 @@ include('include/header.php');
                                     </a>
 
                                     <div class="top-selling-detail">
-                                        <a href="#">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
                                             <h5><?php if ($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en']; ?></h5>
                                         </a>
                                         <!--<div class="product-rating">
@@ -813,7 +814,8 @@ include('include/header.php');
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
-                                    <a href="#" class="top-selling-image">
+                                    <a href="Product-Details?product_id=<?php echo $product [$i]['id']; ?>"
+                                       class="top-selling-image">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($product [$i]['p_image'], ','));
                                         ?>"
@@ -822,7 +824,7 @@ include('include/header.php');
                                     </a>
 
                                     <div class="top-selling-detail">
-                                        <a href="#">
+                                        <a href="Product-Details?product_id=<?php echo $product [$i]['id']; ?>">
                                             <h5><?php if ($_SESSION['language'] === 'CN') echo $product [$i]['p_name']; else echo $product [$i]['p_name_en']; ?></h5>
                                         </a>
                                         <!--<div class="product-rating">
@@ -877,7 +879,8 @@ include('include/header.php');
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
-                                    <a href="#" class="top-selling-image">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product3 [$i]['id']; ?>"
+                                       class="top-selling-image">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($fetch_product3 [$i]['p_image'], ','));
                                         ?>"
@@ -886,7 +889,7 @@ include('include/header.php');
                                     </a>
 
                                     <div class="top-selling-detail">
-                                        <a href="#">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product3 [$i]['id']; ?>">
                                             <h5><?php if ($_SESSION['language'] === 'CN') echo $fetch_product3 [$i]['p_name']; else echo $fetch_product3 [$i]['p_name_en']; ?></h5>
                                         </a>
                                         <!--<div class="product-rating">

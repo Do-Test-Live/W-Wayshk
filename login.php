@@ -2,7 +2,6 @@
 include('admin/include/dbController.php');
 $db_handle = new DBController();
 
-
 if(isset($_POST['login'])){
     $email = $db_handle->checkValue($_POST['email']);
     $password = $db_handle->checkValue($_POST['password']);
@@ -21,7 +20,6 @@ if(isset($_POST['login'])){
         echo "Something went wrong";
     }
 }
-
 
 ?>
 
