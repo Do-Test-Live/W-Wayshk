@@ -15,8 +15,8 @@
                 <div class="deal-offer-box">
                     <ul class="deal-offer-list">
                         <?php
-                        $product = $db_handle->runQuery("select * from product WHERE status= '1' order by rand() limit 5");
-                        $row = $db_handle->numRows("select * from product WHERE status= '1' order by rand() limit 5");
+                        $product = $db_handle->runQuery("select * from product WHERE status= '1' and deal_today = '1' order by rand()");
+                        $row = $db_handle->numRows("select * from product WHERE status= '1' and deal_today = '1' order by rand()");
                         for ($i = 0; $i < $row; $i++) {
                             $image = explode(',',$product[$i]['p_image'])
                             ?>

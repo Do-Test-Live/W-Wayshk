@@ -160,6 +160,20 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Deal Today</label>
+                                            <div class="col-sm-9">
+                                                <select class="default-select  form-control wide" name="today_deal"
+                                                        required>
+                                                    <option value="1" <?php echo ($data[0]["deal_today"] == 1) ? "selected" : ""; ?>>
+                                                        Yes
+                                                    </option>
+                                                    <option value="0" <?php echo ($data[0]["deal_today"] == 0) ? "selected" : ""; ?>>
+                                                        No
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <div class="col-sm-6 mx-auto">
                                                 <button type="submit" class="btn btn-primary w-25"
                                                         name="updateProduct">Submit
@@ -190,6 +204,7 @@ if (!isset($_SESSION['userid'])) {
                                             <th>Insert Date</th>
                                             <th>Last Updated</th>
                                             <th>Status</th>
+                                            <th>Deal Today</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
@@ -224,6 +239,17 @@ if (!isset($_SESSION['userid'])) {
                                                 } else {
                                                     ?>
                                                     <td>Deactive</td>
+                                                    <?php
+                                                }
+                                                ?>
+                                                <?php
+                                                if ($product[$i]["deal_today"] == 1) {
+                                                    ?>
+                                                    <td>Yes</td>
+                                                    <?php
+                                                } else {
+                                                    ?>
+                                                    <td>No</td>
                                                     <?php
                                                 }
                                                 ?>

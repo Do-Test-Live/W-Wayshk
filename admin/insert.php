@@ -47,6 +47,7 @@ if (isset($_POST["add_product"])) {
     $selling_price = $db_handle->checkValue($_POST['selling_price']);
     $cost = $db_handle->checkValue($_POST['cost']);
     $product_status = $db_handle->checkValue($_POST['product_status']);
+    $today_deal = $db_handle->checkValue($_POST['today_deal']);
     $product_description = $db_handle->checkValue($_POST['product_description']);
     $product_description_en = $db_handle->checkValue($_POST['product_description_en']);
     $inserted_at = date("Y-m-d H:i:s");
@@ -75,8 +76,8 @@ if (isset($_POST["add_product"])) {
         $products_image = '';
     }
 
-    $insert = $db_handle->insertQuery("INSERT INTO `product` (`category_id`, `product_code`,`product_weight`, `p_name`,`p_name_en`,`product_price`, `description`,`description_en`, `p_image`,`status`, `inserted_at`,`cost`) VALUES 
-                ('$product_category','$product_code','$product_weight','$product_name','$product_name_en','$selling_price','$product_description','$product_description_en','$products_image','$product_status','$inserted_at','$cost')");
+    $insert = $db_handle->insertQuery("INSERT INTO `product` (`category_id`, `product_code`,`product_weight`, `p_name`,`p_name_en`,`product_price`, `description`,`description_en`, `p_image`,`status`, `inserted_at`,`cost`,`deal_today`) VALUES 
+                ('$product_category','$product_code','$product_weight','$product_name','$product_name_en','$selling_price','$product_description','$product_description_en','$products_image','$product_status','$inserted_at','$cost','$today_deal')");
     if($insert){
         echo "<script>
                 document.cookie = 'alert = 3;';

@@ -115,6 +115,13 @@ if (!isset($_SESSION['userid'])) {
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Today Deal *</label>
+                                            <select class="form-control default-select" id="sel1" name="today_deal" required>
+                                                <option value="0" selected>No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Product Description * (CN)</label>
                                             <textarea class="form-control" rows="4" id="comment" name="product_description" required></textarea>
                                         </div>
