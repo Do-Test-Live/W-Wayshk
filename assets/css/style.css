@@ -26596,7 +26596,8 @@ header .offcanvas-backdrop {
     -webkit-box-shadow: 0 0 8px rgba(34, 34, 34, 0.05);
     box-shadow: 0 0 8px rgba(34, 34, 34, 0.05);
     -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out
+    transition: all .3s ease-in-out;
+    height: 500px;
 }
 
 .become-service .service-box:hover {

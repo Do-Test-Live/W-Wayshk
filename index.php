@@ -316,7 +316,7 @@ include('include/header.php');
                                     <div class="product-image">
                                         <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
                                             <img src="admin/<?php
-                                            echo str_replace("650", "250", strtok($fetch_product [$i]['p_image'], ','));
+                                            echo str_replace("650", "250", strtok($fetch_product [$i + 1]['p_image'], ','));
                                             ?>"
                                                  class="img-fluid blur-up lazyload" alt="">
                                         </a>
