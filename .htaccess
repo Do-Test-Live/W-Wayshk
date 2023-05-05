@@ -54,4 +54,6 @@ RewriteRule ^Membership-Program-EN en_membership.php [NE,L]
 
 RewriteRule ^Membership-Program membership.php [NE,L]
 
+RewriteRule ^Wish-List whitelist.php [NE,L]
+
 

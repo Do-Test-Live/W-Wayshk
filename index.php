@@ -246,9 +246,9 @@ include('include/header.php');
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
-
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                            <a href="#" class="notifi-wishlist">
+                                            <a href="Wish-List?id=<?php echo $fetch_product [$i]['id']; ?>"
+                                               class="notifi-wishlist">
                                                 <i data-feather="heart"></i>
                                             </a>
                                         </li>
@@ -328,7 +328,7 @@ include('include/header.php');
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="#" class="notifi-wishlist">
+                                                <a href="Wish-List?id=<?php echo $fetch_product [$i + 1]['id']; ?>" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -433,7 +433,7 @@ include('include/header.php');
                                         </li>
 
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                            <a href="#" class="notifi-wishlist">
+                                            <a href="Wish-List?id=<?php echo $fetch_product [$i]['id']; ?>" class="notifi-wishlist">
                                                 <i data-feather="heart"></i>
                                             </a>
                                         </li>
@@ -513,7 +513,7 @@ include('include/header.php');
                                             </li>
 
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="#" class="notifi-wishlist">
+                                                <a href="Wish-List?id=<?php echo $fetch_product [$i + 1]['id']; ?>" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
