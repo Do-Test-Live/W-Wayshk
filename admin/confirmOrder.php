@@ -65,6 +65,7 @@ if (!isset($_SESSION['userid'])) {
                                     <th>Address</th>
                                     <th>City</th>
                                     <th>Zip Code</th>
+                                    <th>Note</th>
                                     <th>Payment Type</th>
                                     <th>Shipping Method</th>
                                     <th>Total (HKD)</th>
@@ -87,6 +88,7 @@ if (!isset($_SESSION['userid'])) {
                                         <td><?php echo $bill_data[$i]["address"]; ?></td>
                                         <td><?php echo $bill_data[$i]["city"]; ?></td>
                                         <td><?php echo $bill_data[$i]["zip_code"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["note"]; ?></td>
                                         <td><?php echo $bill_data[$i]["payment_type"]; ?></td>
                                         <td><?php echo $bill_data[$i]["shipping_method"]; ?></td>
                                         <td><?php echo $bill_data[$i]["total_purchase"]; ?></td>

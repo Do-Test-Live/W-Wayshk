@@ -136,7 +136,7 @@ include('include/header.php');
             </div>
 
             <div class="col-xl-7 order-lg-2">
-                <div class="seller-title h-100 d-flex justify-content-end">
+                <div class="seller-title h-100 d-flex justify-content-center">
                     <div>
                         <h2 class="header-title">網上下單</h2>
                         <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">1. 把需要的貨品放進購物車</h2>
@@ -169,7 +169,7 @@ include('include/header.php');
                 <div class="seller-title h-100 d-flex align-items-center">
                     <div>
                         <h2 class="header-title">選擇付款方式</h2>
-                        <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">自取時以現金付款</h2>
+                        <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">A. 自取時以現金付款</h2>
                         <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">B. PayMe （電話： +852 5265 7359）</h2>
                         <p style="padding-left: 20px;">* 把付款證明以Whatsapp傳至+852 5605 8389</p>
                         <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">C.
@@ -181,7 +181,7 @@ include('include/header.php');
                         <p style="padding-left: 20px;">戶口名稱: Wayshk</p>
                         <p style="padding-left: 20px;">* 付款後把入數證明以Whatsapp傳至+852 5605 8389</p>
                         <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">E. 信用卡支付 【需支付額外5% 手續費】</h2>
-                        <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">支票付款 （只限機構/學校訂單）</h2>
+                        <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">F. 支票付款 （只限機構/學校訂單）</h2>
                         <p style="padding-left: 20px;">支票抬頭請書明受款人為「 Wayshk」, 信封請註明 Attn: Wayshk , 並郵寄往大圍成運路21-23號群力工業大廈3樓1室</p>
                         <h2 style="font-weight: 700;font-size: 18px; margin-bottom: 0 !important; color: black;">於網上下單均有電子單據 ；如需公司蓋印報價單/收帳單/收據，先於下單時列明提出/以電郵查詢</h2>
                     </div>
@@ -284,13 +284,13 @@ include('include/header.php');
                 <div class="seller-title h-100 d-flex align-items-center">
                     <div>
                         <h2 class="header-title">海外訂單</h2>
-                        <p>海外訂單以順豐快遞 SF EXPRESS配送，運費貨到付款</p>
-                        <p>目前開放配送地區為： <span style="font-weight: 700;">澳門、台灣、新加坡、馬來西亞、中國</span></p>
-                        <p>海外訂單限以信用卡結帳，交易手續費、匯率與退款手續費依發卡銀行規定，如有任何疑問，請聯繫您的信用卡發卡銀行</p>
-                        <p>海外訂單不適用包郵活動</p>
-                        <p>各國進口關稅標準不同，若領取包裹時需收取關稅，關稅須由買家自行支付</p>
-                        <p>部分商品可能會有無法配送或清關等問題，建議先確認商品是否可送達指定國家後再購買。如商品被扣關，將不獲退款。</p>
-                        <p>海外訂單不受理退換貨服務</p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 海外訂單以順豐快遞 SF EXPRESS配送，運費貨到付款</p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 目前開放配送地區為： <span style="font-weight: 700;">澳門、台灣、新加坡、馬來西亞、中國</span></p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 海外訂單限以信用卡結帳，交易手續費、匯率與退款手續費依發卡銀行規定，如有任何疑問，請聯繫您的信用卡發卡銀行</p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 海外訂單不適用包郵活動</p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 各國進口關稅標準不同，若領取包裹時需收取關稅，關稅須由買家自行支付</p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 部分商品可能會有無法配送或清關等問題，建議先確認商品是否可送達指定國家後再購買。如商品被扣關，將不獲退款。</p>
+                        <p><i class="fa-regular fa-hand-point-right" style="color: #d99f46;"></i> 海外訂單不受理退換貨服務</p>
                     </div>
                 </div>
             </div>

@@ -31,6 +31,7 @@ if (isset($_POST["placeOrder"])) {
     $address = $db_handle->checkValue($_POST['address']);
     $city = $db_handle->checkValue($_POST['city']);
     $zip_code = $db_handle->checkValue($_POST['zip_code']);
+    $note = $db_handle->checkValue($_POST['note']);
     $delivery_charge = $db_handle->checkValue($_POST['delivery_charge']);
     $addInfo = 0;
 
@@ -56,9 +57,9 @@ if (isset($_POST["placeOrder"])) {
 
     $insert_user = $db_handle->insertQuery("INSERT INTO `billing_details`(`customer_id`, `f_name`, `l_name`, 
                               `email`, `phone`, `address`, `city`, `zip_code`, `payment_type`,`shipping_method`, 
-                              `total_purchase`,`delivery_charges`, `purchase_points`, `updated_at`) 
+                              `total_purchase`,`delivery_charges`, `purchase_points`, `updated_at`,`note`) 
                               VALUES ('$customer_id','$f_name','$l_name','$email','$phone'
-                              ,'$address','$city','$zip_code','$payment','$shipping','$total_purchase','$delivery_charge','$purchase_points','$updated_at')");
+                              ,'$address','$city','$zip_code','$payment','$shipping','$total_purchase','$delivery_charge','$purchase_points','$updated_at','$note')");
 
 
     $billing_id = $db_handle->runQuery("SELECT * FROM billing_details order by id desc limit 1");

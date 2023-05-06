@@ -101,7 +101,7 @@ include('include/header.php');
                                                    class="lord-icon">
                                         </lord-icon>
                                     </div>
-                                    <div class="checkout-box">
+                                    <div class="checkout-box" style="height: 100%;">
                                         <div class="checkout-title">
                                             <h4><?php if($_SESSION['language'] === 'CN') echo '郵寄地址'; else echo 'Delivery Address';?></h4>
                                         </div>
@@ -139,6 +139,11 @@ include('include/header.php');
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="zip_code"
                                                                        value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼'; else echo 'Zip Code';?>" maxlength="5"
+                                                                       minlength="5" required="">
+                                                            </div>
+                                                            <div class="form-group col-md-12 mb-3">
+                                                                <input type="text" class="form-control" name="note"
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記'; else echo 'Note';?>" maxlength="5"
                                                                        minlength="5" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">

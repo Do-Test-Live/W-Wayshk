@@ -5165,7 +5165,7 @@ h2 {
     line-height: 2em;
     text-transform: capitalize;
     margin: 0;
-    color: #d99f46;
+    color: #000000;
 }
 
 h3 {
@@ -21283,7 +21283,8 @@ header .offcanvas-backdrop {
     -webkit-box-shadow: 0 0 8px #eee;
     box-shadow: 0 0 8px #eee;
     margin-left: 66px;
-    position: relative
+    position: relative;
+    margin-top: 20px;
 }
 
 [dir="rtl"] .checkout-section-2 .left-sidebar-checkout .checkout-detail-box > ul > li .checkout-box {
@@ -21343,6 +21344,7 @@ header .offcanvas-backdrop {
 }
 
 .checkout-section-2 .left-sidebar-checkout .checkout-detail-box > ul > li .checkout-box .checkout-detail .delivery-address-box {
+    margin-top: 25px;
     border-radius: 8px;
     padding: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
     background-color: #fff;

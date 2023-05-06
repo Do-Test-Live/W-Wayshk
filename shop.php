@@ -159,11 +159,11 @@ include('include/header.php');
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                      aria-labelledby="headingOne">
                                     <div class="accordion-body">
-                                        <div class="form-floating theme-form-floating-2 search-box">
+                                        <!--<div class="form-floating theme-form-floating-2 search-box">
                                             <input type="search" class="form-control" id="search"
-                                                   placeholder="<?php if($_SESSION['language'] === 'CN') echo '搜索'; else echo 'Search ..';?>">
-                                            <label for="search"><?php if($_SESSION['language'] === 'CN') echo '搜索'; else echo 'Search ..';?></label>
-                                        </div>
+                                                   placeholder="<?php /*if($_SESSION['language'] === 'CN') echo '搜索'; else echo 'Search ..';*/?>">
+                                            <label for="search"><?php /*if($_SESSION['language'] === 'CN') echo '搜索'; else echo 'Search ..';*/?></label>
+                                        </div>-->
 
                                         <ul class="category-list custom-padding custom-height">
 
@@ -207,10 +207,19 @@ include('include/header.php');
             <?php
             if (isset($_GET['catId'])) {
                 $id = $_GET['catId'];
+                $fetch_cat_name = $db_handle->runQuery("select * from category where id = '$id'");
+                $cat_name = $fetch_cat_name[0]['c_name'];
+                $cat_name_en = $fetch_cat_name[0]['c_name_en'];
                 ?>
                 <div class="col-custome-9">
-
-                    <div class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
+<h2><?php
+    if($_SESSION['language'] === 'CN')
+        echo $cat_name;
+    else
+        echo $cat_name_en;
+    ?>
+</h2>
+                    <div class="row g-sm-4 g-3 row-cols-xxl-4 mt-3 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
                         $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
                         // calculate the offset for the SQL query
