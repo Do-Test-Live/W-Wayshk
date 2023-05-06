@@ -273,6 +273,10 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li class="product-box-contain">
                                                         <i></i>
+                                                        <a href="Wish-List">Wishlist</a>
+                                                    </li>
+                                                    <li class="product-box-contain">
+                                                        <i></i>
                                                         <a href="Logout">Logout</a>
                                                     </li>
 
