@@ -93,6 +93,7 @@ if(isset($_POST['add_course'])){
     $course_name_en = $db_handle->checkValue($_POST['course_name_en']);
     $course_duration = $db_handle->checkValue($_POST['course_duration']);
     $course_price = $db_handle->checkValue($_POST['course_price']);
+    $course_price_poor = $db_handle->checkValue($_POST['course_price_poor']);
     $course_description = $db_handle->checkValue($_POST['course_description']);
     $course_description_en = $db_handle->checkValue($_POST['course_description_en']);
     $inserted_at = date("Y-m-d H:i:s");
@@ -117,7 +118,7 @@ if(isset($_POST['add_course'])){
         }
     }
 
-    $insert = $db_handle->insertQuery("INSERT INTO `course`(`course_name`,`course_name_en`, `course_duration`, `course_description`,`course_description_en`,`course_image`, `inserted_at`,`course_price`) VALUES ('$course_name','$course_name_en','$course_duration','$course_description','$course_description_en','$image','$inserted_at','$course_price')");
+    $insert = $db_handle->insertQuery("INSERT INTO `course`(`course_name`,`course_name_en`, `course_duration`, `course_description`,`course_description_en`,`course_image`, `inserted_at`,`course_price`,`course_price_poor`) VALUES ('$course_name','$course_name_en','$course_duration','$course_description','$course_description_en','$image','$inserted_at','$course_price','$course_price_poor')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';

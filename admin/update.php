@@ -76,6 +76,7 @@ if (isset($_POST['updateCourse'])) {
     $course_name_en = $db_handle->checkValue($_POST['course_name_en']);
     $course_duration = $db_handle->checkValue($_POST['course_duration']);
     $course_price = $db_handle->checkValue($_POST['course_price']);
+    $course_price_poor = $db_handle->checkValue($_POST['course_price_poor']);
     $course_description = $db_handle->checkValue($_POST['course_description']);
     $course_description_en = $db_handle->checkValue($_POST['course_description_en']);
     $status = $db_handle->checkValue($_POST['status']);
@@ -100,7 +101,7 @@ if (isset($_POST['updateCourse'])) {
         }
     }
 
-    $data = $db_handle->insertQuery("UPDATE `course` SET `course_name`='$course_name',`course_name_en`='$course_name_en',`course_duration`='$course_duration',`course_price`='$course_price',`course_description`='$course_description',`course_description_en`='$course_description_en',`status`='$status',`updated_at`='$updated_at'" . $query . " WHERE course_id='{$course_id}'");
+    $data = $db_handle->insertQuery("UPDATE `course` SET `course_name`='$course_name',`course_name_en`='$course_name_en',`course_duration`='$course_duration',`course_price`='$course_price',`course_price_poor`='$course_price_poor',`course_description`='$course_description',`course_description_en`='$course_description_en',`status`='$status',`updated_at`='$updated_at'" . $query . " WHERE course_id='{$course_id}'");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Course';
@@ -228,6 +229,19 @@ if(isset($_POST['delivery'])){
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `delivery_date`='$date',`approve` = '$status' WHERE id='$id'");
     if($data){
+        $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
+        $no_fetch_product = $db_handle->numRows("select * from invoice_details where billing_id = '$id'");
+        for($i=0; $i < $no_fetch_product; $i++){
+            $quantity = $fetch_product[$i]['product_quantity'];
+            $product_id = $fetch_product[$i]['product_id'];
+            $fetch_stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
+            $no_fetch_stock = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
+            if($no_fetch_stock > 0){
+                $s_quantity = $fetch_stock[0]['quantity'];
+                $s_quantity = $s_quantity - $quantity;
+                $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
+            }
+        }
         $email_to = $email;
         $subject = 'Wayshk';
 

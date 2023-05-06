@@ -432,6 +432,10 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
+                                                           href="Course">在線課程</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
                                                            href="Textbook-Download">教材下載</a>
                                                     </li>
                                                     <li>
@@ -470,6 +474,9 @@ if (isset($_SESSION["cart_item"])) {
                                                     <li>
                                                         <a class="dropdown-item" href="Living-Seeds-Children-EN">Wayshk
                                                             Children Service Society</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="Course">Online Courses</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"

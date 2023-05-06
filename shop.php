@@ -238,7 +238,7 @@ include('include/header.php');
                                                 </li>
 
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                    <a href="#" class="notifi-wishlist">
+                                                    <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" class="notifi-wishlist">
                                                         <i data-feather="heart"></i>
                                                     </a>
                                                 </li>
@@ -358,7 +358,7 @@ include('include/header.php');
                                                 </li>
 
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                    <a href="#" class="notifi-wishlist">
+                                                    <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" class="notifi-wishlist">
                                                         <i data-feather="heart"></i>
                                                     </a>
                                                 </li>

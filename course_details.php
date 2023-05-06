@@ -17,7 +17,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>活籽兒童服務社 | Wayshk | 全港職業治療服務</title>
+    <title>課程 | Wayshk | 全港職業治療服務</title>
 
     <?php include('include/css.php'); ?>
     <style>

@@ -1,4 +1,4 @@
-ErrorDocument 404 http://localhost/W-Wayshk-Admin/404.php
+ErrorDocument 404 https://wayshk.ngt.hk/admin/404.php
 
 RewriteEngine on
 
@@ -15,6 +15,8 @@ RewriteRule ^Product\-Analysis productAnalysis.php [NE,L]
 RewriteRule ^Business-Analysis businessAnalysis.php [NE,L]
 
 RewriteRule ^Store\-Analysis storeAnalysis.php [NE,L]
+
+RewriteRule ^Product\-Report product-report.php [NE,L]
 
 RewriteRule ^Add-Category addCategory.php [NE,L]
 
@@ -39,8 +41,6 @@ RewriteRule ^Promo-Code promoCode.php [NE,L]
 RewriteRule ^Pending-Order pendingOrder.php [NE,L]
 
 RewriteRule ^Confirm-Order confirmOrder.php [NE,L]
-
-RewriteRule ^Report report.php [NE,L]
 
 RewriteRule ^Customer customer.php [NE,L]
 

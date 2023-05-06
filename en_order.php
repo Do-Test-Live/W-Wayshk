@@ -45,6 +45,12 @@ $db_handle = new DBController();
             .become-service .service-box{
                 height: 725px;
             }
+            .mb-sm-3{
+                margin-bottom: 20px;
+            }
+            .seller-title h2{
+                font-size: 30px !important;
+            }
         }
     </style>
 </head>
@@ -71,12 +77,12 @@ include('include/header.php');
 <!-- Service Section Start -->
 <section class="become-service section-b-space" >
     <div class="container-fluid-lg">
-        <div class="seller-title mb-5 text-center">
+        <div class="seller-title text-center">
             <h2>Order Method</h2>
         </div>
 
         <div class="row" id="three-section">
-            <div class="col-xxl-4">
+            <div class="col-xl-4">
                 <div class="service-box" style="height: 230px !important;">
                     <div class="service-svg">
                         <img src="assets/images/order/order.png" />
@@ -88,7 +94,7 @@ include('include/header.php');
                 </div>
             </div>
 
-            <div class="col-xxl-4">
+            <div class="col-xl-4">
                 <div class="service-box" style="height: 230px !important;">
                     <div class="service-svg">
                         <img src="assets/images/order/payment.png" />
@@ -100,7 +106,7 @@ include('include/header.php');
                 </div>
             </div>
 
-            <div class="col-xxl-4">
+            <div class="col-xl-4">
                 <div class="service-box" style="height: 230px !important;">
                     <div class="service-svg">
                         <img src="assets/images/order/shipping.png" />
@@ -120,7 +126,7 @@ include('include/header.php');
 <section class="saller-poster-section">
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-xxl-4">
+            <div class="col-xl-4">
                 <div class="poster-box">
                     <div class="poster-image">
                         <img src="assets/images/order/online-order.png"
@@ -129,7 +135,7 @@ include('include/header.php');
                 </div>
             </div>
 
-            <div class="col-xxl-7 order-lg-2">
+            <div class="col-xl-7 order-lg-2">
                 <div class="seller-title h-100 d-flex justify-content-end">
                     <div>
                         <h2 class="header-title">Online Order</h2>
@@ -157,7 +163,7 @@ include('include/header.php');
 <section class="saller-poster-section">
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-xxl-4 my-auto" id="image-section-one">
+            <div class="col-xl-4 my-auto" id="image-section-one">
                 <div class="poster-box">
                     <div class="poster-image">
                         <img src="assets/images/order/payment-mathod.png"
@@ -165,7 +171,7 @@ include('include/header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-7">
+            <div class="col-xl-7">
                 <div class="seller-title h-100 d-flex align-items-center">
                     <div>
                         <h2 class="header-title">Select Payment Method</h2>
@@ -196,7 +202,7 @@ include('include/header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4 my-auto" id="image-section-two">
+            <div class="col-xl-4 my-auto" id="image-section-two">
                 <div class="poster-box">
                     <div class="poster-image">
                         <img src="assets/images/order/payment-mathod.png"
@@ -213,7 +219,7 @@ include('include/header.php');
 <section class="saller-poster-section">
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-xxl-4">
+            <div class="col-xl-4">
                 <div class="poster-box">
                     <div class="poster-image">
                         <img src="assets/images/order/shipping-1.png"
@@ -222,13 +228,13 @@ include('include/header.php');
                 </div>
             </div>
 
-            <div class="col-xxl-7 order-lg-2">
+            <div class="col-xl-7 order-lg-2">
                 <div class="seller-title h-100 d-flex justify-content-end">
                     <div>
                         <h2 class="header-title">Shipping</h2>
                         <p style="font-weight: 700;">1. The delivery period of stock products is 0-7 days; and uncertain for pre-order products is uncertain. Welcome to contact us for details.</p></br>
-                        </br><p style="font-weight: 700;">2. The color and style of the products will be distributed randomly. If you have any requirements for the color/style of the product. Please fill in the description box. Wayshk will try to meet your request. There is no return or exchange once the products are delivered.</p>
-                        </br><p style="font-weight: 700;">3. If you accidentally fill in the wrong address, please contact us as soon as possible for amendment. If the shipment has been arranged, you will not be able to change the address.</p>
+                        <p style="font-weight: 700;">2. The color and style of the products will be distributed randomly. If you have any requirements for the color/style of the product. Please fill in the description box. Wayshk will try to meet your request. There is no return or exchange once the products are delivered.</p></br>
+                        <p style="font-weight: 700;">3. If you accidentally fill in the wrong address, please contact us as soon as possible for amendment. If the shipment has been arranged, you will not be able to change the address.</p></br>
                     </div>
                 </div>
             </div>
@@ -245,7 +251,7 @@ include('include/header.php');
         </div>
 
         <div class="row">
-            <div class="col-xxl-6">
+            <div class="col-xl-6 mb-sm-3">
                 <div class="service-box">
                     <div class="service-svg">
                         <img src="assets/images/order/warehouse-1.png">
@@ -262,7 +268,7 @@ include('include/header.php');
                 </div>
             </div>
 
-            <div class="col-xxl-6">
+            <div class="col-xl-6">
                 <div class="service-box">
                     <div class="service-svg">
                         <img src="assets/images/order/warehouse-2.png">
@@ -290,7 +296,7 @@ include('include/header.php');
 <section class="business-section section-b-space">
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-xxl-7">
+            <div class="col-xl-7">
                 <div class="seller-title h-100 d-flex align-items-center">
                     <div>
                         <h2 class="header-title">Overseas Orders</h2>
@@ -304,7 +310,7 @@ include('include/header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4 my-auto order-lg-2">
+            <div class="col-xl-4 my-auto order-lg-2">
                 <div class="poster-box">
                     <div class="poster-image">
                         <img src="assets/images/order/Overseas-Orders.png"
