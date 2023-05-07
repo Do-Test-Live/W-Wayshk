@@ -152,6 +152,8 @@ include('include/header.php');
                                                                 <label class="form-check-label ms-2" for="flexCheckChecked">
                                                                     <?php if($_SESSION['language'] === 'CN') echo '將此數據添加到客戶信息'; else echo 'Add this data to customer info';?>
                                                                 </label>
+
+                                                                <input name="discount" type="hidden" value="<?php echo $_GET['discount']; ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -361,6 +363,10 @@ include('include/header.php');
                                     <h4 class="price"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
                                 </li>
                                 <li>
+                                    <h4><?php if($_SESSION['language'] === 'CN') echo '折扣'; else echo 'Discount';?></h4>
+                                    <h4 class="price"><?php echo "HKD " . number_format($_GET['discount'], 2); ?></h4>
+                                </li>
+                                <li>
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
                                     <h4 class="price text-end">
                                         <?php
@@ -375,7 +381,8 @@ include('include/header.php');
                                             $dCharge = $dAdditional +  $delivery_charges[0]['min_delivery_charge'];
                                         }
                                         echo $dCharge;
-                                        $total_price_new = $total_price_new + $dCharge;
+                                        $discount=$_GET['discount'];
+                                        $total_price_new = $total_price_new + $dCharge-$discount;
                                         ?>
                                         <input type="hidden" value="<?php echo $delivery_charges;?>" name="delivery_charge">
                                     </h4>

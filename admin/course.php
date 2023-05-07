@@ -74,9 +74,17 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Course Name (EN)</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" name="course_name"
+                                                <input type="text" class="form-control" name="course_name_en"
                                                        placeholder="Course Name"
                                                        value="<?php echo $data[0]["course_name_en"]; ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Course Type</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="course_type"
+                                                       placeholder="Course Name"
+                                                       value="<?php echo $data[0]["course_type"]; ?>" required>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">

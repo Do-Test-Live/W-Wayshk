@@ -189,7 +189,7 @@ if (isset($_SESSION["cart_item"])) {
                             <div class="search-box">
                                 <div class="input-group">
                                     <input type="search" class="form-control" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '我正在尋找'; else echo 'I am searching for';?>"
-                                           aria-label="Recipient's username" aria-describedby="button-addon2">
+                                           aria-label="Recipient's username" aria-describedby="button-addon2" id="search">
                                     <button class="btn search-button-2" type="button" id="button-addon2">
                                         <i data-feather="search"></i>
                                     </button>

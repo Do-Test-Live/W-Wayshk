@@ -228,7 +228,7 @@ include('include/header.php');
                         $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' AND product.category_id = '$id' limit 8 OFFSET $offset");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
-                            <div>
+                            <div class="search_content">
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
@@ -309,7 +309,7 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $n_page;?>" tabindex="-1" aria-disabled="true">
-                                        <i class="fa-solid fa-angle-left"></i> Previous
+                                         Previous
                                     </a>
                                 </li>
                                 <?php
@@ -346,7 +346,7 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $n_page; ?>">
-                                        <i class="fa-solid fa-angle-right"></i> Next
+                                        Next
                                     </a>
                                 </li>
                                 <?php
@@ -374,7 +374,7 @@ include('include/header.php');
                         $num_rows = $db_handle->numRows("SELECT * FROM category,`product` WHERE product.status = '1' and product.category_id = category.id AND category.status = '1' limit 12 OFFSET $offset;");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
-                            <div>
+                            <div class="search_content">
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
@@ -437,7 +437,7 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?page=<?php echo $n_page;?>" tabindex="-1" aria-disabled="true">
-                                        <i class="fa-solid fa-angle-left"></i> Previous
+                                        Previous
                                     </a>
                                 </li>
                                 <?php
@@ -472,7 +472,7 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?page=<?php echo $n_page; ?>">
-                                        <i class="fa-solid fa-angle-right"></i> Next
+                                        Next
                                     </a>
                                 </li>
                                 <?php
@@ -500,107 +500,6 @@ include('include/footer.php');
 ?>
 <!-- Footer Section End -->
 
-
-<!-- Location Modal Start -->
-<!--<div class="modal location-modal fade theme-modal" id="locationModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Choose your Delivery Location</h5>
-                <p class="mt-1 text-content">Enter your address and we will specify the offer for your area.</p>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="location-list">
-                    <div class="search-input">
-                        <input type="search" class="form-control" placeholder="Search Your Area">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-
-                    <div class="disabled-box">
-                        <h6>Select a Location</h6>
-                    </div>
-
-                    <ul class="location-select custom-height">
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Alabama</h6>
-                                <span>Min: $130</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Arizona</h6>
-                                <span>Min: $150</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>California</h6>
-                                <span>Min: $110</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Colorado</h6>
-                                <span>Min: $140</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Florida</h6>
-                                <span>Min: $160</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Georgia</h6>
-                                <span>Min: $120</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Kansas</h6>
-                                <span>Min: $170</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Minnesota</h6>
-                                <span>Min: $120</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>New York</h6>
-                                <span>Min: $110</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h6>Washington</h6>
-                                <span>Min: $130</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
-<!-- Location Modal End -->
 
 <!-- Deal Box Modal Start -->
 <?php include ('include/deal.php');?>
@@ -675,5 +574,18 @@ include('include/footer.php');
 
 <!-- thme setting js -->
 <script src="assets/js/theme-setting.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".search_content .product-box-3").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+
+</script>
 </body>
 </html>

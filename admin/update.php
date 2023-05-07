@@ -74,6 +74,7 @@ if (isset($_POST['updateCourse'])) {
     $course_id = $db_handle->checkValue($_POST['id']);
     $course_name = $db_handle->checkValue($_POST['course_name']);
     $course_name_en = $db_handle->checkValue($_POST['course_name_en']);
+    $course_type = $db_handle->checkValue($_POST['course_type']);
     $course_duration = $db_handle->checkValue($_POST['course_duration']);
     $course_price = $db_handle->checkValue($_POST['course_price']);
     $course_price_poor = $db_handle->checkValue($_POST['course_price_poor']);
@@ -101,7 +102,7 @@ if (isset($_POST['updateCourse'])) {
         }
     }
 
-    $data = $db_handle->insertQuery("UPDATE `course` SET `course_name`='$course_name',`course_name_en`='$course_name_en',`course_duration`='$course_duration',`course_price`='$course_price',`course_price_poor`='$course_price_poor',`course_description`='$course_description',`course_description_en`='$course_description_en',`status`='$status',`updated_at`='$updated_at'" . $query . " WHERE course_id='{$course_id}'");
+    $data = $db_handle->insertQuery("UPDATE `course` SET `course_name`='$course_name',`course_name_en`='$course_name_en',`course_duration`='$course_duration',`course_price`='$course_price',`course_price_poor`='$course_price_poor',`course_description`='$course_description',`course_description_en`='$course_description_en',`status`='$status',`updated_at`='$updated_at',`course_type`='$course_type'" . $query . " WHERE course_id='{$course_id}'");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Course';

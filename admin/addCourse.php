@@ -66,6 +66,10 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="text" class="form-control" placeholder="" name="course_name_en" required>
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Course Type</label>
+                                            <input type="text" class="form-control" placeholder="" name="course_type" required>
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Course Duration</label>
                                             <input type="text" class="form-control" placeholder="" name="course_duration" required>
                                         </div>

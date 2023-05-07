@@ -32,6 +32,14 @@ $db_handle = new DBController();
             right: 0;
             color: #fff;
         }
+
+        .alert-error{
+            background: #da9393;
+        }
+
+        .alert-success{
+            background: #93da94;
+        }
     </style>
 </head>
 
@@ -166,14 +174,23 @@ include('include/header.php');
             </div>
 
             <div class="col-xxl-3 mt-3">
+                <div class="coupon-cart">
+                    <h6 class="text-content mb-2">Coupon Apply</h6>
+                    <div id="liveAlertPlaceholder"></div>
+                    <div class="mb-3 coupon-box input-group">
+                        <input type="hidden" name="totalAmount" id="totalAmount" value="<?php echo $total_price_new; ?>"/>
+                        <input type="text" class="form-control" id="coupon" placeholder="Enter Coupon Code Here...">
+                        <button style="border: 1px solid black" class="btn btn-light" onclick="applyCoupon();">Apply</button>
+                    </div>
+                </div>
                 <div class="summery-box p-sticky">
                     <div class="button-group cart-button">
                         <ul>
                             <li>
-                                <button onclick="location.href = 'Checkout';"
-                                        class="btn btn-animation proceed-btn fw-bold mt-3">
+                                <a href="Checkout"
+                                        class="btn btn-animation proceed-btn fw-bold mt-3" id="checkout">
                                     <?php if($_SESSION['language'] === 'CN') echo '結帳'; else echo 'Proceed To Checkout'?>
-                                </button>
+                                </a>
                             </li>
 
                             <li>
@@ -348,5 +365,40 @@ include('include/footer.php');
 
 <!-- thme setting js -->
 <script src="assets/js/theme-setting.js"></script>
+
+<script>
+    let alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    function alertMessage(message, type) {
+        let wrapper = document.createElement('div')
+        wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+        alertPlaceholder.append(wrapper)
+    }
+
+
+    async function applyCoupon(){
+        let coupon=document.getElementById('coupon').value;
+        let totalAmount=document.getElementById('totalAmount').value;
+
+        $.ajax({
+            type: 'get',
+            contentType: "application/json; charset=utf-8",
+            url: 'checkCoupon.php',
+            data: {
+                coupon: coupon,totalAmount:totalAmount
+            },
+            success: function(response) {
+                console.log(response);
+                const obj = JSON.parse(response);
+
+                alertMessage(obj.message, obj.alertType);
+                document.getElementById("checkout").href="Checkout?discount="+obj.amount;
+            }
+        });
+    }
+
+
+</script>
 </body>
 </html>
