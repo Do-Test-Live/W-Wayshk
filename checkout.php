@@ -143,7 +143,7 @@ include('include/header.php');
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="note"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記'; else echo 'Note';?>" maxlength="5"
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記'; else echo 'Note';?>"
                                                                        minlength="5" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
@@ -153,7 +153,13 @@ include('include/header.php');
                                                                     <?php if($_SESSION['language'] === 'CN') echo '將此數據添加到客戶信息'; else echo 'Add this data to customer info';?>
                                                                 </label>
 
-                                                                <input name="discount" type="hidden" value="<?php echo $_GET['discount']; ?>">
+                                                                <?php
+                                                                if(isset($_GET['discount'])){
+                                                                    ?>
+                                                                    <input name="discount" type="hidden" value="<?php echo $_GET['discount']; ?>">
+                                                                    <?php
+                                                                }
+                                                                ?>
                                                             </div>
                                                         </div>
                                                     </div>

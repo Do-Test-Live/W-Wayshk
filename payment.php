@@ -74,9 +74,7 @@ if (isset($_POST["placeOrder"])) {
         $unit_price = $item["price"];
         $product_id = $item['id'];
 
-        $invoice = $db_handle->insertQuery("INSERT INTO `invoice_details`( `customer_id`, `billing_id`,`product_id`, `product_name`, 
-                              `product_quantity`, `product_unit_price`,`product_total_price`, `updated_at`) 
-                              VALUES ('$customer_id','$id','$product_id','$name','$quantity','$unit_price','$item_price', '$updated_at')");
+        $invoice = $db_handle->insertQuery("INSERT INTO `invoice_details`( `customer_id`, `billing_id`,`product_id`, `product_name`,`product_quantity`, `product_unit_price`,`product_total_price`, `updated_at`) VALUES ('$customer_id','$id','$product_id','$name','$quantity','$unit_price','$item_price', '$updated_at')");
     }
     unset($_SESSION["cart_item"]);
 
@@ -84,7 +82,7 @@ if (isset($_POST["placeOrder"])) {
 
     $password = randomPassword();
 
-    if ($customer_id != 0) {
+    if ($customer_id = 0) {
         $select = $db_handle->runQuery("SELECT * FROM customer where email='$email'");
         if ($select == 0 && $addInfo == 1) {
             $info = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `address`, 
@@ -108,7 +106,7 @@ if (isset($_POST["placeOrder"])) {
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
                     <h3 style='color:black'>Order Placed Successfully</h3>
                     <p style='color:black;'>
-                    Your order is successfully placed. We will inform you about the delivery status soon. Please download the copy of your invoice from: <a href = 'https://wayshk.ngt.hk/admin/print_invoice.php?id=$id' target='_blank'></a>
+                    Your order is successfully placed. We will inform you about the delivery status soon. Please download the copy of your invoice from: <a href = 'https://wayshk.ngt.hk/admin/print_invoice.php?id=$id' target='_blank'>Here</a>
                     </p>
                 </div>
                 </body>
@@ -127,7 +125,7 @@ if (isset($_POST["placeOrder"])) {
                 <body style='background-color: #eee; font-size: 16px;'>
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
                     <p style='color:black;'>
-                        New Order Arrive. Pyment option $payment .
+                        New Order Arrived. Pyment option: $payment .
                     </p>
                 </div>
                 </body>

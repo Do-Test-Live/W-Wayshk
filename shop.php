@@ -585,7 +585,6 @@ include('include/footer.php');
         });
     });
 
-
 </script>
 </body>
 </html>

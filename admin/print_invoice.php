@@ -596,7 +596,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             </div>
             <div class="cs-invoice_head cs-mb10">
                 <div class="cs-invoice_left">
-                    <b class="cs-primary_color">致： </b>
+                    <b class="cs-primary_color">致： <?php echo $id;?></b>
                     <p>
                         <?php echo $billing_details[0]['f_name'] . ' ' . $billing_details[0]['l_name']; ?><br>
                         <?php echo $billing_details[0]['address']; ?>,<br><?php echo $billing_details[0]['city']; ?>
