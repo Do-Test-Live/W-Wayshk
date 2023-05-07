@@ -9137,7 +9137,9 @@ header .header-nav .header-nav-left .category-dropdown {
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         -webkit-box-shadow: none;
-        box-shadow: none
+        box-shadow: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     [dir="rtl"] header .header-nav .header-nav-left .category-dropdown {

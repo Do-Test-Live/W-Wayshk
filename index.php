@@ -234,7 +234,7 @@ include('include/header.php');
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($fetch_product [$i]['p_image'], ','));
                                         ?>"
@@ -242,7 +242,7 @@ include('include/header.php');
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -255,7 +255,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                         <h6 class="name">
                                             <?php if ($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en']; ?>
                                         </h6>
@@ -301,7 +301,7 @@ include('include/header.php');
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                             <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                             </button>
                                         </a>
@@ -314,7 +314,7 @@ include('include/header.php');
                                 ?>
                                 <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="product-image">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                             <img src="admin/<?php
                                             echo str_replace("650", "250", strtok($fetch_product [$i + 1]['p_image'], ','));
                                             ?>"
@@ -322,7 +322,7 @@ include('include/header.php');
                                         </a>
                                         <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
@@ -335,7 +335,7 @@ include('include/header.php');
                                         </ul>
                                     </div>
                                     <div class="product-detail">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                             <h6 class="name">
                                                 <?php if ($_SESSION['language'] === 'CN') echo $fetch_product [$i + 1]['p_name']; else echo $fetch_product [$i + 1]['p_name_en']; ?>
                                             </h6>
@@ -382,7 +382,7 @@ include('include/header.php');
                                         </div>
 
                                         <div class="add-to-cart-box bg-white">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                                 <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                                 </button>
                                             </a>
@@ -419,7 +419,7 @@ include('include/header.php');
                         <div>
                             <div class="product-box product-box-bg wow fadeInUp">
                                 <div class="product-image">
-                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($fetch_product [$i]['p_image'], ','));
                                         ?>"
@@ -427,7 +427,7 @@ include('include/header.php');
                                     </a>
                                     <ul class="product-option">
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -440,7 +440,7 @@ include('include/header.php');
                                     </ul>
                                 </div>
                                 <div class="product-detail">
-                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                         <h6 class="name">
                                             <?php if ($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en']; ?>
                                         </h6>
@@ -486,7 +486,7 @@ include('include/header.php');
                                     </div>
 
                                     <div class="add-to-cart-box bg-white">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                             <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                             </button>
                                         </a>
@@ -499,7 +499,7 @@ include('include/header.php');
                                 ?>
                                 <div class="product-box product-box-bg wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="product-image">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                             <img src="admin/<?php
                                             echo str_replace("650", "250", strtok($fetch_product [$i + 1]['p_image'], ','));
                                             ?>"
@@ -507,7 +507,7 @@ include('include/header.php');
                                         </a>
                                         <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                                <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
@@ -520,7 +520,7 @@ include('include/header.php');
                                         </ul>
                                     </div>
                                     <div class="product-detail">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                             <h6 class="name">
                                                 <?php if ($_SESSION['language'] === 'CN') echo $fetch_product [$i + 1]['p_name']; else echo $fetch_product [$i + 1]['p_name_en']; ?>
                                             </h6>
@@ -566,7 +566,7 @@ include('include/header.php');
                                         </div>
 
                                         <div class="add-to-cart-box bg-white">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                                 <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
                                                 </button>
                                             </a>
@@ -750,7 +750,7 @@ include('include/header.php');
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
-                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>"
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank"
                                        class="top-selling-image">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($fetch_product [$i]['p_image'], ','));
@@ -760,7 +760,7 @@ include('include/header.php');
                                     </a>
 
                                     <div class="top-selling-detail">
-                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>">
+                                        <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                             <h5><?php if ($_SESSION['language'] === 'CN') echo $fetch_product [$i]['p_name']; else echo $fetch_product [$i]['p_name_en']; ?></h5>
                                         </a>
                                         <!--<div class="product-rating">
@@ -814,7 +814,7 @@ include('include/header.php');
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
-                                    <a href="Product-Details?product_id=<?php echo $product [$i]['id']; ?>"
+                                    <a href="Product-Details?product_id=<?php echo $product [$i]['id']; ?>" target="_blank"
                                        class="top-selling-image">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($product [$i]['p_image'], ','));
@@ -879,7 +879,7 @@ include('include/header.php');
                             for ($i = 0; $i < $row; $i++) {
                                 ?>
                                 <div class="top-selling-contain wow fadeInUp">
-                                    <a href="Product-Details?product_id=<?php echo $fetch_product3 [$i]['id']; ?>"
+                                    <a href="Product-Details?product_id=<?php echo $fetch_product3 [$i]['id']; ?>" target="_blank"
                                        class="top-selling-image">
                                         <img src="admin/<?php
                                         echo str_replace("650", "250", strtok($fetch_product3 [$i]['p_image'], ','));

@@ -303,6 +303,19 @@ include('include/header.php');
                                 </a>
                             </li>
                             <?php
+                            if(isset($_GET['page']) && $_GET['page'] > 1){
+                                $c_page = $_GET['page'];
+                                $n_page = $c_page - 1;
+                                ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $n_page;?>" tabindex="-1" aria-disabled="true">
+                                        <i class="fa-solid fa-angle-left"></i> Previous
+                                    </a>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                            <?php
                             // calculate the total number of pages
                             $new = $db_handle->runQuery("SELECT COUNT(id) as c FROM `product` WHERE category_id = '$id'");
                             $no_new = $db_handle->numRows("SELECT COUNT(id) as c FROM `product` WHERE category_id = '$id'");
@@ -318,9 +331,23 @@ include('include/header.php');
                                     echo "......";
                                     $i=$total_pages;
                                 }
+
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $i; ?>"><?php echo $i;?></a>
+                                </li>
+                                <?php
+                            }
+                            if(!isset($_GET['page']) || $_GET['page'] < $i - 1){
+                                if(!isset($_GET['page']))
+                                    $n_page = 2;
+                                else
+                                    $n_page = $_GET['page'] + 1;
+                                ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $n_page; ?>">
+                                        <i class="fa-solid fa-angle-right"></i> Next
+                                    </a>
                                 </li>
                                 <?php
                             }
@@ -399,10 +426,23 @@ include('include/header.php');
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
                             <li class="page-item">
-                                <a class="page-link" href="Shop?page=1" tabindex="-1" aria-disabled="true">
+                                <a class="page-link" href="Shop?catId=page=1" tabindex="-1" aria-disabled="true">
                                     <i class="fa-solid fa-angles-left"></i>
                                 </a>
                             </li>
+                            <?php
+                            if(isset($_GET['page']) && $_GET['page'] > 1){
+                                $c_page = $_GET['page'];
+                                $n_page = $c_page - 1;
+                                ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="Shop?page=<?php echo $n_page;?>" tabindex="-1" aria-disabled="true">
+                                        <i class="fa-solid fa-angle-left"></i> Previous
+                                    </a>
+                                </li>
+                                <?php
+                            }
+                            ?>
                             <?php
                             // calculate the total number of pages
                             $new = $db_handle->runQuery("SELECT COUNT('id') as c FROM product");
@@ -422,6 +462,18 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?page=<?php echo $i; ?>"><?php echo $i;?></a>
+                                </li>
+                                <?php
+                            } if(!isset($_GET['page']) || $_GET['page'] < $i - 1){
+                                if(!isset($_GET['page']))
+                                    $n_page = 2;
+                                else
+                                    $n_page = $_GET['page'] + 1;
+                                ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="Shop?page=<?php echo $n_page; ?>">
+                                        <i class="fa-solid fa-angle-right"></i> Next
+                                    </a>
                                 </li>
                                 <?php
                             }

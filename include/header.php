@@ -436,7 +436,7 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                           href="Course">在線課程</a>
+                                                           href="Course">精選課程</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
