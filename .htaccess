@@ -61,3 +61,5 @@ RewriteRule ^Course course.php [NE,L]
 RewriteRule ^Course-Details course_details.php [NE,L]
 
 RewriteRule ^Search-Result search_result.php [NE,L]
+
+RewriteRule ^Customer-Review customer_review.php [NE,L]

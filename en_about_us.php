@@ -142,47 +142,6 @@ include('include/header.php');
 </section>-->
 <!-- Fresh Vegetable Section End -->
 
-<!-- Review Section Start -->
-<section class="review-section section-lg-space">
-    <div class="container-fluid">
-        <div class="about-us-title text-center">
-            <h4 class="text-content">Latest Testimonals</h4>
-            <h2 class="center">What people say</h2>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="slider-4-half product-wrapper">
-                    <?php
-                    $fetch_comment = $db_handle->runQuery("SELECT * FROM `review`, customer WHERE customer.id = review.customer_id and review.status = '1'");
-                    $no_fetch_comment = $db_handle->numRows("SELECT * FROM `review`, customer WHERE customer.id = review.customer_id and review.status = '1'");
-                    for ($i = 0; $i < $no_fetch_comment; $i++){
-                        ?>
-                        <div>
-                            <div class="reviewer-box">
-                                <i class="fa-solid fa-quote-right"></i>
-                                <h3><?php echo $fetch_comment[$i]['description'];?></h3>
-                                <div class="reviewer-profile">
-                                    <div class="reviewer-image">
-                                        <img src="assets/images/inner-page/user/avater.jpg" class="blur-up lazyload"
-                                             alt="">
-                                    </div>
-
-                                    <div class="reviewer-name">
-                                        <h4><?php echo $fetch_comment[$i]['customer_name'];?></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                    }
-
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Review Section End -->
 
 <!-- Footer Section Start -->
 <?php

@@ -152,7 +152,7 @@ include('include/header.php');
                         else
                             echo 'Search Results'?>
                     </h2>
-                <div class="col-custome-12">
+                <div class="col-custome-12 mt-5">
 
                     <div class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
