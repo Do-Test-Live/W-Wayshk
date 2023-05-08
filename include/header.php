@@ -185,16 +185,17 @@ if (isset($_SESSION["cart_item"])) {
                         </a>
 
                         <div class="middle-box">
-
-                            <div class="search-box">
-                                <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '我正在尋找'; else echo 'I am searching for';?>"
-                                           aria-label="Recipient's username" aria-describedby="button-addon2" id="search">
-                                    <button class="btn search-button-2" type="button" id="button-addon2">
-                                        <i data-feather="search"></i>
-                                    </button>
+                            <form action="Search-Result" method="post">
+                                <div class="search-box">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" name="search" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '我正在尋找'; else echo 'I am searching for';?>"
+                                               aria-label="Recipient's username" aria-describedby="button-addon2" id="search">
+                                        <button class="btn search-button-2" type="submit" name="search_button" id="button-addon2">
+                                            <i data-feather="search"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div class="rightside-box">
