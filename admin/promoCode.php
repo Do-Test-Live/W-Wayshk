@@ -94,6 +94,12 @@ if (!isset($_SESSION['userid'])) {
                                                    required>
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Min Order Amount</label>
+                                            <input type="text" class="form-control" placeholder="" name="min_order_amount"
+                                                   value="<?php echo $data[0]["minimum_order"] ?>"
+                                                   required>
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Start Date</label>
                                             <input type="date" class="form-control" placeholder="" name="start_date"
                                                    value="<?php echo $data[0]["start_date"] ?>"

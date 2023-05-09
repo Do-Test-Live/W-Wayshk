@@ -127,8 +127,10 @@ if (!isset($_SESSION['userid'])) {
                                             $profit = ($selling_price - $cost) * $quantity;
                                             $sum_profit = $sum_profit + $profit;
                                         }
+                                        $discount = $db_handle->runQuery("select sum(discount) as d from billing_details");
+                                        $dis = $discount[0]['d'];
                                         ?>
-                                        <h2 class="text-white font-w600"><?php echo $sum_profit;?> HKD</h2>
+                                        <h2 class="text-white font-w600"><?php echo $sum_profit - $dis;?> HKD</h2>
                                         <span class="text-white">Total Profit</span>
                                     </div>
                                 </div>
@@ -157,8 +159,20 @@ if (!isset($_SESSION['userid'])) {
                                                 $sum_profit = $sum_profit + $profit;
                                             }
                                         }
+                                        $dis = 0;
+                                        $discount = $db_handle->runQuery("select discount,updated_at from billing_details");
+                                        $no_discount = $db_handle->numRows("select discount,updated_at from billing_details");
+                                        for($x=0; $x<$no_discount; $x++){
+                                            $date = date_create($discount[$x]["updated_at"]);
+                                            $date_formatted = date_format($date, "m:Y");
+                                            if($date_formatted == $month){
+                                                $dis += $discount[$x]['discount'];
+                                            }
+                                        }
+
+
                                         ?>
-                                        <h2 class="text-white font-w600"><?php echo $sum_profit;?> HKD</h2>
+                                        <h2 class="text-white font-w600"><?php echo $sum_profit - $dis;?> HKD</h2>
                                         <span class="text-white">Total Monthly Profit</span>
                                     </div>
                                 </div>

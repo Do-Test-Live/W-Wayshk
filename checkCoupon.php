@@ -2,11 +2,12 @@
 session_start();
 include('admin/include/dbController.php');
 $db_handle = new DBController();
+$today = date('Y-m-d');
 
 $coupon = $_GET['coupon'];
 $totalAmount = $_GET['totalAmount'];
 
-$query="SELECT * FROM promo_code where code='$coupon' and status=1";
+$query="SELECT * FROM promo_code where code='$coupon' and status=1 and start_date >= '$today' and expirey_date <= '$today'";
 $data = $db_handle->runQuery($query);
 $row_count = $db_handle->numRows($query);
 if($row_count==1){

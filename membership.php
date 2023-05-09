@@ -91,8 +91,7 @@ include('include/header.php');
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
                                         style="font-weight: bold;">
-                                    1. 如何加入Wayshk會員計劃？<i
-                                        class="fa-solid fa-angle-down"></i>
+                                    1. 如何加入Wayshk會員計劃？
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
@@ -107,8 +106,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
                                         style="font-weight: bold;">
-                                    2. 如何賺取積分？<i
-                                        class="fa-solid fa-angle-down"></i>
+                                    2. 如何賺取積分？
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -141,8 +139,7 @@ include('include/header.php');
                                         data-bs-target="#collapseThree" aria-expanded="true"
                                         aria-controls="collapseThree"
                                         style="font-weight: bold;">
-                                    3. 如何兌換積分獎賞？<i
-                                        class="fa-solid fa-angle-down"></i>
+                                    3. 如何兌換積分獎賞？
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -160,8 +157,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"
                                         style="font-weight: bold;">
-                                    4. 積分的有效期是？<i
-                                        class="fa-solid fa-angle-down"></i>
+                                    4. 積分的有效期是？
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
@@ -177,8 +173,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"
                                         style="font-weight: bold;">
-                                    5. 如何更改個人資料？<i
-                                        class="fa-solid fa-angle-down"></i>
+                                    5. 如何更改個人資料？
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
@@ -193,8 +188,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"
                                         style="font-weight: bold;">
-                                    6. 忘記登入密碼怎麼辦？  <i
-                                        class="fa-solid fa-angle-down"></i>
+                                    6. 忘記登入密碼怎麼辦？
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
@@ -210,8 +204,7 @@ include('include/header.php');
                                         data-bs-target="#collapseSeven" aria-expanded="true"
                                         aria-controls="collapseSeven"
                                         style="font-weight: bold;">
-                                    7. 想要取消會籍怎麼辦？<i
-                                        class="fa-solid fa-angle-down"></i>
+                                    7. 想要取消會籍怎麼辦？
                                 </button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"

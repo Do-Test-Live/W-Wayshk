@@ -102,6 +102,17 @@ if (!isset($_SESSION['userid'])) {
                                         <td colspan="4" style="font-weight: bold;">Total Profit</td>
                                         <td style="font-weight: bold;"><?php echo $sum_profit;?></td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="4" style="font-weight: bold;">Total Discount</td>
+                                        <td style="font-weight: bold;"><?php
+                                            $discount = $db_handle->runQuery("select sum(discount) as d from billing_details");
+                                            echo $discount[0]['d'];
+                                            ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="font-weight: bold;">Net Profit</td>
+                                        <td style="font-weight: bold;"><?php echo $sum_profit - $discount[0]['d'];?></td>
+                                    </tr>
                                     </tfoot>
                                 </table>
                             </div>

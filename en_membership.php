@@ -91,8 +91,7 @@ include('include/header.php');
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
                                         style="font-weight: bold;">
-                                    1. How do I join the Wayshk Membership Program? <i
-                                            class="fa-solid fa-angle-down"></i>
+                                    1. How do I join the Wayshk Membership Program?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
@@ -110,8 +109,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
                                         style="font-weight: bold;">
-                                    2. How do I earn points?<i
-                                            class="fa-solid fa-angle-down"></i>
+                                    2. How do I earn points?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -150,8 +148,7 @@ include('include/header.php');
                                         data-bs-target="#collapseThree" aria-expanded="true"
                                         aria-controls="collapseThree"
                                         style="font-weight: bold;">
-                                    3. How do I redeem my points?<i
-                                            class="fa-solid fa-angle-down"></i>
+                                    3. How do I redeem my points?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -172,8 +169,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"
                                         style="font-weight: bold;">
-                                    4. What is the validity period of points?<i
-                                            class="fa-solid fa-angle-down"></i>
+                                    4. What is the validity period of points?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
@@ -191,8 +187,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"
                                         style="font-weight: bold;">
-                                    5. How do I change my personal information? <i
-                                            class="fa-solid fa-angle-down"></i>
+                                    5. How do I change my personal information?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
@@ -208,8 +203,7 @@ include('include/header.php');
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"
                                         style="font-weight: bold;">
-                                    6. What should I do if I forget my password? <i
-                                            class="fa-solid fa-angle-down"></i>
+                                    6. What should I do if I forget my password?
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
@@ -228,8 +222,7 @@ include('include/header.php');
                                         data-bs-target="#collapseSeven" aria-expanded="true"
                                         aria-controls="collapseSeven"
                                         style="font-weight: bold;">
-                                    7. What should I do if I want to cancel my membership? <i
-                                            class="fa-solid fa-angle-down"></i>
+                                    7. What should I do if I want to cancel my membership?
                                 </button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"

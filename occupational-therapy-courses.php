@@ -17,7 +17,7 @@ $db_handle = new DBController();
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
 
-    <title>Online booking | Wayshk</title>
+    <title>課本下載 | Wayshk</title>
 
     <?php include('include/css.php'); ?>
     <style>

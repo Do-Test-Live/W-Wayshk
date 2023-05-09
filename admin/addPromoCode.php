@@ -80,6 +80,11 @@ if (!isset($_SESSION['userid'])) {
                                                    required>
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Min Order Amount</label>
+                                            <input type="number" class="form-control" placeholder="" name="min_order_amount"
+                                                   required>
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Start Date</label>
                                             <input type="date" class="form-control" placeholder="" name="start_date"
                                                    required>

@@ -134,11 +134,12 @@ if(isset($_POST['add_promo_code'])){
     $coupon_amount = $db_handle->checkValue($_POST['coupon_amount']);
     $start_date = $db_handle->checkValue($_POST['start_date']);
     $expirey_date = $db_handle->checkValue($_POST['expirey_date']);
+    $min_order_amount = $db_handle->checkValue($_POST['min_order_amount']);
     $coupon_description = $db_handle->checkValue($_POST['coupon_description']);
     $inserted_at = date("Y-m-d H:i:s");
 
-    $insert = $db_handle->insertQuery("INSERT INTO `promo_code`(`coupon_name`, `description`, `code`, `coupon_type`, `amount`, `start_date`, `expirey_date`, `inserted_at`) 
-VALUES ('$coupon_name','$coupon_description','$coupon_code','$promo_type','$coupon_amount','$start_date','$expirey_date','$inserted_at')");
+    $insert = $db_handle->insertQuery("INSERT INTO `promo_code`(`coupon_name`, `description`, `code`, `coupon_type`, `amount`, `start_date`, `expirey_date`, `inserted_at`,`minimum_order`) 
+VALUES ('$coupon_name','$coupon_description','$coupon_code','$promo_type','$coupon_amount','$start_date','$expirey_date','$inserted_at','$min_order_amount')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';
