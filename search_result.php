@@ -163,7 +163,7 @@ include('include/header.php');
                         $num_rows = $db_handle->numRows("select * from product where p_name LIKE '%$keyword%' OR p_name_en LIKE '%$keyword%' OR product_code LIKE '%$keyword%'");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
-                            <div class="search_content">
+                            <div class="search_content mt-3">
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">

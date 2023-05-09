@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('admin/include/dbController.php');
 $db_handle = new DBController();
 
@@ -18,16 +19,35 @@ if($row_count==1){
             $amount=(int)($totalAmount/100)*$amount;
         }
 
+        if($_SESSION['language'] === 'CN'){
+            echo json_encode(
+                array('message' => "優惠券申請成功。", 'alertType' => "success",'amount'=>$amount)
+            );
+        }else{
+            echo json_encode(
+                array('message' => "Coupon Apply Successfully.", 'alertType' => "success",'amount'=>$amount)
+            );
+        }
+    }else{
+        if($_SESSION['language'] === 'CN'){
+            echo json_encode(
+                array('message' => "添加更多產品以應用此優惠券。", 'alertType' => "error",'amount'=>0)
+            );
+        }else{
+            echo json_encode(
+                array('message' => "Add more products to apply this Coupon.", 'alertType' => "error",'amount'=>0)
+            );
+        }
+
+    }
+}else{
+    if($_SESSION['language'] === 'CN'){
         echo json_encode(
-            array('message' => "Coupon Apply Successfully.", 'alertType' => "success",'amount'=>$amount)
+            array('message' => "此優惠券代碼無效。", 'alertType' => "error",'amount'=>0)
         );
     }else{
         echo json_encode(
-            array('message' => "Add more product to apply this Coupon.", 'alertType' => "error",'amount'=>0)
+            array('message' => "This coupon code is not valid.", 'alertType' => "error",'amount'=>0)
         );
     }
-}else{
-    echo json_encode(
-        array('message' => "Coupon code not valid.", 'alertType' => "error",'amount'=>0)
-    );
 }

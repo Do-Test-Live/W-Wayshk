@@ -309,7 +309,12 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $n_page;?>" tabindex="-1" aria-disabled="true">
-                                         Previous
+                                         <?php
+                                         if($_SESSION['language'] === 'CN')
+                                             echo '上一頁';
+                                         else
+                                             echo 'Previous';
+                                         ?>
                                     </a>
                                 </li>
                                 <?php
@@ -346,7 +351,12 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?catId=<?php echo $id;?>&page=<?php echo $n_page; ?>">
-                                        Next
+                                        <?php
+                                        if($_SESSION['language'] === 'CN')
+                                            echo '下一頁';
+                                        else
+                                            echo 'Next';
+                                        ?>
                                     </a>
                                 </li>
                                 <?php
@@ -437,7 +447,12 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?page=<?php echo $n_page;?>" tabindex="-1" aria-disabled="true">
-                                        Previous
+                                        <?php
+                                        if($_SESSION['language'] === 'CN')
+                                            echo '上一頁';
+                                        else
+                                            echo 'Previous';
+                                        ?>
                                     </a>
                                 </li>
                                 <?php
@@ -472,7 +487,12 @@ include('include/header.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link" href="Shop?page=<?php echo $n_page; ?>">
-                                        Next
+                                        <?php
+                                        if($_SESSION['language'] === 'CN')
+                                            echo '下一頁';
+                                        else
+                                            echo 'Next';
+                                        ?>
                                     </a>
                                 </li>
                                 <?php

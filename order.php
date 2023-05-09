@@ -49,7 +49,7 @@ $db_handle = new DBController();
                 margin-bottom: 20px;
             }
             .seller-title h2{
-                font-size: 30px !important;
+                font-size: 20px !important;
             }
         }
     </style>

@@ -103,7 +103,7 @@ include('include/header.php');
                                     </div>
                                     <div class="checkout-box" style="height: 100%;">
                                         <div class="checkout-title">
-                                            <h4><?php if($_SESSION['language'] === 'CN') echo '郵寄地址'; else echo 'Delivery Address';?></h4>
+                                            <h4><?php if($_SESSION['language'] === 'CN') echo '顧客資料'; else echo 'Customer Information';?></h4>
                                         </div>
 
                                         <div class="checkout-detail">
@@ -125,8 +125,8 @@ include('include/header.php');
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="phone_number"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電話號碼'; else echo 'Phone Number';?>" maxlength="10"
-                                                                       minlength="10" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電話號碼'; else echo 'Phone Number';?>"
+                                                                       required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="address"
@@ -143,8 +143,7 @@ include('include/header.php');
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="note"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記'; else echo 'Note';?>"
-                                                                       minlength="5" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記'; else echo 'Note';?>">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input class="form-check-input card-class" name="addInfo" type="checkbox"

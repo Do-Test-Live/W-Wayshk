@@ -140,7 +140,7 @@ include('include/header.php');
                                         </td>
 
                                         <td class="quantity">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '重量'; else echo 'Weight'?></h4>
+                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '重量（克）'; else echo 'Weight'?></h4>
                                             <div class="quantity-price">
                                                 <div class="cart_qty">
                                                     <div class="input-group">
@@ -175,12 +175,27 @@ include('include/header.php');
 
             <div class="col-xxl-3 mt-3">
                 <div class="coupon-cart">
-                    <h6 class="text-content mb-2">Coupon Apply</h6>
+                    <h6 class="text-content mb-2"><?php
+                        if($_SESSION['language'] === 'CN')
+                            echo '申請優惠券';
+                        else
+                            echo 'Coupon Apply';
+                        ?></h6>
                     <div id="liveAlertPlaceholder"></div>
                     <div class="mb-3 coupon-box input-group">
                         <input type="hidden" name="totalAmount" id="totalAmount" value="<?php echo $total_price_new; ?>"/>
-                        <input type="text" class="form-control" id="coupon" placeholder="Enter Coupon Code Here...">
-                        <button style="border: 1px solid black" class="btn btn-light" onclick="applyCoupon();">Apply</button>
+                        <input type="text" class="form-control" id="coupon" placeholder="<?php
+                        if ($_SESSION['language'] === 'CN')
+                            echo '在此處輸入優惠券代碼..';
+                        else
+                            echo 'Enter the Coupon Code Here...'
+                        ?>">
+                        <button style="border: 1px solid black" class="btn btn-light" onclick="applyCoupon();"><?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '申請';
+                            else
+                                echo 'Apply';
+                            ?></button>
                     </div>
                 </div>
                 <div class="summery-box p-sticky">

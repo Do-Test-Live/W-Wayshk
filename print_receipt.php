@@ -1,5 +1,5 @@
 <?php
-require_once("include/dbController.php");
+require_once("admin/include/dbController.php");
 $db_handle = new DBController();
 $id = $_GET['id'];
 $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE id = '$id'");
@@ -580,7 +580,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             <div class="cs-invoice_head cs-type1 cs-mb25">
                 <div class="cs-invoice_left">
 
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收帳單 / Invoice</p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收據 / Receipt</p>
                     <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票號碼：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
                     <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">日期: </b>
                         <?php
@@ -590,7 +590,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </p>
                 </div>
                 <div class="cs-invoice_right cs-text_right">
-                    <div class="cs-logo cs-mb5"><img src="../assets/images/logo/2.png" alt="Logo" style="width: 200px">
+                    <div class="cs-logo cs-mb5"><img src="assets/images/logo/2.png" alt="Logo" style="width: 200px">
                     </div>
                 </div>
             </div>
@@ -681,7 +681,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                             <tr class="cs-border_none">
                                 <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">全部的</td>
                                 <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">
-                                   <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
+                                    <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
                                 </td>
                             </tr>
                             </tbody>
