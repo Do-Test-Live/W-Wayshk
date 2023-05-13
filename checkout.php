@@ -130,20 +130,20 @@ include('include/header.php');
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="address"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '街道地址'; else echo 'Street Address';?>" required="">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '街道地址（自取客人請填寫 自取）'; else echo 'Street Address (For self-pickup customers, fill in self-pickup)';?>" required="">
                                                             </div>
-                                                            <div class="form-group col-md-6 mb-3">
+                                                            <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="city" value=""
                                                                        placeholder="<?php if($_SESSION['language'] === 'CN') echo '城市'; else echo 'City';?>" required="">
                                                             </div>
-                                                            <div class="form-group col-md-6 mb-3">
+                                                            <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="zip_code"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼'; else echo 'Zip Code';?>" maxlength="5"
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼（香港顧客請填寫 00000）'; else echo 'Zip Code (For customers from Hong Kong, fill in 00000)';?>" maxlength="5"
                                                                        minlength="5" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="note"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記'; else echo 'Note';?>">
+                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '筆記  (如有任何指示或特別要求，請在此新增)'; else echo 'Notes  (Add any instructions or special requests here)';?>">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input class="form-check-input card-class" name="addInfo" type="checkbox"

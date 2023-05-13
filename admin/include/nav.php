@@ -123,6 +123,12 @@
                     <span class="nav-text">Delivery Charges</span>
                 </a>
             </li>
+            <li>
+                <a href="update_files.php">
+                    <i class="flaticon-381-controls-3"></i>
+                    <span class="nav-text">Update Files</span>
+                </a>
+            </li>
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>

@@ -112,6 +112,32 @@ if (!isset($_SESSION['userid'])) {
                                                        value="<?php echo $data[0]["product_code"]; ?>" required>
                                             </div>
                                         </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Image</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Upload</span>
+                                                    </div>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="cat_image" accept="image/png, image/jpeg, image/jpg" multiple>
+                                                        <label class="custom-file-label">Choose file (png, jpg, jpeg)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            $image = explode(",",$data[0]['p_image']);
+                                            foreach ($image as $img){
+                                                ?>
+                                                <div class="col-sm-3">
+                                                    <img src="<?php echo $img ?>" class="img-fluid"
+                                                         alt=""/>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+
+                                        </div>
                                         <div class="form-group col-md-12">
                                             <label>Product Description *</label>
                                             <textarea class="form-control" rows="4" id="comment" name="product_description" required><?php echo $data[0]["description"]; ?></textarea>

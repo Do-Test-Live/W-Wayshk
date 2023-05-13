@@ -177,7 +177,7 @@ include('include/header.php');
                 <div class="coupon-cart">
                     <h6 class="text-content mb-2"><?php
                         if($_SESSION['language'] === 'CN')
-                            echo '申請優惠券';
+                            echo '申請優惠卷';
                         else
                             echo 'Coupon Apply';
                         ?></h6>
@@ -186,7 +186,7 @@ include('include/header.php');
                         <input type="hidden" name="totalAmount" id="totalAmount" value="<?php echo $total_price_new; ?>"/>
                         <input type="text" class="form-control" id="coupon" placeholder="<?php
                         if ($_SESSION['language'] === 'CN')
-                            echo '在此處輸入優惠券代碼..';
+                            echo '輸入優惠卷號碼';
                         else
                             echo 'Enter the Coupon Code Here...'
                         ?>">
@@ -229,106 +229,6 @@ include('include/footer.php');
 ?>
 <!-- Footer Section End -->
 
-<!-- Location Modal Start -->
-<!--  <div class="modal location-modal fade theme-modal" id="locationModal" tabindex="-1"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Choose your Delivery Location</h5>
-                  <p class="mt-1 text-content">Enter your address and we will specify the offer for your area.</p>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="fa-solid fa-xmark"></i>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <div class="location-list">
-                      <div class="search-input">
-                          <input type="search" class="form-control" placeholder="Search Your Area">
-                          <i class="fa-solid fa-magnifying-glass"></i>
-                      </div>
-
-                      <div class="disabled-box">
-                          <h6>Select a Location</h6>
-                      </div>
-
-                      <ul class="location-select custom-height">
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Alabama</h6>
-                                  <span>Min: $130</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Arizona</h6>
-                                  <span>Min: $150</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>California</h6>
-                                  <span>Min: $110</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Colorado</h6>
-                                  <span>Min: $140</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Florida</h6>
-                                  <span>Min: $160</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Georgia</h6>
-                                  <span>Min: $120</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Kansas</h6>
-                                  <span>Min: $170</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Minnesota</h6>
-                                  <span>Min: $120</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>New York</h6>
-                                  <span>Min: $110</span>
-                              </a>
-                          </li>
-
-                          <li>
-                              <a href="javascript:void(0)">
-                                  <h6>Washington</h6>
-                                  <span>Min: $130</span>
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>-->
-<!-- Location Modal End -->
 
 <!-- Deal Box Modal Start -->
 <?php include ('include/deal.php');?>

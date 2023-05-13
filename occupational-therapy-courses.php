@@ -91,11 +91,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -116,11 +112,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -141,11 +133,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -168,11 +156,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -193,11 +177,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -218,11 +198,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -245,11 +221,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -270,11 +242,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -295,11 +263,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -322,11 +286,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -347,11 +307,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -372,11 +328,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -399,11 +351,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -424,11 +372,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -449,11 +393,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -476,11 +416,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -501,11 +437,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -526,11 +458,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -553,11 +481,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -578,11 +502,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -603,11 +523,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -630,11 +546,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -655,11 +567,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -680,11 +588,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -707,11 +611,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -732,11 +632,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -757,11 +653,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -784,11 +676,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -809,11 +697,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -834,11 +718,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -861,11 +741,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -886,11 +762,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -911,11 +783,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -938,11 +806,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -963,11 +827,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>
@@ -988,11 +848,7 @@ include('include/header.php');
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
-                                    <p>
-                                        Over
-                                    </p>
-                                    <span class="time"><span>$1000；</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+
                                 </div>
                                 <button onclick="#" class="blog-button">下載<i class="fa-solid fa-right-long"></i></button>
                             </div>

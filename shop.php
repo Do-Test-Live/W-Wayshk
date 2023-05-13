@@ -219,6 +219,18 @@ include('include/header.php');
         echo $cat_name_en;
     ?>
 </h2>
+                    <h2>
+                        <?php
+                        if($id == '19'){
+                            if($_SESSION['language'] === 'CN'){
+                                echo '注意：個別評估工具只會售賣與治療師或相關專業人士。歡迎向我們查詢並取得其他評估工具的報價。Wayshk 提供全球代購服務';
+                            }else{
+                                echo 'NOTE: Individual assessment tools are only sold to therapists or related professionals.Feel free to contact us for inquiries and quotes for other evaluation tools. Wayshk provides global purchasing service';
+                            }
+                        }
+                        ?>
+
+                    </h2>
                     <div class="row g-sm-4 g-3 row-cols-xxl-4 mt-3 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
                         <?php
                         $current_page = isset($_GET['page']) ? $_GET['page'] : 1;

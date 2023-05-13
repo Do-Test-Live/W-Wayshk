@@ -607,7 +607,7 @@ include('include/header.php');
                                     <div>
                                         <a href="<?php echo $first_add[0]['link_one']; ?>">
                                             <button class="btn text-white btn-md mt-xxl-4 mt-2 home-button mend-auto theme-bg-color">
-                                                <?php if ($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now'; ?>
+                                                <?php if ($_SESSION['language'] === 'CN') echo '立即了解'; else echo 'Find Out Now'; ?>
                                                 <i class="fa-solid fa-right-long icon ms-2"></i>
                                             </button>
                                         </a>
@@ -633,7 +633,7 @@ include('include/header.php');
                                     <p class="text-content fw-500 mt-3 w-75 mend-auto"><?php if ($_SESSION['language'] === 'CN') echo $second_add[0]['details_cn']; else echo $second_add[0]['details']; ?></p>
                                     <a href="<?php echo $second_add[0]['link_one']; ?>">
                                         <button class="btn text-white btn-md mt-2 home-button mend-auto theme-bg-color">
-                                            <?php if ($_SESSION['language'] === 'CN') echo '現在去購物'; else echo 'Shop Now'; ?>
+                                            <?php if ($_SESSION['language'] === 'CN') echo '立即了解'; else echo 'Find Out Now'; ?>
                                             <i class="fa-solid fa-right-long icon ms-2"></i>
                                         </button>
                                     </a>

@@ -68,7 +68,10 @@ include ('include/header.php');
                             <p style="padding-left: 5px">Product Catalogue </p>
                         </div>
                         <div class="col-8">
-                            <a href="assets/document/b05373_09898414966d4b53bb8a6a843ef4168c.pdf" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
+                            <?php
+                            $catalogue = $db_handle->runQuery("SELECT * FROM `files` WHERE id = '1'");
+                            ?>
+                            <a href="assets/document/<?php echo $catalogue[0]['path'];?>" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>
@@ -77,7 +80,10 @@ include ('include/header.php');
                             <p style="padding-left: 5px">Product Order Form</p>
                         </div>
                         <div class="col-8">
-                            <a href="assets/document/b05373_bfe59f57fdbb4780bd62fcdf57eed338.pdf" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
+                            <?php
+                            $catalogue = $db_handle->runQuery("SELECT * FROM `files` WHERE id = '2'");
+                            ?>
+                            <a href="assets/document/<?php echo $catalogue[0]['path'];?>" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
                         </div>
                     </div>

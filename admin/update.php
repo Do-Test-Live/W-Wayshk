@@ -303,3 +303,39 @@ if(isset($_POST['updatePassword'])){
     }
 }
 
+
+if (isset($_POST['update_files'])){
+        $product_catalouge = '';
+        $product_order_form = '';
+        $updated_at = date("Y-m-d H:i:s");
+
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['product_catalouge']['name'];
+        $file_size = $_FILES['product_catalouge']['size'];
+        $file_tmp = $_FILES['product_catalouge']['tmp_name'];
+
+        $RandomAccountNumber1 = mt_rand(1, 99999);
+        $file_name1 = $RandomAccountNumber . "_" . $_FILES['product_order_form']['name'];
+        $file_size1 = $_FILES['product_order_form']['size'];
+        $file_tmp1 = $_FILES['product_order_form']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "pdf") {
+            $product_catalouge = '';
+        } else {
+                $data = $db_handle->runQuery("SELECT * FROM files");
+                unlink("../assets/document/".$data[0]['path']);
+                move_uploaded_file($file_tmp,"../assets/document/" . $file_name);
+                unlink("../assets/document/".$data[1]['path']);
+                move_uploaded_file($file_tmp1, "../assets/document/" . $file_name1);
+                $update = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name',`updated_at`='$updated_at' WHERE id = '1'");
+                $update2 = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name1',`updated_at`='$updated_at' WHERE id = '2'");
+                if($update && $update2){
+                    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='update_files.php';
+                </script>";
+                }
+        }
+}
+
