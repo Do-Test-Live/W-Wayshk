@@ -97,8 +97,8 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>Healthy, nutritious & Tasty Fruits & Veggies</h2>
-                                    <h3>Save upto 50%</h3>
+                                    <h2>立即加入會員</h2>
+                                    <h3>取得限定優惠</h3>
                                 </div>
                             </div>
                         </div>
@@ -110,8 +110,8 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>Healthy, nutritious & Tasty Fruits & Veggies</h2>
-                                    <h3>Save upto 50%</h3>
+                                    <h2>立即加入會員</h2>
+                                    <h3>取得限定優惠</h3>
                                 </div>
                             </div>
                         </div>
@@ -123,8 +123,8 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>Healthy, nutritious & Tasty Fruits & Veggies</h2>
-                                    <h3>Save upto 50%</h3>
+                                    <h2>立即加入會員</h2>
+                                    <h3>取得限定優惠</h3>
                                 </div>
                             </div>
                         </div>

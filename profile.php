@@ -13,12 +13,34 @@ if (!isset($_SESSION['id'])) {
 if (isset($_POST['submit'])) {
     $review = $db_handle->checkValue($_POST['review']);
     $inserted_at = date("Y-m-d H:i:s");
-    $query = $db_handle->insertQuery("INSERT INTO `review`(`customer_id`, `description`, `inserted_at`) VALUES ('$customer_id','$review','$inserted_at')");
-    echo "<script>
-                window.location.href='index.php';
+    $image = '';
+
+    if (!empty($_FILES['image']['name'])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['image']['name'];
+        $file_size = $_FILES['image']['size'];
+        $file_tmp  = $_FILES['image']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
+            $attach_files = '';
+            echo "<script>
+                document.cookie = 'alert = 5;';
+                window.location.href='profile.php';
                 </script>";
 
+        } else {
+            move_uploaded_file($file_tmp, "admin/assets/review/" . $file_name);
+            $image = "assets/review/" . $file_name;
+            $query = $db_handle->insertQuery("INSERT INTO `review`(`customer_id`,`image`, `description`, `inserted_at`) VALUES ('$customer_id','$image','$review','$inserted_at')");
+            echo "<script>
+                window.location.href='profile.php';
+                </script>";
+        }
+    }
+    echo 'Not worked';
 }
+
 
 
 ?>
@@ -126,7 +148,7 @@ include('include/header.php');
                                         <td><?php echo $fetch_data[$i]['payment_type'];?></td>
                                         <td><?php echo $fetch_data[$i]['shipping_method'];?></td>
                                         <td><?php echo $fetch_data[$i]['total_purchase'];?></td>
-                                        <td><a href="admin/print_invoice.php?id=<?php echo $fetch_data[$i]['id'];?>" target="_blank"><i class="fa fa-print"></i></a></td>
+                                        <td><a href="print_receipt.php?id=<?php echo $fetch_data[$i]['id'];?>" target="_blank"><i class="fa fa-print"></i></a></td>
                                     </tr>
                                     <?php
                                 }
@@ -144,8 +166,24 @@ include('include/header.php');
                         <h3>Membership Points:</h3>
                         <h3 class="text-warning">
                             <?php
-                            $points = $db_handle->runQuery("select sum(purchase_points) as points from billing_details where customer_id = '$customer_id'");
-                            echo $points[0]['points'];
+                            $today = date("Y-m-d H:i:s");
+                            $select_points = $db_handle->runQuery("select * from point where customer_id = '$customer_id'");
+                            $no_select_points = $db_handle->numRows("select * from point where customer_id = '$customer_id'");
+                            for($i=0; $i <= $no_fetch_data; $i++){
+                                $point_id = $select_points[$i]['point_id'];
+                                $point_date = $select_points[$i]['date'];
+                                // Get the current timestamp
+                                $current_timestamp = time();
+                                // Convert the datetime value to a Unix timestamp
+                                $datetime_timestamp = strtotime($point_date);
+                                // Calculate the difference between the two timestamps in days
+                                $difference_in_days = round(($current_timestamp - $datetime_timestamp) / (60 * 60 * 24));
+                                if($difference_in_days > 180){
+                                    $update = $db_handle->insertQuery("UPDATE `point` SET `points`='0' WHERE point_id = '$point_id'");
+                                }
+                            }
+                            $point = $db_handle->runQuery("SELECT SUM(points) as p FROM point WHERE customer_id = '$customer_id'");
+                            echo $point[0]['p'];
                             ?>
                          Points</h3>
                     </div>
@@ -186,15 +224,21 @@ include('include/header.php');
                     </div>
 
                     <div class="input-box">
-                        <form class="row g-4" action="#" method="post">
+                        <form class="row g-4" action="#" method="post" enctype="multipart/form-data">
                             <div class="col-12">
                                 <div class="form-floating theme-form-floating log-in-form">
                                     <textarea class="form-control" rows="4" name="review"></textarea>
                                     <label for="email">Comment</label>
                                 </div>
                             </div>
-
                             <div class="col-12">
+                                <div class="form-floating theme-form-floating log-in-form">
+                                    <input type="file" class="form-control" name="image">
+                                    <label for="email">Image</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-3">
                                 <button class="btn btn-animation w-100 justify-content-center" name="submit"
                                         type="submit">Submit
                                 </button>

@@ -192,13 +192,19 @@ if(isset($_POST['customer_signup'])){
     $membership_point = 200;
     $inserted_at = date("Y-m-d H:i:s");
 
-    $insert = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `password`, `inserted_at`,`membership_point`) 
-VALUES ('$customer_name','$customer_email','$customer_number','$password','$inserted_at','$membership_point')");
-
-    echo "<script>
+    $insert = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `password`, `inserted_at`) 
+VALUES ('$customer_name','$customer_email','$customer_number','$password','$inserted_at')");
+    if($insert){
+        $fetch_customer_id = $db_handle->runQuery("SELECT id FROM `customer` ORDER BY id desc limit 1");
+        $customer_id = $fetch_customer_id[0]['id'];
+        $insert_point = $db_handle->insertQuery("INSERT INTO `point`(`customer_id`, `points`, `date`) VALUES ('$customer_id','200','$inserted_at')");
+        if($insert_point){
+            echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='../login.php';
                 </script>";
+        }
+    }
 }
 
 

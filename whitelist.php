@@ -129,13 +129,13 @@ include('include/header.php');
                     if ($_SESSION['language'] === 'CN')
                         echo '最喜歡的產品';
                     else
-                        echo 'Favorite Products';
+                        echo 'Favourite Products';
                     ?>
                 </h2>
             </div>
             <?php
-            $fetch_product = $db_handle->runQuery("SELECT * FROM `wishlist`,product WHERE product.id = wishlist.product_id and wishlist.customer_id = '1' order by wishlist.id desc");
-            $row = $db_handle->numRows("SELECT * FROM `wishlist`,product WHERE product.id = wishlist.product_id and wishlist.customer_id = '1' order by wishlist.id desc");
+            $fetch_product = $db_handle->runQuery("SELECT * FROM `wishlist`,product WHERE product.id = wishlist.product_id and wishlist.customer_id = '$customer_id' order by wishlist.id desc");
+            $row = $db_handle->numRows("SELECT * FROM `wishlist`,product WHERE product.id = wishlist.product_id and wishlist.customer_id = '$customer_id' order by wishlist.id desc");
             for ($i = 0; $i < $row; $i++) {
                 ?>
                 <div class="col-md-3 p-3">
