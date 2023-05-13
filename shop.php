@@ -244,7 +244,7 @@ include('include/header.php');
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                 <img src="admin/<?php
                                                 echo str_replace("650", "250", strtok($fetch_products [$i]['p_image'],','));
                                                 ?>"
@@ -253,7 +253,7 @@ include('include/header.php');
 
                                             <ul class="product-option">
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                    <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                                    <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
@@ -269,7 +269,7 @@ include('include/header.php');
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['c_name']; else echo $fetch_products[$i]['c_name_en'];?></span>
-                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                 <h5 class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['p_name']; else echo $fetch_products[$i]['p_name_en'];?></h5>
                                             </a>
                                             <!--<div class="product-rating mt-2">
@@ -295,7 +295,7 @@ include('include/header.php');
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                                 </a>
                                             </div>
                                         </div>
@@ -400,7 +400,7 @@ include('include/header.php');
                                 <div class="product-box-3 h-100 wow fadeInUp">
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                 <img src="admin/<?php
                                                 echo str_replace("650", "250", strtok($fetch_products [$i]['p_image'],','));
                                                 ?>"
@@ -409,7 +409,7 @@ include('include/header.php');
 
                                             <ul class="product-option">
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                    <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" data-bs-toggle="modal"
+                                                    <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" data-bs-toggle="modal"
                                                        data-bs-target="#view">
                                                         <i data-feather="eye"></i>
                                                     </a>
@@ -426,7 +426,7 @@ include('include/header.php');
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['c_name']; else echo $fetch_products[$i]['c_name_en'];?></span>
-                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>">
+                                            <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                 <h5 class="name"><?php if($_SESSION['language'] === 'CN') echo $fetch_products[$i]['p_name']; else echo $fetch_products[$i]['p_name_en'];?></h5>
                                             </a>
 
@@ -434,7 +434,7 @@ include('include/header.php');
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                                 </a>
                                             </div>
                                         </div>
