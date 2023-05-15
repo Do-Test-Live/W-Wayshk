@@ -33,11 +33,11 @@ $db_handle = new DBController();
             color: #fff;
         }
 
-        .alert-error{
+        .alert-error {
             background: #da9393;
         }
 
-        .alert-success{
+        .alert-success {
             background: #93da94;
         }
     </style>
@@ -69,7 +69,7 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="breadscrumb-contain">
-                    <h2><?php if($_SESSION['language'] === 'CN') echo '購物車'; else echo 'Cart';?></h2>
+                    <h2><?php if ($_SESSION['language'] === 'CN') echo '購物車'; else echo 'Cart'; ?></h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -78,7 +78,7 @@ include('include/header.php');
                                 </a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <?php if($_SESSION['language'] === 'CN') echo '購物車'; else echo 'Cart';?></li>
+                                <?php if ($_SESSION['language'] === 'CN') echo '購物車'; else echo 'Cart'; ?></li>
                         </ol>
                     </nav>
                 </div>
@@ -109,14 +109,14 @@ include('include/header.php');
                                         <td class="product-detail">
                                             <div class="product border-0">
                                                 <a href="#" class="product-image">
-                                                    <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'],','));?>"
+                                                    <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'], ',')); ?>"
                                                          class="img-fluid blur-up lazyload" alt="">
                                                 </a>
                                                 <div class="product-detail">
                                                     <ul>
                                                         <li class="name">
-                                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '產品名稱'; else echo 'Product Name'?> </h4>
-                                                            <a href="Product-Details?product_id=<?php echo $item["id"]; ?>"><?php if($_SESSION['language'] === 'CN') echo $item["name"]; else echo $item["en_name"]?></a>
+                                                            <h4 class="table-title text-content"><?php if ($_SESSION['language'] === 'CN') echo '產品名稱'; else echo 'Product Name' ?> </h4>
+                                                            <a href="Product-Details?product_id=<?php echo $item["id"]; ?>"><?php if ($_SESSION['language'] === 'CN') echo $item["name"]; else echo $item["en_name"] ?></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -124,12 +124,12 @@ include('include/header.php');
                                         </td>
 
                                         <td class="price">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '價格'; else echo 'Price'?></h4>
+                                            <h4 class="table-title text-content"><?php if ($_SESSION['language'] === 'CN') echo '價格'; else echo 'Price' ?></h4>
                                             <h5><?php echo $item["price"] . ' HKD'; ?></h5>
                                         </td>
 
                                         <td class="quantity">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '數量'; else echo 'Qty'?></h4>
+                                            <h4 class="table-title text-content"><?php if ($_SESSION['language'] === 'CN') echo '數量'; else echo 'Qty' ?></h4>
                                             <div class="quantity-price">
                                                 <div class="cart_qty">
                                                     <div class="input-group">
@@ -140,7 +140,7 @@ include('include/header.php');
                                         </td>
 
                                         <td class="quantity">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '重量（克）'; else echo 'Weight'?></h4>
+                                            <h4 class="table-title text-content"><?php if ($_SESSION['language'] === 'CN') echo '重量（克）'; else echo 'Weight' ?></h4>
                                             <div class="quantity-price">
                                                 <div class="cart_qty">
                                                     <div class="input-group">
@@ -151,13 +151,14 @@ include('include/header.php');
                                         </td>
 
                                         <td class="subtotal">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '合計'; else echo 'Total'?></h4>
+                                            <h4 class="table-title text-content"><?php if ($_SESSION['language'] === 'CN') echo '合計'; else echo 'Total' ?></h4>
                                             <h5><?php echo number_format($item_price, 2) . ' HKD'; ?></h5>
                                         </td>
 
                                         <td class="save-remove">
-                                            <h4 class="table-title text-content"><?php if($_SESSION['language'] === 'CN') echo '行動'; else echo 'Action'?></h4>
-                                            <a class="remove close_button" href="Cart?action=remove&product_id=<?php echo $item["id"]; ?>"><?php if($_SESSION['language'] === 'CN') echo '消除'; else echo 'Remove'?></a>
+                                            <h4 class="table-title text-content"><?php if ($_SESSION['language'] === 'CN') echo '行動'; else echo 'Action' ?></h4>
+                                            <a class="remove close_button"
+                                               href="Cart?action=remove&product_id=<?php echo $item["id"]; ?>"><?php if ($_SESSION['language'] === 'CN') echo '消除'; else echo 'Remove' ?></a>
                                         </td>
                                     </tr>
                                     <?php
@@ -172,18 +173,60 @@ include('include/header.php');
                     </div>
                 </div>
             </div>
+            <div class="col-12 mt-3">
+                <div>
+                    <p>
+                        <?php
+                        $points = 0;
+                        $customer_id = 0;
+                        if (isset($_SESSION['id'])) {
+                            $customer_id = $_SESSION['id'];
+                        }
 
+                        $query = "SELECT * FROM `point` where customer_id={$customer_id}";
+                        $data = $db_handle->runQuery($query);
+                        $row = $db_handle->numRows($query);
+                        for ($i = 0; $i < $row; $i++) {
+                            $points += $data[$i]['points'];
+                        }
+                        ?>
+                        <?php
+                        if($_SESSION['language'] == 'EN'){
+                            ?>
+                            You have <?php echo $points; ?> points in your account.
+                            At least 40 point need to craft 1 HKD.
+                            <?php
+                        } else{
+                            ?>
+                            你有 <?php echo $points; ?> 您帳戶中的積分。
+                            至少需要 40 積分才能製作 1 HKD。
+                            <?php
+                        }
+                        ?>
+                    </p>
+                </div>
+                <div class="mb-3 coupon-box input-group">
+                    <div onclick="applyPoints(<?php echo $points; ?>);">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="applyPoints" <?php if ($points / 40 < 1) echo 'disabled'; ?>>
+                        <label class="form-check-label" for="applyPoints">
+                            Apply points for discounts.
+                        </label>
+                    </div>
+                </div>
+            </div>
             <div class="col-xxl-3 mt-3">
                 <div class="coupon-cart">
                     <h6 class="text-content mb-2"><?php
-                        if($_SESSION['language'] === 'CN')
+                        if ($_SESSION['language'] === 'CN')
                             echo '申請優惠卷';
                         else
                             echo 'Coupon Apply';
                         ?></h6>
                     <div id="liveAlertPlaceholder"></div>
                     <div class="mb-3 coupon-box input-group">
-                        <input type="hidden" name="totalAmount" id="totalAmount" value="<?php echo $total_price_new; ?>"/>
+                        <input type="hidden" name="totalAmount" id="totalAmount"
+                               value="<?php echo $total_price_new; ?>"/>
                         <input type="text" class="form-control" id="coupon" placeholder="<?php
                         if ($_SESSION['language'] === 'CN')
                             echo '輸入優惠卷號碼';
@@ -191,7 +234,7 @@ include('include/header.php');
                             echo 'Enter the Coupon Code Here...'
                         ?>">
                         <button style="border: 1px solid black" class="btn btn-light" onclick="applyCoupon();"><?php
-                            if($_SESSION['language'] === 'CN')
+                            if ($_SESSION['language'] === 'CN')
                                 echo '申請';
                             else
                                 echo 'Apply';
@@ -203,15 +246,15 @@ include('include/header.php');
                         <ul>
                             <li>
                                 <a href="Checkout"
-                                        class="btn btn-animation proceed-btn fw-bold mt-3" id="checkout">
-                                    <?php if($_SESSION['language'] === 'CN') echo '結帳'; else echo 'Proceed To Checkout'?>
+                                   class="btn btn-animation proceed-btn fw-bold mt-3" id="checkout">
+                                    <?php if ($_SESSION['language'] === 'CN') echo '結帳'; else echo 'Proceed To Checkout' ?>
                                 </a>
                             </li>
 
                             <li>
                                 <button onclick="location.href = 'Home';"
                                         class="btn btn-light shopping-button text-dark">
-                                    <i class="fa-solid fa-arrow-left-long"></i> <?php if($_SESSION['language'] === 'CN') echo '返回購物'; else echo 'Return To Shopping'?>
+                                    <i class="fa-solid fa-arrow-left-long"></i> <?php if ($_SESSION['language'] === 'CN') echo '返回購物'; else echo 'Return To Shopping' ?>
                                 </button>
                             </li>
                         </ul>
@@ -231,7 +274,7 @@ include('include/footer.php');
 
 
 <!-- Deal Box Modal Start -->
-<?php include ('include/deal.php');?>
+<?php include('include/deal.php'); ?>
 <!-- Deal Box Modal End -->
 
 <!-- Tap to top start -->
@@ -292,28 +335,34 @@ include('include/footer.php');
     }
 
 
-    async function applyCoupon(){
-        let coupon=document.getElementById('coupon').value;
-        let totalAmount=document.getElementById('totalAmount').value;
+    async function applyCoupon() {
+        let coupon = document.getElementById('coupon').value;
+        let totalAmount = document.getElementById('totalAmount').value;
 
         $.ajax({
             type: 'get',
             contentType: "application/json; charset=utf-8",
             url: 'checkCoupon.php',
             data: {
-                coupon: coupon,totalAmount:totalAmount
+                coupon: coupon, totalAmount: totalAmount
             },
-            success: function(response) {
+            success: function (response) {
                 console.log(response);
                 const obj = JSON.parse(response);
 
                 alertMessage(obj.message, obj.alertType);
-                document.getElementById("checkout").href="Checkout?discount="+obj.amount;
+                document.getElementById("checkout").href = "Checkout?discount=" + obj.amount;
             }
         });
     }
 
-
+    async function applyPoints(points) {
+        if(document.getElementById("applyPoints").checked){
+            document.getElementById("checkout").href = document.getElementById("checkout").getAttribute("href")+"?points="+points+"&applyPoints=1";
+        }else{
+            document.getElementById("checkout").href ='Checkout';
+        }
+    }
 </script>
 </body>
 </html>

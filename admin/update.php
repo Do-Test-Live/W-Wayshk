@@ -45,7 +45,6 @@ if (isset($_POST['updateCategory'])) {
 
 }
 
-
 if (isset($_POST['updateProduct'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $p_name = $db_handle->checkValue($_POST['p_name']);
@@ -59,11 +58,65 @@ if (isset($_POST['updateProduct'])) {
     $product_price = $db_handle->checkValue($_POST['product_price']);
     $cost = $db_handle->checkValue($_POST['cost']);
     $product_weight = $db_handle->checkValue($_POST['product_weight']);
+    $query = '';
 
     $updated_at = date("Y-m-d H:i:s");
 
+    if (!empty($_FILES['images']['tmp_name'][0])) {
+        // At least one image is selected
+
+        $dataFileName = []; // Array to store the file names
+
+        // Loop through each uploaded image file
+        foreach ($_FILES['images']['tmp_name'] as $index => $uploadedFile) {
+            $originalFileName = $_FILES['images']['name'][$index];
+            // Get the original image size and type
+            list($originalWidth, $originalHeight, $imageType) = getimagesize($uploadedFile);
+
+            // Create image resource from uploaded file based on image type
+            switch ($imageType) {
+                case IMAGETYPE_JPEG:
+                    $image = imagecreatefromjpeg($uploadedFile);
+                    break;
+                case IMAGETYPE_PNG:
+                    $image = imagecreatefrompng($uploadedFile);
+                    break;
+                case IMAGETYPE_GIF:
+                    $image = imagecreatefromgif($uploadedFile);
+                    break;
+                default:
+                    throw new Exception('Unsupported image type.');
+            }
+
+            // Resize the image to 250x250 and save it
+            $newImage = imagecreatetruecolor(250, 250);
+            imagecopyresampled($newImage, $image, 0, 0, 0, 0, 250, 250, $originalWidth, $originalHeight);
+            $RandomAccountNumber = mt_rand(1, 99999);
+            imagejpeg($newImage, 'assets/products_image/250/' . $RandomAccountNumber . '_' . $originalFileName . '.jpg');
+
+            // Resize the image to 650x650 and save it
+            $newImage = imagecreatetruecolor(650, 650);
+            imagecopyresampled($newImage, $image, 0, 0, 0, 0, 650, 650, $originalWidth, $originalHeight);
+            $RandomAccountNumber = mt_rand(1, 99999);
+            imagejpeg($newImage, 'assets/products_image/650/' . $RandomAccountNumber . '_' . $originalFileName . '.jpg');
+            $dataFileName[] = 'assets/products_image/650/' . $RandomAccountNumber . '_' . $originalFileName . '.jpg';
+
+            // Free up memory
+            imagedestroy($image);
+            imagedestroy($newImage);
+        }
+
+        $databaseValue = implode(',', $dataFileName);
+        $query .= ",`p_image`='" . $databaseValue . "'";
+        $fetch_image = $db_handle->runQuery("select p_image from product WHERE id={$id}");
+        $img = explode(',',$fetch_image[0]['p_image']);
+        foreach ($img as $i){
+            unlink($i);
+        }
+    }
+
     $data = $db_handle->insertQuery("UPDATE `product` SET `category_id`='$product_category',`product_code`='$product_code',`p_name`='$p_name',`description`='$product_description',`description_en` = '$product_description_en',
-                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`p_name_en` = '$p_name_en',`cost` = '$cost',`product_weight` = '$product_weight', `deal_today` = '$today_deal' WHERE id={$id}");
+                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`p_name_en` = '$p_name_en',`cost` = '$cost',`product_weight` = '$product_weight', `deal_today` = '$today_deal'" . $query . " WHERE id={$id}");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Product';
@@ -158,7 +211,7 @@ if (isset($_POST['updateAdmin'])) {
         }
     }
 
-    $data = $db_handle->insertQuery("UPDATE `admin_login` SET `name`='$name',`email`='$email',`password`='$password',`role`='$role',`status`='$status'". $query ." WHERE id={$id}");
+    $data = $db_handle->insertQuery("UPDATE `admin_login` SET `name`='$name',`email`='$email',`password`='$password',`role`='$role',`status`='$status'" . $query . " WHERE id={$id}");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Admin';
@@ -191,7 +244,7 @@ if (isset($_POST['updateHomeBanner'])) {
             $image = '';
         } else {
             $data = $db_handle->runQuery("SELECT * FROM banner WHERE id='{$id}'");
-            unlink("../".$data[0]['banner_img']);
+            unlink("../" . $data[0]['banner_img']);
             move_uploaded_file($file_tmp, "../assets/images/banner/" . $file_name);
             $image = "assets/images/banner/" . $file_name;
             $query .= ",`banner_img`='" . $image . "'";
@@ -208,7 +261,7 @@ if (isset($_POST['updateHomeBanner'])) {
 }
 
 
-if(isset($_POST['updateDeliveryCharges'])){
+if (isset($_POST['updateDeliveryCharges'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $min_charge = $db_handle->checkValue($_POST['min_charge']);
     $weight_upto = $db_handle->checkValue($_POST['weight_upto']);
@@ -223,22 +276,22 @@ if(isset($_POST['updateDeliveryCharges'])){
 }
 
 
-if(isset($_POST['delivery'])){
+if (isset($_POST['delivery'])) {
     $id = $db_handle->checkValue($_POST['billing_id']);
     $email = $db_handle->checkValue($_POST['email']);
     $date = $db_handle->checkValue($_POST['date']);
     $status = $db_handle->checkValue($_POST['status']);
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `delivery_date`='$date',`approve` = '$status' WHERE id='$id'");
-    if($data){
+    if ($data) {
         $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
         $no_fetch_product = $db_handle->numRows("select * from invoice_details where billing_id = '$id'");
-        for($i=0; $i < $no_fetch_product; $i++){
+        for ($i = 0; $i < $no_fetch_product; $i++) {
             $quantity = $fetch_product[$i]['product_quantity'];
             $product_id = $fetch_product[$i]['product_id'];
             $fetch_stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
             $no_fetch_stock = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
-            if($no_fetch_stock > 0){
+            if ($no_fetch_stock > 0) {
                 $s_quantity = $fetch_stock[0]['quantity'];
                 $s_quantity = $s_quantity - $quantity;
                 $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
@@ -271,11 +324,11 @@ if(isset($_POST['delivery'])){
     }
 }
 
-if(isset($_POST['approved'])){
+if (isset($_POST['approved'])) {
     $id = $db_handle->checkValue($_POST['billing_id']);
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `approve` = '1' WHERE id='$id'");
-    if($data){
+    if ($data) {
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Confirm-Order';
@@ -284,18 +337,18 @@ if(isset($_POST['approved'])){
 
 }
 
-if(isset($_POST['updatePassword'])){
+if (isset($_POST['updatePassword'])) {
     $o_pass = $db_handle->checkValue($_POST['o_pass']);
     $n_pass = $db_handle->checkValue($_POST['n_pass']);
 
     $previous_pass = $db_handle->runQuery("select password from admin_login limit 1");
-    if($previous_pass[0]['password'] == $o_pass){
+    if ($previous_pass[0]['password'] == $o_pass) {
         $update = $db_handle->insertQuery("update admin_login set password = '$n_pass' where id = 2");
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Profile';
                 </script>";
-    }else{
+    } else {
         echo "<script>
                 document.cookie = 'alert = 5;';
                 window.location.href='Profile';
@@ -304,43 +357,43 @@ if(isset($_POST['updatePassword'])){
 }
 
 
-if (isset($_POST['update_files'])){
+if (isset($_POST['update_files'])) {
+    $product_catalouge = '';
+    $product_order_form = '';
+    $updated_at = date("Y-m-d H:i:s");
+
+    $RandomAccountNumber = mt_rand(1, 99999);
+    $file_name = $RandomAccountNumber . "_" . $_FILES['product_catalouge']['name'];
+    $file_size = $_FILES['product_catalouge']['size'];
+    $file_tmp = $_FILES['product_catalouge']['tmp_name'];
+
+    $RandomAccountNumber1 = mt_rand(1, 99999);
+    $file_name1 = $RandomAccountNumber . "_" . $_FILES['product_order_form']['name'];
+    $file_size1 = $_FILES['product_order_form']['size'];
+    $file_tmp1 = $_FILES['product_order_form']['tmp_name'];
+
+    $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+    if ($file_type != "pdf") {
         $product_catalouge = '';
-        $product_order_form = '';
-        $updated_at = date("Y-m-d H:i:s");
-
-        $RandomAccountNumber = mt_rand(1, 99999);
-        $file_name = $RandomAccountNumber . "_" . $_FILES['product_catalouge']['name'];
-        $file_size = $_FILES['product_catalouge']['size'];
-        $file_tmp = $_FILES['product_catalouge']['tmp_name'];
-
-        $RandomAccountNumber1 = mt_rand(1, 99999);
-        $file_name1 = $RandomAccountNumber . "_" . $_FILES['product_order_form']['name'];
-        $file_size1 = $_FILES['product_order_form']['size'];
-        $file_tmp1 = $_FILES['product_order_form']['tmp_name'];
-
-        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
-        if ($file_type != "pdf") {
-            $product_catalouge = '';
-        } else {
-                $data = $db_handle->runQuery("SELECT * FROM files");
-                unlink("../assets/document/".$data[0]['path']);
-                move_uploaded_file($file_tmp,"../assets/document/" . $file_name);
-                unlink("../assets/document/".$data[1]['path']);
-                move_uploaded_file($file_tmp1, "../assets/document/" . $file_name1);
-                $update = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name',`updated_at`='$updated_at' WHERE id = '1'");
-                $update2 = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name1',`updated_at`='$updated_at' WHERE id = '2'");
-                if($update && $update2){
-                    echo "<script>
+    } else {
+        $data = $db_handle->runQuery("SELECT * FROM files");
+        unlink("../assets/document/" . $data[0]['path']);
+        move_uploaded_file($file_tmp, "../assets/document/" . $file_name);
+        unlink("../assets/document/" . $data[1]['path']);
+        move_uploaded_file($file_tmp1, "../assets/document/" . $file_name1);
+        $update = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name',`updated_at`='$updated_at' WHERE id = '1'");
+        $update2 = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name1',`updated_at`='$updated_at' WHERE id = '2'");
+        if ($update && $update2) {
+            echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='update_files.php';
                 </script>";
-                }
         }
+    }
 }
 
 
-if(isset($_POST['updateTextbook'])){
+if (isset($_POST['updateTextbook'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $title = $db_handle->checkValue($_POST['title']);
     $title_en = $db_handle->checkValue($_POST['title_en']);

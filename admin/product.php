@@ -120,7 +120,7 @@ if (!isset($_SESSION['userid'])) {
                                                         <span class="input-group-text">Upload</span>
                                                     </div>
                                                     <div class="custom-file">
-                                                        <input type="file" class="custom-file-input" name="cat_image" accept="image/png, image/jpeg, image/jpg" multiple>
+                                                        <input type="file" class="custom-file-input" name="images[]" accept="image/png, image/jpeg, image/jpg" multiple>
                                                         <label class="custom-file-label">Choose file (png, jpg, jpeg)</label>
                                                     </div>
                                                 </div>

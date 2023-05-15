@@ -159,6 +159,14 @@ include('include/header.php');
                                                                     <?php
                                                                 }
                                                                 ?>
+
+                                                                <?php
+                                                                if(isset($_GET['points'])){
+                                                                    ?>
+                                                                    <input name="points" type="hidden" value="<?php echo $_GET['points']; ?>">
+                                                                    <?php
+                                                                }
+                                                                ?>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -369,7 +377,23 @@ include('include/header.php');
                                 </li>
                                 <li>
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '折扣'; else echo 'Discount';?></h4>
-                                    <h4 class="price"><?php echo "HKD " . number_format($_GET['discount'], 2); ?></h4>
+                                    <h4 class="price">
+                                        <?php
+                                        $discount=0;
+                                        if(isset($_GET['points'])){
+                                            $discount=(int)$_GET['points']/40;
+
+                                            if($total_price_new<=$discount){
+                                                $discount=$total_price_new;
+                                            }
+                                        }
+                                        if(isset($_GET['discount'])){
+                                            echo "HKD " . number_format($_GET['discount']+$discount, 2);
+                                        }else{
+                                            echo "HKD " . number_format($discount, 2);
+                                        }
+                                        ?>
+                                    </h4>
                                 </li>
                                 <li>
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
@@ -386,7 +410,9 @@ include('include/header.php');
                                             $dCharge = $dAdditional +  $delivery_charges[0]['min_delivery_charge'];
                                         }
                                         echo $dCharge;
-                                        $discount=$_GET['discount'];
+                                        if(isset($_GET['discount'])) {
+                                            $discount = $_GET['discount'];
+                                        }
                                         $total_price_new = $total_price_new + $dCharge-$discount;
                                         ?>
                                         <input type="hidden" value="<?php echo $delivery_charges;?>" name="delivery_charge">

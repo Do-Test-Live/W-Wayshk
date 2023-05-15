@@ -45,15 +45,28 @@ if (isset($_POST["placeOrder"])) {
         $addInfo = 1;
     }
 
+    $points = 0;
+
+
     foreach ($_SESSION["cart_item"] as $item) {
         $total_purchase += $item["quantity"] * $item["price"];
     }
 
     if ($customer_id != 0) {
         $purchase_points = floor($total_purchase);
+
+        if (isset($_POST['points'])) {
+            if ($total_purchase >= $_POST['points'] / 40) {
+                $purchase_points = -$_POST['points'];
+            } else {
+                $purchase_points = (int)$total_purchase * 40 - $_POST['points'];
+            }
+
+        }
     }
 
-    if(isset($_SESSION['id'])){
+
+    if (isset($_SESSION['id'])) {
         $customer = $_SESSION['id'];
         $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$purchase_points','$updated_at')");
     }
@@ -84,6 +97,7 @@ if (isset($_POST["placeOrder"])) {
 
     $password = randomPassword();
 
+    $info = '';
     if ($customer_id = 0) {
         $select = $db_handle->runQuery("SELECT * FROM customer where email='$email'");
         if ($select == 0 && $addInfo == 1) {
@@ -135,9 +149,10 @@ if (isset($_POST["placeOrder"])) {
 
             if (mail($email_to, $subject, $messege, $headers)) {
                 ?>
-                echo "<script>
+                echo "
+                <script>
                     alert("Your order has been placed successfully! Please check your email for more details.");
-                    window.location.href='Home';
+                    window.location.href = 'Home';
                 </script>";
                 <?php
             }
@@ -148,7 +163,7 @@ if (isset($_POST["placeOrder"])) {
 
     $id = $data[0]['id'];
 
-    if (isset($_SESSION) && $insert_user) {
+    if (!isset($_SESSION['user_id']) && $info) {
         session_unset();
         session_destroy();
 
@@ -158,7 +173,7 @@ if (isset($_POST["placeOrder"])) {
         // Include configuration file
         require_once 'config.php';
 
-    } else if ($insert_user) {
+    } else if (!isset($_SESSION['user_id']) && $insert_user) {
 
         // Include configuration file
         require_once 'config.php';
