@@ -397,7 +397,7 @@ include('include/header.php');
                                 </li>
                                 <li>
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
-                                    <h4 class="price text-end">
+                                    <h4 class="price text-end" id="price">
                                         <?php
                                         $delivery_charges = $db_handle->runQuery("select * from delivery_charges");
                                         if ($total_price_new >= $delivery_charges[0]['min_order_free_delivery']){
@@ -409,18 +409,18 @@ include('include/header.php');
                                             $dAdditional = $d_weight * $delivery_charges[0]['next_per_kg_weight'];
                                             $dCharge = $dAdditional +  $delivery_charges[0]['min_delivery_charge'];
                                         }
-                                        echo $dCharge;
+                                        /*echo $dCharge;*/
                                         if(isset($_GET['discount'])) {
                                             $discount = $_GET['discount'];
                                         }
-                                        $total_price_new = $total_price_new + $dCharge-$discount;
+                                        $totalPriceNew = $total_price_new + $dCharge - $discount;
                                         ?>
-                                        <input type="hidden" value="<?php echo $delivery_charges;?>" name="delivery_charge">
+                                        <input type="hidden" id="shippingInput" value="<?php echo $dCharge;?>" name="delivery_charge">
                                     </h4>
                                 </li>
                                 <li class="list-total">
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '全部的 (HKD)'; else echo 'Total (HKD)';?></h4>
-                                    <h4 class="price"><?php echo "HKD " . number_format($total_price_new, 2); ?></h4>
+                                    <h4 class="price" id="total_value"><?php echo "HKD " . number_format($totalPriceNew, 2); ?></h4>
                                 </li>
                             </ul>
                         </div>
@@ -458,9 +458,42 @@ include('include/footer.php');
 <?php include ('include/deal.php');?>
 <!-- Deal Box Modal End -->
 
+
 <!-- latest jquery-->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        // Initialize the value of the hidden input field
+        var deliveryCharges = <?php echo $dCharge; ?>;
+        var totalprice = <?php echo $total_price_new; ?>;
+        var discount = <?php echo $discount; ?>;
+        $('#shippingInput').val(deliveryCharges);
+        $('#price').text(deliveryCharges);
+        $('#total_value').text(deliveryCharges + totalprice - discount);
+        console.log(deliveryCharges);
+        console.log(totalprice);
+        console.log(discount);
+
+        // Function to update the value and display it in the <h4> tag
+        function updateValue(value) {
+            $('#shippingInput').val(value);
+            $('#price').text(value);
+            $('#total_value').text(value + totalprice - discount);
+        }
+
+        // Handle radio button change event
+        $('input[type="radio"][name="shipping"]').change(function() {
+            if ($(this).attr('id') === 'express') {
+                // Update value to the PHP variable if "S.F. Express" is selected
+                updateValue(deliveryCharges);
+            } else {
+                // Set value to 0 for other options
+                updateValue(0);
+            }
+        });
+    });
+</script>
 <!-- jquery ui-->
 <script src="assets/js/jquery-ui.min.js"></script>
 
@@ -494,5 +527,8 @@ include('include/footer.php');
 
 <!-- thme setting js -->
 <script src="assets/js/theme-setting.js"></script>
+
+
+
 </body>
 </html>
