@@ -339,3 +339,43 @@ if (isset($_POST['update_files'])){
         }
 }
 
+
+if(isset($_POST['updateTextbook'])){
+    $id = $db_handle->checkValue($_POST['id']);
+    $title = $db_handle->checkValue($_POST['title']);
+    $title_en = $db_handle->checkValue($_POST['title_en']);
+    $category = $db_handle->checkValue($_POST['category']);
+    $category_en = $db_handle->checkValue($_POST['category_en']);
+    $points = $db_handle->checkValue($_POST['points']);
+    $link = $db_handle->checkValue($_POST['link']);
+    $description = $db_handle->checkValue($_POST['description']);
+    $description_en = $db_handle->checkValue($_POST['description_en']);
+    $image = '';
+    $query = '';
+    $updated_at = date("Y-m-d H:i:s");
+    if (!empty($_FILES['textbook_image']['name'])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['textbook_image']['name'];
+        $file_size = $_FILES['textbook_image']['size'];
+        $file_tmp = $_FILES['textbook_image']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg" && $file_type != "gif") {
+            $image = '';
+        } else {
+            $data = $db_handle->runQuery("select * FROM `textbook` WHERE id='{$id}'");
+            unlink($data[0]['image']);
+            move_uploaded_file($file_tmp, "assets/textbook/" . $file_name);
+            $image = "assets/textbook/" . $file_name;
+            $query .= ",`image`='" . $image . "'";
+        }
+    }
+    $data = $db_handle->insertQuery("UPDATE `textbook` SET `textbook_title`='$title',`textbook_title_en`='$title_en',`textbook_cat`='$category',`textbook_cat_en`='$category_en',
+                      `textbook_point`='$points',`download_link`='$link',`textbook_details`='$description',`textbook_details_en`='$description_en',`updated_at`='$updated_at'" . $query . " where id={$id}");
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Textbook';
+                </script>";
+
+}
+

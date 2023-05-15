@@ -485,7 +485,7 @@ if (isset($_SESSION["cart_item"])) {
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                           href="Textbook-Download-EN">Textbook Download</a>
+                                                           href="Textbook-Download">Textbook Download</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"

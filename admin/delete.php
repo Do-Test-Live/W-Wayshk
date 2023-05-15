@@ -47,3 +47,10 @@ if(isset($_GET['adminId'])){
     echo 'success';
 }
 
+if(isset($_GET['textBookId'])){
+    $data = $db_handle->runQuery("select * FROM `textbook` WHERE id ='{$_GET['textBookId']}'");
+    unlink($data[0]['image']);
+    $db_handle->insertQuery("delete from textbook where id=" . $_GET['textBookId'] . "");
+    echo 'success';
+}
+

@@ -235,3 +235,40 @@ if(isset($_POST['add_quantity'])){
                 </script>";
     }
 }
+
+if(isset($_POST['add_textbook'])){
+    $textbook_title = $db_handle->checkValue($_POST['textbook_title']);
+    $textbook_title_en = $db_handle->checkValue($_POST['textbook_title_en']);
+    $textbook_cat = $db_handle->checkValue($_POST['textbook_cat']);
+    $textbook_cat_en = $db_handle->checkValue($_POST['textbook_cat_en']);
+    $textbook_point = $db_handle->checkValue($_POST['textbook_point']);
+    $textbook_details = $db_handle->checkValue($_POST['textbook_details']);
+    $textbook_details_en = $db_handle->checkValue($_POST['textbook_details_en']);
+    $file_download = $db_handle->checkValue($_POST['file_download']);
+    $image = '';
+    $inserted_at = date("Y-m-d H:i:s");
+    if (!empty($_FILES['textbook_image']['name'])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['textbook_image']['name'];
+        $file_size = $_FILES['textbook_image']['size'];
+        $file_tmp  = $_FILES['textbook_image']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
+            $attach_files = '';
+            echo "<script>
+                document.cookie = 'alert = 5;';
+                window.location.href='Add-Textbook';
+                </script>";
+
+        } else {
+            move_uploaded_file($file_tmp, "assets/textbook/" . $file_name);
+            $image = "assets/textbook/" . $file_name;
+            $insert_query = $db_handle->insertQuery("INSERT INTO `textbook`(`textbook_title`, `textbook_title_en`, `textbook_cat`, `textbook_cat_en`, `textbook_point`, `textbook_details`, `textbook_details_en`, `image`, `inserted_at`,`download_link`) VALUES ('$textbook_title','$textbook_title_en','$textbook_cat','$textbook_cat_en','$textbook_point','$textbook_details','$textbook_details_en','$image','$inserted_at','$file_download')");
+            echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Textbook';
+                </script>";
+        }
+    }
+}

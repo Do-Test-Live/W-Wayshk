@@ -28,6 +28,16 @@
                     <li><a href="Category">Category List</a></li>
                 </ul>
             </li>
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-album"></i>
+                    <span class="nav-text">Textbook</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="Add-Textbook">Add Textbook</a></li>
+                    <li><a href="Textbook">Textbook List</a></li>
+                </ul>
+            </li>
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-upload"></i>
@@ -124,8 +134,8 @@
                 </a>
             </li>
             <li>
-                <a href="update_files.php">
-                    <i class="flaticon-381-controls-3"></i>
+                <a href="Update-Files">
+                    <i class="flaticon-381-save"></i>
                     <span class="nav-text">Update Files</span>
                 </a>
             </li>

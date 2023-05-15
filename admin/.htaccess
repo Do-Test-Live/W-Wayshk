@@ -52,6 +52,8 @@ RewriteRule ^Profile profile.php [NE,L]
 
 RewriteRule ^Insert insert.php [NE,L]
 
+RewriteRule ^Update\-Files update_files.php [NE,L]
+
 RewriteRule ^Update update.php [NE,L]
 
 RewriteRule ^Delete delete.php [NE,L]
@@ -67,4 +69,10 @@ RewriteRule ^Profit-Loss profit_loss_report.php [NE,L]
 RewriteRule ^Delivery-Charges delivery_charges.php [NE,L]
 
 RewriteRule ^Order-Details order_details.php [NE,L]
+
+RewriteRule ^Add-Textbook add_textbook.php [NE,L]
+
+RewriteRule ^Textbook textbook.php [NE,L]
+
+
 
