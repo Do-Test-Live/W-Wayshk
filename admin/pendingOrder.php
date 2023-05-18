@@ -59,6 +59,7 @@ if (!isset($_SESSION['userid'])) {
                                 <thead>
                                 <tr>
                                     <th>SL</th>
+                                    <th>Order No</th>
                                     <th>Customer Name</th>
                                     <th>Email</th>
                                     <th>Contact No.</th>
@@ -82,6 +83,7 @@ if (!isset($_SESSION['userid'])) {
                                     ?>
                                     <tr>
                                         <td><?php echo $i + 1; ?></td>
+                                        <td><?php echo '#WHK'.$bill_data[$i]['id'];?></td>
                                         <td><?php echo $bill_data[$i]["f_name"] . ' ' . $bill_data[$i]["l_name"]; ?></td>
                                         <td><?php echo $bill_data[$i]["email"]; ?></td>
                                         <td><?php echo $bill_data[$i]["phone"]; ?></td>

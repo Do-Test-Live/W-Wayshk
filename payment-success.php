@@ -121,6 +121,9 @@ if (!empty($_GET['session_id'])) {
 
 <?php if ($statusMsg=="Your Payment has been Successful!") {
 
+    $order_id = $db_handle->runQuery("SELECT id FROM `billing_details` ORDER BY id desc limit 1");
+    $id = $order_id[0]['id'];
+
     $email_to = $customer_email;
     $subject = 'Wayshk';
 
@@ -134,7 +137,7 @@ if (!empty($_GET['session_id'])) {
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
                     <h3 style='color:black'>Payment Successful</h3>
                     <p style='color:black;'>
-                    Thank you for payment.
+                    Your Payment has been received successfully. Please download your order summary copy from: <a href='https://wayshk.ngt.hk/print_receipt.php?id=$id' target='_blank'>Here</a>
                     </p>
                 </div>
                 </body>

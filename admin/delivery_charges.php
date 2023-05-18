@@ -72,7 +72,7 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Minimum Charges Applied Upto Weight (KG)</label>
+                                            <label class="col-sm-3 col-form-label">Minimum Charges Applied Upto Weight (GM)</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="weight_upto"
                                                        placeholder="Category Name"
@@ -80,7 +80,7 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Additional Charge for per KG</label>
+                                            <label class="col-sm-3 col-form-label">Additional Charge for per GM</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="additional_charges"
                                                        placeholder="Additional Charge"

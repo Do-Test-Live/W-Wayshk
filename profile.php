@@ -129,7 +129,7 @@ include('include/header.php');
                                 <thead>
                                 <tr>
                                     <th>SL No</th>
-                                    <th>Invoice Number</th>
+                                    <th>Order Number</th>
                                     <th>Payment Type</th>
                                     <th>Shipping Method</th>
                                     <th>Price</th>
