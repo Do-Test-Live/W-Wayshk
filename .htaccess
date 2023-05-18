@@ -20,6 +20,8 @@ RewriteRule ^Living-Seeds-Children-EN en_living-seeds-children.php [NE,L]
 
 RewriteRule ^Living-Seeds-Children living-seeds-children.php [NE,L]
 
+RewriteRule ^Textbook-Details textbook_details.php [NE,L]
+
 RewriteRule ^Textbook-Download-EN en_occupational-therapy-courses.php [NE,L]
 
 RewriteRule ^Textbook-Download occupational-therapy-courses.php [NE,L]
@@ -42,23 +44,15 @@ RewriteRule ^Checkout checkout.php [NE,L]
 
 RewriteRule ^Payment payment.php [NE,L]
 
-RewriteRule ^1-Course-EN en_course_details.php [NE,L]
-
-RewriteRule ^1-Course course_details.php [NE,L]
-
-RewriteRule ^2-Course-EN en_second_course_details.php [NE,L]
-
-RewriteRule ^2-Course second_course_details.php [NE,L]
-
 RewriteRule ^Membership-Program-EN en_membership.php [NE,L]
 
 RewriteRule ^Membership-Program membership.php [NE,L]
 
 RewriteRule ^Wish-List whitelist.php [NE,L]
 
-RewriteRule ^Course course.php [NE,L]
-
 RewriteRule ^Course-Details course_details.php [NE,L]
+
+RewriteRule ^Course course.php [NE,L]
 
 RewriteRule ^Search-Result search_result.php [NE,L]
 

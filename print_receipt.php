@@ -580,7 +580,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             <div class="cs-invoice_head cs-type1 cs-mb25">
                 <div class="cs-invoice_left">
 
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收據 / Receipt</p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">概括 / Summary</p>
                     <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票號碼：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
                     <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">日期: </b>
                         <?php

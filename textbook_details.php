@@ -8,7 +8,7 @@ $db_handle = new DBController();
 
 $id = $_GET['id'];
 
-$fetch_details = $db_handle->runQuery("select * from course where course_id = '$id'");
+$fetch_details = $db_handle->runQuery("select * from textbook where id = '$id'");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $fetch_details = $db_handle->runQuery("select * from course where course_id = '$
     <meta name="keywords" content="Wayshk">
     <meta name="author" content="Wayshk">
     <link rel="icon" href="assets/images/favicon/2.png" type="image/x-icon">
-    <title>Course Details | Wayshk </title>
+    <title>Textbooks Details | Wayshk </title>
 
     <?php include('include/css.php'); ?>
     <style>
@@ -64,42 +64,36 @@ include('include/header.php');
 <section class="contact-box-section mb-5 mt-5">
     <div class="container-fluid-lg">
         <div class="row mx-auto">
-            <img class="img-fluid" src="admin/<?php echo $fetch_details[0]['course_image']; ?>" alt="course details"
+            <img class="img-fluid" src="admin/<?php echo $fetch_details[0]['image']; ?>" alt="course details"
                  style="max-width: 700px;">
         </div>
         <div class="row g-lg-5 g-3 mt-5">
             <h1><?php
                 if ($_SESSION['language'] === 'CN')
-                    echo $fetch_details[0]['course_name'];
+                    echo $fetch_details[0]['textbook_title'];
                 else
-                    echo $fetch_details[0]['course_name_en']; ?>
+                    echo $fetch_details[0]['textbook_title_en']; ?>
             </h1>
             <table style="border: 1px solid #000000; margin: 25px; max-width:400px;padding: 15px;">
                 <thead>
                 <tr>
-                    <td style="border: 1px solid #000000">
-                        <?php
-                        if($_SESSION['language'] === 'CN')
-                            echo '課程價格';
-                        else
-                            echo 'Course Price'
-                        ?></td>
-                    <td style="border: 1px solid #000000"><?php echo $fetch_details[0]['course_price']; ?></td>
+                    <td style="border: 1px solid #000000">Points Required to Download</td>
+                    <td style="border: 1px solid #000000"><?php echo $fetch_details[0]['textbook_point']; ?></td>
                 </tr>
                 </thead>
             </table>
             <p>
                 <?php
                 if ($_SESSION['language'] === 'CN')
-                    echo $fetch_details[0]['course_description'];
+                    echo $fetch_details[0]['textbook_details'];
                 else
-                    echo $fetch_details[0]['course_description_en'];
+                    echo $fetch_details[0]['textbook_details_en'];
                 ?>
             </p>
             <div class="row mt-3">
                 <div class="col-3">
-                    <a href="#" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
-                        <?php if($_SESSION['language'] === 'CN') echo '現在下單'; else echo 'Order Now';?>  <i class="fa-solid fa-right-long icon ms-2"></i></a>
+                    <a href="textbookBuy.php?id=<?php echo $id;?>" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
+                       <?php if($_SESSION['language'] === 'CN') echo '下載'; else echo 'Download';?>  <i class="fa-solid fa-right-long icon ms-2"></i></a>
                 </div>
             </div>
 

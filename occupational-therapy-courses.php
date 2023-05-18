@@ -78,14 +78,14 @@ include('include/header.php');
                         <div class="col-xxl-4 col-sm-6 ms-auto mt-3">
                             <div class="blog-box wow fadeInUp">
                                 <div class="blog-image">
-                                    <a href="#">
+                                    <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>">
                                         <img src="admin/<?php echo $textbook[$i]['image']; ?>"
                                              class="bg-img blur-up lazyload" alt="">
                                     </a>
                                 </div>
 
                                 <div class="blog-contain">
-                                    <a href="#">
+                                    <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>">
                                         <h3>
                                             <?php
                                             if ($_SESSION['language'] == 'CN')
@@ -104,8 +104,8 @@ include('include/header.php');
                                             <p><?php if($_SESSION['language'] === 'CN') echo '積分'; else echo 'Points: ';?> <?php echo $textbook[$i]['textbook_point']; ?></p>
                                         </div>
                                     </div>
-                                    <button onclick="#" class="blog-button"><?php if ($_SESSION['language'] === 'CN') echo '下載'; else echo 'Download';?><i class="fa-solid fa-right-long"></i>
-                                    </button>
+                                    <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>" class="blog-button"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'View Details';?><i class="fa-solid fa-right-long"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>

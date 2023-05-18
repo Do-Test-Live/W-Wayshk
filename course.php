@@ -89,14 +89,14 @@ include('include/header.php');
                     <div class="col-xxl-4 col-sm-6 ms-auto mt-3">
                         <div class="blog-box wow fadeInUp">
                             <div class="blog-image">
-                                <a href="#">
+                                <a href="Course-Details?id=<?php echo $fetch_course[$i]['course_id'];?>">
                                     <img src="admin/<?php echo $fetch_course[$i]['course_image'];?>"
                                          class="bg-img blur-up lazyload" alt="">
                                 </a>
                             </div>
 
                             <div class="blog-contain">
-                                <a href="#">
+                                <a href="Course-Details?id=<?php echo $fetch_course[$i]['course_id'];?>">
                                     <h3><?php
                                         if($_SESSION['language'] === 'CN')
                                             echo $fetch_course[$i]['course_name'];
@@ -117,7 +117,7 @@ include('include/header.php');
                                     <span class="time"><span><?php echo $fetch_course[$i]['course_price'];?> HKD</span></span>
                                     <span class="super"><span>Low-income families $500</span></span>
                                 </div>
-                                <button onclick="#" class="blog-button"><?php
+                                <button onclick="window.location.href='Course-Details?id=<?php echo $fetch_course[$i]['course_id'];?>'" class="blog-button"><?php
                                     if($_SESSION['language'] === 'CN')
                                         echo '查看課程';
                                     else
