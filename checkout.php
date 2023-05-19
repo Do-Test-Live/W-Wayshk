@@ -1,10 +1,15 @@
 <?php
 session_start();
-if (isset($_SESSION['id'])) {
-    $customer_id = $_SESSION['id'];
-}
 include('admin/include/dbController.php');
 $db_handle = new DBController();
+$flag = 0;
+
+if (isset($_SESSION['id'])) {
+    $flag = 1;
+    $customer_id = $_SESSION['id'];
+    $fetch_customer_details = $db_handle->runQuery("select * from customer where id = '$customer_id'");
+}
+
 
 if (!isset($_SESSION["cart_item"])) {
     echo "<script>
@@ -113,7 +118,7 @@ include('include/header.php');
                                                         <div class="row">
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="f_name"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '名'; else echo 'First Name';?>" required="">
+                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['customer_name'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '名'; else echo 'First Name';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-6 mb-3">
                                                                 <input type="text" class="form-control" name="l_name"
@@ -121,24 +126,24 @@ include('include/header.php');
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="email"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電子郵件'; else echo 'Email';?>" required="">
+                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['email'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電子郵件'; else echo 'Email';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="phone_number"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電話號碼'; else echo 'Phone Number';?>"
+                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['number'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '電話號碼'; else echo 'Phone Number';?>"
                                                                        required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="address"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '街道地址（自取客人請填寫 自取）'; else echo 'Street Address (For self-pickup customers, fill in self-pickup)';?>" required="">
+                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['address'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '街道地址（自取客人請填寫 自取）'; else echo 'Street Address (For self-pickup customers, fill in self-pickup)';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
-                                                                <input type="text" class="form-control" name="city" value=""
+                                                                <input type="text" class="form-control" name="city" value="<?php if($flag == '1') echo $fetch_customer_details[0]['city'];?>"
                                                                        placeholder="<?php if($_SESSION['language'] === 'CN') echo '城市'; else echo 'City';?>" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="zip_code"
-                                                                       value="" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼（香港顧客請填寫 00000）'; else echo 'Zip Code (For customers from Hong Kong, fill in 00000)';?>" maxlength="5"
+                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['zip_code'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼（香港顧客請填寫 00000）'; else echo 'Zip Code (For customers from Hong Kong, fill in 00000)';?>" maxlength="5"
                                                                        minlength="5" required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">

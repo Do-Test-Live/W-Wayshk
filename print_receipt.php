@@ -699,11 +699,12 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </svg>
                 </div>
                 <div class="cs-note_right">
-                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方法:</b></p>
-                    <p class="cs-m0">1) 郵寄支票 ：支票抬頭請書明受款人為「 Wayshk」，信封請註明 Attn: Wayshk
-                        並郵寄往大圍成運路 21-23 號群力工業大廈 3 樓 1 室</p>
-                    <p class="cs-m0">2) 直接存款 ：銀行戶口號碼為 769-334699-883 （恆生銀行）
-                        銀行戶口名稱: Wayshk</p>
+                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方式</b></p>
+                    <p class="cs-m0">自取時以現金付款</p>
+                    <p class="cs-m0">PayMe （電話： +852 5265 7359）</p>
+                    <p class="cs-m0">轉數款 FPS （電話： +852 5265 7359）</p>
+                    <p class="cs-m0">銀行入數戶口號碼為 769-334699-883 (恆生銀行) 戶口名稱: Wayshk</p>
+                    <p class="cs-m0">Whatsapp: +852 56058389 | Email: wayshk.order@gmail.com</p>
                 </div>
             </div>
         </div>

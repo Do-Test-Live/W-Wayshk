@@ -41,7 +41,7 @@ if (isset($_POST["placeOrder"])) {
     $total_purchase = 0;
     $purchase_points = 0;
 
-    if (!empty($_POST['addInfo'])) {
+    if (isset($_POST['addInfo'])) {
         $addInfo = 1;
     }
 
@@ -98,8 +98,8 @@ if (isset($_POST["placeOrder"])) {
     $password = randomPassword();
 
     $info = '';
-    if ($customer_id = 0) {
-        $select = $db_handle->runQuery("SELECT * FROM customer where email='$email'");
+    if (!isset($_SESSION['id'])) {
+        $select = $db_handle->numRows("SELECT * FROM customer where email='$email'");
         if ($select == 0 && $addInfo == 1) {
             $info = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `address`, 
                        `city`, `zip_code`, `password`, `inserted_at`, `updated_at`) 
