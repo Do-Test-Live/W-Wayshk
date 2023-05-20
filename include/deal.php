@@ -22,12 +22,12 @@
                             ?>
                             <li class="list-1">
                                 <div class="deal-offer-contain">
-                                    <a href="shop.php" class="deal-image">
+                                    <a href="Product-Details?product_id=<?php echo $product[0]['id'];?>" class="deal-image">
                                         <img src="admin/<?php echo $image[0];?>" class="blur-up lazyload"
                                              alt="">
                                     </a>
 
-                                    <a href="shop.php" class="deal-contain">
+                                    <a href="Product-Details?product_id=<?php echo $product[0]['id'];?>" class="deal-contain">
                                         <h5><?php if($_SESSION['language'] === 'CN')echo $product[$i]['p_name']; else echo $product[$i]['p_name_en'];?></h5>
                                         <h6><?php echo $product[$i]['product_price']?></h6>
                                     </a>
