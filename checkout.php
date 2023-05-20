@@ -315,7 +315,7 @@ include('include/header.php');
                                                             <div class="custom-form-check form-check mb-0">
                                                                 <label class="form-check-label" for="card"><input
                                                                             class="form-check-input mt-0" type="radio"
-                                                                            name="payment" value="Credit Card" id="card">
+                                                                            name="payment" value="Credit Card" id="card" onclick="applyExtraFee();">
                                                                     <?php if($_SESSION['language'] === 'CN') echo '信用卡支付 【需支付額外5% 手續費】'; else echo 'Credit card payment [an additional 5% handling fee is required]';?></label>
                                                             </div>
                                                         </div>
@@ -364,7 +364,7 @@ include('include/header.php');
                                             <img src="admin/<?php echo str_replace("650", "250", strtok($item['image'],',')); ?>"
                                                  class="img-fluid blur-up lazyloaded checkout-image" alt="">
                                             <h4><?php if($_SESSION['language'] === 'CN') echo $item["name"]; else echo $item["en_name"];?> <span>X <?php echo $item["quantity"]; ?></span></h4>
-                                            <h4 class="price"><?php echo "HK$ " . number_format($item_price, 2); ?></h4>
+                                            <h4 class="price"><?php echo "HKD " . number_format($item_price, 2); ?></h4>
                                         </li>
                                         <?php
                                         $total_quantity_new += $item["quantity"];
@@ -499,6 +499,11 @@ include('include/footer.php');
         });
     });
 </script>
+
+
+
+
+
 <!-- jquery ui-->
 <script src="assets/js/jquery-ui.min.js"></script>
 

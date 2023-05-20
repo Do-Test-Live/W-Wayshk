@@ -52,6 +52,7 @@ if (isset($_POST["placeOrder"])) {
         $total_purchase += $item["quantity"] * $item["price"];
     }
 
+
     if ($customer_id != 0) {
         $purchase_points = floor($total_purchase);
 
@@ -91,6 +92,7 @@ if (isset($_POST["placeOrder"])) {
 
         $invoice = $db_handle->insertQuery("INSERT INTO `invoice_details`( `customer_id`, `billing_id`,`product_id`, `product_name`,`product_quantity`, `product_unit_price`,`product_total_price`, `updated_at`) VALUES ('$customer_id','$id','$product_id','$name','$quantity','$unit_price','$item_price', '$updated_at')");
     }
+
     unset($_SESSION["cart_item"]);
 
     $name = $f_name . ' ' . $l_name;
@@ -267,6 +269,7 @@ if (isset($_POST["placeOrder"])) {
 
     // Create a Checkout Session with the selected product
     const createCheckoutSession = function (stripe) {
+        <?php $total_purchase = (int)$total_purchase + ((int)$total_purchase * 0.05);?>
         return fetch("payment_init.php?total_purchase=<?php echo $total_purchase; ?>", {
             method: "POST",
             headers: {
