@@ -74,5 +74,7 @@ RewriteRule ^Add-Textbook add_textbook.php [NE,L]
 
 RewriteRule ^Textbook textbook.php [NE,L]
 
+RewriteRule ^Invoice invoice.php [NE,L]
+
 
 

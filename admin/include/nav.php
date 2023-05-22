@@ -139,6 +139,12 @@
                     <span class="nav-text">Update Files</span>
                 </a>
             </li>
+            <li>
+                <a href="Invoice">
+                    <i class="flaticon-381-save"></i>
+                    <span class="nav-text">Invoice</span>
+                </a>
+            </li>
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
