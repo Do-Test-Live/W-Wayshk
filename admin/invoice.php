@@ -123,20 +123,20 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                     </div>
 
-                                    <table id="example3" class="display min-w850">
+                                    <table id="productTable" class="display min-w850">
                                         <thead>
                                         <tr>
                                             <th>Product Code</th>
                                             <th>Unit Price</th>
                                             <th>QTY</th>
                                             <th>Sub total</th>
-                                            <th>Add</th>
+                                            <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
+                                        <tr class="productRow mt-5">
                                             <td>
-                                                <select name="product" id="mySelect">
+                                                <select name="product[]" class="productSelect">
                                                     <?php
                                                     $fetch_product = $db_handle->runQuery("select * from product");
                                                     $no_fetch_product = $db_handle->numRows("select * from product");
@@ -148,10 +148,13 @@ if (!isset($_SESSION['userid'])) {
                                                     ?>
                                                 </select>
                                             </td>
-                                            <td><input type="text" name="unit_price"></td>
-                                            <td><input type="text" name="Quantity"></td>
-                                            <td><input type="text" name="Sub_total"></td>
-                                            <td><button type="button" class="btn btn-primary">Add</button></td>
+                                            <td><input type="text" name="unit_price[]"></td>
+                                            <td><input type="text" name="quantity[]"></td>
+                                            <td><input type="text" name="subtotal[]"></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary addRow">Add</button>
+                                                <button type="button" class="btn btn-danger removeRow">Remove</button>
+                                            </td>
                                         </tr>
                                         </tbody>
                                         <tfoot>
@@ -171,7 +174,7 @@ if (!isset($_SESSION['userid'])) {
                                     </table>
 
                                     <div class="text-center mt-5">
-                                        <button type="submit" class="btn btn-primary w-50" name="add_cat">Submit</button>
+                                        <button type="submit" class="btn btn-primary w-50" name="add_invoice">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -191,24 +194,40 @@ if (!isset($_SESSION['userid'])) {
 <!--**********************************
     Main wrapper end
 ***********************************-->
-<script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--<script>
     // Initialize Select2
     $(document).ready(function () {
-        $('#mySelect').select2();
+        $('.productSelect').select2();
     });
 
-</script>
+</script>-->
 
 <script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<script>
-    // Wait for the document to be ready
     $(document).ready(function() {
-        // Add an event listener to the 'change' event of the select field
-        $('#mySelect').change(function() {
-            // Get the selected option value
+
+        // Add event listener to the "Add" button
+        $(document).on('click', '.addRow', function() {
+            var row = $(this).closest('tr').clone();
+            row.find('.addRow').removeClass('addRow').addClass('removeRow').text('Remove');
+            $('tbody').append(row);
+            $('tbody tr:last').find('.removeRow').not(':first').remove(); // Remove "Remove" button from previous rows
+        });
+
+
+        // Add event listener to the "Remove" button
+        $(document).on('click', '.removeRow', function() {
+            $(this).closest('tr').remove();
+            calculateTotal(); // Recalculate the total when a row is removed
+        });
+
+        // Add event listener to the "change" event of the product select field
+        $(document).on('change', '.productSelect', function() {
             var selectedProductId = $(this).val();
+            var currentRow = $(this).closest('tr');
 
             // Send an AJAX request to fetch the unit price from the database
             $.ajax({
@@ -216,11 +235,60 @@ if (!isset($_SESSION['userid'])) {
                 type: 'POST',
                 data: { productId: selectedProductId }, // Send the selected product ID as data
                 success: function(response) {
-                    // Update the unit_price input field with the fetched value
-                    $('input[name="unit_price"]').val(response);
+                    currentRow.find('input[name="unit_price[]"]').val(response);
+                    calculateSubtotal(currentRow);
                 }
             });
         });
+
+        // Add event listeners to the unit price and quantity fields
+        $(document).on('change', 'input[name="unit_price[]"], input[name="quantity[]"]', function() {
+            var currentRow = $(this).closest('tr');
+            calculateSubtotal(currentRow);
+        });
+
+        // Function to calculate and update the subtotal field in a specific row
+        function calculateSubtotal(row) {
+            var unitPrice = parseFloat(row.find('input[name="unit_price[]"]').val());
+            var quantity = parseFloat(row.find('input[name="quantity[]"]').val());
+
+            // Calculate the subtotal
+            var subtotal = unitPrice * quantity;
+
+            // Update the subtotal input field in the current row
+            row.find('input[name="subtotal[]"]').val(subtotal);
+
+            calculateTotal(); // Recalculate the total whenever a subtotal is updated
+        }
+
+        // Add event listeners to the discount and shipping fee fields
+        $(document).on('change', 'input[name="discount"], input[name="shipping_fee"]', function() {
+            calculateTotal();
+        });
+
+        // Function to calculate and update the total field
+        function calculateTotal() {
+            var subtotalSum = 0;
+            var discount = parseFloat($('input[name="discount"]').val()) || 0;
+            var shippingFee = parseFloat($('input[name="shipping_fee"]').val()) || 0;
+
+            // Iterate over each row and sum up the subtotals
+            $('input[name="subtotal[]"]').each(function() {
+                var subtotal = parseFloat($(this).val());
+                if (!isNaN(subtotal)) {
+                    subtotalSum += subtotal;
+                }
+            });
+
+            // Calculate the total
+            var total = subtotalSum + shippingFee - discount;
+
+            // Update the total input field
+            $('input[name="total"]').val(total);
+        }
+
+        // Call the calculateTotal function initially to set the initial total value
+        calculateTotal();
     });
 </script>
 

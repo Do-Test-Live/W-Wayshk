@@ -536,7 +536,7 @@ if (isset($_SESSION["cart_item"])) {
         </li>
 
         <li>
-            <a href="#" class="search-box">
+            <a href="#" class="search-box" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="fa-solid fa-magnifying-glass text-white" style="font-size: 18px"></i>
             </a>
         </li>
@@ -546,5 +546,33 @@ if (isset($_SESSION["cart_item"])) {
             </a>
         </li>
     </ul>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="Search-Result" method="post">
+                    <div class="search-box">
+                        <div class="input-group">
+                            <input type="search" class="form-control" name="search" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '我正在尋找'; else echo 'I am searching for';?>"
+                                   aria-label="Recipient's username" aria-describedby="button-addon2" id="search">
+                            <button class="btn search-button-2" type="submit" name="search_button" id="button-addon2">
+                                <i data-feather="search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- mobile fix menu end -->

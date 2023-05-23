@@ -141,7 +141,7 @@
             </li>
             <li>
                 <a href="Invoice">
-                    <i class="flaticon-381-save"></i>
+                    <i class="flaticon-381-record"></i>
                     <span class="nav-text">Invoice</span>
                 </a>
             </li>

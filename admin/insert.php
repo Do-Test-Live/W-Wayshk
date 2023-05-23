@@ -272,3 +272,49 @@ if(isset($_POST['add_textbook'])){
         }
     }
 }
+
+
+if(isset($_POST['add_invoice'])){
+    // Retrieve the values from the form fields
+    $inserted_at = date("Y-m-d H:i:s");
+    $note = $_POST['platform'];
+    $paymentMethod = $_POST['payment_method'];
+    $deliveryMethods = $_POST['delivery_methods'];
+    $organizationName = $_POST['organization_name'];
+    $contactPersonName = $_POST['c_name'];
+    $contactPersonEmail = $_POST['c_email'];
+    $contactPersonPhone = $_POST['phone'];
+    $address = $_POST['address'];
+    $discount = $_POST['discount'];
+    $shipping_fee = $_POST['shipping_fee'];
+    $total = $_POST['total'];
+
+    // Retrieve the values of the appended rows
+    $productCodes = $_POST['product'];
+    $unitPrices = $_POST['unit_price'];
+    $quantities = $_POST['quantity'];
+    $subtotals = $_POST['subtotal'];
+
+    // Convert the variables to arrays if they are not already
+    $productCodes = is_array($productCodes) ? $productCodes : [$productCodes];
+    $unitPrices = is_array($unitPrices) ? $unitPrices : [$unitPrices];
+    $quantities = is_array($quantities) ? $quantities : [$quantities];
+    $subtotals = is_array($subtotals) ? $subtotals : [$subtotals];
+
+    $insertBillingDetails = $db_handle->insertQuery("INSERT INTO `billing_details`(`f_name`, `organization_name`, `email`, `phone`, `address`, `payment_type`, `shipping_method`, `discount`, `note`, `total_purchase`, `delivery_charges`, `purchase_points`, `updated_at`) VALUES ('$contactPersonName','$organizationName','$contactPersonEmail','$contactPersonPhone','$address','$paymentMethod','$deliveryMethods','$discount','$note','$total','$shipping_fee','0','$inserted_at')");
+
+    $fetchBillNumber = $db_handle->runQuery("select id from billing_details order by id desc limit 1");
+    $billId = $fetchBillNumber[0]['id'];
+
+    // Display the values of the appended rows
+    for ($i = 0; $i < count($productCodes); $i++) {
+        $fetchProductName = $db_handle->runQuery("select p_name from product where id = '$productCodes[$i]'");
+        $productName = $fetchProductName[0]['p_name'];
+        $insertProducts = $db_handle->insertQuery("INSERT INTO `invoice_details`(`customer_id`, `billing_id`, `product_id`, `product_name`, `product_quantity`, `product_unit_price`, `product_total_price`, `updated_at`) VALUES ('0','$billId','$productCodes[$i]','$productName','$quantities[$i]','$unitPrices[$i]','$subtotals[$i]','$inserted_at')");
+    }
+
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Invoice';
+                </script>";
+}
