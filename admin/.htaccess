@@ -76,5 +76,9 @@ RewriteRule ^Textbook textbook.php [NE,L]
 
 RewriteRule ^Invoice invoice.php [NE,L]
 
+RewriteRule ^Add-Book-Keeping add_bookkeeping.php [NE,L]
+
+RewriteRule ^Book-Keeping bookkeeping.php [NE,L]
+
 
 

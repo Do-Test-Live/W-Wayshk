@@ -432,3 +432,53 @@ if (isset($_POST['updateTextbook'])) {
 
 }
 
+
+if (isset($_POST['updateBook'])) {
+    $id = $db_handle->checkValue($_POST['id']);
+    $date = $db_handle->checkValue($_POST['date']);
+    $store_name = $db_handle->checkValue($_POST['store_name']);
+    $type = $db_handle->checkValue($_POST['type']);
+    $item_name = $db_handle->checkValue($_POST['item_name']);
+    $amount = $db_handle->checkValue($_POST['amount']);
+    $payer = $db_handle->checkValue($_POST['payer']);
+    $payment_method = $db_handle->checkValue($_POST['payment_method']);
+
+    $query = '';
+
+    $updated_at = date("Y-m-d H:i:s");
+
+    if (!empty($_FILES['images']['tmp_name'][0])) {
+        // Unlink previous images
+        $fetch_image = $db_handle->runQuery("SELECT image FROM book_keeping WHERE bookkeeping_id={$id}");
+        $img = explode(',', $fetch_image[0]['image']);
+        foreach ($img as $i) {
+            unlink($i);
+        }
+
+        // Move and store new images with random numbers
+        $dataFileName = [];
+        $totalFiles = count($_FILES['images']['tmp_name']);
+        for ($i = 0; $i < $totalFiles; $i++) {
+            $tempFilePath = $_FILES['images']['tmp_name'][$i];
+            if ($tempFilePath != "") {
+                $fileExtension = pathinfo($_FILES['images']['name'][$i], PATHINFO_EXTENSION);
+                $fileName = uniqid() . '_' . $fileExtension; // Generate unique file name with random number
+                $targetFilePath = "assets/book_keeping/" . $fileName; // Specify the target directory for uploaded files
+                move_uploaded_file($tempFilePath, $targetFilePath);
+                $dataFileName[] = $targetFilePath;
+            }
+        }
+
+        $databaseValue = implode(',', $dataFileName);
+        $query .= ", `image`='" . $databaseValue . "'";
+    }
+
+    $data = $db_handle->insertQuery("UPDATE `book_keeping` SET `date`='$date',`store_name`='$store_name',`type`='$type',`item_name`='$item_name',`amount`='$amount',`payer`='$payer',`payment_method`='$payment_method'" . $query . " WHERE bookkeeping_id={$id}");
+    if ($data) {
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Book-Keeping';
+                </script>";
+    }
+}
+

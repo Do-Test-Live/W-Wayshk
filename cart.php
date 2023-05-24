@@ -198,8 +198,7 @@ include('include/header.php');
                             <?php
                         } else{
                             ?>
-                            你有 <?php echo $points; ?> 您帳戶中的積分。
-                            至少需要 40 積分才能製作 1 HKD。
+                            您帳戶中有 <?php echo $points; ?> 積分。最少需要40積分才能兌換1 HKD。
                             <?php
                         }
                         ?>
@@ -210,7 +209,12 @@ include('include/header.php');
                         <input class="form-check-input" type="checkbox" value=""
                                id="applyPoints" <?php if ($points / 40 < 1) echo 'disabled'; ?>>
                         <label class="form-check-label" for="applyPoints">
-                            Apply points for discounts.
+                            <?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '申請積分可享折扣。';
+                            else
+                                echo 'Apply points for discounts.';
+                            ?>
                         </label>
                     </div>
                 </div>
@@ -219,7 +223,7 @@ include('include/header.php');
                 <div class="coupon-cart">
                     <h6 class="text-content mb-2"><?php
                         if ($_SESSION['language'] === 'CN')
-                            echo '申請優惠卷';
+                            echo '使用優惠卷';
                         else
                             echo 'Coupon Apply';
                         ?></h6>
@@ -229,13 +233,13 @@ include('include/header.php');
                                value="<?php echo $total_price_new; ?>"/>
                         <input type="text" class="form-control" id="coupon" placeholder="<?php
                         if ($_SESSION['language'] === 'CN')
-                            echo '輸入優惠卷號碼';
+                            echo '輸入優惠卷編碼';
                         else
                             echo 'Enter the Coupon Code Here...'
                         ?>">
                         <button style="border: 1px solid black" class="btn btn-light" onclick="applyCoupon();"><?php
                             if ($_SESSION['language'] === 'CN')
-                                echo '申請';
+                                echo '使用';
                             else
                                 echo 'Apply';
                             ?></button>

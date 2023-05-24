@@ -109,6 +109,18 @@
                     <li><a href="Confirm-Order">Complete order</a></li>
                 </ul>
             </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-panel"></i>
+                    <span class="nav-text">Book Keeping</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="Add-Book-Keeping">Add</a></li>
+                    <li><a href="Book-Keeping">View</a></li>
+                </ul>
+            </li>
+
             <li>
                 <a href="Review" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-6"></i>

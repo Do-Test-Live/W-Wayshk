@@ -318,3 +318,50 @@ if(isset($_POST['add_invoice'])){
                 window.location.href='Invoice';
                 </script>";
 }
+
+
+if(isset($_POST['add_bookkeeping'])){
+    $recept_no = $db_handle->checkValue($_POST['recept_no']);
+    $date = $db_handle->checkValue($_POST['date']);
+    $store_name = $db_handle->checkValue($_POST['store_name']);
+    $type = $db_handle->checkValue($_POST['type']);
+    $item_name = $db_handle->checkValue($_POST['item_name']);
+    $amount = $db_handle->checkValue($_POST['amount']);
+    $payer = $db_handle->checkValue($_POST['payer']);
+    $payment_methods = $db_handle->checkValue($_POST['payment_methods']);
+
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $receipt_image='';
+    $arr = array();
+    if (!empty($_FILES['bimage']['name'][0])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+
+        foreach ($_FILES['bimage']['name'] as $key => $tmp_name) {
+
+            $file_name = $RandomAccountNumber.$key."_" . $_FILES['bimage']['name'][$key];
+            $file_size = $_FILES['bimage']['size'][$key];
+            $file_tmp = $_FILES['bimage']['tmp_name'][$key];
+            $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+
+            if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg" && $file_type != "pdf") {
+                $products_image = '';
+            } else {
+                move_uploaded_file($file_tmp, "assets/book_keeping/" .$file_name);
+                $arr[] = "assets/book_keeping/" . $file_name;
+            }
+        }
+        $receipt_image = implode(',', $arr);
+    } else {
+        $receipt_image = '';
+    }
+
+    $insert = $db_handle->insertQuery("INSERT INTO `book_keeping`(`recept_no`, `date`, `store_name`, `type`, `item_name`, `amount`, `payer`, `payment_method`, `image`, `inserted_at`) 
+VALUES ('$recept_no','$date','$store_name','$type','$item_name','$amount','$payer','$payment_methods','$receipt_image','$inserted_at')");
+    if($insert){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Book-Keeping';
+                </script>";
+    }
+}

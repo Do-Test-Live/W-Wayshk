@@ -54,3 +54,8 @@ if(isset($_GET['textBookId'])){
     echo 'success';
 }
 
+if(isset($_GET['bookId'])){
+    $db_handle->insertQuery("delete from book_keeping where bookkeeping_id =" . $_GET['bookId'] . "");
+    echo 'success';
+}
+
