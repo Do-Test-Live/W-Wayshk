@@ -274,7 +274,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="PayMe"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="PayMe" id="PayMe">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo ' PayMe （電話： +852 5265 7359）'; else echo 'PayMe (Tel: +852 5265 7359)';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo ' PayMe<br>電話：+852 5265 7359'; else echo 'PayMe (Tel: +852 5265 7359)';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -288,7 +288,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="fps"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Transfer FPS" id="fps">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '轉數款 FPS （電話： +852 5265 7359）'; else echo 'Transfer FPS (Tel: +852 5265 7359)';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '轉數款 FPS <br> 電話： +852 5265 7359'; else echo 'Transfer FPS (Tel: +852 5265 7359)';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -302,7 +302,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="Bank"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Bank Deposit" id="Bank">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '銀行入數戶口號碼為 769-334699-883 (恆生銀行) 戶口名稱: Wayshk'; else echo 'Bank deposit Account number : 769-334699-883 (Hang Seng Bank) Account name : Wayshk';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '銀行入數戶口號碼為 <br>769-334699-883 (恆生銀行) <br>戶口名稱: Wayshk'; else echo 'Bank deposit Account number : 769-334699-883 (Hang Seng Bank) Account name : Wayshk';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -316,7 +316,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="card"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Credit Card" id="card" onclick="applyExtraFee();">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '信用卡支付 【需支付額外5% 手續費】'; else echo 'Credit card payment [an additional 5% handling fee is required]';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '信用卡支付 <br>需支付額外5% 手續費'; else echo 'Credit card payment [an additional 5% handling fee is required]';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -330,7 +330,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="Check"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Check" id="Check">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '支票付款 （只限機構/學校訂單）'; else echo 'Payment by Check (for Institutional/School Orders Only)';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '支票付款 <br> 只限機構/學校訂單'; else echo 'Payment by Check (for Institutional/School Orders Only)';?></label>
                                                             </div>
                                                         </div>
                                                     </div>

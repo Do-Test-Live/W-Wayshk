@@ -58,7 +58,7 @@ if (isset($_POST["placeOrder"])) {
 
         if (isset($_POST['points'])) {
             if ($total_purchase >= $_POST['points'] / 40) {
-                $purchase_points = -$_POST['points'];
+                $purchase_points =- $_POST['points'];
             } else {
                 $purchase_points = (int)$total_purchase * 40 - $_POST['points'];
             }
@@ -395,6 +395,8 @@ if (isset($_POST["placeOrder"])) {
 
     }
 }
+
+$total_purchase = (int)$total_purchase + (int)$shipping - (int)$discount;
 
 ?>
 <!DOCTYPE html>
