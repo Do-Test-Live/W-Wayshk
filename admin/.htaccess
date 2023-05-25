@@ -78,7 +78,15 @@ RewriteRule ^Invoice invoice.php [NE,L]
 
 RewriteRule ^Add-Book-Keeping add_bookkeeping.php [NE,L]
 
+RewriteRule ^Book-Keeping-Report report_bookkeeping.php [NE,L]
+
 RewriteRule ^Book-Keeping bookkeeping.php [NE,L]
+
+RewriteRule ^Report_Print-Book report_print_bookkeeping.php [NE,L]
+
+
+
+
 
 
 

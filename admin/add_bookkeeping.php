@@ -79,7 +79,18 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Type</label>
-                                            <input type="text" class="form-control" name="type" placeholder="" required>
+                                            <select name="type" class="form-control">
+                                                <option value="Restock" selected>Restock</option>
+                                                <option value="Restock Shipping">Restock Shipping</option>
+                                                <option value="Shipping">Shipping</option>
+                                                <option value="Admin">Admin</option>
+                                                <option value="Salary">Salary</option>
+                                                <option value="Rent">Rent</option>
+                                                <option value="Promotions">Promotions</option>
+                                                <option value="Office Use">Office Use</option>
+                                                <option value="Packing">Packing</option>
+                                                <option value="Others">Others</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Item Name</label>
@@ -95,8 +106,16 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="text" class="form-control" placeholder="" name="payer" required>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label>Payment Methods</label>
-                                            <input type="text" class="form-control" placeholder="" name="payment_methods" required>
+                                                <label>Payment Methods </label>
+                                                <select name="payment_methods" class="form-control">
+                                                    <option value="PayMe" selected>PayMe</option>
+                                                    <option value="FPS">FPS</option>
+                                                    <option value="Credit Card">Credit Card</option>
+                                                    <option value="Alipay">Alipay</option>
+                                                    <option value="Cash">Cash</option>
+                                                    <option value="Direct Bank Transfer">Direct Bank Transfer</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
                                         </div>
 
                                         <div class="form-group col-md-12">

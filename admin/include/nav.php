@@ -118,6 +118,7 @@
                 <ul aria-expanded="false">
                     <li><a href="Add-Book-Keeping">Add</a></li>
                     <li><a href="Book-Keeping">View</a></li>
+                    <li><a href="Book-Keeping-Report">Report</a></li>
                 </ul>
             </li>
 

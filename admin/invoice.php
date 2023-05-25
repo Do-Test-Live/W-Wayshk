@@ -87,7 +87,15 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Payment Methods </label>
-                                            <input type="text" class="form-control" placeholder="" name="payment_method" required>
+                                            <select name="payment_method" class="form-control">
+                                                <option value="PayMe" selected>PayMe</option>
+                                                <option value="FPS">FPS</option>
+                                                <option value="Credit Card">Credit Card</option>
+                                                <option value="Alipay">Alipay</option>
+                                                <option value="Cash">Cash</option>
+                                                <option value="Direct Bank Transfer">Direct Bank Transfer</option>
+                                                <option value="Others">Others</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -123,7 +131,7 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                     </div>
 
-                                    <table id="productTable" class="display min-w850">
+                                    <table id="productTable" class="display min-w850 table table-striped">
                                         <thead>
                                         <tr>
                                             <th>Product Code</th>
