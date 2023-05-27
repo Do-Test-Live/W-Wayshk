@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 02:34 PM
+-- Generation Time: May 27, 2023 at 01:51 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -96,6 +96,7 @@ CREATE TABLE `billing_details` (
   `customer_id` int(11) NOT NULL,
   `f_name` varchar(150) NOT NULL,
   `l_name` varchar(100) NOT NULL,
+  `organization_name` varchar(255) NOT NULL,
   `email` varchar(150) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `address` varchar(30) NOT NULL,
@@ -117,12 +118,49 @@ CREATE TABLE `billing_details` (
 -- Dumping data for table `billing_details`
 --
 
-INSERT INTO `billing_details` (`id`, `customer_id`, `f_name`, `l_name`, `email`, `phone`, `address`, `city`, `zip_code`, `payment_type`, `shipping_method`, `discount`, `note`, `total_purchase`, `delivery_charges`, `approve`, `purchase_points`, `delivery_date`, `updated_at`) VALUES
-(1, 0, 'Mugdho', 'Saha', 'sahamugdho@gmail.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '90000', 'Check', 'Tai Wai Warehouse', 10.00, 'This is a test note', 360.00, 0.00, 3, 0, '0000-00-00', '2023-05-07 13:35:06'),
-(2, 6, 'Customer', 'Point', 'customer@test.com', '12345678', '97/6, Boyra Cross Road', 'Khulna GPO', '90000', 'Pay by cash when picking up', 'S.F. Express', 0.00, '', 920.00, 0.00, 3, 920, '0000-00-00', '2023-05-11 07:51:56'),
-(3, 0, 'Test', 'User', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Pay by cash when picking up', 'S.F. Express', 0.00, 'This is a test note', 78.00, 0.00, 3, 0, '0000-00-00', '2023-05-11 07:54:06'),
-(4, 6, 'Test', 'User', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'PayMe', 'Tai Wai Warehouse', 0.00, 'dfasdasdas', 88.00, 0.00, 3, 0, '0000-00-00', '2023-05-11 08:05:32'),
-(5, 0, 'Test', 'User', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Pay by cash when picking up', 'Tai Wai Warehouse', 0.00, '', 45.00, 0.00, 3, 0, '0000-00-00', '2023-05-15 12:48:34');
+INSERT INTO `billing_details` (`id`, `customer_id`, `f_name`, `l_name`, `organization_name`, `email`, `phone`, `address`, `city`, `zip_code`, `payment_type`, `shipping_method`, `discount`, `note`, `total_purchase`, `delivery_charges`, `approve`, `purchase_points`, `delivery_date`, `updated_at`) VALUES
+(1, 0, 'Mugdho', 'Saha', '', 'sahamugdho@gmail.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '90000', 'Check', 'Tai Wai Warehouse', 10.00, 'This is a test note', 360.00, 0.00, 3, 0, '0000-00-00', '2023-05-07 13:35:06'),
+(2, 6, 'Customer', 'Point', '', 'customer@test.com', '12345678', '97/6, Boyra Cross Road', 'Khulna GPO', '90000', 'Pay by cash when picking up', 'S.F. Express', 0.00, '', 920.00, 0.00, 3, 920, '0000-00-00', '2023-05-11 07:51:56'),
+(3, 0, 'Test', 'User', '', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Pay by cash when picking up', 'S.F. Express', 0.00, 'This is a test note', 78.00, 0.00, 3, 0, '0000-00-00', '2023-05-11 07:54:06'),
+(4, 6, 'Test', 'User', '', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'PayMe', 'Tai Wai Warehouse', 0.00, 'dfasdasdas', 88.00, 0.00, 3, 0, '0000-00-00', '2023-05-11 08:05:32'),
+(5, 0, 'Test', 'User', '', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Pay by cash when picking up', 'Tai Wai Warehouse', 0.00, '', 45.00, 0.00, 3, 0, '0000-00-00', '2023-05-15 12:48:34'),
+(6, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Credit Card', 'S.F. Express', 0.00, '', 218.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:21:32'),
+(7, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '56/2 B K Roy Road', 'Khulna Sadar', '9100', 'Credit Card', 'Tai Wai Warehouse', 0.00, '', 75.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:28:25'),
+(8, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '56/2 B K Roy Road', 'Khulna Sadar', '9100', 'Credit Card', 'Tai Wai Warehouse', 0.00, '', 75.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:29:43'),
+(9, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '56/2 B K Roy Road', 'Khulna Sadar', '9100', 'Credit Card', 'Tai Wai Warehouse', 0.00, '', 75.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:30:08'),
+(10, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '56/2 B K Roy Road', 'Khulna Sadar', '9100', 'Credit Card', 'Tai Wai Warehouse', 0.00, '', 75.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:30:23'),
+(11, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Credit Card', 'Tai Wai Warehouse', 0.00, '', 165.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:31:58'),
+(12, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Credit Card', 'S.F. Express', 0.00, '', 530.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 12:35:04'),
+(13, 5, 'Andrew', 'Saha', '', 'test@usdt.com', '000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Credit Card', 'S.F. Express', 0.00, '', 120.00, 0.00, 3, 0, '0000-00-00', '2023-05-20 13:29:51'),
+(15, 0, 'GGG', '', '', '', '', 'Hong Kong', '', '', 'Pay Me', 'COD', 0.00, 'Website', 457.00, 120.00, 3, 0, '0000-00-00', '2023-05-23 12:00:44'),
+(16, 0, 'Test', 'User', '', 'test@test.com', '0000000000', '97/6, Boyra Cross Road', 'Khulna GPO', '9000', 'Credit Card', 'S.F. Express', 100.00, '', 1350.00, 0.00, 3, 0, '0000-00-00', '2023-05-24 13:28:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `book_keeping`
+--
+
+CREATE TABLE `book_keeping` (
+  `bookkeeping_id` int(11) NOT NULL,
+  `recept_no` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `store_name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `amount` float(10,2) NOT NULL,
+  `payer` varchar(255) NOT NULL,
+  `payment_method` varchar(255) NOT NULL,
+  `image` varchar(1000) NOT NULL,
+  `inserted_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `book_keeping`
+--
+
+INSERT INTO `book_keeping` (`bookkeeping_id`, `recept_no`, `date`, `store_name`, `type`, `item_name`, `amount`, `payer`, `payment_method`, `image`, `inserted_at`) VALUES
+(3, '001', '2023-05-24', 'Test', 'Test', 'Test Item Test', 100.00, 'Test Hello', 'COD', 'assets/book_keeping/646defc0c6f68_png,assets/book_keeping/646defc0c730a_png', '2023-05-24 17:52:16');
 
 -- --------------------------------------------------------
 
@@ -235,6 +273,29 @@ INSERT INTO `customer` (`id`, `customer_name`, `email`, `number`, `address`, `ci
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `defected_products`
+--
+
+CREATE TABLE `defected_products` (
+  `id` int(10) NOT NULL,
+  `product_id` int(10) NOT NULL,
+  `quantity` int(10) NOT NULL,
+  `note` text NOT NULL,
+  `inserted_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `defected_products`
+--
+
+INSERT INTO `defected_products` (`id`, `product_id`, `quantity`, `note`, `inserted_at`, `updated_at`) VALUES
+(1, 3, 5, 'This is for test', '2023-05-27 15:13:32', '0000-00-00 00:00:00'),
+(2, 3, 50, 'This is a test message', '2023-05-27 15:50:17', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `delivery_charges`
 --
 
@@ -251,7 +312,7 @@ CREATE TABLE `delivery_charges` (
 --
 
 INSERT INTO `delivery_charges` (`delivery_id`, `min_delivery_charge`, `weight_upto`, `next_per_kg_weight`, `min_order_free_delivery`) VALUES
-(1, 100.00, 4.00, 20.00, 1000.00);
+(1, 0.00, 4000.00, 0.00, 1000.00);
 
 -- --------------------------------------------------------
 
@@ -315,7 +376,19 @@ INSERT INTO `invoice_details` (`id`, `customer_id`, `billing_id`, `product_id`, 
 (2, 6, 2, 93, '搖滾威力平衡板', 1, 920.00, 920.00, '2023-05-11 07:51:56'),
 (3, 0, 3, 243, 'Playfoam動物學習套裝小盒', 1, 78.00, 78.00, '2023-05-11 07:54:06'),
 (4, 6, 4, 4, '香港地道小食小肌肉訓練教材', 1, 88.00, 88.00, '2023-05-11 08:05:32'),
-(5, 0, 5, 11, '刮刮聖誕卡遊戲套裝 ', 1, 45.00, 45.00, '2023-05-15 12:48:34');
+(5, 0, 5, 11, '刮刮聖誕卡遊戲套裝 ', 1, 45.00, 45.00, '2023-05-15 12:48:34'),
+(6, 5, 6, 263, '動力沙沙灘套裝', 1, 218.00, 218.00, '2023-05-20 12:21:32'),
+(7, 5, 7, 151, '學習筷子 (右手)', 1, 75.00, 75.00, '2023-05-20 12:28:25'),
+(8, 5, 8, 151, '學習筷子 (右手)', 1, 75.00, 75.00, '2023-05-20 12:29:43'),
+(9, 5, 9, 151, '學習筷子 (右手)', 1, 75.00, 75.00, '2023-05-20 12:30:08'),
+(10, 5, 10, 151, '學習筷子 (右手)', 1, 75.00, 75.00, '2023-05-20 12:30:23'),
+(11, 5, 11, 210, '觸感鬚鬚球(3件)', 1, 165.00, 165.00, '2023-05-20 12:31:58'),
+(12, 5, 12, 3, '香港味道治療膠練習工具套裝', 2, 265.00, 530.00, '2023-05-20 12:35:04'),
+(13, 5, 13, 150, '彎形叉子', 1, 120.00, 120.00, '2023-05-20 13:29:51'),
+(14, 0, 15, 19, '紅色/軟 治療膠4oz', 2, 100.00, 200.00, '2023-05-23 12:00:44'),
+(15, 0, 15, 13, '打孔火車圖卡', 5, 25.00, 125.00, '2023-05-23 12:00:44'),
+(16, 0, 15, 68, '75cm穿珠繩', 3, 4.00, 12.00, '2023-05-23 12:00:44'),
+(17, 0, 16, 94, '比力寶旋轉盤子', 3, 450.00, 1350.00, '2023-05-24 13:28:37');
 
 -- --------------------------------------------------------
 
@@ -336,8 +409,16 @@ CREATE TABLE `point` (
 
 INSERT INTO `point` (`point_id`, `customer_id`, `points`, `date`) VALUES
 (1, 6, 0, '2022-11-01 13:43:17'),
-(2, 6, 920, '2023-05-11 13:51:56'),
-(4, 6, 88, '2023-05-11 14:05:32');
+(2, 6, 0, '2023-05-11 13:51:56'),
+(4, 6, 8, '2023-05-11 14:05:32'),
+(5, 5, 218, '2023-05-20 18:21:32'),
+(6, 5, 75, '2023-05-20 18:28:25'),
+(7, 5, 75, '2023-05-20 18:29:43'),
+(8, 5, 75, '2023-05-20 18:30:08'),
+(9, 5, 75, '2023-05-20 18:30:23'),
+(10, 5, 165, '2023-05-20 18:31:58'),
+(11, 5, 530, '2023-05-20 18:35:04'),
+(12, 5, 120, '2023-05-20 19:29:51');
 
 -- --------------------------------------------------------
 
@@ -722,7 +803,7 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`stock_id`, `category_id`, `product_id`, `quantity`, `inserted_at`) VALUES
-(1, 4, 3, 150, '2023-03-15 14:46:07'),
+(1, 4, 3, 95, '2023-03-15 14:46:07'),
 (2, 5, 6, 45, '2023-03-15 14:46:23'),
 (3, 1, 41, 200, '2023-03-21 15:31:34');
 
@@ -800,7 +881,8 @@ CREATE TABLE `transactions` (
 INSERT INTO `transactions` (`id`, `billing_id`, `customer_name`, `customer_email`, `item_name`, `item_number`, `item_price`, `item_price_currency`, `paid_amount`, `paid_amount_currency`, `txn_id`, `payment_status`, `stripe_checkout_session_id`, `created`, `modified`) VALUES
 (1, 1, 'Test', 'test@test.com', '1小時30分鐘租場服務', 'DP12345', 190.00, 'hkd', 270.00, 'hkd', 'pi_3N12B9Eef0ZfRYif14rqJehd', 'succeeded', 'cs_test_a1yX3YYsa9THbO27tJI1bSmcGB65fdpiews8V43PULT8LeLxxO3vorI0Tl', '2023-04-26 12:50:41', '2023-04-26 12:50:41'),
 (2, 2, 'Test', 'test@test.com', '1小時30分鐘租場服務', 'DP12345', 190.00, 'hkd', 350.00, 'hkd', 'pi_3N12KgEef0ZfRYif0FuYqTw8', 'succeeded', 'cs_test_a1SK13VL4kKsmNvZQ9e0lgNeK1sFErMUsl5BaRzd9aW9r5LOCy82oHteeN', '2023-04-26 13:00:42', '2023-04-26 13:00:42'),
-(3, 3, 'Test', 'test@test.com', '1小時30分鐘租場服務', 'DP12345', 190.00, 'hkd', 328.00, 'hkd', 'pi_3N2Vk3Eef0ZfRYif05JjLhgt', 'succeeded', 'cs_test_a1yzipmuTmBCisShHL1xnFLu2q78e6nDviXUNu8ll80oHDCvqTCIfGipB1', '2023-04-30 14:37:15', '2023-04-30 14:37:15');
+(3, 3, 'Test', 'test@test.com', '1小時30分鐘租場服務', 'DP12345', 190.00, 'hkd', 328.00, 'hkd', 'pi_3N2Vk3Eef0ZfRYif05JjLhgt', 'succeeded', 'cs_test_a1yzipmuTmBCisShHL1xnFLu2q78e6nDviXUNu8ll80oHDCvqTCIfGipB1', '2023-04-30 14:37:15', '2023-04-30 14:37:15'),
+(4, 16, 'Test', 'test@test.com', '1小時30分鐘租場服務', 'DP12345', 190.00, 'hkd', 1312.50, 'hkd', 'pi_3NBFs1Eef0ZfRYif0QDaD8Fa', 'succeeded', 'cs_test_a17YwH4CdJLoYgDwjR9zIhF39FqIAlSvWBXS2t7JFjnLhpSTfjkjOun4Hl', '2023-05-24 17:29:47', '2023-05-24 17:29:47');
 
 -- --------------------------------------------------------
 
@@ -821,7 +903,8 @@ CREATE TABLE `wishlist` (
 
 INSERT INTO `wishlist` (`id`, `customer_id`, `product_id`, `inserted_at`) VALUES
 (1, 6, 240, '2023-05-11 19:01:55'),
-(2, 6, 106, '2023-05-11 19:04:04');
+(2, 6, 106, '2023-05-11 19:04:04'),
+(3, 6, 183, '2023-05-18 18:53:52');
 
 --
 -- Indexes for dumped tables
@@ -846,6 +929,12 @@ ALTER TABLE `billing_details`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `book_keeping`
+--
+ALTER TABLE `book_keeping`
+  ADD PRIMARY KEY (`bookkeeping_id`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
@@ -861,6 +950,12 @@ ALTER TABLE `course`
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `defected_products`
+--
+ALTER TABLE `defected_products`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -961,7 +1056,13 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `billing_details`
 --
 ALTER TABLE `billing_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `book_keeping`
+--
+ALTER TABLE `book_keeping`
+  MODIFY `bookkeeping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -980,6 +1081,12 @@ ALTER TABLE `course`
 --
 ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `defected_products`
+--
+ALTER TABLE `defected_products`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `delivery_charges`
@@ -1003,13 +1110,13 @@ ALTER TABLE `inventory`
 -- AUTO_INCREMENT for table `invoice_details`
 --
 ALTER TABLE `invoice_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `point`
 --
 ALTER TABLE `point`
-  MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -1051,13 +1158,13 @@ ALTER TABLE `textbook`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
