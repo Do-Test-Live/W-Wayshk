@@ -84,9 +84,6 @@ RewriteRule ^Book-Keeping bookkeeping.php [NE,L]
 
 RewriteRule ^Report_Print-Book report_print_bookkeeping.php [NE,L]
 
+RewriteRule ^Add-Defected-Products add_defected.php [NE,L]
 
-
-
-
-
-
+RewriteRule ^Defected-Products-List defected_list.php [NE,L]

@@ -365,3 +365,28 @@ VALUES ('$recept_no','$date','$store_name','$type','$item_name','$amount','$paye
                 </script>";
     }
 }
+
+if(isset($_POST['defected'])){
+    $product_id = $db_handle->checkValue($_POST['product_id']);
+    $quantity = $db_handle->checkValue($_POST['quantity']);
+    $note = $db_handle->checkValue($_POST['note']);
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $inserted_defected = $db_handle->insertQuery("INSERT INTO `defected_products`(`product_id`, `quantity`, `note`, `inserted_at`) VALUES ('$product_id','$quantity','$note','$inserted_at')");
+
+    if($inserted_defected){
+        $fetch_quantity = $db_handle->runQuery("select stock_id, quantity from stock where product_id = '$product_id'");
+
+        $stock_id = $fetch_quantity[0]['stock_id'];
+        $quantity_previous = $fetch_quantity[0]['quantity'];
+        $updated_quantity = $quantity_previous - $quantity;
+
+        $update_quantity = $db_handle->insertQuery("update stock set quantity = '$updated_quantity' where stock_id = '$stock_id'");
+        if($update_quantity){
+            echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Defected-Products';
+                </script>";
+        }
+    }
+}

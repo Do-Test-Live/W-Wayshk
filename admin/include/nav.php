@@ -66,6 +66,8 @@
                 <ul aria-expanded="false">
                     <li><a href="Add-Stock">Add Stock</a></li>
                     <li><a href="Stock">Stock List</a></li>
+                    <li><a href="Add-Defected-Products">Add Defected Products</a></li>
+                    <li><a href="Defected-Products-List">Defected Products List</a></li>
                 </ul>
             </li>
             <li>
