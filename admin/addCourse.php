@@ -79,7 +79,7 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Course Price for Poor Family</label>
-                                            <input type="number" class="form-control" placeholder="" name="course_price_poor" required>
+                                            <input type="number" class="form-control" placeholder="" name="course_price_poor">
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Course Image</label>
