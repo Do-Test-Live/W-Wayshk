@@ -111,8 +111,11 @@ if (!isset($_SESSION['userid'])) {
                                                 <a href="Order-Details?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1"><i
                                                             class="fa fa-eye"></i></a>
+                                                <a href="Print-Receipt?id=<?php echo $bill_data[$i]["id"]; ?>"
+                                                   class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Receipt"><i
+                                                            class="fa fa-print"></i></a>
                                                 <a href="print_invoice.php?id=<?php echo $bill_data[$i]["id"]; ?>"
-                                                   class="btn btn-primary shadow btn-xs sharp mr-1"><i
+                                                   class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Invoice"><i
                                                             class="fa fa-print"></i></a>
                                             </div>
                                         </td>
@@ -140,6 +143,12 @@ if (!isset($_SESSION['userid'])) {
 ***********************************-->
 
 <?php include 'include/js.php'; ?>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 <!-- Datatable -->
 <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="js/plugins-init/datatables.init.js"></script>
