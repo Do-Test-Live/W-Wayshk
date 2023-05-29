@@ -70,7 +70,7 @@ if (!isset($_SESSION['userid'])) {
 								<div class="media align-items-center">
 									<div class="media-body mr-2">
                                         <?php
-                                        $total_revenue = $db_handle->runQuery("SELECT SUM(total_purchase) as total FROM `billing_details` where approve = '3'");
+                                        $total_revenue = $db_handle->runQuery("SELECT SUM(total_purchase) as total FROM `billing_details`");
                                         ?>
 										<h2 class="text-white font-w600"><?php echo $total_revenue[0]['total'];?></h2>
 										<span class="text-white">Total Revenue</span>
@@ -174,6 +174,111 @@ if (!isset($_SESSION['userid'])) {
                                         ?>
                                         <h2 class="text-white font-w600"><?php echo $sum_profit - $dis;?> HKD</h2>
                                         <span class="text-white">Total Monthly Profit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $capital = $db_handle->runQuery("SELECT SUM(amount) as s from cash_flow");
+                                            echo $capital[0]['s'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Total Capital Investment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $book = $db_handle->runQuery("SELECT SUM(amount) as a FROM `book_keeping`;");
+                                            echo $book[0]['a'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Total Expanse</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $mcapital = $db_handle->runQuery("SELECT SUM(amount) as ms from cash_flow WHERE MONTH(date) = MONTH(CURDATE()) AND YEAR(date) = YEAR(CURDATE())");
+                                            echo $mcapital[0]['ms'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Monthly Capital Investment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $mbook = $db_handle->runQuery("SELECT SUM(amount) as ba FROM `book_keeping` WHERE MONTH(date) = MONTH(CURDATE()) AND YEAR(date) = YEAR(CURDATE())");
+                                            echo $mbook[0]['ba'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Monthly Expanse</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $bank = $db_handle->runQuery("SELECT SUM(amount) as bank FROM `bank_interest` WHERE MONTH(date) = MONTH(CURDATE()) AND YEAR(date) = YEAR(CURDATE())");
+                                            echo $bank[0]['bank'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Monthly Bank Interest</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $fetch_bill_amount = $db_handle->runQuery("SELECT SUM(total_purchase) as p FROM `billing_details` where approve = '1'");
+                                            $fetch_bank_interest = $db_handle->runQuery("SELECT SUM(amount) as bank FROM `bank_interest`");
+                                            echo $capital[0]['s'] - $book[0]['a'] + $fetch_bill_amount[0]['p'] + $fetch_bank_interest[0]['bank'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Cash Status</span>
                                     </div>
                                 </div>
                             </div>

@@ -74,6 +74,7 @@ if(isset($_GET['catId'])){
                                             <th>SL</th>
                                             <th>Customer Name</th>
                                             <th>Review</th>
+                                            <th>Image</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -89,6 +90,7 @@ if(isset($_GET['catId'])){
                                                 <td><?php echo $i + 1; ?></td>
                                                 <td><?php echo $review_data[$i]["customer_name"]; ?></td>
                                                 <td><?php echo $review_data[$i]["description"]; ?></td>
+                                                <td><a href="<?php echo $review_data[$i]["image"]; ?>" target="_blank">Image</a></td>
                                                 <?php
                                                 if ($review_data[$i]["status"] == 1) {
                                                     ?>

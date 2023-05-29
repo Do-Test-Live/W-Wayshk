@@ -178,6 +178,7 @@ if (!isset($_SESSION['userid'])) {
                                             <th>Amount</th>
                                             <th>Payer</th>
                                             <th>Payment methods </th>
+                                            <th>Files</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
@@ -201,6 +202,16 @@ if (!isset($_SESSION['userid'])) {
                                                 <td><?php echo $bookkeeping[$i]["amount"]; ?></td>
                                                 <td><?php echo $bookkeeping[$i]["payer"]; ?></td>
                                                 <td><?php echo $bookkeeping[$i]["payment_method"]; ?></td>
+                                                <td>
+                                                <?php
+                                                $files = explode(',',$bookkeeping[$i]['image']);
+                                                foreach ($files as $f){
+                                                    ?>
+                                                    <a href="<?php echo $f;?>" target="_blank">File</a>
+                                                    <?php
+                                                }
+                                                ?>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="Book-Keeping?bookID=<?php echo $bookkeeping[$i]["bookkeeping_id"]; ?>"

@@ -96,8 +96,8 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="Product-Analysis">Product Analysis</a></li>
-                    <li><a href="Business-Analysis">Business Analysis</a></li>
-                    <li><a href="Store-Analysis">Store Analysis</a></li>
+                    <!--<li><a href="Business-Analysis">Business Analysis</a></li>
+                    <li><a href="Store-Analysis">Store Analysis</a></li>-->
                     <li><a href="Profit-Loss">Profit-Loss Analysis</a></li>
                 </ul>
             </li>
@@ -130,12 +130,12 @@
                     <span class="nav-text">Review</span>
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a href="Report" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
                     <span class="nav-text">Report</span>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="Customer">
                     <i class="flaticon-381-internet"></i>
