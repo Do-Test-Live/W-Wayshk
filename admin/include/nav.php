@@ -160,6 +160,18 @@
                     <span class="nav-text">Invoice</span>
                 </a>
             </li>
+            <li>
+                <a href="Cash-Capital">
+                    <i class="flaticon-381-calculator-1"></i>
+                    <span class="nav-text">Cash Capital</span>
+                </a>
+            </li>
+            <li>
+                <a href="Bank-Interest">
+                    <i class="flaticon-381-calculator"></i>
+                    <span class="nav-text">Bank Interest</span>
+                </a>
+            </li>
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>

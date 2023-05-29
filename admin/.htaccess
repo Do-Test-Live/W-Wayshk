@@ -89,3 +89,7 @@ RewriteRule ^Add-Defected-Products add_defected.php [NE,L]
 RewriteRule ^Defected-Products-List defected_list.php [NE,L]
 
 RewriteRule ^Print-Receipt print_receipt.php [NE,L]
+
+RewriteRule ^Cash-Capital cash_flow.php [NE,L]
+
+RewriteRule ^Bank-Interest bank_interest.php [NE,L]

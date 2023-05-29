@@ -59,3 +59,12 @@ if(isset($_GET['bookId'])){
     echo 'success';
 }
 
+if(isset($_GET['cashFlowId'])){
+    $db_handle->insertQuery("delete from cash_flow where cash_id =" . $_GET['cashFlowId'] . "");
+    echo 'success';
+}
+
+if(isset($_GET['bankInterestId'])){
+    $db_handle->insertQuery("delete from bank_interest where bank_id =" . $_GET['bankInterestId'] . "");
+    echo 'success';
+}

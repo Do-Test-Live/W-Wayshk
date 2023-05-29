@@ -482,3 +482,35 @@ if (isset($_POST['updateBook'])) {
     }
 }
 
+if(isset($_POST['updateCashFlow'])){
+    $id = $db_handle->checkValue($_POST['id']);
+    $date = $db_handle->checkValue($_POST['date']);
+    $amount = $db_handle->checkValue($_POST['amount']);
+    $note = $db_handle->checkValue($_POST['note']);
+    $updated_at = date("Y-m-d H:i:s");
+
+    $data = $db_handle->insertQuery("UPDATE `cash_flow` SET `date`='$date',`amount`='$amount',`note`='$note',`updated_at`='$updated_at' WHERE cash_id = '$id'");
+    if($data){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Cash-Flow';
+                </script>";
+    }
+}
+
+if(isset($_POST['updateBankInterest'])){
+    $id = $db_handle->checkValue($_POST['id']);
+    $date = $db_handle->checkValue($_POST['date']);
+    $amount = $db_handle->checkValue($_POST['amount']);
+    $note = $db_handle->checkValue($_POST['note']);
+    $updated_at = date("Y-m-d H:i:s");
+
+    $data = $db_handle->insertQuery("UPDATE `bank_interest` SET `date`='$date',`amount`='$amount',`note`='$note',`updated_at`='$updated_at' WHERE bank_id = '$id'");
+    if($data){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Bank-Interest';
+                </script>";
+    }
+}
+
