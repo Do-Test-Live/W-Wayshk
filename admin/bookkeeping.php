@@ -184,8 +184,13 @@ if (!isset($_SESSION['userid'])) {
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $bookkeeping = $db_handle->runQuery("SELECT * FROM `book_keeping` order by bookkeeping_id desc");
-                                        $no_bookkeeping = $db_handle->numRows("SELECT * FROM `book_keeping` order by bookkeeping_id desc");
+                                        if($fetch_admin[0]['type'] == '0'){
+                                            $bookkeeping = $db_handle->runQuery("SELECT * FROM `book_keeping` order by bookkeeping_id desc");
+                                            $no_bookkeeping = $db_handle->numRows("SELECT * FROM `book_keeping` order by bookkeeping_id desc");
+                                        }else{
+                                            $bookkeeping = $db_handle->runQuery("SELECT * FROM `book_keeping` where type != 'Salary' order by bookkeeping_id desc");
+                                            $no_bookkeeping = $db_handle->numRows("SELECT * FROM `book_keeping` where type != 'Salary' order by bookkeeping_id desc");
+                                        }
 
                                         for ($i = 0; $i < $no_bookkeeping; $i++) {
                                             ?>

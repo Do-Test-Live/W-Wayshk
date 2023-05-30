@@ -125,6 +125,17 @@
             </li>
 
             <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-panel"></i>
+                    <span class="nav-text">Quotation</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="Add-Quotation">Add</a></li>
+                    <li><a href="View-Quotation">View</a></li>
+                </ul>
+            </li>
+
+            <li>
                 <a href="Review" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-6"></i>
                     <span class="nav-text">Review</span>

@@ -93,3 +93,7 @@ RewriteRule ^Print-Receipt print_receipt.php [NE,L]
 RewriteRule ^Cash-Capital cash_flow.php [NE,L]
 
 RewriteRule ^Bank-Interest bank_interest.php [NE,L]
+
+RewriteRule ^Add-Quotation add_quotation.php [NE,L]
+
+RewriteRule ^View-Quotation quotation.php [NE,L]
