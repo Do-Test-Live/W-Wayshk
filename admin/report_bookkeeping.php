@@ -120,7 +120,13 @@ if (!isset($_SESSION['userid'])) {
                                                 <option value="Restock Shipping">Restock Shipping</option>
                                                 <option value="Shipping">Shipping</option>
                                                 <option value="Admin">Admin</option>
-                                                <option value="Salary">Salary</option>
+                                                <?php
+                                                if($fetch_admin[0]['type'] == '0'){
+                                                    ?>
+                                                    <option value="Salary">Salary</option>
+                                                    <?php
+                                                }
+                                                ?>
                                                 <option value="Rent">Rent</option>
                                                 <option value="Promotions">Promotions</option>
                                                 <option value="Office Use">Office Use</option>
