@@ -70,7 +70,6 @@ if (!isset($_SESSION['userid'])) {
                                     <th>Payment Type</th>
                                     <th>Shipping Method</th>
                                     <th>Total (HKD)</th>
-                                    <th>Status</th>
                                     <th>Details</th>
                                 </tr>
                                 </thead>
@@ -94,18 +93,6 @@ if (!isset($_SESSION['userid'])) {
                                         <td><?php echo $bill_data[$i]["payment_type"]; ?></td>
                                         <td><?php echo $bill_data[$i]["shipping_method"]; ?></td>
                                         <td><?php echo $bill_data[$i]["total_purchase"]; ?></td>
-
-                                        <?php
-                                        if ($bill_data[$i]["approve"] == 3) {
-                                            ?>
-                                            <td>Pending</td>
-                                            <?php
-                                        } else{
-                                            ?>
-                                            <td>Approved</td>
-                                            <?php
-                                        }
-                                        ?>
                                         <td>
                                             <div class="d-flex">
                                                 <a href="print_quotation.php?id=<?php echo $bill_data[$i]["id"]; ?>"

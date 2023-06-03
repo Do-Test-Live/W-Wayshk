@@ -76,7 +76,7 @@ include('include/header.php');
                     if($_SESSION['language'] === 'CN')
                         echo '精選課程';
                     else
-                        echo 'Online Courses'
+                        echo 'Featured Courses'
                     ?></h2>
             </div>
             <div class="col-xxl-12 mt-5">
@@ -115,7 +115,13 @@ include('include/header.php');
                                         Over
                                     </p>
                                     <span class="time"><span><?php echo $fetch_course[$i]['course_price'];?> HKD</span></span>
-                                    <span class="super"><span>Low-income families $500</span></span>
+                                    <span class="super"><span><?php
+                                            if($fetch_course[$i]['course_price_poor'] > 0){
+                                                ?>
+                                                Low-income families <?php echo $fetch_course[$i]['course_price_poor'];?> HKD
+                                                <?php
+                                            }
+                                            ?></span></span>
                                 </div>
                                 <button onclick="window.location.href='Course-Details?id=<?php echo $fetch_course[$i]['course_id'];?>'" class="blog-button"><?php
                                     if($_SESSION['language'] === 'CN')

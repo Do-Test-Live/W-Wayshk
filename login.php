@@ -109,7 +109,7 @@ if(isset($_POST['login'])){
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3><?php if ($_SESSION['language'] === 'CN') echo '歡迎來到匯匯香港'; else echo 'Welcome To WaysHK';?></h3>
+                            <h3><?php if ($_SESSION['language'] === 'CN') echo '歡迎來到WaysHK'; else echo 'Welcome To WaysHK';?></h3>
                             <h4><?php if ($_SESSION['language'] === 'CN') echo '登入你的帳戶'; else echo 'Log In Your Account';?></h4>
                         </div>
 

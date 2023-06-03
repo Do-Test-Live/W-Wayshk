@@ -485,11 +485,11 @@ if (isset($_SESSION["cart_item"])) {
                                                             Children Service Society</a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="Course">Online Courses</a>
+                                                        <a class="dropdown-item" href="Course">Featured Courses</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                           href="Textbook-Download">Textbook Download</a>
+                                                           href="Textbook-Download">Teaching Resources</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"

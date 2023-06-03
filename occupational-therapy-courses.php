@@ -64,7 +64,7 @@ include('include/header.php');
                     if ($_SESSION['language'] === 'CN')
                         echo '教材下載';
                     else
-                        echo 'Textbook Download';
+                        echo 'Teaching Resources';
                     ?>
                 </h2>
             </div>

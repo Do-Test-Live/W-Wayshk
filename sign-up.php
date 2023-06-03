@@ -121,14 +121,14 @@ $db_handle = new DBController();
                                     </div>
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 my-3">
                                     <div class="forgot-box">
                                         <div class="form-check ps-0 m-0 remember-box">
                                             <input class="checkbox_animated check-box" type="checkbox"
                                                 id="flexCheckDefault" required>
                                             <label class="form-check-label" for="flexCheckDefault">
                                                 <?php if($_SESSION['language'] === 'CN') echo '我同意
-                                                <span>我同意 私隱</span> 政策 及 <span>條款細則</span>'; else echo 'I agree with
+                                                <span>私隱</span> 政策 及 <span>條款細則</span>'; else echo 'I agree with
                                                 <span>Terms</span> and <span>Privacy</span>';?>
                                                 </label>
                                         </div>

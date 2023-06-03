@@ -65,10 +65,10 @@ include('include/header.php');
     <div class="container-fluid-lg">
         <div class="row mx-auto">
             <img class="img-fluid" src="admin/<?php echo $fetch_details[0]['course_image']; ?>" alt="course details"
-                 style="max-width: 700px;">
+                 style="max-width: 500px;">
         </div>
         <div class="row g-lg-5 g-3 mt-5">
-            <h1><?php
+            <h1 style="font-size: 32px;"><?php
                 if ($_SESSION['language'] === 'CN')
                     echo $fetch_details[0]['course_name'];
                 else

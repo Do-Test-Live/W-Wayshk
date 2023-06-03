@@ -99,7 +99,14 @@ include('include/header.php');
         <div class="row">
             <div class="col-12">
                 <div class="breadscrumb-contain">
-                    <h2 class="mb-2">User Profile</h2>
+                    <h2 class="mb-2">
+                        <?php
+                        if($_SESSION['language'] === 'CN')
+                            echo '用戶資料';
+                        else
+                            echo 'User Profile';
+                        ?>
+                        </h2>
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
@@ -107,7 +114,15 @@ include('include/header.php');
                                     <i class="fa-solid fa-house"></i>
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active">Profile</li>
+                            <li class="breadcrumb-item active">
+                                <?php
+                                if($_SESSION['language'] === 'CN'){
+                                    echo '輪廓';
+                                }else{
+                                    echo 'Profile';
+                                }
+                                ?>
+                                </li>
                         </ol>
                     </nav>
                 </div>
@@ -128,12 +143,12 @@ include('include/header.php');
                             <table class="table order-tab-table">
                                 <thead>
                                 <tr>
-                                    <th>SL No</th>
-                                    <th>Order Number</th>
-                                    <th>Payment Type</th>
-                                    <th>Shipping Method</th>
-                                    <th>Price</th>
-                                    <th>Print Invoice</th>
+                                    <th><?php if($_SESSION['language'] === 'CN') echo '序列號'; else echo 'SL No';?></th>
+                                    <th><?php if($_SESSION['language'] === 'CN') echo '訂單號'; else echo 'Order Number';?></th>
+                                    <th><?php if($_SESSION['language'] === 'CN') echo '付款方式'; else echo 'Payment Type';?></th>
+                                    <th><?php if($_SESSION['language'] === 'CN') echo '郵寄方式'; else echo 'Shipping Method';?></th>
+                                    <th><?php if($_SESSION['language'] === 'CN') echo '價格'; else echo 'Price';?></th>
+                                    <th><?php if($_SESSION['language'] === 'CN') echo '打印'; else echo 'Print';?></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -163,7 +178,14 @@ include('include/header.php');
             <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                 <div class="log-in-box">
                     <div class="log-in-title">
-                        <h3>Membership Points:</h3>
+                        <h3>
+                            <?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '會員積分：';
+                            else
+                                echo 'Membership Points:';
+                                ?>
+                            </h3>
                         <h3 class="text-warning">
                             <?php
                             $today = date("Y-m-d H:i:s");
@@ -188,7 +210,14 @@ include('include/header.php');
                          Points</h3>
                     </div>
                     <div class="log-in-title">
-                        <h3>Previous Comment</h3>
+                        <h3>
+                            <?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '上一條評論';
+                            else
+                                echo 'Previous Comment';
+                            ?>
+                            </h3>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -196,8 +225,8 @@ include('include/header.php');
                                 <table class="table order-tab-table">
                                     <thead>
                                     <tr>
-                                        <th>SL No</th>
-                                        <th>Comment</th>
+                                        <th><?php if($_SESSION['language'] === 'CN') echo '序列號'; else echo 'SL No';?></th>
+                                        <th><?php if($_SESSION['language'] === 'CN') echo '評論'; else echo 'Comment';?></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -219,8 +248,23 @@ include('include/header.php');
                         </div>
                     </div>
                     <div class="log-in-title mt-5">
-                        <h3>Welcome To WaysHK</h3>
-                        <h4>Submit your Comment.</h4>
+                        <h3>
+                            <?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '歡迎來到WaysHK';
+                            else
+                                echo 'Welcome To WaysHK';
+                            ?>
+                        </h3>
+                        <h4>
+                            <?php
+                            if($_SESSION['language'] === 'CN')
+                                echo '提交您的評論。';
+                            else
+                                echo 'Submit your Comment.';
+                            ?>
+
+                        </h4>
                     </div>
 
                     <div class="input-box">
@@ -228,19 +272,19 @@ include('include/header.php');
                             <div class="col-12">
                                 <div class="form-floating theme-form-floating log-in-form">
                                     <textarea class="form-control" rows="4" name="review"></textarea>
-                                    <label for="email">Comment</label>
+                                    <label for="email"><?php if($_SESSION['language'] === 'CN') echo '評論'; else echo 'Comment';?></label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating theme-form-floating log-in-form">
                                     <input type="file" class="form-control" name="image">
-                                    <label for="email">Image</label>
+                                    <label for="email"><?php if($_SESSION['language'] === 'CN') echo '圖像'; else echo 'Image';?></label>
                                 </div>
                             </div>
 
                             <div class="col-12 mt-3">
                                 <button class="btn btn-animation w-100 justify-content-center" name="submit"
-                                        type="submit">Submit
+                                        type="submit"><?php if($_SESSION['language'] === 'CN') echo '提交'; else echo 'Submit';?>
                                 </button>
                             </div>
                         </form>
