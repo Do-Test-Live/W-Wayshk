@@ -302,7 +302,7 @@ include('include/header.php');
 
                                     <div class="add-to-cart-box bg-white">
                                         <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
-                                            <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
+                                            <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add'; ?>
                                             </button>
                                         </a>
                                     </div>
@@ -383,7 +383,7 @@ include('include/header.php');
 
                                         <div class="add-to-cart-box bg-white">
                                             <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
-                                                <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
+                                                <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add'; ?>
                                                 </button>
                                             </a>
                                         </div>
@@ -487,7 +487,7 @@ include('include/header.php');
 
                                     <div class="add-to-cart-box bg-white">
                                         <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
-                                            <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
+                                            <button class="btn btn-add-cart addcart-button"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add'; ?>
                                             </button>
                                         </a>
                                     </div>
@@ -567,7 +567,7 @@ include('include/header.php');
 
                                         <div class="add-to-cart-box bg-white">
                                             <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
-                                                <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add'; ?>
+                                                <button class="btn btn-add-cart"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add'; ?>
                                                 </button>
                                             </a>
                                         </div>

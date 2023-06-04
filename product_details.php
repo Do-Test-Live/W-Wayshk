@@ -202,7 +202,7 @@ include('include/header.php');
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                    <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit"><?php if($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add';?>
                                     </button>
                                 </form>
                             </div>
@@ -344,7 +344,7 @@ include('include/header.php');
 
                                     <div class="add-to-cart-box bg-white">
                                         <a href="#">
-                                            <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                            <button class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add';?>
                                             </button>
                                         </a>
                                     </div>

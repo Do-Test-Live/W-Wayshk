@@ -1,67 +1,294 @@
-<?php
-if(isset($_POST['formSubmit'])){
-// Retrieve the values of dynamically added fields
-    $fields = $_POST['field'];
-
-// Process the data as needed
-    foreach ($fields as $field) {
-        // Do something with each field value
-        echo $field.'</br>';
-    }
-}
-
-?>
-
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Test Add On fields</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap"
+          rel="stylesheet">
+
+    <style type="text/css">
+        /* Paste the CSS styles from your original HTML template here */
+        body {
+            text-align: center;
+            margin: 0 auto;
+            width: 650px;
+            font-family: 'Public Sans', sans-serif;
+            background-color: #e2e2e2;
+            display: block;
+        }
+
+        .mb-3 {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            text-decoration: unset;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h5 {
+            margin: 10px;
+            color: #777;
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .header-menu ul li + li {
+            margin-left: 20px;
+        }
+
+        .header-menu ul li a {
+            font-size: 14px;
+            color: #252525;
+            font-weight: 500;
+        }
+
+        .password-button {
+            background-color: #ffcc18;
+            border: none;
+            color: #000;
+            padding: 14px 26px;
+            font-size: 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .footer-table {
+            position: relative;
+        }
+
+        .footer-table::before {
+            position: absolute;
+            content: "";
+            background-image: url(images/footer-left.svg);
+            background-position: top right;
+            top: 0;
+            left: -71%;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            background-size: contain;
+            opacity: 0.3;
+        }
+
+        .footer-table::after {
+            position: absolute;
+            content: "";
+            background-image: url(images/footer-right.svg);
+            background-position: top right;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            background-size: contain;
+            opacity: 0.3;
+        }
+
+        .theme-color {
+            color: #ffcc18;
+        }
+        table.customTable {
+            width: 100%;
+            background-color: #FFFFFF;
+            border-collapse: collapse;
+            border-width: 2px;
+            border-color: #ffcc18;
+            border-style: solid;
+            color: #000000;
+        }
+        table.customTable td, table.customTable th {
+            border-width: 1px;
+            border-color: #ffcc18;
+            border-style: solid;
+            padding: 5px;
+        }
+
+        table.customTable thead {
+            background-color: #ffcc18;
+        }
+    </style>
 </head>
-<body>
 
+<body style="margin: 20px auto;">
+<table align="center" border="0" cellpadding="0" cellspacing="0"
+       style="background-color: white; width: 100%; box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);-webkit-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);">
+    <!-- Paste the rest of your HTML template code here -->
+    <tbody>
+    <tr>
+        <td>
+            <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr class="header"
+                    style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
+                    <td class="header-logo" style="padding: 10px 32px;">
+                        <a href="#" style="display: block; text-align: left;">
+                            <img src="assets/images/logo/2.png" class="main-logo" alt="logo" style="width: 120px">
+                        </a>
+                    </td>
+                </tr>
+            </table>
 
-<form id="myForm" method="post" action="#">
-    <div id="fieldsContainer">
-        <div class="field">
-            <input type="text" name="field[]" />
-            <button type="button" class="removeField">Remove</button>
-        </div>
-    </div>
-    <button type="button" id="addField">Add Field</button>
-    <button type="submit" name="formSubmit">Submit</button>
-</form>
+            <table class="contant-table" style="margin-bottom: -6px;" align="center" border="0" cellpadding="0"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <td>
+                        <img src="assets/images/welcome-poster.jpg" alt="">
+                    </td>
+                </tr>
+                </thead>
+            </table>
 
+            <table class="contant-table" style="margin-top: 40px;" align="center" border="0" cellpadding="0"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr style="display: block;">
+                    <td style="display: block;">
+                        <h3
+                                style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase; padding: 10px">
+                            Hi Thank You for Your Purchase! Your Order number is: WHK#1</h3>
+                    </td>
 
-<script>
-    window.onload = function () {
-        // Get references to necessary elements
-        var form = document.getElementById('myForm');
-        var addFieldButton = document.getElementById('addField');
-        var fieldsContainer = document.getElementById('fieldsContainer');
+                    <td style='display: block;'>
+                        <p style="font-size: 14px;font-weight: 600;width: 82%;margin: 8px auto 0;line-height: 1.5;color: #939393;font-family: 'Nunito Sans', sans-serif;">
+                            感謝你選購Wayshk產品。訂單詳情已隨郵件附上，請查收。
+                        </p>
+                    </td>
+                    <td style="display: block">
+                        <table class="customTable" style="margin-top: 20px; margin-bottom: 20px;">
+                            <thead>
+                            <tr>
+                                <th>產品名稱</th>
+                                <th>產品代碼</th>
+                                <th>數量</th>
+                                <th>價格</th>
+                                <th>合計</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>紅色/軟 治療膠4oz</td>
+                                <td>PU4R</td>
+                                <td>3</td>
+                                <td>100.00</td>
+                                <td>300.00</td>
+                            </tr>
+                            <tr>
+                                <td>太空人訓練轉板</td>
+                                <td>SI15</td>
+                                <td>5</td>
+                                <td>3200.00</td>
+                                <td>16000.00</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="2">郵寄方式: Home</td>
+                                <td colspan="2">小計</td>
+                                <td>16300.00 HKD</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">付款方式: Credit Card</td>
+                                <td colspan="2">運費</td>
+                                <td>0.00 HKD</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td colspan="2">全部的</td>
+                                <td>16300 HKD</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                    <td style='display: block;'>
+                        <p style="font-size: 14px;font-weight: 600;width: 82%;margin: 8px auto 0;line-height: 1.5;color: #939393;font-family: 'Nunito Sans', sans-serif;">
+                            選用速遞出貨客人：
+                            付款方式：
+                            PayMe (號碼：5265-7359 WAYSHK )
+                            轉數快 (號碼：5265-7359 WAYSHK )
+                            銀行入數【戶口號碼為 769-334699-883 (恆生銀行) WAYSHK】
+                            請於下單後WhatsApp 付款憑證到 +852 5605 8389，
+                            並提供訂單編號進行確認。 
+                            *現貨產品送貨期為1星期。若訂單包含預購產品，將會於所有貨品齊全後一併寄出。
 
-        // Add event listener to the "Add Field" button
-        addFieldButton.addEventListener('click', function () {
-            // Create a new field element
-            var field = document.createElement('div');
-            field.className = 'field';
-            field.innerHTML =
-                '<input type="text" name="field[]" />' +
-                '<button type="button" class="removeField">Remove</button>';
+                        </p>
+                    </td>
+                </tr>
+                </thead>
+            </table>
 
-            // Add event listener to the "Remove" button
-            var removeButton = field.querySelector('.removeField');
-            removeButton.addEventListener('click', function () {
-                fieldsContainer.removeChild(field);
-            });
+            <table class="button-table" style="margin: 34px 0;" align="center" border="0" cellpadding="0"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr style="display: block;">
+                    <td style="display: block;">
+                        <a href='https://wayshk.ngt.hk/print_receipt.php?id=$id' class="password-button"
+                           target="_blank">See Details</a>
+                    </td>
+                </tr>
+                </thead>
+            </table>
 
-            // Append the new field to the container
-            fieldsContainer.appendChild(field);
-        });
+            <table class="contant-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                <tr style="display: block;">
+                    <td style="display: block;">
+                        <p
+                                style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
+                            If you have any question, please email us at <span
+                                    class="theme-color">wayshk.order@gmail.com</span> or whatsapp at: +852 56058389</p>
+                    </td>
+                </tr>
+                </thead>
+            </table>
 
-        // Add event listener to the form submission
-    };
-</script>
-
+            <table class="text-center footer-table" align="center" border="0" cellpadding="0" cellspacing="0"
+                   width="100%"
+                   style="background-color: #282834; color: white; padding: 24px; overflow: hidden; z-index: 0; margin-top: 30px;">
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
+                               align="center" style="margin: 8px auto 11px;">
+                            <tr>
+                                <td>
+                                    <h4 style="font-size: 19px; font-weight: 700; margin: 0;">Shop For <span
+                                                class="theme-color">WaysHK</span></h4>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td>
+                                    <h5 style="font-size: 13px; text-transform: uppercase; margin: 0; color:#ddd;
+                                letter-spacing:1px; font-weight: 500;">Want to change how you receive these emails?
+                                    </h5>
+                                    <h5 style="font-size: 13px; text-transform: uppercase; margin: 10px 0 0; color:#ddd;
+                                letter-spacing:1px; font-weight: 500;">2023 copy right by WaysHK</h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
 </body>
+
 </html>

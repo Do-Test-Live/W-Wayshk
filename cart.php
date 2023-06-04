@@ -211,7 +211,7 @@ include('include/header.php');
                         <label class="form-check-label" for="applyPoints">
                             <?php
                             if($_SESSION['language'] === 'CN')
-                                echo '申請積分可享折扣。';
+                                echo '使用積分可享折扣';
                             else
                                 echo 'Apply points for discounts.';
                             ?>

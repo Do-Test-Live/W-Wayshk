@@ -295,7 +295,7 @@ include('include/header.php');
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add';?>
                                                 </a>
                                             </div>
                                         </div>
@@ -434,7 +434,7 @@ include('include/header.php');
                                                         class="theme-color"><?php echo $fetch_products[$i]['product_price'] ?> HKD</span>
                                             </h5>
                                             <div class="add-to-cart-box bg-white">
-                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
+                                                <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="btn btn-add-cart addcart-button"><?php if($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'Add';?>
                                                 </a>
                                             </div>
                                         </div>

@@ -112,7 +112,7 @@ if (isset($_POST["placeOrder"])) {
 
     if ($payment != 'Credit Card') {
         $email_to = $email;
-        $subject = 'Wayshk';
+        $subject = 'Wayshk活籽兒童用品店：已收到你的訂單';
 
 
         $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
