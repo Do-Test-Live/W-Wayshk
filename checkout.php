@@ -143,8 +143,8 @@ include('include/header.php');
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="zip_code"
-                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['zip_code'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼（香港顧客請填寫 00000）'; else echo 'Zip Code (For customers from Hong Kong, fill in 00000)';?>" maxlength="5"
-                                                                       minlength="5" required="">
+                                                                       value="<?php if($flag == '1') echo $fetch_customer_details[0]['zip_code'];?>" placeholder="<?php if($_SESSION['language'] === 'CN') echo '郵政編碼（香港顧客請填寫 00000）'; else echo 'Zip Code (For customers from Hong Kong, fill in 00000)';?>"
+                                                                        required="">
                                                             </div>
                                                             <div class="form-group col-md-12 mb-3">
                                                                 <input type="text" class="form-control" name="note"

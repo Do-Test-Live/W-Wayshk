@@ -252,14 +252,14 @@ include('include/header.php');
                                             </a>
 
                                             <ul class="product-option">
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
                                                     <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
 
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                    <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" class="notifi-wishlist">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                                    <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="notifi-wishlist">
                                                         <i data-feather="heart"></i>
                                                     </a>
                                                 </li>
@@ -408,14 +408,14 @@ include('include/header.php');
                                             </a>
 
                                             <ul class="product-option">
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
                                                     <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" data-bs-toggle="modal"
                                                        data-bs-target="#view">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
 
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
                                                     <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" class="notifi-wishlist">
                                                         <i data-feather="heart"></i>
                                                     </a>

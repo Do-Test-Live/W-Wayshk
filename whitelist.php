@@ -19,7 +19,6 @@ if (isset($_GET['id'])) {
                 echo "
                     <script>
                     alert('Added Successfully');
-                    window.location.href = 'Wish-List';
                     </script>
                     ";
             }

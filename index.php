@@ -241,13 +241,13 @@ include('include/header.php');
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
                                             <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                            <a href="Wish-List?id=<?php echo $fetch_product [$i]['id']; ?>"
+                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                            <a href="Wish-List?id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank"
                                                class="notifi-wishlist">
                                                 <i data-feather="heart"></i>
                                             </a>
@@ -321,14 +321,14 @@ include('include/header.php');
                                                  class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                         <ul class="product-option">
-                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
                                                 <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
 
-                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="Wish-List?id=<?php echo $fetch_product [$i + 1]['id']; ?>" class="notifi-wishlist">
+                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                                <a href="Wish-List?id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
@@ -426,14 +426,14 @@ include('include/header.php');
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
                                             <a href="Product-Details?product_id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
 
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                            <a href="Wish-List?id=<?php echo $fetch_product [$i]['id']; ?>" class="notifi-wishlist">
+                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                            <a href="Wish-List?id=<?php echo $fetch_product [$i]['id']; ?>" target="_blank" class="notifi-wishlist">
                                                 <i data-feather="heart"></i>
                                             </a>
                                         </li>
@@ -506,14 +506,14 @@ include('include/header.php');
                                                  class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                         <ul class="product-option">
-                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
                                                 <a href="Product-Details?product_id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                             </li>
 
-                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                <a href="Wish-List?id=<?php echo $fetch_product [$i + 1]['id']; ?>" class="notifi-wishlist">
+                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                                <a href="Wish-List?id=<?php echo $fetch_product [$i + 1]['id']; ?>" target="_blank" class="notifi-wishlist">
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
