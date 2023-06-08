@@ -67,10 +67,10 @@ if (isset($_POST["placeOrder"])) {
     }
 
 
-    if (isset($_SESSION['id'])) {
+    /*if (isset($_SESSION['id'])) {
         $customer = $_SESSION['id'];
         $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$purchase_points','$updated_at')");
-    }
+    }*/
 
     $insert_user = $db_handle->insertQuery("INSERT INTO `billing_details`(`customer_id`, `f_name`, `l_name`, 
                               `email`, `phone`, `address`, `city`, `zip_code`, `payment_type`,`shipping_method`, 
