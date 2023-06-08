@@ -37,6 +37,11 @@ if (isset($_POST['submit'])) {
                 window.location.href='profile.php';
                 </script>";
         }
+    }else{
+        $query = $db_handle->insertQuery("INSERT INTO `review`(`customer_id`, `description`, `inserted_at`) VALUES ('$customer_id','$review','$inserted_at')");
+        echo "<script>
+                window.location.href='profile.php';
+                </script>";
     }
     echo 'Not worked';
 }

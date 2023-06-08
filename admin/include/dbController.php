@@ -4,7 +4,7 @@ class DBController {
     private $user = "root";
     private $password = "";
     private $database = "wayshk";
-    private $from_email='noreply@wayshk.ngt.hk';
+    private $from_email='business@wayshk.com';
     private $notification_email='mingowhk@gmail.com';
     private $conn;
 

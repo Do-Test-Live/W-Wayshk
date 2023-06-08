@@ -69,7 +69,7 @@ $id = $_GET['id'];
                                                     <select class="default-select  form-control wide" name="status"
                                                             required>
                                                         <option value = '3'>Pending</option>
-                                                        <option value = '2'>Accepted</option>
+                                                        <option value = '2'>Paid & Accepted</option>
                                                         <option value = '1'>Delivered</option>
                                                     </select>
                                                 </div>
