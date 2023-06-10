@@ -65,15 +65,15 @@ include('include/header.php');
     <div class="container-fluid-lg">
         <div class="row mx-auto">
             <img class="img-fluid" src="admin/<?php echo $fetch_details[0]['image']; ?>" alt="course details"
-                 style="max-width: 700px;">
+                 style="max-width: 350px;">
         </div>
         <div class="row g-lg-5 g-3 mt-5">
-            <h1><?php
+            <h2><?php
                 if ($_SESSION['language'] === 'CN')
                     echo $fetch_details[0]['textbook_title'];
                 else
                     echo $fetch_details[0]['textbook_title_en']; ?>
-            </h1>
+            </h2>
             <table style="border: 1px solid #000000; margin: 25px; max-width:400px;padding: 15px;">
                 <thead>
                 <tr>

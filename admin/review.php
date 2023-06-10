@@ -5,10 +5,17 @@ $db_handle = new DBController();
 if (!isset($_SESSION['userid'])) {
     header("Location: Login");
 }
+date_default_timezone_set("Asia/Hong_Kong");
+$inserted_at = date("Y-m-d H:i:s");
 
 if(isset($_GET['catId'])){
     $id = $_GET['catId'];
     $data = $db_handle->insertQuery("UPDATE `review` SET `status`='1' WHERE review_id = '$id'");
+
+    $fetch_details = $db_handle->runQuery("select * from review where review_id = '$id'");
+    $customer_id = $fetch_details[0]['customer_id'];
+    $points = 200;
+    $insert_point = $db_handle->insertQuery("INSERT INTO `point`(`customer_id`, `points`, `date`) VALUES ('$customer_id','$points','$inserted_at')");
     echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Review';

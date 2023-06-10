@@ -432,7 +432,7 @@ include('include/header.php');
                         <input class="form-check-input card-class" name="addInfo" type="checkbox"
                                value="" id="termsandconditions" required>
                         <label class="form-check-label ms-2" for="termsandconditions">
-                            <?php if($_SESSION['language'] === 'CN') echo '<a href="terms_condition.php" target="_blank">我同意這條款和條件</a>'; else echo '<a href="terms_condition_en.php" target="_blank">I agree to the terms and conditions.</a>';?>
+                            <?php if($_SESSION['language'] === 'CN') echo '<a href="terms_condition.php" target="_blank">本人已閱讀並同意遵守此條款及細則</a>'; else echo '<a href="terms_condition_en.php" target="_blank">I have read and agreed to be bound by these <br/> terms and conditions</a>';?>
                         </label>
                         <button class="btn theme-bg-color text-white btn-md w-100 mt-4 fw-bold" name="placeOrder" type="submit">
                             <?php if($_SESSION['language'] === 'CN') echo '下訂單'; else echo 'Place Order';?></button>

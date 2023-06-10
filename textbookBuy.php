@@ -4,10 +4,18 @@ $id = $_GET['id'];
 if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 } else {
-    echo "<script>
+    if($_SESSION['language'] === 'EN'){
+        echo "<script>
 alert('Please log in first to download the book.');
 window.location.href = 'Textbook-Details?id=$id';
 </script>";
+    }else{
+        echo "<script>
+alert(' 請先登入會員，並使用積分下載訓練教材');
+window.location.href = 'Textbook-Details?id=$id';
+</script>";
+    }
+
 }
 include('admin/include/dbController.php');
 $db_handle = new DBController();
@@ -59,11 +67,20 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
                 </body>
             </html>";
     if (mail($email_to, $subject, $messege, $headers)) {
+    if($_SESSION['language'] === 'EN'){
         echo "
         <script>
                 alert('Your request is confirmed. Please check your email for more details.');
                 window.location.href = 'Textbook-Details?id=$id';
           </script>";
+    } else{
+        echo "
+        <script>
+                alert('收到你的指示。 所選訓練教材已經發送到你的登記電郵');
+                window.location.href = 'Textbook-Details?id=$id';
+          </script>";
+    }
+
     }
 } else {
     echo "<script>

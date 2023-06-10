@@ -7,6 +7,7 @@ if (!isset($_SESSION['userid'])) {
     header("Location: Login");
 }
 $today = date("F d, Y");
+$total = 0;
 
 if(isset($_POST['overallBookReport'])){
     $fdate = $db_handle->checkValue($_POST['fdate']);
@@ -120,19 +121,26 @@ if(isset($_POST['payerBookReport'])){
             for ($i=0; $i < $no_fetch_book; $i++){
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $fetch_book[0]['recept_no'];?></th>
-                    <td><?php echo $fetch_book[0]['date'];?></td>
-                    <td><?php echo $fetch_book[0]['store_name'];?></td>
-                    <td><?php echo $fetch_book[0]['type'];?></td>
-                    <td><?php echo $fetch_book[0]['item_name'];?></td>
-                    <td><?php echo $fetch_book[0]['amount'];?></td>
-                    <td><?php echo $fetch_book[0]['payer'];?></td>
-                    <td><?php echo $fetch_book[0]['payment_method'];?></td>
+                    <th scope="row"><?php echo $fetch_book[$i]['recept_no'];?></th>
+                    <td><?php echo $fetch_book[$i]['date'];?></td>
+                    <td><?php echo $fetch_book[$i]['store_name'];?></td>
+                    <td><?php echo $fetch_book[$i]['type'];?></td>
+                    <td><?php echo $fetch_book[$i]['item_name'];?></td>
+                    <td><?php echo $fetch_book[$i]['amount'];?></td>
+                    <td><?php echo $fetch_book[$i]['payer'];?></td>
+                    <td><?php echo $fetch_book[$i]['payment_method'];?></td>
+                    <?php
+                    $total = $total + $fetch_book[$i]['amount'];
+                    ?>
                 </tr>
                 <?php
             }
         }
         ?>
+        <tr>
+            <td colspan="5">Total</td>
+            <td colspan="3"><?php echo $total; ?></td>
+        </tr>
         </tbody>
     </table>
 

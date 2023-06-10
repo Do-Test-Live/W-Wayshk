@@ -75,7 +75,6 @@ if (!isset($_SESSION['userid'])) {
                                             <label class="col-sm-3 col-form-label">Minimum Charges Applied Upto Weight (GM)</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="weight_upto"
-                                                       placeholder="Category Name"
                                                        value="<?php echo $data[0]["weight_upto"]; ?>" required>
                                             </div>
                                         </div>
@@ -83,7 +82,6 @@ if (!isset($_SESSION['userid'])) {
                                             <label class="col-sm-3 col-form-label">Additional Charge for per GM</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="additional_charges"
-                                                       placeholder="Additional Charge"
                                                        value="<?php echo $data[0]["next_per_kg_weight"]; ?>" required>
                                             </div>
                                         </div>
@@ -91,7 +89,6 @@ if (!isset($_SESSION['userid'])) {
                                             <label class="col-sm-3 col-form-label">Minimum Order for Free Delivery</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="min_order_amount"
-                                                       placeholder="Additional Charge"
                                                        value="<?php echo $data[0]["min_order_free_delivery"]; ?>" required>
                                             </div>
                                         </div>
