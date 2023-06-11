@@ -264,7 +264,7 @@ $id = 2;
                 <thead>
                 <tr style="display: block;">
                     <td style="display: block;">
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">付款方法說明</p>
+                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 20px auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">付款方法說明</p>
                         <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">（一）選用速遞出貨
                             請於7日內，以以下方式付款：</p>
                         <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">⦁ PayMe (電話號碼：5265-7359 WAYSHK )</p>
@@ -287,7 +287,7 @@ $id = 2;
                 </tr>
                 <tr>
                     <td>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
+                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 20px auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
                             （二）選用自取方式出貨
                         </p>
                         <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
