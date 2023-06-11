@@ -110,6 +110,14 @@ if (isset($_POST["placeOrder"])) {
         }
     }
 
+    if($payment == 'Credit Card') {
+        $customer = $_SESSION['id'];
+        if($customer != 0){
+            $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$purchase_points','$updated_at')");
+        }
+
+    }
+
     if ($payment != 'Credit Card') {
         $email_to = $email;
         $subject = 'Wayshk活籽兒童用品店：已收到你的訂單';

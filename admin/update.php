@@ -284,12 +284,15 @@ if (isset($_POST['delivery'])) {
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `delivery_date`='$date',`approve` = '$status' WHERE id='$id'");
 
-    $fetch_customer = $db_handle->runQuery("select customer_id,total_purchase,updated_at from billing_details where id='$id'");
+    $fetch_customer = $db_handle->runQuery("select customer_id,total_purchase,updated_at,payment_type from billing_details where id='$id'");
     $customer = $fetch_customer[0]['customer_id'];
     $points = $fetch_customer[0]['total_purchase'];
     $date = $fetch_customer[0]['updated_at'];
+    $payment = $fetch_customer[0]['payment_type'];
 
-    $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$points','$date')");
+    if($payment != 'Credit Card' && $customer != 0){
+        $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$points','$date')");
+    }
 
     if ($data) {
         $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
