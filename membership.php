@@ -97,7 +97,7 @@ include('include/header.php');
                             <div id="collapseOne" class="accordion-collapse collapse show"
                                  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>於官網主頁進入「Wayshk網店會員積分計劃」頁面，再按 「註冊會員」 以電話號碼建立會員帳戶，註冊成功即可獲取200積分。（只限年滿十八歲或以上人士參與）</p>
+                                    <p>於官網主頁進入「Wayshk網店會員積分計劃」頁面，再按 「註冊會員」 以電子郵件建立會員帳戶，註冊成功即可獲取200積分。（只限年滿十八歲或以上人士參與）</p>
                                 </div>
                             </div>
                         </div>

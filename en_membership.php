@@ -98,8 +98,7 @@ include('include/header.php');
                                  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p>Go to the "Wayshk Online Shop Membership Program" page on the official homepage,
-                                        then click "Register Member" to create a membership account with your phone
-                                        number and receive 200 points upon successful registration. (Only for those who
+                                        then click "Register Member" to create a membership account with your email and receive 200 points upon successful registration. (Only for those who
                                         are 18 years old or above)</p>
                                 </div>
                             </div>
