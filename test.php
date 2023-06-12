@@ -160,7 +160,7 @@ $id = 2;
                 <thead>
                 <tr>
                     <td>
-                        <img src="assets/images/welcome-poster.jpg" alt="">
+                        <img src="https://wayshk.ngt.hk/assets/images/welcome-poster.jpg" alt="">
                     </td>
                 </tr>
                 </thead>
@@ -171,8 +171,7 @@ $id = 2;
                 <thead>
                 <tr style="display: block;">
                     <td style="display: block;">
-                        <h3
-                                style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase; padding: 10px">
+                        <h3 style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase; padding: 10px">
                             感謝您購買 Wayshk活籽兒童用品店的商品，您的訂單已經建立，我們將在收到您的付款後，盡快處理您的訂單。訂單編號：WHK#01</h3>
                     </td>
 
@@ -188,7 +187,7 @@ $id = 2;
                             <thead>
                             <tr style="display: block;">
                                 <td style="display: block;">
-                                    <a href='https://wayshk.ngt.hk/print_receipt.php?id=$id' class="password-button"
+                                    <a href='https://wayshk.ngt.hk/print_receipt.php?id=$id' class="password-button" style="margin-left: 60px;"
                                        target="_blank">See Details</a>
                                 </td>
                             </tr>
@@ -243,109 +242,56 @@ $id = 2;
                             </tfoot>
                         </table>
                     </td>
-                    <td style='display: block;'>
-                        <p style="font-size: 14px;font-weight: 600;width: 82%;margin: 8px auto 0;line-height: 1.5;color: #939393;font-family: 'Nunito Sans', sans-serif;">
-                            選用速遞出貨客人：
-                            付款方式：
-                            PayMe (號碼：5265-7359 WAYSHK )
-                            轉數快 (號碼：5265-7359 WAYSHK )
-                            銀行入數【戶口號碼為 769-334699-883 (恆生銀行) WAYSHK】
-                            請於下單後WhatsApp 付款憑證到 +852 5605 8389，
-                            並提供訂單編號進行確認。 
-                            *現貨產品送貨期為1星期。若訂單包含預購產品，將會於所有貨品齊全後一併寄出。
-
-                        </p>
-                    </td>
-                </tr>
-                </thead>
-            </table>
-
-            <table class="contant-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <thead>
-                <tr style="display: block;">
-                    <td style="display: block;">
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 20px auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">付款方法說明</p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">（一）選用速遞出貨
-                            請於7日內，以以下方式付款：</p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">⦁ PayMe (電話號碼：5265-7359 WAYSHK )</p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">⦁ 轉數快 (電話號碼：5265-7359 WAYSHK )</p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">⦁ 銀行入數【戶口號碼為 769-334699-883 (恆生銀行) WAYSHK】
-                        </p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">⦁ 請於付款後，將付款憑證Whatsapp到 +852 5605 8389，並提供訂單編號進行確認。
+                    <td style='display: block; margin-left: 20px'>
+                        <h3>付款方法說明:</h3>
+                        <h3>(一）選用速遞出貨:</h3>
+                        <h3>請於7日內，以以下方式付款：<br/><br/></h3>
+                        <p>
+                            ⦁ PayMe (電話號碼：5265-7359 WAYSHK )<br/><br/>
+                            ⦁ 轉數快 (電話號碼：5265-7359 WAYSHK )<br/><br/>
+                            ⦁ 銀行入數【戶口號碼為 769-334699-883 (恆生銀行) WAYSHK】
+                            <br/><br/>
+                            請於付款後，將付款憑證Whatsapp到 +852 5605 8389，並提供訂單編號進行確認。
                             亦可直接回覆此電郵。
+                            <br/><br/>
+                            *收到款項後，現貨產品送貨期為1星期。若訂單包含預購產品，將會於所有貨品齊全後一併寄出。<br/><br/>
+                            *七天內如無收到付款證明，訂單將自動取消。<br/><br/>
                         </p>
-                    </td>
+                        <h3>(二）選用自取方式出貨</h3>
+                        <p>請WhatsApp +852 5605 8389 聯絡我們查詢自取點現貨詳情並預約取貨時間。<br/><br/>
+                            接受PayMe/轉數快/銀行入數/現場現金付款。 <br/><br/>
+                        </p>
+                        <h3>自取點A 大圍倉庫</h3>
+                        <p>
+                            地址：大圍成運路21-23號群力工業大廈3樓1室<br/><br/>
+                            大圍火車站A出口右轉，步行約5分鐘<br/><br/>
+                            開放時間：不定 （10:30 – 18:15）<br/><br/>
+                            不設現場入內選貨。與我們確認領取時間，到達後致電並於門口交收。<br/><br/>
+                        </p>
+                        <h3>自取點B 兒璞兒童學習及發展中心</h3>
+                        <p>
+                            地址：灣仔軒尼詩道237-239號25樓<br/><br/>
+                            灣仔地鐵站A2出口，步行約5分鐘/ 會展站A3出口，步行約6分鐘<br/><br/>
+                            開放時間： 星期一至五 09:00 - 18:00；星期六 09:00 - 16:00
+                            【午餐時間 12:30-13:45 不開放】
+                            <br/><br/>
+                            電話：2877 8787<br/><br/>
+                            請必須預約取貨時間。<br/><br/><br/><br/>
+                        </p>
 
-                    <td>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                            *收到款項後，現貨產品送貨期為1星期。若訂單包含預購產品，將會於所有貨品齊全後一併寄出。
-                        </p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                            *七天內如無收到付款證明，訂單將自動取消。
-                        </p>
                     </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 20px auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                            （二）選用自取方式出貨
-                        </p>
-                        <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                            請WhatsApp +852 5605 8389 聯絡我們查詢自取點現貨詳情並預約取貨時間。
-                            接受PayMe/轉數快/銀行入數/現場現金付款。
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        自取點A 大圍倉庫
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        地址：大圍成運路21-23號群力工業大廈3樓1室
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        大圍火車站A出口右轉，步行約5分鐘
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        開放時間：不定 （10:30 – 18:15）
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        不設現場入內選貨。與我們確認領取時間，到達後致電並於門口交收。
-                    </p>
-                </tr>
-                <tr>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        自取點B 兒璞兒童學習及發展中心
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        地址：灣仔軒尼詩道237-239號25樓
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        灣仔地鐵站A2出口，步行約5分鐘/ 會展站A3出口，步行約6分鐘
-                        開放時間： 星期一至五 09:00 - 18:00；星期六 09:00 - 16:00
-                        【午餐時間 12:30-13:45 不開放】
-
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        開放時間： 星期一至五 09:00 - 18:00；星期六 09:00 - 16:00
-                        【午餐時間 12:30-13:45 不開放】
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        【午餐時間 12:30-13:45 不開放】
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        電話：2877 8787
-                    </p>
-                    <p style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                        請必須預約取貨時間。
-                    </p>
                 </tr>
                 </thead>
             </table>
+
+
+
+
+
             <table>
                 <tr>
                     <td>
-                        <img src="https://wayshk.ngt.hk/assets/images/wa1.jpg" class="main-logo" alt="logo" style="width: 180px; margin-left: 50px;">
+                        <img src="https://wayshk.ngt.hk/assets/images/wa1.jpg" class="main-logo" alt="logo" style="width: 180px; margin-left: 110px;">
                     </td>
                     <td>
                         <img src="https://wayshk.ngt.hk/assets/images/wa-2.jpg" class="main-logo" alt="logo" style="width: 180px; margin-left: 50px;">
@@ -362,7 +308,7 @@ $id = 2;
                                align="center" style="margin: 8px auto 11px;">
                             <tr>
                                 <td>
-                                    <h4 style="font-size: 19px; font-weight: 700; margin: 0; color: #FFFFFF">聯絡我們</h4>
+                                    <h4 style="font-size: 19px; font-weight: 700; margin: 0; color: #FFFFFF">聯絡我們</h4><br/>
                                 </td>
                             </tr>
                         </table>
