@@ -321,7 +321,7 @@ if (isset($_POST['delivery'])) {
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
                     <h3 style='color:black'>Order Update</h3>
                     <p style='color:black;'>
-                    Your order is successfully received. Your approximate delivery date is: $date. Please contact us for more details.
+                    Your order is successfully received. We will try to process your order as soon as possible. Please contact us for more details.
                     </p>
                 </div>
                 </body>

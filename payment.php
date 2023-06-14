@@ -195,7 +195,6 @@ if (isset($_POST["placeOrder"])) {
         .footer-table::before {
             position: absolute;
             content: "";
-            background-image: url(images/footer-left.svg);
             background-position: top right;
             top: 0;
             left: -71%;
@@ -210,7 +209,6 @@ if (isset($_POST["placeOrder"])) {
         .footer-table::after {
             position: absolute;
             content: "";
-            background-image: url(images/footer-right.svg);
             background-position: top right;
             top: 0;
             right: 0;
@@ -486,7 +484,7 @@ $total_purchase = (int)$total_purchase + (int)$shipping - (int)$discount;
 
     // Create a Checkout Session with the selected product
     const createCheckoutSession = function (stripe) {
-        <?php $total_purchase = (int)$total_purchase + ((int)$total_purchase * 0.05);?>
+        <?php $total_purchase = (int)$total_purchase + (int)(($total_purchase * 5) / 100); ?>
         return fetch("payment_init.php?total_purchase=<?php echo $total_purchase; ?>", {
             method: "POST",
             headers: {
@@ -528,6 +526,8 @@ $total_purchase = (int)$total_purchase + (int)$shipping - (int)$discount;
     function showMessage(messageText) {
 
     }
+
+
 </script>
 </body>
 </html>

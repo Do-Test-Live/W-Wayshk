@@ -72,14 +72,14 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Minimum Charges Applied Upto Weight (GM)</label>
+                                            <label class="col-sm-3 col-form-label">Minimum Charges Applied Upto Weight (KG)</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="weight_upto"
                                                        value="<?php echo $data[0]["weight_upto"]; ?>" required>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Additional Charge for per GM</label>
+                                            <label class="col-sm-3 col-form-label">Additional Charge for per 0.5 KG</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="additional_charges"
                                                        value="<?php echo $data[0]["next_per_kg_weight"]; ?>" required>
@@ -119,7 +119,7 @@ if (!isset($_SESSION['userid'])) {
                                             <th>SL</th>
                                             <th>Min. Delivery Charge</th>
                                             <th>Upto Weight (KG)</th>
-                                            <th>Additional Delivery Charges (Per KG)</th>
+                                            <th>Additional Delivery Charges (Per 0.5 KG)</th>
                                             <th>Min. Order Amount for Free Delivery</th>
                                             <th>Action</th>
                                         </tr>

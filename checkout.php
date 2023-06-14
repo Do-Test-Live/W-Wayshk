@@ -407,11 +407,11 @@ include('include/header.php');
                                         $delivery_charges = $db_handle->runQuery("select * from delivery_charges");
                                         if ($total_price_new >= $delivery_charges[0]['min_order_free_delivery']){
                                             $dCharge = 0;
-                                        }elseif($total_weight <= $delivery_charges[0]['weight_upto']){
+                                        }elseif(($total_weight / 1000) <= $delivery_charges[0]['weight_upto']){
                                             $dCharge = $delivery_charges[0]['min_delivery_charge'];
                                         }else{
-                                            $d_weight = $total_weight - $delivery_charges[0]['weight_upto'];
-                                            $dAdditional = $d_weight * $delivery_charges[0]['next_per_kg_weight'];
+                                            $d_weight = ($total_weight / 1000) - $delivery_charges[0]['weight_upto'];
+                                            $dAdditional = $d_weight * $delivery_charges[0]['next_per_kg_weight'] * 2;
                                             $dCharge = $dAdditional +  $delivery_charges[0]['min_delivery_charge'];
                                         }
                                         /*echo $dCharge;*/
