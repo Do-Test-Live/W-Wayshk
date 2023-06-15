@@ -204,7 +204,7 @@ include('include/header.php');
 
                                     <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                     </button>
-                                    <a class="btn btn-md bg-dark cart-button text-white w-100 mt-3" href="Wish-List?id=<?php echo $product_id;?>" target="_blank"><?php if($_SESSION['language'] === 'CN') echo '添加到白名單'; else echo 'Add to Whitelist';?>
+                                    <a class="btn btn-md bg-dark cart-button text-white w-100 mt-3" href="Wish-List?id=<?php echo $product_id;?>" target="_blank"><?php if($_SESSION['language'] === 'CN') echo '添加到喜愛清單'; else echo 'Add to Whitelist';?>
                                     </a>
                                 </form>
                             </div>
@@ -285,13 +285,13 @@ include('include/header.php');
                                              class="img-fluid blur-up lazyload" alt="">
                                     </a>
                                     <ul class="product-option">
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
+                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '詳情'; else echo 'View';?>">
                                             <a href="Product-Details?product_id=<?php echo $related_products [$i]['id'];?>">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
 
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '查看詳情'; else echo 'Wishlist';?>">
                                             <a href="Wish-List?id=<?php echo $related_products [$i]['id'];?>" target="_blank" class="notifi-wishlist">
                                                 <i data-feather="heart"></i>
                                             </a>

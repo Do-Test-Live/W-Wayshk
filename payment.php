@@ -40,6 +40,7 @@ if (isset($_POST["placeOrder"])) {
     $updated_at = date("Y-m-d H:i:s");
     $total_purchase = 0;
     $purchase_points = 0;
+    $final_payment_for_stripe = $db_handle->checkValue($_POST['stripe_value']);
 
     if (isset($_POST['addInfo'])) {
         $addInfo = 1;
@@ -484,8 +485,7 @@ $total_purchase = (int)$total_purchase + (int)$shipping - (int)$discount;
 
     // Create a Checkout Session with the selected product
     const createCheckoutSession = function (stripe) {
-        <?php $total_purchase = (int)$total_purchase + (int)(($total_purchase * 5) / 100); ?>
-        return fetch("payment_init.php?total_purchase=<?php echo $total_purchase; ?>", {
+        return fetch("payment_init.php?total_purchase=<?php echo $final_payment_for_stripe; ?>", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

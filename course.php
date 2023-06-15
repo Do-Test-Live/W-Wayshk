@@ -86,7 +86,7 @@ include('include/header.php');
                 $no_fetch_course = $db_handle->numRows("select * from course where status = '1' order by course_id desc");
                 for ($i=0; $i < $no_fetch_course; $i++){
                     ?>
-                    <div class="col-xxl-4 col-sm-6 ms-auto mt-3">
+                    <div class="col-xxl-4 col-sm-6 m-auto mt-3">
                         <div class="blog-box wow fadeInUp">
                             <div class="blog-image">
                                 <a href="Course-Details?id=<?php echo $fetch_course[$i]['course_id'];?>">
@@ -105,14 +105,25 @@ include('include/header.php');
                                         ?>
                                     </h3>
                                         <h4>
-                                            Course Type: <?php
+                                            <?php
+                                            if($_SESSION['language'] == 'CN')
+                                                echo '課程類型:';
+                                            else
+                                                echo 'Course Type:';
+                                            ?>
+                                            <?php
                                             echo $fetch_course[$i]['course_type'];
                                             ?></h4>
                                 </a>
                                 <hr/>
                                 <div class="blog-label">
                                     <p>
-                                        Over
+                                        <?php
+                                        if($_SESSION['language'] == 'CN')
+                                            echo '超過';
+                                        else
+                                            echo 'Over';
+                                        ?>
                                     </p>
                                     <span class="time"><span><?php echo $fetch_course[$i]['course_price'];?> HKD</span></span>
                                     <span class="super"><span><?php

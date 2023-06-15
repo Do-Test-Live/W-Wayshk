@@ -97,8 +97,19 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
+                                <?php
+                                if($_SESSION['language'] == 'CN'){
+                                    ?>
                                     <h2>立即加入會員</h2>
                                     <h3>取得限定優惠</h3>
+                                    <?php
+                                }else{
+                                    ?>
+                                    <h2>Become a member now</h2>
+                                    <h3>to get limited offers</h3>
+                                    <?php
+                                }
+                                ?>
                                 </div>
                             </div>
                         </div>
@@ -110,8 +121,19 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>立即加入會員</h2>
-                                    <h3>取得限定優惠</h3>
+                                    <?php
+                                    if($_SESSION['language'] == 'CN'){
+                                        ?>
+                                        <h2>為你搜羅來至各國大小品牌產品</h2>
+                                        <h3>方便一站式購買</h3>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <h2>Convenient one-stop shopping</h2>
+                                        <h3>for products from worldwide</h3>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -123,8 +145,19 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>立即加入會員</h2>
-                                    <h3>取得限定優惠</h3>
+                                    <?php
+                                    if($_SESSION['language'] == 'CN'){
+                                        ?>
+                                        <h2>精美本土特色自製教材</h2>
+                                        <h3>有趣地輕鬆學習</h3>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <h2>Exquisite self-made teaching materials</h2>
+                                        <h3>to make learning fun</h3>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -252,13 +285,13 @@ include('include/header.php');
                                             </a>
 
                                             <ul class="product-option">
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '詳情'; else echo 'View';?>">
                                                     <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
 
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '查看詳情'; else echo 'Wishlist';?>">
                                                     <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" class="notifi-wishlist">
                                                         <i data-feather="heart"></i>
                                                     </a>
@@ -408,14 +441,14 @@ include('include/header.php');
                                             </a>
 
                                             <ul class="product-option">
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '看法'; else echo 'View';?>">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '詳情'; else echo 'View';?>">
                                                     <a href="Product-Details?product_id=<?php echo $fetch_products[$i]['id'];?>" target="_blank" data-bs-toggle="modal"
                                                        data-bs-target="#view">
                                                         <i data-feather="eye"></i>
                                                     </a>
                                                 </li>
 
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '願望清單'; else echo 'Wishlist';?>">
+                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="<?php if($_SESSION['language'] == 'CN') echo '查看詳情'; else echo 'Wishlist';?>">
                                                     <a href="Wish-List?id=<?php echo $fetch_products[$i]['id'];?>" class="notifi-wishlist">
                                                         <i data-feather="heart"></i>
                                                     </a>

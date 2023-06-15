@@ -77,7 +77,7 @@ include('include/header.php');
             <table style="border: 1px solid #000000; margin: 25px; max-width:400px;padding: 15px;">
                 <thead>
                 <tr>
-                    <td style="border: 1px solid #000000">Points Required to Download</td>
+                    <td style="border: 1px solid #000000"><?php if($_SESSION['language'] == 'CN') echo '下載所需積分'; else echo 'Points Required to Download';?></td>
                     <td style="border: 1px solid #000000"><?php echo $fetch_details[0]['textbook_point']; ?></td>
                 </tr>
                 </thead>

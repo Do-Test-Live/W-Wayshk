@@ -426,6 +426,7 @@ include('include/header.php');
                                 <li class="list-total">
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '全部的 (HKD)'; else echo 'Total (HKD)';?></h4>
                                     <h4 class="price" id="total_value"><?php echo "HKD " . number_format($totalPriceNew, 2); ?></h4>
+                                    <input type="text" value="<?php echo $totalPriceNew * 1.05; ?>" name="stripe_value">
                                 </li>
                             </ul>
                         </div>

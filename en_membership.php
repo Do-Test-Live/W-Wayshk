@@ -124,10 +124,7 @@ include('include/header.php');
                                         in the Online Shop. Points will be rounded down to the nearest single digit,
                                         e.g. if the net purchase is HK$99.5 after the discount, the customer will earn
                                         99 points</p>
-                                    <p>(iii) Referral Reward - Invite a friend to become Wayshk Online Shop member, and
-                                        the referrer will earn 200 points (unlimited number of times) after your
-                                        friend's first purchase in the Online Shop.</p>
-                                    <p>(iv) Trial Evaluation Rebate - After purchasing a product / taking a course,
+                                    <p>(iii) Trial Evaluation Rebate - After purchasing a product / taking a course,
                                         write a trial evaluation with photos and you will receive 200 points for each
                                         product evaluation.</p>
                                     <p>* Shipping and other service fees are not included in the purchase amount.</p>
