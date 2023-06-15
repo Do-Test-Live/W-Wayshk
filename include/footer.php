@@ -249,6 +249,7 @@
                 <div class="col-lg-4">
                     <div class="reserve">
                         <h6 class="text-content">©2023 Wayshk All rights reserved</h6>
+                        <h6 class="text-content mt-2">powered by <a href="https://ngt-tech.io/home-zh" target="_blank">NGT TECH</a></h6>
                     </div>
                 </div>
                 <div class="col-lg-4">
