@@ -59,3 +59,5 @@ RewriteRule ^Search-Result search_result.php [NE,L]
 RewriteRule ^Customer-Review customer_review.php [NE,L]
 
 RewriteRule ^Testimonial testimonial.php [NE,L]
+
+RewriteRule ^Reset-Pass reset_pass.php [NE,L]

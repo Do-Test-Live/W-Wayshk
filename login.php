@@ -130,7 +130,7 @@ if(isset($_POST['login'])){
                                     </div>
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 my-3">
                                     <div class="forgot-box">
                                         <a href="forgot.php" class="forgot-password"><?php if($_SESSION['language'] === 'CN') echo '忘記密碼？'; else echo 'Forgot Password?';?></a>
                                     </div>

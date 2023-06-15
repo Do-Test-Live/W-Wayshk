@@ -143,7 +143,7 @@ if(isset($_POST['forgot'])){
                     style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
                     <td class="header-logo" style="padding: 10px 32px;">
                         <a href="#" style="display: block; text-align: left;">
-                            <img src="assets/images/logo/2.png" class="main-logo" alt="logo" style="width: 120px">
+                            <img src="https://wayshk.ngt.hk/assets/images/logo/2.png" class="main-logo" alt="logo" style="width: 120px">
                         </a>
                     </td>
                 </tr>
@@ -154,7 +154,7 @@ if(isset($_POST['forgot'])){
                 <thead>
                 <tr>
                     <td>
-                        <img src="assets/images/welcome-poster.jpg" alt="">
+                        <img src="https://wayshk.ngt.hk/assets/images/welcome-poster.jpg" alt="">
                     </td>
                 </tr>
                 </thead>
@@ -167,7 +167,7 @@ if(isset($_POST['forgot'])){
                     <td style="display: block;">
                         <h3
                                 style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                            You Password is: $pass. Please log in using this password. Thank you for being with WaysHK!</h3>
+                            Please visit the <a href="https://wayshk.ngt.hk/Reset-Pass?email=$email" target="_blank">Link</a> and reset your password. Thank you for being with WaysHK!</h3>
                     </td>
                 </tr>
                 </thead>
@@ -334,7 +334,7 @@ if(isset($_POST['forgot'])){
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="col-12 my-3">
                                         <button class="btn btn-animation w-100" name="forgot" type="submit"><?php if($_SESSION['language'] === 'CN') echo '忘記密碼'; else echo 'Forgot Password';?></button>
                                     </div>
                                 </form>

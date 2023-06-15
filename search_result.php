@@ -101,8 +101,19 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>立即加入會員</h2>
-                                    <h3>取得限定優惠</h3>
+                                    <?php
+                                    if($_SESSION['language'] == 'CN'){
+                                        ?>
+                                        <h2>立即加入會員</h2>
+                                        <h3>取得限定優惠</h3>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <h2>Become a member now</h2>
+                                        <h3>to get limited offers</h3>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -114,8 +125,19 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>立即加入會員</h2>
-                                    <h3>取得限定優惠</h3>
+                                    <?php
+                                    if($_SESSION['language'] == 'CN'){
+                                        ?>
+                                        <h2>為你搜羅來至各國大小品牌產品</h2>
+                                        <h3>方便一站式購買</h3>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <h2>Convenient one-stop shopping</h2>
+                                        <h3>for products from worldwide</h3>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -127,8 +149,19 @@ include('include/header.php');
                             <div
                                     class="banner-detail p-center-right position-relative shop-banner ms-auto banner-small">
                                 <div>
-                                    <h2>立即加入會員</h2>
-                                    <h3>取得限定優惠</h3>
+                                    <?php
+                                    if($_SESSION['language'] == 'CN'){
+                                        ?>
+                                        <h2>精美本土特色自製教材</h2>
+                                        <h3>有趣地輕鬆學習</h3>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <h2>Exquisite self-made teaching materials</h2>
+                                        <h3>to make learning fun</h3>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
