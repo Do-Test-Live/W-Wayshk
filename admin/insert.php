@@ -54,24 +54,52 @@ if (isset($_POST["add_product"])) {
 
     $products_image='';
     $arr = array();
-    if (!empty($_FILES['product_image']['name'][0])) {
-        $RandomAccountNumber = mt_rand(1, 99999);
+    if (!empty($_FILES['product_image']['tmp_name'][0])) {
+        // At least one image is selected
 
-        foreach ($_FILES['product_image']['name'] as $key => $tmp_name) {
+        $dataFileName = []; // Array to store the file names
 
-            $file_name = $RandomAccountNumber.$key."_" . $_FILES['product_image']['name'][$key];
-            $file_size = $_FILES['product_image']['size'][$key];
-            $file_tmp = $_FILES['product_image']['tmp_name'][$key];
-            $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        // Loop through each uploaded image file
+        foreach ($_FILES['product_image']['tmp_name'] as $index => $uploadedFile) {
+            $originalFileName = $_FILES['product_image']['name'][$index];
+            // Get the original image size and type
+            list($originalWidth, $originalHeight, $imageType) = getimagesize($uploadedFile);
 
-            if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
-                $products_image = '';
-            } else {
-                move_uploaded_file($file_tmp, "assets/products_image/" .$file_name);
-                $arr[] = "assets/products_image/" . $file_name;
+            // Create image resource from uploaded file based on image type
+            switch ($imageType) {
+                case IMAGETYPE_JPEG:
+                    $image = imagecreatefromjpeg($uploadedFile);
+                    break;
+                case IMAGETYPE_PNG:
+                    $image = imagecreatefrompng($uploadedFile);
+                    break;
+                case IMAGETYPE_GIF:
+                    $image = imagecreatefromgif($uploadedFile);
+                    break;
+                default:
+                    throw new Exception('Unsupported image type.');
             }
+
+            // Resize the image to 250x250 and save it
+            $newImage = imagecreatetruecolor(250, 250);
+            imagecopyresampled($newImage, $image, 0, 0, 0, 0, 250, 250, $originalWidth, $originalHeight);
+            $RandomAccountNumber = mt_rand(1, 99999);
+            imagejpeg($newImage, 'assets/products_image/250/' . $RandomAccountNumber . '_' . $originalFileName);
+
+            // Resize the image to 650x650 and save it
+            $newImage = imagecreatetruecolor(650, 650);
+            imagecopyresampled($newImage, $image, 0, 0, 0, 0, 650, 650, $originalWidth, $originalHeight);
+            imagejpeg($newImage, 'assets/products_image/650/' . $RandomAccountNumber . '_' . $originalFileName);
+
+            $dataFileName[] = 'assets/products_image/650/' . $RandomAccountNumber . '_' . $originalFileName;
+
+            // Free up memory
+            imagedestroy($image);
+            imagedestroy($newImage);
         }
-        $products_image = implode(',', $arr);
+
+        $databaseValue = implode(',', $dataFileName);
+        $products_image = $databaseValue;
     } else {
         $products_image = '';
     }
