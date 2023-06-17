@@ -68,3 +68,11 @@ if(isset($_GET['bankInterestId'])){
     $db_handle->insertQuery("delete from bank_interest where bank_id =" . $_GET['bankInterestId'] . "");
     echo 'success';
 }
+
+if(isset($_GET['invoiceId'])){
+    $invoice_details = $db_handle->insertQuery("DELETE FROM `invoice_details` WHERE `billing_id` = " . $_GET['invoiceId'] . "");
+    if($invoice_details){
+        $db_handle->insertQuery("DELETE FROM `billing_details` WHERE `id`= " . $_GET['invoiceId'] . "");
+        echo 'success';
+    }
+}

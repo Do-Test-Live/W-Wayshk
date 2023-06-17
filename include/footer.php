@@ -50,7 +50,7 @@
 
         <div class="main-footer section-b-space section-t-space">
             <div class="row g-md-4 g-3">
-                <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="col-xl-7 col-lg-9 col-sm-9">
                     <div class="footer-logo">
                         <div class="theme-logo">
                             <a href="Home">
@@ -157,6 +157,14 @@
                                 <li>
                                     <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
                                 </li>
+                                <li>
+                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
+                                        <?php if($_SESSION['language'] === 'CN') echo '私隱政策'; else echo 'Privacy Policy';?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
+                                        <?php if($_SESSION['language'] === 'CN') echo '條款細則'; else echo 'Terms and Condition';?></a>
+                                </li>
                                 <!--<li>
                                     <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
                                 </li>-->
@@ -185,30 +193,19 @@
                                 <li>
                                     <a href="Occupational-Therapy-Courses-EN" class="text-content">Featured Courses</a>
                                 </li>
+                                <li>
+                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
+                                        <?php if($_SESSION['language'] === 'CN') echo '私隱政策'; else echo 'Privacy Policy';?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
+                                        <?php if($_SESSION['language'] === 'CN') echo '條款細則'; else echo 'Terms and Condition';?></a>
+                                </li>
                             </ul>
                             <?php
                         }
                         ?>
 
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-sm-3">
-                    <div class="footer-title">
-                        <h4><?php if($_SESSION['language'] === 'CN') echo '幫助中心'; else echo 'Help Center';?></h4>
-                    </div>
-
-                    <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
-                                    <?php if($_SESSION['language'] === 'CN') echo '私隱政策'; else echo 'Privacy Policy';?></a>
-                            </li>
-                            <li>
-                                <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
-                                    <?php if($_SESSION['language'] === 'CN') echo '條款細則'; else echo 'Terms and Condition';?></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 

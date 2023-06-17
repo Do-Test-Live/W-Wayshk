@@ -59,6 +59,8 @@ if (!isset($_SESSION['userid'])) {
                                 <thead>
                                 <tr>
                                     <th>SL</th>
+                                    <th>Status</th>
+                                    <th>Details</th>
                                     <th>Order No</th>
                                     <th>Customer Name</th>
                                     <th>Email</th>
@@ -70,8 +72,6 @@ if (!isset($_SESSION['userid'])) {
                                     <th>Payment Type</th>
                                     <th>Shipping Method</th>
                                     <th>Total (HKD)</th>
-                                    <th>Status</th>
-                                    <th>Details</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -83,18 +83,6 @@ if (!isset($_SESSION['userid'])) {
                                     ?>
                                     <tr>
                                         <td><?php echo $i + 1; ?></td>
-                                        <td><?php echo '#WHK'.$bill_data[$i]['id'];?></td>
-                                        <td><?php echo $bill_data[$i]["f_name"] . ' ' . $bill_data[$i]["l_name"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["email"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["phone"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["address"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["city"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["zip_code"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["note"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["payment_type"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["shipping_method"]; ?></td>
-                                        <td><?php echo $bill_data[$i]["total_purchase"]; ?></td>
-
                                         <?php
                                         if ($bill_data[$i]["approve"] == 3) {
                                             ?>
@@ -117,8 +105,22 @@ if (!isset($_SESSION['userid'])) {
                                                 <a href="print_invoice.php?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Invoice"><i
                                                             class="fa fa-print"></i></a>
+                                                <a onclick="deleteInvoice(<?php echo $bill_data[$i]["id"];?>)"
+                                                   class="btn btn-danger shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Delete Invoice"><i
+                                                            class="fa fa-trash"></i></a>
                                             </div>
                                         </td>
+                                        <td><?php echo '#WHK'.$bill_data[$i]['id'];?></td>
+                                        <td><?php echo $bill_data[$i]["f_name"] . ' ' . $bill_data[$i]["l_name"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["email"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["phone"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["address"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["city"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["zip_code"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["note"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["payment_type"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["shipping_method"]; ?></td>
+                                        <td><?php echo $bill_data[$i]["total_purchase"]; ?></td>
                                     </tr>
                                     <?php
                                 }
@@ -148,6 +150,55 @@ if (!isset($_SESSION['userid'])) {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
+
+    function deleteInvoice(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: 'get',
+                    url: 'Delete',
+                    data: {
+                        invoiceId: id
+                    },
+                    success: function (data) {
+                        if (data.toString() === 'P') {
+                            Swal.fire(
+                                'Not Deleted!',
+                                '',
+                                'error'
+                            ).then((result) => {
+                                window.location = 'Pending-Order';
+                            });
+                        } else {
+                            Swal.fire(
+                                'Deleted!',
+                                'Invoice data has been deleted.',
+                                'success'
+                            ).then((result) => {
+                                window.location = 'Pending-Order';
+                            });
+                        }
+                    }
+                });
+            } else {
+                Swal.fire(
+                    'Cancelled!',
+                    'Your Data is safe :)',
+                    'error'
+                ).then((result) => {
+                    window.location = 'Pending-Order';
+                });
+            }
+        })
+    }
 </script>
 <!-- Datatable -->
 <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
