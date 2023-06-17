@@ -154,7 +154,7 @@ include('include/header.php');
                                                                 <input class="form-check-input card-class" name="addInfo" type="checkbox"
                                                                        value="" id="flexCheckChecked">
                                                                 <label class="form-check-label ms-2" for="flexCheckChecked">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '同意接收最新優惠資訊'; else echo 'Add this data to customer info';?>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '同意接收最新優惠資訊'; else echo 'Agree to receive the latest promotional information';?>
                                                                 </label>
 
                                                                 <?php

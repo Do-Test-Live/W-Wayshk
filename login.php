@@ -18,7 +18,15 @@ if(isset($_POST['login'])){
         $_SESSION['id'] = $customer_id;
         header('Location: profile.php');
     }else{
-        echo "Something went wrong";
+        if($_SESSION['language'] == 'EN'){
+            echo "<script>
+alert('The email or password that you have entered is not correct. Please check and try again.');
+</script>";
+        }else{
+            echo "<script>
+alert('您輸入的電子郵件或密碼不正確。請檢查後再試一次。');
+</script>";
+        }
     }
 }
 

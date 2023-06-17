@@ -16,25 +16,50 @@ if (isset($_GET['id'])) {
             $inserted_at = date("Y-m-d H:i:s");
             $white_list = $db_handle->insertQuery("INSERT INTO `wishlist`( `customer_id`, `product_id`, `inserted_at`) VALUES ('$customer_id','$product_id','$inserted_at')");
             if ($white_list) {
-                echo "
+                if($_SESSION['language'] === 'CN'){
+                    echo "
+                    <script>
+                    alert('已成功添加。');
+                    </script>
+                    ";
+                }else{
+                    echo "
                     <script>
                     alert('Added Successfully');
                     </script>
                     ";
+                }
             }
         } else{
-            echo "
+            if($_SESSION['language'] == 'CN'){
+                echo "
+                <script>
+                alert('該產品已經在您的願望清單中了！');
+                window.location.href = 'Wish-List';
+                </script>";
+            }else{
+                echo "
                 <script>
                 alert('This product is already at your wishlist!');
                 window.location.href = 'Wish-List';
                 </script>";
+            }
         }
     } else {
-        echo "
+        if($_SESSION['language'] == 'CN'){
+            echo "
+    <script>
+    alert('請先登入或註冊後再進行添加。');
+    window.location.href = 'Home';
+    </script>";
+        }else{
+            echo "
     <script>
     alert('Please login or sign up first to add');
     window.location.href = 'Home';
     </script>";
+        }
+
 
     }
 }

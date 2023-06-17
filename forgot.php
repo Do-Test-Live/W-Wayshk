@@ -165,9 +165,8 @@ if(isset($_POST['forgot'])){
                 <thead>
                 <tr style="display: block;">
                     <td style="display: block;">
-                        <h3
-                                style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                            Please visit the <a href="https://wayshk.ngt.hk/Reset-Pass?email=$email" target="_blank">Link</a> and reset your password. Thank you for being with WaysHK!</h3>
+                        <h3 style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
+                           請訪問<a href="https://wayshk.ngt.hk/Reset-Pass?email=$email" target="_blank">連結</a>並重設您的密碼。感謝您使用 WaysHK！</h3>
                     </td>
                 </tr>
                 </thead>
@@ -179,8 +178,8 @@ if(isset($_POST['forgot'])){
                     <td style="display: block;">
                         <p
                                 style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                            If you have any question, please email us at <span
-                                class="theme-color">ways00.hk@gmail.com</span> or whatsapp at: +852 52657359</p>
+                            如果您有任何問題，請透過電子郵件聯繫我們，地址為： <span
+                                class="theme-color">ways00.hk@gmail.com</span> 或透過 WhatsApp 聯繫我們，號碼為： +852 52657359</p>
                     </td>
                 </tr>
                 </thead>
@@ -204,7 +203,7 @@ if(isset($_POST['forgot'])){
                             <tr>
                                 <td>
                                     <h5 style="font-size: 13px; text-transform: uppercase; margin: 0; color:#ddd;
-                                letter-spacing:1px; font-weight: 500;">Want to change how you receive these emails?
+                                letter-spacing:1px; font-weight: 500;">您想要更改如何接收這些郵件嗎？
                                     </h5>
                                     <h5 style="font-size: 13px; text-transform: uppercase; margin: 10px 0 0; color:#ddd;
                                 letter-spacing:1px; font-weight: 500;">2023 copy right by WaysHK</h5>
@@ -223,7 +222,15 @@ if(isset($_POST['forgot'])){
                         </html>
  HTML;
         if (mail($email_to, $subject, $message, $headers)){
+            if($_SESSION['language'] == 'CN')
             echo "
+        <script>
+        alert ('一封包含所有指示的電子郵件已經發送。請按照電子郵件中的指示進行操作。');
+        window.location.href = 'Login';
+</script>
+        ";
+            else
+                echo "
         <script>
         alert ('An email with all instruction is sent. Please follow the email');
         window.location.href = 'Login';
