@@ -120,7 +120,7 @@ include('include/header.php');
                                     <p>
                                         <?php
                                         if($_SESSION['language'] == 'CN')
-                                            echo '超過';
+                                            echo '價格';
                                         else
                                             echo 'Over';
                                         ?>
@@ -128,8 +128,13 @@ include('include/header.php');
                                     <span class="time"><span><?php echo $fetch_course[$i]['course_price'];?> HKD</span></span>
                                     <span class="super"><span><?php
                                             if($fetch_course[$i]['course_price_poor'] > 0){
+                                                if($_SESSION['language'] == 'CN'){
+                                                    echo '低收入家庭';
+                                                }else {
+                                                    echo 'Low-income families';
+                                                }
                                                 ?>
-                                                Low-income families <?php echo $fetch_course[$i]['course_price_poor'];?> HKD
+                                                <?php echo $fetch_course[$i]['course_price_poor'];?> HKD
                                                 <?php
                                             }
                                             ?></span></span>

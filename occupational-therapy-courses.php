@@ -75,7 +75,7 @@ include('include/header.php');
                     $no_textbook = $db_handle->numRows("SELECT * FROM `textbook` ORDER BY id desc");
                     for ($i = 0; $i < $no_textbook; $i++) {
                         ?>
-                        <div class="col-xxl-4 col-sm-6 ms-auto mt-3">
+                        <div class="col-xxl-4 col-sm-6 m-auto mt-3">
                             <div class="blog-box wow fadeInUp">
                                 <div class="blog-image">
                                     <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>">
@@ -97,7 +97,7 @@ include('include/header.php');
                                     </a>
                                     <hr/>
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <p><?php if ($_SESSION['language'] === 'CN')
                                                     echo '分類名稱：' . $textbook[$i]['textbook_cat'];
                                                 else echo 'Category Name: ' . $textbook[$i]['textbook_cat_en']; ?></p>

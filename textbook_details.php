@@ -74,7 +74,7 @@ include('include/header.php');
                 else
                     echo $fetch_details[0]['textbook_title_en']; ?>
             </h2>
-            <table style="border: 1px solid #000000; margin: 25px; max-width:400px;padding: 15px;">
+            <table style="    border: 1px solid #000000;max-width: 380px;padding: 15px;margin-left: 10px;">
                 <thead>
                 <tr>
                     <td style="border: 1px solid #000000"><?php if($_SESSION['language'] == 'CN') echo '下載所需積分'; else echo 'Points Required to Download';?></td>
@@ -91,7 +91,7 @@ include('include/header.php');
                 ?>
             </p>
             <div class="row mt-3">
-                <div class="col-3">
+                <div class="col-5">
                     <a href="textbookBuy.php?id=<?php echo $id;?>" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                        <?php if($_SESSION['language'] === 'CN') echo '下載'; else echo 'Download';?>  <i class="fa-solid fa-right-long icon ms-2"></i></a>
                 </div>

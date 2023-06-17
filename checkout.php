@@ -191,7 +191,7 @@ include('include/header.php');
 
                                     <div class="checkout-box">
                                         <div class="checkout-title">
-                                            <h4><?php if($_SESSION['language'] === 'CN') echo '郵寄方式'; else echo 'Shipping Method';?></h4>
+                                            <h4><?php if($_SESSION['language'] === 'CN') echo '出貨方式'; else echo 'Shipping Method';?></h4>
                                         </div>
                                         <div class="checkout-detail">
                                             <div class="accordion accordion-flush custom-accordion"
@@ -401,7 +401,7 @@ include('include/header.php');
                                     </h4>
                                 </li>
                                 <li>
-                                    <h4><?php if($_SESSION['language'] === 'CN') echo '運費'; else echo 'Shipping'?></h4>
+                                    <h4><?php if($_SESSION['language'] === 'CN') echo '預計運費'; else echo 'Estimated shipping fee'?></h4>
                                     <h4 class="price text-end" id="price">
                                         <?php
                                         $delivery_charges = $db_handle->runQuery("select * from delivery_charges");
