@@ -7094,7 +7094,6 @@ footer .main-footer .footer-contact {
 
 footer .main-footer .footer-contact ul li {
     display: block;
-    margin-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
     position: relative
 }
 
@@ -7120,7 +7119,6 @@ footer .main-footer .footer-contact ul li::before {
     bottom: -24px;
     right: 0;
     width: calc(100% - 33px);
-    border-bottom: 1px dashed #c1c1c1
 }
 
 [dir="rtl"] footer .main-footer .footer-contact ul li::before {
