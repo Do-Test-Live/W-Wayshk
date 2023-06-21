@@ -172,16 +172,14 @@
                 </a>
             </li>
             <li>
-                <a href="Cash-Capital">
-                    <i class="flaticon-381-calculator-1"></i>
-                    <span class="nav-text">Cash Capital</span>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-panel"></i>
+                    <span class="nav-text">Accounting System</span>
                 </a>
-            </li>
-            <li>
-                <a href="Bank-Interest">
-                    <i class="flaticon-381-calculator"></i>
-                    <span class="nav-text">Bank Interest</span>
-                </a>
+                <ul aria-expanded="false">
+                    <li><a href="Cash-Capital">Cash Capital</a></li>
+                    <li><a href="Bank-Interest">Bank Interest</a></li>
+                </ul>
             </li>
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

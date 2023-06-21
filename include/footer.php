@@ -50,7 +50,7 @@
 
         <div class="main-footer section-b-space section-t-space">
             <div class="row g-md-4 g-3">
-                <div class="col-xl-10 col-lg-9 col-sm-9">
+                <div class="col-xl-6 col-lg-6 col-sm-12">
                     <div class="footer-logo">
                         <div class="theme-logo">
                             <a href="Home">
@@ -129,11 +129,7 @@
                     </div>
                 </div>
 
-                <!--<div class="col-xl-3 col-lg-4 col-sm-6">
-
-                </div>-->
-
-                <div class="col-xl-2 col-sm-3 mt-3">
+                <div class="col-xl-3 col-lg-3 col-sm-6  mt-3">
                     <div class="footer-title">
                         <h4><?php if($_SESSION['language'] === 'CN') echo '快速鏈接'; else echo 'Quick Link';?></h4>
                     </div>
@@ -158,20 +154,6 @@
                                 <li>
                                     <a href="Institution" class="text-content">機構/學校訂購</a>
                                 </li>
-                                <li>
-                                    <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
-                                </li>
-                                <li>
-                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
-                                        <?php if($_SESSION['language'] === 'CN') echo '私隱政策'; else echo 'Privacy Policy';?></a>
-                                </li>
-                                <li>
-                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
-                                        <?php if($_SESSION['language'] === 'CN') echo '條款細則'; else echo 'Terms and Condition';?></a>
-                                </li>
-                                <!--<li>
-                                    <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
-                                </li>-->
                             </ul>
                             <?php
                         } else{ ?>
@@ -191,6 +173,38 @@
                                 <li>
                                     <a href="Institution-EN" class="text-content">Institution/School Order</a>
                                 </li>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-sm-6  mt-3">
+                    <div class="footer-contain mt-5">
+                        <?php
+                        if($_SESSION['language'] === 'CN'){
+                            ?>
+                            <ul>
+                                <li>
+                                    <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
+                                </li>
+                                <li>
+                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
+                                        <?php if($_SESSION['language'] === 'CN') echo '私隱政策'; else echo 'Privacy Policy';?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php if($_SESSION['language'] === 'CN') echo 'terms_condition.php'; else echo 'terms_condition_en.php';?>" class="text-content">
+                                        <?php if($_SESSION['language'] === 'CN') echo '條款細則'; else echo 'Terms and Condition';?></a>
+                                </li>
+                                <!--<li>
+                                    <a href="Occupational-Therapy-Courses" class="text-content">精選課程</a>
+                                </li>-->
+                            </ul>
+                            <?php
+                        } else{ ?>
+                            <ul>
                                 <li>
                                     <a href="Living-Seeds-Children-EN" class="text-content">Wayshk Children Service Society</a>
                                 </li>

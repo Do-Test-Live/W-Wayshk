@@ -160,7 +160,7 @@ include('include/header.php');
                                                                 <?php
                                                                 if(isset($_GET['discount'])){
                                                                     ?>
-                                                                    <input name="discount" type="hidden" value="<?php echo $_GET['discount']; ?>">
+                                                                    <input name="discount" type="hidden" value="0">
                                                                     <?php
                                                                 }
                                                                 ?>
@@ -418,14 +418,14 @@ include('include/header.php');
                                         if(isset($_GET['discount'])) {
                                             $discount = $_GET['discount'];
                                         }
-                                        $totalPriceNew = $total_price_new + $dCharge - $discount;
+                                        $totalPriceNew = $total_price_new - $discount;
                                         ?>
-                                        <input type="hidden" id="shippingInput" value="<?php echo $dCharge;?>" name="delivery_charge">
+                                        <input type="text" id="shippingInput" value="<?php echo $dCharge;?>" name="delivery_charge">
                                     </h4>
                                 </li>
                                 <li class="list-total">
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '全部的 (HKD)'; else echo 'Total (HKD)';?></h4>
-                                    <h4 class="price" id="total_value"><?php echo "HKD " . number_format($totalPriceNew, 2); ?></h4>
+                                    <h4 class="price" id="total_value"><?php echo number_format($totalPriceNew, 2); ?></h4>
                                     <input type="hidden" value="<?php echo $totalPriceNew * 1.05; ?>" name="stripe_value">
                                 </li>
                             </ul>
@@ -481,7 +481,7 @@ include('include/footer.php');
         var discount = <?php echo $discount; ?>;
         $('#shippingInput').val(deliveryCharges);
         $('#price').text(deliveryCharges);
-        $('#total_value').text(deliveryCharges + totalprice - discount);
+        $('#total_value').text(totalprice - discount);
         console.log(deliveryCharges);
         console.log(totalprice);
         console.log(discount);
@@ -490,7 +490,7 @@ include('include/footer.php');
         function updateValue(value) {
             $('#shippingInput').val(value);
             $('#price').text(value);
-            $('#total_value').text(value + totalprice - discount);
+            $('#total_value').text(totalprice - discount);
         }
 
         // Handle radio button change event

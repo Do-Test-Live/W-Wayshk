@@ -120,33 +120,67 @@ if (!empty($_GET['session_id'])) {
 ?>
 
 <?php if ($statusMsg=="Your Payment has been Successful!") {
+    $orderdetails = '<table class="customTable" style="margin-top: 20px; margin-bottom: 20px;">';
+    $orderdetails .= '<thead>
+                             <tr>
+                                <th>產品名稱</th>
+                                <th>產品代碼</th>
+                                <th>數量</th>
+                                <th>價格</th>
+                                <th>合計</th>
+                            </tr>
+                      </thead>';
+    $orderdetails .= '<tbody>';
 
-    $order_id = $db_handle->runQuery("SELECT id FROM `billing_details` ORDER BY id desc limit 1");
-    $id = $order_id[0]['id'];
+    $data = $db_handle->runQuery("SELECT id FROM billing_details order by id desc LIMIT  1");
 
-    $email_to = $customer_email;
-    $subject = 'Wayshk';
+    $id = $data[0]['id'];
+
+    $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details` WHERE `billing_id` = '$id'");
+    $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details` WHERE `billing_id` = '$id'");
+
+    $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
+    $tableHtml .= '<tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">產品名稱</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">產品代碼</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">數量</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">價格</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">合計</th>
+                </tr>';
+
+    for ($i = 0; $i < $no_product_details; $i++) {
+        $tableHtml .= '<tr>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_id'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
+        $tableHtml .= '</tr>';
+    }
+
+    $tableHtml .= '</table>';
+
+    $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>聯絡我們</h4>';
+    $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">如你有任何關於此訂單的查詢，請與Wayshk聯繫。</h5>';
+    $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">香港大圍成運路21-23號群力工業大廈3樓1室</h5>';
+    $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</h5>';
+    $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">其他查詢WhatsApp +85252657359 /電郵地址ways00.hk@gmail.com</h5>';
 
 
-    $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
-    $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+    $button = "<a href='https://wayshk.ngt.hk/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
 
-    $messege = "
-            <html>
-                <body style='background-color: #eee; font-size: 16px;'>
-                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <h3 style='color:black'>Payment Successful</h3>
-                    <p style='color:black;'>
-                    Your Payment has been received successfully. Please download your order summary copy from: <a href='https://wayshk.ngt.hk/print_receipt.php?id=$id' target='_blank'>Here</a>
-                    </p>
-                </div>
-                </body>
-            </html>";
-    if (mail($email_to, $subject, $messege, $headers)) {
+    $img = '<img src="https://wayshk.ngt.hk/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
 
+    $to = $customer_email;
+    $subject = 'WaysHK';
+    $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單更新 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $footer;
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: business@wayshk.com' . "\r\n";
+
+    if (mail($to, $subject, $message, $headers)) {
         $email_to = $db_handle->notify_email();
         $subject = 'Wayshk';
-
 
         $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
         $headers .= "Content-Type: text/html; charset=utf-8\r\n";
@@ -156,31 +190,26 @@ if (!empty($_GET['session_id'])) {
                 <body style='background-color: #eee; font-size: 16px;'>
                 <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
                     <p style='color:black;'>
-                        New Order Arrive.
+                        New Order Arrived. Payment completed.
                     </p>
                 </div>
                 </body>
             </html>";
 
         if (mail($email_to, $subject, $messege, $headers)) {
-            ?>
-            <script>
-                location.href = "Home";
-            </script>
-            <?php
-        } else { ?>
-            <h1 class="error">Your Payment been failed!</h1>
-            <p class="error"><?php echo $statusMsg; ?></p>
-            <p>Admin Mail Send Failed.</p>
-        <?php }
-    } else { ?>
-        <h1 class="error">Your Payment been failed!</h1>
-        <p class="error"><?php echo $statusMsg; ?></p>
-        <p>Customer Mail Send Failed.</p>
-
-    <?php }
-} else { ?>
-    <h1 class="error">Your Payment been failed!</h1>
-    <p class="error"><?php echo $statusMsg; ?></p>
-    <p>Status mesage not match.</p>
-<?php } ?>
+            echo "
+    <script>
+    alert('您的訂單已經成功提交。請查看您的郵件以獲取更多詳細資訊');
+    window.location.href = 'Home';
+    </script>
+    ";
+        } else {
+            echo "
+    <script>
+    alert('出了些問題');
+    window.location.href = 'Home';
+    </script>
+    ";
+        }
+    }
+}

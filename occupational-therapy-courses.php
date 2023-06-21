@@ -78,14 +78,14 @@ include('include/header.php');
                         <div class="col-xxl-4 col-sm-6 m-auto mt-3">
                             <div class="blog-box wow fadeInUp">
                                 <div class="blog-image">
-                                    <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>">
+                                    <a href="Textbook-Details?id=<?php echo $textbook[$i]['id'];?>">
                                         <img src="admin/<?php echo $textbook[$i]['image']; ?>"
                                              class="bg-img blur-up lazyload" alt="">
                                     </a>
                                 </div>
 
                                 <div class="blog-contain">
-                                    <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>">
+                                    <a href="Textbook-Details?id=<?php echo $textbook[$i]['id'];?>">
                                         <h3>
                                             <?php
                                             if ($_SESSION['language'] == 'CN')
@@ -104,7 +104,7 @@ include('include/header.php');
                                             <p><?php if($_SESSION['language'] === 'CN') echo '積分'; else echo 'Points: ';?> <?php echo $textbook[$i]['textbook_point']; ?></p>
                                         </div>
                                     </div>
-                                    <a href="Textbook-Details?id=<?php echo $textbook[0]['id'];?>" class="blog-button"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'View Details';?><i class="fa-solid fa-right-long"></i>
+                                    <a href="Textbook-Details?id=<?php echo $textbook[$i]['id'];?>" class="blog-button"><?php if ($_SESSION['language'] === 'CN') echo '查看詳情'; else echo 'View Details';?><i class="fa-solid fa-right-long"></i>
                                     </a>
                                 </div>
                             </div>
