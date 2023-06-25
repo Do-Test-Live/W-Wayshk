@@ -11,7 +11,7 @@ if (!isset($_SESSION['userid'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Add Product | Wayshk Admin</title>
+    <title>Report Book Keeping| Wayshk Admin</title>
     <?php include 'include/css.php'; ?>
 </head>
 <body>
@@ -50,7 +50,7 @@ if (!isset($_SESSION['userid'])) {
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Add Book Keeping</h4>
+                            <h4 class="card-title">Book Keeping Report</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">

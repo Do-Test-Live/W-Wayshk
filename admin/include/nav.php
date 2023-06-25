@@ -179,6 +179,7 @@
                 <ul aria-expanded="false">
                     <li><a href="Cash-Capital">Cash Capital</a></li>
                     <li><a href="Bank-Interest">Bank Interest</a></li>
+                    <li><a href="Accounting-Report">Cash Capital Report</a></li>
                 </ul>
             </li>
             <!--<li>
