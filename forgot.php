@@ -166,7 +166,7 @@ if(isset($_POST['forgot'])){
                 <tr style="display: block;">
                     <td style="display: block;">
                         <h3 style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                           請訪問<a href="https://wayshk.ngt.hk/Reset-Pass?email=$email" target="_blank">連結</a>並重設您的密碼。感謝您使用 WaysHK！</h3>
+                           請訪問<a href="https://wayshk.com/Reset-Pass?email=$email" target="_blank">連結</a>並重設您的密碼。感謝您使用 WaysHK！</h3>
                     </td>
                 </tr>
                 </thead>

@@ -167,9 +167,9 @@ if (!empty($_GET['session_id'])) {
     $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">其他查詢WhatsApp +85252657359 /電郵地址ways00.hk@gmail.com</h5>';
 
 
-    $button = "<a href='https://wayshk.ngt.hk/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
+    $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
 
-    $img = '<img src="https://wayshk.ngt.hk/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
+    $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
 
     $to = $customer_email;
     $subject = 'WaysHK';

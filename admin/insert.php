@@ -227,10 +227,29 @@ VALUES ('$customer_name','$customer_email','$customer_number','$password','$inse
         $customer_id = $fetch_customer_id[0]['id'];
         $insert_point = $db_handle->insertQuery("INSERT INTO `point`(`customer_id`, `points`, `date`) VALUES ('$customer_id','200','$inserted_at')");
         if($insert_point){
-            echo "<script>
-                document.cookie = 'alert = 3;';
+            $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
+            $to = $customer_email;
+            $subject = 'WAYSHK 活籽兒童用品店會員註冊 ';
+            $message = $img . '<br><br> 感謝您註冊成為WAYSHK 活籽兒童用品店的會員<br>您已成功登記。現在可以使用您的電郵和密碼登錄。<br><br> 成功註冊會員已獲贈200積分，可用於下載指定訓練教材，或兌換成$5港元現金獎賞使用（沒有最低消費限制）。 <br><br>
+立即登入帳戶並兌換獎賞：<a href="https://wayshk.com/" target="_blank">www.wayshk.com</a><br><br>*積分有效期為180天 <br><br>聯絡我們:<br>如你有任何查詢，請與Wayshk聯繫。<br>香港大圍成運路21-23號群力工業大廈3樓1室
+<br>產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com<br>其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com';
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $headers .= 'From: business@wayshk.com' . "\r\n";
+
+            if (mail($to, $subject, $message, $headers)) {
+                if($_SESSION['language'] == 'EN'){
+                    echo "<script>
+                alert('Congratulation! You have successfully registered in our website.');
                 window.location.href='../login.php';
                 </script>";
+                }else{
+                    echo "<script>
+                alert('恭喜您！您已成功在我们的网站注册。');
+                window.location.href='../login.php';
+                </script>";
+                }
+            }
         }
     }
 }
@@ -429,7 +448,7 @@ if(isset($_POST['add_cash_flow'])){
     if($query){
         echo "<script>
                 document.cookie = 'alert = 3;';
-                window.location.href='Cash-Flow';
+                window.location.href='Cash-Capital';
                 </script>";
     }
 }

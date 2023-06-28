@@ -50,12 +50,12 @@ if (!isset($_SESSION['userid'])) {
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Payment System Report</h4>
+                            <h4 class="card-title">Monthly Accounting Report</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
                                 <form action="Payment-Method-Report" method="post" enctype="multipart/form-data">
-                                    <h4>Payment Method Wise Report</h4>
+                                    <h4>Current Month Accounting Report</h4>
                                     <div class="text-center mt-3">
                                         <button type="submit" name="overallBookReport" class="btn btn-primary w-50">Submit</button>
                                     </div>

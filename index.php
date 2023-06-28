@@ -1035,6 +1035,21 @@ include('include/footer.php');
 <div class="bg-overlay"></div>
 <!-- Bg overlay End -->
 
+<!--pop up modal-->
+<div class="modal" tabindex="-1" id="global-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>網頁正在更新中，請勿使用網上平台下單。</p>
+                <p>以WhatsApp +852 5605 8389 聯絡我們。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- latest jquery-->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
@@ -1078,6 +1093,12 @@ include('include/footer.php');
 
 <!-- script js -->
 <script src="assets/js/script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#global-modal').modal('show');
+    });
+</script>
 
 </body>
 </html>
