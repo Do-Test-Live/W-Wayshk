@@ -118,18 +118,6 @@ if (isset($_POST["placeOrder"])) {
 
     $total_value = 0;
 
-    $orderdetails = '<table class="customTable" style="margin-top: 20px; margin-bottom: 20px;">';
-    $orderdetails .= '<thead>
-                             <tr>
-                                <th>產品名稱</th>
-                                <th>產品代碼</th>
-                                <th>數量</th>
-                                <th>價格</th>
-                                <th>合計</th>
-                            </tr>
-                      </thead>';
-    $orderdetails .= '<tbody>';
-
     $data = $db_handle->runQuery("SELECT id FROM billing_details order by id desc LIMIT  1");
 
     $id = $data[0]['id'];
@@ -139,20 +127,20 @@ if (isset($_POST["placeOrder"])) {
 
     $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
     $tableHtml .= '<tr>
-                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">產品名稱</th>
-                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">產品代碼</th>
-                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">數量</th>
-                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">價格</th>
-                    <th style="border: 1px solid #000; padding: 8px; text-align: center;">合計</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品名稱</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品代碼</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">數量</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">價格</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">合計</th>
                 </tr>';
 
     for ($i = 0; $i < $no_product_details; $i++) {
         $tableHtml .= '<tr>';
-        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
-        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_id'] . '</td>';
-        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
-        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
-        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_id'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
         $tableHtml .= '</tr>';
     }
 
