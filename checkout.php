@@ -287,8 +287,8 @@ include('include/header.php');
                                                             <div class="custom-form-check form-check mb-0">
                                                                 <label class="form-check-label" for="fps"><input
                                                                             class="form-check-input mt-0" type="radio"
-                                                                            name="payment" value="Transfer FPS" id="fps">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '轉數款 FPS <br> 電話： +852 5265 7359'; else echo 'Transfer FPS (Tel: +852 5265 7359)';?></label>
+                                                                            name="payment" value="Transfer By FPS" id="fps">
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '轉數款 FPS <br> 電話： +852 5265 7359'; else echo 'Transfer By FPS (Tel: +852 5265 7359)';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -302,7 +302,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="Bank"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Bank Deposit" id="Bank">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '銀行入數戶口號碼為 <br>769-334699-883 (恆生銀行) <br>戶口名稱: Wayshk'; else echo 'Bank deposit Account number : 769-334699-883 (Hang Seng Bank) Account name : Wayshk';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '銀行入數戶口號碼為 <br>769-334699-883 (恆生銀行) <br>戶口名稱: Wayshk'; else echo 'Bank deposit Account number : 769-334699-883 (Hang Seng Bank) <br/>Account name : Wayshk';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -330,7 +330,7 @@ include('include/header.php');
                                                                 <label class="form-check-label" for="Check"><input
                                                                             class="form-check-input mt-0" type="radio"
                                                                             name="payment" value="Check" id="Check">
-                                                                    <?php if($_SESSION['language'] === 'CN') echo '支票付款 <br> 只限機構/學校訂單'; else echo 'Payment by Check (for Institutional/School Orders Only)';?></label>
+                                                                    <?php if($_SESSION['language'] === 'CN') echo '支票付款 <br> 只限機構/學校訂單'; else echo 'Pay by Check (for Institutional/School Orders Only)';?></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -433,7 +433,7 @@ include('include/header.php');
                         <input class="form-check-input card-class" name="addInfo" type="checkbox"
                                value="" id="termsandconditions" required>
                         <label class="form-check-label ms-2" for="termsandconditions">
-                            <?php if($_SESSION['language'] === 'CN') echo '<a href="terms_condition.php" target="_blank">本人已閱讀並同意遵守此條款及細則</a>'; else echo '<a href="terms_condition_en.php" target="_blank">I have read and agreed to be bound by these <br/> terms and conditions</a>';?>
+                            <?php if($_SESSION['language'] === 'CN') echo '<a href="terms_condition.php" target="_blank">本人已閱讀並同意遵守此條款及細則</a>'; else echo '<a href="terms_condition_en.php" target="_blank" style="font-size: 14px;">I have read and agreed to be bound by these <br/> terms and conditions</a>';?>
                         </label>
                         <button class="btn theme-bg-color text-white btn-md w-100 mt-4 fw-bold" name="placeOrder" type="submit">
                             <?php if($_SESSION['language'] === 'CN') echo '下訂單'; else echo 'Place Order';?></button>

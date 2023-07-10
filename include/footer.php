@@ -154,6 +154,9 @@
                                 <li>
                                     <a href="Institution" class="text-content">機構/學校訂購</a>
                                 </li>
+                                <li>
+                                    <a href="Course" class="text-content">精選課程</a>
+                                </li>
                             </ul>
                             <?php
                         } else{ ?>
@@ -173,6 +176,9 @@
                                 <li>
                                     <a href="Institution-EN" class="text-content">Institution/School Order</a>
                                 </li>
+                                <li>
+                                    <a href="Course" class="text-content">Courses</a>
+                                </li>
                             </ul>
                             <?php
                         }
@@ -189,6 +195,12 @@
                             <ul>
                                 <li>
                                     <a href="Living-Seeds-Children" class="text-content">活籽兒童服務社</a>
+                                </li>
+                                <li>
+                                    <a href="Textbook-Download" class="text-content">教材下載</a>
+                                </li>
+                                <li>
+                                    <a href="Sign-Up" class="text-content">會員計劃</a>
                                 </li>
                                 <li>
                                     <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">
@@ -209,7 +221,13 @@
                                     <a href="Living-Seeds-Children-EN" class="text-content">Wayshk Children Service Society</a>
                                 </li>
                                 <li>
-                                    <a href="Occupational-Therapy-Courses-EN" class="text-content">Featured Courses</a>
+                                    <a href="Course" class="text-content">Featured Courses</a>
+                                </li>
+                                <li>
+                                    <a href="Textbook-Download" class="text-content">Resources Download</a>
+                                </li>
+                                <li>
+                                    <a href="Sign-Up" class="text-content">Membership Program</a>
                                 </li>
                                 <li>
                                     <a href="<?php if($_SESSION['language'] === 'CN') echo 'privacy_policy.php'; else echo 'privacy_policy_en.php';?>" class="text-content">

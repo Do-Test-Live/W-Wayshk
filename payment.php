@@ -137,7 +137,7 @@ if (isset($_POST["placeOrder"])) {
     for ($i = 0; $i < $no_product_details; $i++) {
         $tableHtml .= '<tr>';
         $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
-        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_id'] . '</td>';
+        $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
         $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
         $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
         $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
@@ -185,15 +185,15 @@ if (isset($_POST["placeOrder"])) {
 
     if ($payment != 'Credit Card') {
         $to = $email;
-        $subject = 'WaysHK';
-        $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單更新 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $payment1 . '<br><br>' . $payment2 . '<br><br>' . $footer;
+        $subject = 'Wayshk 活籽兒童用品店 - 訂單編號';
+        $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $payment1 . '<br><br>' . $payment2 . '<br><br>' . $footer;
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= 'From: business@wayshk.com' . "\r\n";
 
         if (mail($to, $subject, $message, $headers)) {
             $email_to = $db_handle->notify_email();
-            $subject = 'Wayshk';
+            $subject = 'Wayshk 活籽兒童用品店 - 訂單編號';
 
             $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
             $headers .= "Content-Type: text/html; charset=utf-8\r\n";

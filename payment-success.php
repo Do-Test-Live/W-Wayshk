@@ -172,15 +172,15 @@ if (!empty($_GET['session_id'])) {
     $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
 
     $to = $customer_email;
-    $subject = 'WaysHK';
-    $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單更新 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $footer;
+    $subject = 'Wayshk 活籽兒童用品店 - 訂單編號';
+    $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $footer;
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= 'From: business@wayshk.com' . "\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
         $email_to = $db_handle->notify_email();
-        $subject = 'Wayshk';
+        $subject = 'Wayshk 活籽兒童用品店 - 訂單編號';
 
         $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
         $headers .= "Content-Type: text/html; charset=utf-8\r\n";

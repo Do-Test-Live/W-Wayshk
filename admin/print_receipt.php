@@ -699,7 +699,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </svg>
                 </div>
                 <div class="cs-note_right">
-                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方式</b></p>
+                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方式 ：</b></p>
                     <p class="cs-m0">自取時以現金付款</p>
                     <p class="cs-m0">PayMe （電話： +852 5265 7359）</p>
                     <p class="cs-m0">轉數款 FPS （電話： +852 5265 7359）</p>
