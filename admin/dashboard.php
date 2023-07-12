@@ -88,7 +88,7 @@ if (!isset($_SESSION['userid'])) {
                                         $total_order = $db_handle->runQuery("SELECT COUNT(id) as number FROM `billing_details`");
                                         ?>
 										<h2 class="text-white font-w600"><?php echo $total_order[0]['number'];?></h2>
-										<span class="text-white">Total Oders</span>
+										<span class="text-white">Total Orders</span>
 									</div>
 								</div>
 							</div>
@@ -207,7 +207,7 @@ if (!isset($_SESSION['userid'])) {
                                             echo $book[0]['a'];
                                             ?> HKD
                                         </h2>
-                                        <span class="text-white">Total Expanse</span>
+                                        <span class="text-white">Total Expense</span>
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@ if (!isset($_SESSION['userid'])) {
                                             echo $mbook[0]['ba'];
                                             ?> HKD
                                         </h2>
-                                        <span class="text-white">Monthly Expanse</span>
+                                        <span class="text-white">Monthly Expense</span>
                                     </div>
                                 </div>
                             </div>
@@ -279,6 +279,24 @@ if (!isset($_SESSION['userid'])) {
                                             ?> HKD
                                         </h2>
                                         <span class="text-white">Cash Status</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                        <div class="card grd-card">
+                            <div class="card-body">
+                                <div class="media align-items-center">
+                                    <div class="media-body mr-2">
+                                        <h2 class="text-white font-w600">
+                                            <?php
+                                            $select_product_cost = $db_handle->runQuery("SELECT SUM(cost) as c FROM `product`;");
+                                            echo $select_product_cost[0]['c'];
+                                            ?> HKD
+                                        </h2>
+                                        <span class="text-white">Total Product Cost</span>
                                     </div>
                                 </div>
                             </div>

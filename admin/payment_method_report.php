@@ -66,6 +66,7 @@ $currentYear = date('Y');
             <th scope="col">Cash</th>
             <th scope="col">Cheque</th>
             <th scope="col">Stripe</th>
+            <th scope="col">PayMe</th>
         </tr>
         </thead>
         <tbody>
@@ -91,6 +92,7 @@ $currentYear = date('Y');
         $cash_payment = $db_handle->runQuery("SELECT SUM(`total_purchase`) as cash FROM `billing_details` WHERE `payment_type` = 'Pay by cash when picking up' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
         $check_payment = $db_handle->runQuery("SELECT SUM(`total_purchase`) as cheque FROM `billing_details` WHERE `payment_type` = 'Check' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
         $credit_card = $db_handle->runQuery("SELECT SUM(`total_purchase`) as card FROM `billing_details` WHERE `payment_type` = 'Credit Card' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $payme = $db_handle->runQuery("SELECT SUM(`total_purchase`) as pay FROM `billing_details` WHERE `payment_type` = 'PayMe' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
         ?>
         <tr>
             <td>Total</td>
@@ -99,6 +101,7 @@ $currentYear = date('Y');
             <td><?php echo $cash_payment[0]['cash']; ?></td>
             <td><?php echo $check_payment[0]['cheque']; ?></td>
             <td><?php echo $credit_card[0]['card']; ?></td>
+            <td><?php echo $payme[0]['pay']; ?></td>
         </tr>
         </tbody>
     </table>
