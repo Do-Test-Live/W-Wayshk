@@ -70,7 +70,7 @@ include('include/header.php');
                 <div class="fresh-contain p-center-left">
                     <div>
                         <div class="review-title">
-                            <h2 class="inner-header">Company Profile</h2>
+                            <h2 class="inner-header">About Us</h2>
                         </div>
 
                         <div class="delivery-list">

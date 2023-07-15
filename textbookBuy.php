@@ -49,6 +49,9 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
     }
     $fetch_email = $db_handle->runQuery("SELECT email FROM `customer` WHERE id='$customer_id'");
     $email_to = $fetch_email[0]['email'];
+
+
+    
     $subject = 'Textbook Download | Wayshk';
 
 
@@ -76,7 +79,7 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
     } else{
         echo "
         <script>
-                alert('收到你的指示。 所選訓練教材已經發送到你的登記電郵');
+                alert('所選教材已經發送到您登記的電郵地址內。');
                 window.location.href = 'Textbook-Details?id=$id';
           </script>";
     }

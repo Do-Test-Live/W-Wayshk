@@ -16,8 +16,13 @@ if(isset($_POST['overallBookReport'])){
     $formattedFdate = date("F d, Y", strtotime($fdate));
     $formattedTdate = date("F d, Y", strtotime($tdate));
 
-    $fetch_book = $db_handle->runQuery("SELECT * FROM `book_keeping` WHERE date BETWEEN '$fdate' AND '$tdate'");
-    $no_fetch_book = $db_handle->numRows("SELECT * FROM `book_keeping` WHERE date BETWEEN '$fdate' AND '$tdate'");
+    if($_SESSION['userid'] == 2){
+        $fetch_book = $db_handle->runQuery("SELECT * FROM `book_keeping` WHERE date BETWEEN '$fdate' AND '$tdate'");
+        $no_fetch_book = $db_handle->numRows("SELECT * FROM `book_keeping` WHERE date BETWEEN '$fdate' AND '$tdate'");
+    } else{
+        $fetch_book = $db_handle->runQuery("SELECT * FROM `book_keeping` WHERE date BETWEEN '$fdate' AND '$tdate' and type != 'Salary'");
+        $no_fetch_book = $db_handle->numRows("SELECT * FROM `book_keeping` WHERE date BETWEEN '$fdate' AND '$tdate' and type != 'Salary'");
+    }
 }
 
 if(isset($_POST['paymentBookReport'])){

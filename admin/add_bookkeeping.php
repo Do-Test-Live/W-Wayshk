@@ -13,7 +13,9 @@ if (!isset($_SESSION['userid'])) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Add Product | Wayshk Admin</title>
     <?php include 'include/css.php'; ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js" integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js"
+            integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -61,13 +63,14 @@ if (!isset($_SESSION['userid'])) {
                                             <label>Receipt No. </label>
                                             <?php
                                             $fetch_no = $db_handle->runQuery("select bookkeeping_id from book_keeping order by bookkeeping_id desc limit 1");
-                                            if(is_null($fetch_no)){
+                                            if (is_null($fetch_no)) {
                                                 $serial = 1;
-                                            }else{
+                                            } else {
                                                 $serial = $fetch_no[0]['bookkeeping_id'] + 1;
                                             }
                                             ?>
-                                            <input type="text" class="form-control" value="00<?php echo $serial;?>" name="recept_no" placeholder="" required readonly>
+                                            <input type="text" class="form-control" value="00<?php echo $serial; ?>"
+                                                   name="recept_no" placeholder="" required readonly>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Date</label>
@@ -75,7 +78,8 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Store Name</label>
-                                            <input type="text" class="form-control" name="store_name" placeholder="" required>
+                                            <input type="text" class="form-control" name="store_name" placeholder=""
+                                                   required>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Type</label>
@@ -84,7 +88,14 @@ if (!isset($_SESSION['userid'])) {
                                                 <option value="Restock Shipping">Restock Shipping</option>
                                                 <option value="Shipping">Shipping</option>
                                                 <option value="Admin">Admin</option>
-                                                <option value="Salary">Salary</option>
+                                                <?php
+                                                if ($_SESSION['userid'] == 2) {
+                                                    ?>
+                                                    <option value="Salary">Salary</option>
+                                                    <?php
+                                                }
+
+                                                ?>
                                                 <option value="Rent">Rent</option>
                                                 <option value="Promotions">Promotions</option>
                                                 <option value="Office Use">Office Use</option>
@@ -94,28 +105,31 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Item Name</label>
-                                            <input type="text" class="form-control" name="item_name" placeholder="" required>
+                                            <input type="text" class="form-control" name="item_name" placeholder=""
+                                                   required>
                                         </div>
 
                                         <div class="form-group col-md-12">
                                             <label>Amount</label>
-                                            <input type="number" class="form-control" placeholder="" name="amount" required>
+                                            <input type="number" class="form-control" placeholder="" name="amount"
+                                                   required>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Payer</label>
-                                            <input type="text" class="form-control" placeholder="" name="payer" required>
+                                            <input type="text" class="form-control" placeholder="" name="payer"
+                                                   required>
                                         </div>
                                         <div class="form-group col-md-12">
-                                                <label>Payment Methods </label>
-                                                <select name="payment_methods" class="form-control">
-                                                    <option value="PayMe" selected>PayMe</option>
-                                                    <option value="FPS">FPS</option>
-                                                    <option value="Credit Card">Credit Card</option>
-                                                    <option value="Alipay">Alipay</option>
-                                                    <option value="Cash">Cash</option>
-                                                    <option value="Direct Bank Transfer">Direct Bank Transfer</option>
-                                                    <option value="Others">Others</option>
-                                                </select>
+                                            <label>Payment Methods </label>
+                                            <select name="payment_methods" class="form-control">
+                                                <option value="PayMe" selected>PayMe</option>
+                                                <option value="FPS">FPS</option>
+                                                <option value="Credit Card">Credit Card</option>
+                                                <option value="Alipay">Alipay</option>
+                                                <option value="Cash">Cash</option>
+                                                <option value="Direct Bank Transfer">Direct Bank Transfer</option>
+                                                <option value="Others">Others</option>
+                                            </select>
                                         </div>
 
                                         <div class="form-group col-md-12">
@@ -125,7 +139,8 @@ if (!isset($_SESSION['userid'])) {
                                                     <span class="input-group-text">Upload</span>
                                                 </div>
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="bimage[]" multiple required>
+                                                    <input type="file" class="custom-file-input" name="bimage[]"
+                                                           multiple required>
                                                     <label class="custom-file-label">Choose file</label>
                                                 </div>
                                             </div>
@@ -133,7 +148,9 @@ if (!isset($_SESSION['userid'])) {
 
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" name="add_bookkeeping" class="btn btn-primary w-50">Submit</button>
+                                        <button type="submit" name="add_bookkeeping" class="btn btn-primary w-50">
+                                            Submit
+                                        </button>
                                     </div>
                                 </form>
                             </div>

@@ -469,7 +469,7 @@ if (isset($_SESSION["cart_item"])) {
                                                 <a class="nav-link" href="Shop">All products</i></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="About-Us-EN">About</a>
+                                                <a class="nav-link" href="About-Us-EN">About Us</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="Order-EN">How to order</a>
