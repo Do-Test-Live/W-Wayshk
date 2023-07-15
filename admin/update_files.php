@@ -58,7 +58,7 @@ if (!isset($_SESSION['userid'])) {
                                 <div class="basic-form">
                                     <form method="post" action="Update" enctype="multipart/form-data">
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Product Catalogue</label>
+                                            <label class="col-sm-3 col-form-label">Product Catalogue (CN)</label>
                                             <div class="col-sm-6">
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
@@ -72,7 +72,7 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Product Order Form</label>
+                                            <label class="col-sm-3 col-form-label">Product Order Form (CN)</label>
                                             <div class="col-sm-6">
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
@@ -80,6 +80,34 @@ if (!isset($_SESSION['userid'])) {
                                                     </div>
                                                     <div class="custom-file">
                                                         <input type="file" class="custom-file-input" name="product_order_form" accept="application/pdf" required>
+                                                        <label class="custom-file-label">Choose file (pdf only)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Product Catalogue (EN)</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Upload</span>
+                                                    </div>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="product_catalouge_en" accept="application/pdf" required>
+                                                        <label class="custom-file-label">Choose file (pdf only)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Product Order Form (EN)</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Upload</span>
+                                                    </div>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="product_order_form_en" accept="application/pdf" required>
                                                         <label class="custom-file-label">Choose file (pdf only)</label>
                                                     </div>
                                                 </div>

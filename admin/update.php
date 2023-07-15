@@ -383,6 +383,16 @@ if (isset($_POST['update_files'])) {
     $file_size1 = $_FILES['product_order_form']['size'];
     $file_tmp1 = $_FILES['product_order_form']['tmp_name'];
 
+    $RandomAccountNumber1 = mt_rand(1, 99999);
+    $file_name2 = $RandomAccountNumber . "_" . $_FILES['product_order_form_en']['name'];
+    $file_size2 = $_FILES['product_order_form_en']['size'];
+    $file_tmp2 = $_FILES['product_order_form_en']['tmp_name'];
+
+    $RandomAccountNumber = mt_rand(1, 99999);
+    $file_name3 = $RandomAccountNumber . "_" . $_FILES['product_catalouge_en']['name'];
+    $file_size3 = $_FILES['product_catalouge_en']['size'];
+    $file_tmp3 = $_FILES['product_catalouge_en']['tmp_name'];
+
     $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
     if ($file_type != "pdf") {
         $product_catalouge = '';
@@ -392,8 +402,14 @@ if (isset($_POST['update_files'])) {
         move_uploaded_file($file_tmp, "../assets/document/" . $file_name);
         unlink("../assets/document/" . $data[1]['path']);
         move_uploaded_file($file_tmp1, "../assets/document/" . $file_name1);
+        unlink("../assets/document/" . $data[2]['path']);
+        move_uploaded_file($file_tmp2, "../assets/document/" . $file_name2);
+        unlink("../assets/document/" . $data[3]['path']);
+        move_uploaded_file($file_tmp3, "../assets/document/" . $file_name3);
         $update = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name',`updated_at`='$updated_at' WHERE id = '1'");
         $update2 = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name1',`updated_at`='$updated_at' WHERE id = '2'");
+        $update2 = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name2',`updated_at`='$updated_at' WHERE id = '3'");
+        $update2 = $db_handle->insertQuery("UPDATE `files` SET `path`='$file_name3',`updated_at`='$updated_at' WHERE id = '4'");
         if ($update && $update2) {
             echo "<script>
                 document.cookie = 'alert = 3;';
