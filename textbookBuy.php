@@ -4,12 +4,12 @@ $id = $_GET['id'];
 if (isset($_SESSION['id'])) {
     $customer_id = $_SESSION['id'];
 } else {
-    if($_SESSION['language'] === 'EN'){
+    if ($_SESSION['language'] === 'EN') {
         echo "<script>
 alert('Please log in first to download the book.');
 window.location.href = 'Textbook-Details?id=$id';
 </script>";
-    }else{
+    } else {
         echo "<script>
 alert(' 請先登入會員，並使用積分下載訓練教材');
 window.location.href = 'Textbook-Details?id=$id';
@@ -51,40 +51,29 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
     $email_to = $fetch_email[0]['email'];
 
 
-    
+    $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
+    $to = $email_to;
     $subject = 'Textbook Download | Wayshk';
+    $message = $img . '<br><br> <h3>Order Received Successfully</h3><br>
+Your order is successfully placed. Please download the textbook from <a href = "$download_link" target="_blank">Here</a>';
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: business@wayshk.com' . "\r\n";
 
-
-    $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
-    $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-
-    $messege = "
-            <html>
-                <body style='background-color: #eee; font-size: 16px;'>
-                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <h3 style='color:black'>Order Received Successfully</h3>
-                    <p style='color:black;'>
-                    Your order is successfully placed. Please download the textbook from <a href = '$download_link' target='_blank'>Here</a>
-                    </p>
-                </div>
-                </body>
-            </html>";
-    if (mail($email_to, $subject, $messege, $headers)) {
-    if($_SESSION['language'] === 'EN'){
-        echo "
-        <script>
-                alert('Your request is confirmed. Please check your email for more details.');
+    if (mail($to, $subject, $message, $headers)) {
+        if ($_SESSION['language'] == 'EN') {
+            echo "<script>
+               alert('Your request is confirmed. Please check your email for more details.');
                 window.location.href = 'Textbook-Details?id=$id';
-          </script>";
-    } else{
-        echo "
-        <script>
+                </script>";
+        } else {
+            echo "<script>
                 alert('所選教材已經發送到您登記的電郵地址內。');
                 window.location.href = 'Textbook-Details?id=$id';
-          </script>";
+                </script>";
+        }
     }
 
-    }
 } else {
     echo "<script>
                 alert('You do not have enough point to buy the book');
