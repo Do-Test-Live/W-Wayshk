@@ -99,7 +99,7 @@ include('include/header.php');
             <div class="row mt-3">
                 <div class="col-3">
                     <a href="#" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
-                        <?php if($_SESSION['language'] === 'CN') echo '現在下單'; else echo 'Order Now';?>  <i class="fa-solid fa-right-long icon ms-2"></i></a>
+                        <?php if($_SESSION['language'] === 'CN') echo '立即報名'; else echo 'Register Now';?>  <i class="fa-solid fa-right-long icon ms-2"></i></a>
                 </div>
             </div>
 
