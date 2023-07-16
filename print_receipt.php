@@ -580,8 +580,8 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             <div class="cs-invoice_head cs-type1 cs-mb25">
                 <div class="cs-invoice_left">
 
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">概括 / Summary</p>
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票號碼：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收據/ Receipt </p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">訂單編號：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
                     <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">日期: </b>
                         <?php
                         $date = date_create($billing_details[0]["updated_at"]);
@@ -649,7 +649,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </div>
                     <div class="cs-invoice_footer cs-border_top">
                         <div class="cs-left_footer cs-mobile_hide">
-                            <p class="cs-mb0"><b class="cs-primary_color">郵寄方式:</b></p>
+                            <p class="cs-mb0"><b class="cs-primary_color">出貨方式:</b></p>
                             <p class="cs-m0"><?php echo $billing_details[0]['shipping_method'];?></p>
                             <p class="cs-mb0"><b class="cs-primary_color">付款方式:</b></p>
                             <p class="cs-m0"><?php echo $billing_details[0]['payment_type'];?></p>
@@ -680,7 +680,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                         <table>
                             <tbody>
                             <tr class="cs-border_none">
-                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">全部的</td>
+                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">總計 </td>
                                 <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">
                                     <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
                                 </td>
@@ -700,12 +700,13 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </svg>
                 </div>
                 <div class="cs-note_right">
-                    <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方式</b></p>
+                    <!--<p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方式</b></p>
                     <p class="cs-m0">自取時以現金付款</p>
                     <p class="cs-m0">PayMe （電話： +852 5265 7359）</p>
                     <p class="cs-m0">轉數款 FPS （電話： +852 5265 7359）</p>
                     <p class="cs-m0">銀行入數戶口號碼為 769-334699-883 (恆生銀行) 戶口名稱: Wayshk</p>
-                    <p class="cs-m0">Whatsapp: +852 56058389 | Email: wayshk.order@gmail.com</p>
+                    <p class="cs-m0">Whatsapp: +852 56058389 | Email: wayshk.order@gmail.com</p>-->
+                    <p class="cs-m0">此收據為電腦編印文件，毋須蓋印或簽署</p>
                 </div>
             </div>
         </div>

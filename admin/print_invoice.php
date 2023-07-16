@@ -581,7 +581,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                 <div class="cs-invoice_left">
 
                     <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收帳單 / Invoice</p>
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票號碼：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">訂單編號：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
                     <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">日期: </b>
                         <?php
                         $date = date_create($billing_details[0]["updated_at"]);
@@ -680,9 +680,9 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                         <table>
                             <tbody>
                             <tr class="cs-border_none">
-                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">全部的</td>
+                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">總計</td>
                                 <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">
-                                   <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
+                                    <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
                                 </td>
                             </tr>
                             </tbody>
@@ -706,6 +706,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     <p class="cs-m0">3) Payme/轉數快：5265-7359</p>
                     <p class="cs-m0">4) 自取點以現金支付</p>
                     <p class="cs-m0">4) 自取點以現金支付</p>
+                    <p class="cs-m0">此收帳單為電腦編印文件，毋須蓋印或簽署</p>
                 </div>
             </div>
         </div>
