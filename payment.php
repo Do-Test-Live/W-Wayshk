@@ -122,8 +122,8 @@ if (isset($_POST["placeOrder"])) {
 
     $id = $data[0]['id'];
 
-    $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details` WHERE `billing_id` = '$id'");
-    $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details` WHERE `billing_id` = '$id'");
+    $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+    $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
 
     $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
     $tableHtml .= '<tr>

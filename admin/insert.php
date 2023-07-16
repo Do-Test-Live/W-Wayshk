@@ -248,7 +248,7 @@ VALUES ('$customer_name','$customer_email','$customer_number','$password','$inse
                 </script>";
                     }else{
                         echo "<script>
-                alert('恭喜您！您已成功在我们的网站注册。');
+                alert('恭喜您！您已成功在我們的網站註冊。');
                 window.location.href='../login.php';
                 </script>";
                     }

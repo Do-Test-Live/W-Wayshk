@@ -599,6 +599,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `quotation_details` WHERE
                     <b class="cs-primary_color">致：</b>
                     <p>
                         <?php echo $billing_details[0]['f_name'] . ' ' . $billing_details[0]['l_name']; ?><br>
+                        機構名稱: <?php echo $billing_details[0]['organization_name']; ?><br>
                         <?php echo $billing_details[0]['address']; ?>,<br><?php echo $billing_details[0]['city']; ?>
                         ,<br>
                         <?php echo $billing_details[0]['zip_code']; ?>
