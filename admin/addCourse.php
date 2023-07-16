@@ -82,6 +82,10 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="number" class="form-control" placeholder="" name="course_price_poor">
                                         </div>
                                         <div class="form-group col-md-12">
+                                            <label>Enrollment Google Form Link</label>
+                                            <input type="text" class="form-control" placeholder="" name="form_link">
+                                        </div>
+                                        <div class="form-group col-md-12">
                                             <label>Course Image</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">

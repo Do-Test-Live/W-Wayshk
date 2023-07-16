@@ -112,6 +112,14 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Enrollment Google Form Link</label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" name="form_link"
+                                                       placeholder=""
+                                                       value="<?php echo $data[0]["form_link"]; ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Image</label>
                                             <div class="col-sm-6">
                                                 <div class="input-group mb-3">
