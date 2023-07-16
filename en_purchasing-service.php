@@ -69,7 +69,7 @@ include ('include/header.php');
                         </div>
                         <div class="col-8">
                             <?php
-                            $catalogue = $db_handle->runQuery("SELECT * FROM `files` WHERE id = '1'");
+                            $catalogue = $db_handle->runQuery("SELECT * FROM `files` WHERE id = '4'");
                             ?>
                             <a href="assets/document/<?php echo $catalogue[0]['path'];?>" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
@@ -81,7 +81,7 @@ include ('include/header.php');
                         </div>
                         <div class="col-8">
                             <?php
-                            $catalogue = $db_handle->runQuery("SELECT * FROM `files` WHERE id = '2'");
+                            $catalogue = $db_handle->runQuery("SELECT * FROM `files` WHERE id = '3'");
                             ?>
                             <a href="assets/document/<?php echo $catalogue[0]['path'];?>" target="_blank" class="btn text-white home-button mend-auto theme-bg-color" style="max-width: 350px">
                                 Download <i class="fa-solid fa-right-long icon ms-2"></i></a>
