@@ -131,55 +131,56 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                     </div>
 
-                                    <table id="productTable" class="display min-w850 table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>Product Code</th>
-                                            <th>Unit Price</th>
-                                            <th>QTY</th>
-                                            <th>Sub total</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr class="productRow mt-5">
-                                            <td>
-                                                <select name="product[]" class="productSelect">
-                                                    <?php
-                                                    $fetch_product = $db_handle->runQuery("select * from product");
-                                                    $no_fetch_product = $db_handle->numRows("select * from product");
-                                                    for($i=0; $i<$no_fetch_product; $i++){
-                                                        ?>
-                                                        <option value="<?php echo $fetch_product[$i]['id'];?>"><?php echo $fetch_product[$i]['product_code'];?></option>
+                                    <div class="table-responsive">
+                                        <table id="productTable" class="display min-w850 table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>Product Code</th>
+                                                <th>Unit Price</th>
+                                                <th>QTY</th>
+                                                <th>Sub total</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr class="productRow mt-5">
+                                                <td>
+                                                    <select name="product[]" class="productSelect">
                                                         <?php
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </td>
-                                            <td><input type="text" name="unit_price[]"></td>
-                                            <td><input type="text" name="quantity[]"></td>
-                                            <td><input type="text" name="subtotal[]"></td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary addRow">Add</button>
-                                                <button type="button" class="btn btn-danger removeRow">Remove</button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            <th colspan="3">Discount</th>
-                                            <th><input type="number" name="discount"></th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="3">Shipping Fee</th>
-                                            <th><input type="number" name="shipping_fee"></th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="3">Total</th>
-                                            <th><input type="number" name="total"></th>
-                                        </tr>
-                                        </tfoot>
-                                    </table>
+                                                        $fetch_product = $db_handle->runQuery("select * from product");
+                                                        $no_fetch_product = $db_handle->numRows("select * from product");
+                                                        for($i=0; $i<$no_fetch_product; $i++){
+                                                            ?>
+                                                            <option value="<?php echo $fetch_product[$i]['id'];?>"><?php echo $fetch_product[$i]['product_code'];?></option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" name="unit_price[]"></td>
+                                                <td><input type="text" name="quantity[]"></td>
+                                                <td><input type="text" name="subtotal[]"></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary addRow">Add</button>
+                                                    <button type="button" class="btn btn-danger removeRow">Remove</button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <th colspan="3">Discount</th>
+                                                <th><input type="number" name="discount"></th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="3">Shipping Fee</th>
+                                                <th><input type="number" name="shipping_fee"></th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="3">Total</th>
+                                                <th><input type="number" name="total"></th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
 
                                     <div class="text-center mt-5">
                                         <button type="submit" class="btn btn-primary w-50" name="add_invoice">Submit</button>
