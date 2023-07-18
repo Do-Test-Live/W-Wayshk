@@ -234,9 +234,9 @@ VALUES ('$customer_name','$customer_email','$customer_number','$password','$inse
                 $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
                 $to = $customer_email;
                 $subject = 'WAYSHK 活籽兒童用品店會員註冊 ';
-                $message = $img . '<br><br> 感謝您註冊成為WAYSHK 活籽兒童用品店的會員<br>您已成功登記。現在可以使用您的電郵和密碼登錄。<br><br> 成功註冊會員已獲贈200積分，可用於下載指定訓練教材，或兌換成$5港元現金獎賞使用（沒有最低消費限制）。 <br><br>
+                $message = $img . '<p style="font-size: 20px;"><br><br> 感謝您註冊成為WAYSHK 活籽兒童用品店的會員<br>您已成功登記。現在可以使用您的電郵和密碼登錄。<br><br> 成功註冊會員已獲贈200積分，可用於下載指定訓練教材，或兌換成$5港元現金獎賞使用（沒有最低消費限制）。 <br><br>
 立即登入帳戶並兌換獎賞：<a href="https://wayshk.com/" target="_blank">www.wayshk.com</a><br><br>*積分有效期為180天 <br><br>聯絡我們:<br>如你有任何查詢，請與Wayshk聯繫。<br>香港大圍成運路21-23號群力工業大廈3樓1室
-<br>產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com<br>其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com';
+<br>產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com<br>其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</p>';
                 $headers = "MIME-Version: 1.0" . "\r\n";
                 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                 $headers .= 'From: business@wayshk.com' . "\r\n";
