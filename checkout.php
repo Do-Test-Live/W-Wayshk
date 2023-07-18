@@ -420,7 +420,7 @@ include('include/header.php');
                                         }
                                         $totalPriceNew = $total_price_new - $discount;
                                         ?>
-                                        <input type="text" id="shippingInput" value="<?php echo $dCharge;?>" name="delivery_charge">
+                                        <input type="text" id="shippingInput" value="<?php echo round($dCharge);?>" name="delivery_charge">
                                     </h4>
                                 </li>
                                 <li class="list-total">
