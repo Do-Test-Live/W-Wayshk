@@ -55,9 +55,42 @@ if (!isset($_SESSION['userid'])) {
                         <div class="card-body">
                             <div class="basic-form">
                                 <form action="Payment-Method-Report" method="post" enctype="multipart/form-data">
-                                    <h4>Current Month Accounting Report</h4>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Select Month *</label>
+                                            <select class="form-control default-select" id="sel1"
+                                                    name="month" required>
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Select Year *</label>
+                                            <select class="form-control default-select" id="sel1"
+                                                    name="year" required>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="text-center mt-3">
-                                        <button type="submit" name="overallBookReport" class="btn btn-primary w-50">Submit</button>
+                                        <button type="submit" name="overallBookReport" class="btn btn-primary w-50">
+                                            Submit
+                                        </button>
                                     </div>
                                 </form>
                             </div>
