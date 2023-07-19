@@ -109,6 +109,7 @@ if($currentMonth == '1'){
                     <td><?php if ($fetch_data[$i]['payment_type'] == 'Pay by cash when picking up') echo $fetch_data[$i]['total_purchase']; else echo ''; ?></td>
                     <td><?php if ($fetch_data[$i]['payment_type'] == 'Check') echo $fetch_data[$i]['total_purchase']; else echo ''; ?></td>
                     <td><?php if ($fetch_data[$i]['payment_type'] == 'Credit Card') echo $fetch_data[$i]['total_purchase']; else echo ''; ?></td>
+                    <td><?php if ($fetch_data[$i]['payment_type'] == 'PayMe') echo $fetch_data[$i]['total_purchase']; else echo ''; ?></td>
                 </tr>
                 <?php
             }
