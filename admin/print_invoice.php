@@ -649,7 +649,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     </div>
                     <div class="cs-invoice_footer cs-border_top">
                         <div class="cs-left_footer cs-mobile_hide">
-                            <p class="cs-mb0"><b class="cs-primary_color">郵寄方式:</b></p>
+                            <p class="cs-mb0"><b class="cs-primary_color">出貨方式:</b></p>
                             <p class="cs-m0"><?php echo $billing_details[0]['shipping_method'];?></p>
                             <p class="cs-mb0"><b class="cs-primary_color">付款方式:</b></p>
                             <p class="cs-m0"><?php echo $billing_details[0]['payment_type'];?></p>
@@ -704,7 +704,6 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     <p class="cs-m0">1) 郵寄支票 ：支票抬頭請書明受款人為「 Wayshk」，信封請註明 Attn: Wayshk 並郵寄往大圍成運路 21-23 號群力工業大廈 3 樓 1 室</p>
                     <p class="cs-m0">2) 直接存款 ：銀行戶口號碼為 769-334699-883 （恆生銀行） 銀行戶口名稱: Wayshk</p>
                     <p class="cs-m0">3) Payme/轉數快：5265-7359</p>
-                    <p class="cs-m0">4) 自取點以現金支付</p>
                     <p class="cs-m0">4) 自取點以現金支付</p>
                     <p class="cs-m0">此收帳單為電腦編印文件，毋須蓋印或簽署</p>
                 </div>

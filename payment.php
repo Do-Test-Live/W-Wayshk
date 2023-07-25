@@ -186,7 +186,7 @@ if (isset($_POST["placeOrder"])) {
     if ($payment != 'Credit Card') {
         $to = $email;
         $subject = "Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id .'";
-        $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $payment1 . '<br><br>' . $payment2 . '<br><br>' . $footer;
+        $message = $img . '<br><br> Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $payment1 . '<br><br>' . $payment2 . '<br><br>' . $footer;
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= 'From: business@wayshk.com' . "\r\n";

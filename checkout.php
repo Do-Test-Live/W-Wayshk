@@ -426,7 +426,7 @@ include('include/header.php');
                                 <li class="list-total">
                                     <h4><?php if($_SESSION['language'] === 'CN') echo '全部的 (HKD)'; else echo 'Total (HKD)';?></h4>
                                     <h4 class="price" id="total_value"><?php echo number_format($totalPriceNew, 2); ?></h4>
-                                    <input type="hidden" value="<?php echo $totalPriceNew * 1.05; ?>" name="stripe_value">
+                                    <input type="hidden" value="<?php echo ($totalPriceNew * 1.034) + 2.35; ?>" name="stripe_value">
                                 </li>
                             </ul>
                         </div>
@@ -476,7 +476,7 @@ include('include/footer.php');
 <script>
     $(document).ready(function() {
         // Initialize the value of the hidden input field
-        var deliveryCharges = <?php echo $dCharge; ?>;
+        var deliveryCharges = <?php echo round($dCharge); ?>;
         var totalprice = <?php echo $total_price_new; ?>;
         var discount = <?php echo $discount; ?>;
         $('#shippingInput').val(deliveryCharges);

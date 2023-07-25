@@ -204,7 +204,7 @@ include('include/header.php');
 
                                     <button class="btn btn-md bg-dark cart-button text-white w-100 mt-3" type="submit"><?php if($_SESSION['language'] === 'CN') echo '加入購物車'; else echo 'Add';?>
                                     </button>
-                                    <a class="btn btn-md bg-dark cart-button text-white w-100 mt-3" href="Wish-List?id=<?php echo $product_id;?>" target="_blank"><?php if($_SESSION['language'] === 'CN') echo '添加到喜愛清單'; else echo 'Add to Whitelist';?>
+                                    <a class="btn btn-md bg-dark cart-button text-white w-100 mt-3" href="Wish-List?id=<?php echo $product_id;?>" target="_blank"><?php if($_SESSION['language'] === 'CN') echo '添加到喜愛清單'; else echo 'Wishlist';?>
                                     </a>
                                 </form>
                             </div>
