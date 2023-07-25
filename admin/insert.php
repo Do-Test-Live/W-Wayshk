@@ -529,3 +529,17 @@ if(isset($_POST['add_quotation'])){
                 window.location.href='Invoice';
                 </script>";
 }
+
+if(isset($_POST['add_points'])){
+    $customer_id = $db_handle->checkValue($_POST['customer']);
+    $points = $db_handle->checkValue($_POST['point']);
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $insert_point = $db_handle->insertQuery("INSERT INTO `point`(`customer_id`, `points`, `date`) VALUES ('$customer_id','$points','$inserted_at')");
+    if($insert_point){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Point-Customer';
+                </script>";
+    }
+}

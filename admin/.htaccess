@@ -101,3 +101,5 @@ RewriteRule ^View-Quotation quotation.php [NE,L]
 RewriteRule ^Accounting-Report accounting_report.php [NE,L]
 
 RewriteRule ^Payment-Method-Report payment_method_report.php [NE,L]
+
+RewriteRule ^Point-Customer add_points_customer.php [NE,L]

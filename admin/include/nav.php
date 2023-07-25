@@ -172,6 +172,12 @@
                 </a>
             </li>
             <li>
+                <a href="Point-Customer">
+                    <i class="flaticon-381-pin"></i>
+                    <span class="nav-text">Add Point To Customers</span>
+                </a>
+            </li>
+            <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-panel"></i>
                     <span class="nav-text">Accounting System</span>
