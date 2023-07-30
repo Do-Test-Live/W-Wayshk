@@ -214,14 +214,15 @@ include('include/header.php');
                             ?>
                          Points</h3>
                     </div>
-                    <div class="log-in-title">
+
+                    <!--<div class="log-in-title">
                         <h3>
                             <?php
-                            if($_SESSION['language'] === 'CN')
+/*                            if($_SESSION['language'] === 'CN')
                                 echo '上一條評論';
                             else
                                 echo 'Previous Comment';
-                            ?>
+                            */?>
                             </h3>
                     </div>
                     <div class="row">
@@ -230,23 +231,23 @@ include('include/header.php');
                                 <table class="table order-tab-table">
                                     <thead>
                                     <tr>
-                                        <th><?php if($_SESSION['language'] === 'CN') echo '序列號'; else echo 'SL No';?></th>
-                                        <th><?php if($_SESSION['language'] === 'CN') echo '評論'; else echo 'Comment';?></th>
+                                        <th><?php /*if($_SESSION['language'] === 'CN') echo '序列號'; else echo 'SL No';*/?></th>
+                                        <th><?php /*if($_SESSION['language'] === 'CN') echo '評論'; else echo 'Comment';*/?></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                                    $comment = $db_handle->runQuery("select * from review where customer_id = '$customer_id'");
+/*                                    $comment = $db_handle->runQuery("select * from review where customer_id = '$customer_id'");
                                     $no_comment = $db_handle->numRows("select * from review where customer_id = '$customer_id'");
                                     for($i=0; $i<$no_comment;$i++){
-                                        ?>
+                                        */?>
                                         <tr>
-                                            <td><?php echo $i+1;?></td>
-                                            <td><?php echo $comment[$i]['description'];?></td>
+                                            <td><?php /*echo $i+1;*/?></td>
+                                            <td><?php /*echo $comment[$i]['description'];*/?></td>
                                         </tr>
                                         <?php
-                                    }
-                                    ?>
+/*                                    }
+                                    */?>
                                     </tbody>
                                 </table>
                             </div>
@@ -255,19 +256,19 @@ include('include/header.php');
                     <div class="log-in-title mt-5">
                         <h3>
                             <?php
-                            if($_SESSION['language'] === 'CN')
+/*                            if($_SESSION['language'] === 'CN')
                                 echo '歡迎來到WaysHK';
                             else
                                 echo 'Welcome To WaysHK';
-                            ?>
+                            */?>
                         </h3>
                         <h4>
                             <?php
-                            if($_SESSION['language'] === 'CN')
+/*                            if($_SESSION['language'] === 'CN')
                                 echo '提交您的評論。';
                             else
                                 echo 'Submit your Comment.';
-                            ?>
+                            */?>
 
                         </h4>
                     </div>
@@ -277,23 +278,23 @@ include('include/header.php');
                             <div class="col-12">
                                 <div class="form-floating theme-form-floating log-in-form">
                                     <textarea class="form-control" rows="4" name="review"></textarea>
-                                    <label for="email"><?php if($_SESSION['language'] === 'CN') echo '評論'; else echo 'Comment';?></label>
+                                    <label for="email"><?php /*if($_SESSION['language'] === 'CN') echo '評論'; else echo 'Comment';*/?></label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating theme-form-floating log-in-form">
                                     <input type="file" class="form-control" name="image">
-                                    <label for="email"><?php if($_SESSION['language'] === 'CN') echo '圖像'; else echo 'Image';?></label>
+                                    <label for="email"><?php /*if($_SESSION['language'] === 'CN') echo '圖像'; else echo 'Image';*/?></label>
                                 </div>
                             </div>
 
                             <div class="col-12 mt-3">
                                 <button class="btn btn-animation w-100 justify-content-center" name="submit"
-                                        type="submit"><?php if($_SESSION['language'] === 'CN') echo '提交'; else echo 'Submit';?>
+                                        type="submit"><?php /*if($_SESSION['language'] === 'CN') echo '提交'; else echo 'Submit';*/?>
                                 </button>
                             </div>
                         </form>
-                    </div>
+                    </div>-->
 
                     <div class="other-log-in">
                         <h6></h6>

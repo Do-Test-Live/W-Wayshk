@@ -135,18 +135,13 @@
                 </ul>
             </li>
 
-            <li>
+            <!--<li>
                 <a href="Review" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-6"></i>
                     <span class="nav-text">Review</span>
                 </a>
-            </li>
-            <!--<li>
-                <a href="Report" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-settings-2"></i>
-                    <span class="nav-text">Report</span>
-                </a>
             </li>-->
+
             <li>
                 <a href="Customer">
                     <i class="flaticon-381-internet"></i>
@@ -172,10 +167,14 @@
                 </a>
             </li>
             <li>
-                <a href="Point-Customer">
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-pin"></i>
                     <span class="nav-text">Add Point To Customers</span>
                 </a>
+                <ul aria-expanded="false">
+                    <li><a href="Point-Customer">Add</a></li>
+                    <li><a href="View-Points">View</a></li>
+                </ul>
             </li>
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

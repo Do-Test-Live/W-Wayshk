@@ -70,9 +70,9 @@ if (isset($_POST["placeOrder"])) {
 
     $insert_user = $db_handle->insertQuery("INSERT INTO `billing_details`(`customer_id`, `f_name`, `l_name`, 
                               `email`, `phone`, `address`, `city`, `zip_code`, `payment_type`,`shipping_method`, 
-                              `discount`,`total_purchase`,`delivery_charges`, `updated_at`,`note`) 
+                              `discount`,`total_purchase`,`delivery_charges`, `updated_at`,`note`,`platform`) 
                               VALUES ('$customer_id','$f_name','$l_name','$email','$phone'
-                              ,'$address','$city','$zip_code','$payment','$shipping','$discount','$total_purchase','$delivery_charge','$updated_at','$note')");
+                              ,'$address','$city','$zip_code','$payment','$shipping','$discount','$total_purchase','$delivery_charge','$updated_at','$note','Online Order')");
 
 
     $billing_id = $db_handle->runQuery("SELECT * FROM billing_details order by id desc limit 1");

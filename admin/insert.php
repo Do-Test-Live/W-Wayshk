@@ -341,7 +341,7 @@ if(isset($_POST['add_textbook'])){
 if(isset($_POST['add_invoice'])){
     // Retrieve the values from the form fields
     $inserted_at = date("Y-m-d H:i:s");
-    $note = $_POST['platform'];
+    $platform = $_POST['platform'];
     $paymentMethod = $_POST['payment_method'];
     $deliveryMethods = $_POST['delivery_methods'];
     $organizationName = $_POST['organization_name'];
@@ -352,6 +352,7 @@ if(isset($_POST['add_invoice'])){
     $discount = $_POST['discount'];
     $shipping_fee = $_POST['shipping_fee'];
     $total = $_POST['total'];
+    $note = $_POST['note'];
 
     // Retrieve the values of the appended rows
     $productCodes = $_POST['product'];
@@ -365,7 +366,7 @@ if(isset($_POST['add_invoice'])){
     $quantities = is_array($quantities) ? $quantities : [$quantities];
     $subtotals = is_array($subtotals) ? $subtotals : [$subtotals];
 
-    $insertBillingDetails = $db_handle->insertQuery("INSERT INTO `billing_details`(`f_name`, `organization_name`, `email`, `phone`, `address`, `payment_type`, `shipping_method`, `discount`, `note`, `total_purchase`, `delivery_charges`, `purchase_points`, `updated_at`) VALUES ('$contactPersonName','$organizationName','$contactPersonEmail','$contactPersonPhone','$address','$paymentMethod','$deliveryMethods','$discount','$note','$total','$shipping_fee','0','$inserted_at')");
+    $insertBillingDetails = $db_handle->insertQuery("INSERT INTO `billing_details`(`f_name`, `organization_name`, `email`, `phone`, `address`, `payment_type`, `shipping_method`, `discount`, `note`, `total_purchase`, `delivery_charges`, `purchase_points`, `updated_at`,`platform`) VALUES ('$contactPersonName','$organizationName','$contactPersonEmail','$contactPersonPhone','$address','$paymentMethod','$deliveryMethods','$discount','$note','$total','$shipping_fee','0','$inserted_at','$platform')");
 
     $fetchBillNumber = $db_handle->runQuery("select id from billing_details order by id desc limit 1");
     $billId = $fetchBillNumber[0]['id'];
@@ -535,7 +536,7 @@ if(isset($_POST['add_points'])){
     $points = $db_handle->checkValue($_POST['point']);
     $inserted_at = date("Y-m-d H:i:s");
 
-    $insert_point = $db_handle->insertQuery("INSERT INTO `point`(`customer_id`, `points`, `date`) VALUES ('$customer_id','$points','$inserted_at')");
+    $insert_point = $db_handle->insertQuery("INSERT INTO `point`(`customer_id`, `points`, `date`,`flag`) VALUES ('$customer_id','$points','$inserted_at','1')");
     if($insert_point){
         echo "<script>
                 document.cookie = 'alert = 3;';

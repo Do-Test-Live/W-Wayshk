@@ -98,7 +98,8 @@ include('include/header.php');
                                  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p>Go to the "Wayshk Online Shop Membership Program" page on the official homepage,
-                                        then click "Register Member" to create a membership account with your email and receive 200 points upon successful registration. (Only for those who
+                                        then click "Register Member" to create a membership account with your email and
+                                        receive 200 points upon successful registration. (Only for those who
                                         are 18 years old or above)</p>
                                 </div>
                             </div>
@@ -124,9 +125,9 @@ include('include/header.php');
                                         in the Online Shop. Points will be rounded down to the nearest single digit,
                                         e.g. if the net purchase is HK$99.5 after the discount, the customer will earn
                                         99 points</p>
-                                    <p>(iii) Trial Evaluation Rebate - After purchasing a product / taking a course,
-                                        write a trial evaluation with photos and you will receive 200 points for each
-                                        product evaluation.</p>
+                                    <p>(iii) Evaluation rebates - Help us to write Carousell/Facebook comments, or
+                                        directly provide trial photos/suggestions, additional 200 points can be obtained
+                                        after confirmation by our shop assistant.</p>
                                     <p>* Shipping and other service fees are not included in the purchase amount.</p>
                                     <p>* Member points can only be earned after the member has logged in and paid.</p>
                                     <p>*Points cannot be earned on selected products including gift packs/special
@@ -242,14 +243,25 @@ include('include/header.php');
                 <p>1. Each applicant can only apply for one Wayshk Online Shop membership.</p>
                 <p>2. The application fee for Wayshk Online Shop Membership is free of charge.</p>
                 <p>3. The Wayshk Membership Program is only available on the website.</p>
-                <p>4. Wayshk online store membership and points can only be used by the member himself/herself and cannot be transferred to others.</p>
-                <p>5. All membership information, points and rewards redemption records shall be based on the records kept by Wayshk.</p>
-                <p>6. If a member is found to have abused the membership program, made false statements, provided false or invalid documents, or violated any of the terms and conditions of the Wayshk Online Shop membership, Wayshk may exercise the right to suspend or terminate the membership of the member concerned, and the points issued or accumulated by the member will be revoked or nullified.</p>
-                <p>7 Wayshk reserves the right to reject the application of any applicant, review the membership of the member and terminate the membership of any member without providing any reason for the final decision. </p>
-                <p>8. Wayshk will not be held responsible for incorrect credits, which may be caused by technical failures or factors beyond our control.</p>
-                <p>9. The terms and conditions of this membership program are subject to change from time to time without notice.</p>
-                <p>10. In case of any dispute, Wayshk reserves the right to interpret, exercise and decide on all terms and conditions;</p>
-                <p>11. If there is any systemic problem with the membership program, please contact us as soon as possible, we will correct and continuously improve the relevant services as soon as possible</p>
+                <p>4. Wayshk online store membership and points can only be used by the member himself/herself and
+                    cannot be transferred to others.</p>
+                <p>5. All membership information, points and rewards redemption records shall be based on the records
+                    kept by Wayshk.</p>
+                <p>6. If a member is found to have abused the membership program, made false statements, provided false
+                    or invalid documents, or violated any of the terms and conditions of the Wayshk Online Shop
+                    membership, Wayshk may exercise the right to suspend or terminate the membership of the member
+                    concerned, and the points issued or accumulated by the member will be revoked or nullified.</p>
+                <p>7 Wayshk reserves the right to reject the application of any applicant, review the membership of the
+                    member and terminate the membership of any member without providing any reason for the final
+                    decision. </p>
+                <p>8. Wayshk will not be held responsible for incorrect credits, which may be caused by technical
+                    failures or factors beyond our control.</p>
+                <p>9. The terms and conditions of this membership program are subject to change from time to time
+                    without notice.</p>
+                <p>10. In case of any dispute, Wayshk reserves the right to interpret, exercise and decide on all terms
+                    and conditions;</p>
+                <p>11. If there is any systemic problem with the membership program, please contact us as soon as
+                    possible, we will correct and continuously improve the relevant services as soon as possible</p>
             </div>
         </div>
     </div>
@@ -263,7 +275,7 @@ include('include/footer.php');
 <!-- Footer Section End -->
 
 <!-- Deal Box Modal Start -->
-<?php include ('include/deal.php');?>
+<?php include('include/deal.php'); ?>
 <!-- Deal Box Modal End -->
 <!-- Tap to top start -->
 <div class="theme-option">

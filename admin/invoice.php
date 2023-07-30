@@ -131,6 +131,13 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                     </div>
 
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Note</label>
+                                            <textarea type="text" class="form-control" placeholder="" name="note"></textarea>
+                                        </div>
+                                    </div>
+
                                     <div class="table-responsive">
                                         <table id="productTable" class="display min-w850 table table-striped">
                                             <thead>
