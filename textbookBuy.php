@@ -34,7 +34,6 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
 
     for ($i = 0; $i < $no_points; $i++) {
         $point_id = $select_points[$i]['point_id'];
-        echo 'For working';
         if ($select_points[$i]['points'] == $r_point) {
             $update = $db_handle->insertQuery("update point set points = '0' where point_id = '$point_id'");
             $r_point = 0;
@@ -55,7 +54,7 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
     $to = $email_to;
     $subject = 'Textbook Download | Wayshk';
     $message = $img . '<br><br> <h3>Order Received Successfully</h3><br>
-Your order is successfully placed. Please download the textbook from <a href = "$download_link" target="_blank">Here</a>';
+Your order is successfully placed. Please download the textbook from <a href = ' .$download_link. ' target="_blank">Here</a>';
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= 'From: business@wayshk.com' . "\r\n";
