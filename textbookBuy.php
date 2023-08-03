@@ -52,9 +52,17 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
 
     $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
     $to = $email_to;
-    $subject = 'Textbook Download | Wayshk';
-    $message = $img . '<br><br> <h3>Order Received Successfully</h3><br>
-Your order is successfully placed. Please download the textbook from <a href = ' .$download_link. ' target="_blank">Here</a>';
+    $subject = 'Wayshk 活籽兒童用品店 – 教材下載 ';
+    $message = $img . '<br><br> <h3>您好。</h3><br>
+成功收到你的指示。請點擊連結下載教材： <a href = ' . $download_link . ' target="_blank">Here</a> <br><br>
+你的支持，是我們繼續編寫教學資源的動力！請讚好並追蹤Wayshk Facebook 留意最新動態：<a href="https://www.facebook.com/wayshk000" target="_blank">Facebook</a>
+<br><br>
+聯絡我們<br>
+如你有任何關於此訂單的查詢，請與Wayshk聯繫。<br>
+香港大圍成運路21-23號群力工業大廈3樓1室<br>
+產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com<br>
+其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com
+';
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= 'From: business@wayshk.com' . "\r\n";
