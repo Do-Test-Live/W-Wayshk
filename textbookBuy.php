@@ -50,7 +50,7 @@ if ($fetch_point[0]['p'] > $required_points[0]['textbook_point']) {
     $email_to = $fetch_email[0]['email'];
 
 
-    $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
+    $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
     $to = $email_to;
     $subject = 'Wayshk 活籽兒童用品店 – 教材下載 ';
     $message = $img . '<br><br> <h3>您好。</h3><br>

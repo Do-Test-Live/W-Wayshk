@@ -169,7 +169,7 @@ if (!empty($_GET['session_id'])) {
 
     $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
 
-    $img = '<img src="https://wayshk.com/assets/images/welcome-poster.jpg" alt="" style="width: 100%;">';
+    $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
 
     $to = $customer_email;
     $subject = 'Wayshk 活籽兒童用品店 - 訂單編號';
