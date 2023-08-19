@@ -126,7 +126,7 @@ alert('您輸入的電子郵件或密碼不正確。請檢查後再試一次。'
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
                                         <input type="email" class="form-control" id="email" placeholder="<?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?>" name="email">
-                                        <label for="email"><h4><?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?></h4></label>
+                                        <label for="email"><?php if ($_SESSION['language'] === 'CN') echo '電子郵件地址'; else echo 'Email Address';?></label>
                                     </div>
                                 </div>
 

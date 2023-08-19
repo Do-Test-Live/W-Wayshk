@@ -177,51 +177,7 @@ include('include/header.php');
                             ?>
                         </h2>
                     </div>
-                    <div class="timing-box">
-                        <div class="timing theme-bg-color">
-                            <i data-feather="clock"></i>
-                            <h6 class="name">
-                                <?php
-                                if ($_SESSION['language'] === 'CN')
-                                    echo '到期時間淨餘:';
-                                else
-                                    echo 'Expires in :';
-                                ?>
-                            </h6>
-                            <div class="time" id="clockdiv-1" data-hours="1" data-minutes="2" data-seconds="3">
-                                <ul>
-                                    <li>
-                                        <div class="counter">
-                                            <div class="days">
-                                                <h6></h6>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="counter">
-                                            <div class="hours">
-                                                <h6></h6>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="counter">
-                                            <div class="minutes">
-                                                <h6></h6>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="counter">
-                                            <div class="seconds">
-                                                <h6></h6>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div class="product-box-slider-2 no-arrow">
@@ -343,7 +299,7 @@ include('include/header.php');
 
                                         <h5 class="sold text-content">
                                             <span class="theme-color price"><?php echo $fetch_product [$i + 1]['product_price'] ?></span>
-                                            <del>28.56</del>
+
                                         </h5>
 
                                         <div class="product-rating mt-2">

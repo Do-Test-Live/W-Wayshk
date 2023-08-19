@@ -295,19 +295,6 @@ if (isset($_POST['delivery'])) {
     }
 
     if ($data) {
-        $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
-        $no_fetch_product = $db_handle->numRows("select * from invoice_details where billing_id = '$id'");
-        for ($i = 0; $i < $no_fetch_product; $i++) {
-            $quantity = $fetch_product[$i]['product_quantity'];
-            $product_id = $fetch_product[$i]['product_id'];
-            $fetch_stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
-            $no_fetch_stock = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
-            if ($no_fetch_stock > 0) {
-                $s_quantity = $fetch_stock[0]['quantity'];
-                $s_quantity = $s_quantity - $quantity;
-                $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
-            }
-        }
         $email_to = $email;
         $subject = 'Wayshk';
 
@@ -341,10 +328,43 @@ if (isset($_POST['approved'])) {
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET `approve` = '1' WHERE id='$id'");
     if ($data) {
-        echo "<script>
+        $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
+        $no_fetch_product = $db_handle->numRows("select * from invoice_details where billing_id = '$id'");
+        for ($i = 0; $i < $no_fetch_product; $i++) {
+            $quantity = $fetch_product[$i]['product_quantity'];
+            $product_id = $fetch_product[$i]['product_id'];
+            $fetch_stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
+            $no_fetch_stock = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
+            if ($no_fetch_stock > 0) {
+                $s_quantity = $fetch_stock[0]['quantity'];
+                $s_quantity = $s_quantity - $quantity;
+                $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
+            }
+        }
+        $email_to = $email;
+        $subject = 'Wayshk';
+
+
+        $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
+        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+
+        $messege = "
+            <html>
+                <body style='background-color: #eee; font-size: 16px;'>
+                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
+                    <h3 style='color:black'>Order Update</h3>
+                    <p style='color:black;'>
+                    Your products are delivered. Thank you for your purchase! Fell free to buy again.
+                    </p>
+                </div>
+                </body>
+            </html>";
+        if (mail($email_to, $subject, $messege, $headers)) {
+            echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Confirm-Order';
                 </script>";
+        }
     }
 
 }

@@ -71,6 +71,7 @@ if (!isset($_SESSION['userid'])) {
                                     <th>Shipping Method</th>
                                     <th>Total (HKD)</th>
                                     <th>Details</th>
+                                    <th>Order</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -98,6 +99,13 @@ if (!isset($_SESSION['userid'])) {
                                                 <a href="print_quotation.php?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Invoice"><i
                                                         class="fa fa-print"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="quatationtoorder.php?id=<?php echo $bill_data[$i]["id"]; ?>"
+                                                   class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Confirm Order"><i
+                                                            class="fa fa-arrow-circle-o-right"></i></a>
                                             </div>
                                         </td>
                                     </tr>
