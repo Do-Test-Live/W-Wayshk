@@ -381,5 +381,3 @@ $total_purchase = (int)$total_purchase + (int)$shipping - (int)$discount;
 </script>
 </body>
 </html>
-
-

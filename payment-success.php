@@ -136,6 +136,8 @@ if (!empty($_GET['session_id'])) {
 
     $id = $data[0]['id'];
 
+    $update_status = $db_handle->insertQuery("UPDATE `billing_details` SET `approve`='2' WHERE `id` = '$id'");
+
     $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details` WHERE `billing_id` = '$id'");
     $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details` WHERE `billing_id` = '$id'");
 
@@ -172,7 +174,7 @@ if (!empty($_GET['session_id'])) {
     $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
 
     $to = $customer_email;
-    $subject = 'Wayshk 活籽兒童用品店 - 訂單編號';
+    $subject = 'Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id;
     $message = $img . '<br><br>： Wayshk 活籽兒童用品店 - 訂單編號 WHK #' . $id .' <br><br>點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> Order Details ' . $tableHtml . '<br><br>' . $footer;
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

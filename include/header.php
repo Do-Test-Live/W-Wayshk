@@ -451,10 +451,6 @@ if (isset($_SESSION["cart_item"])) {
                                                         <a class="dropdown-item"
                                                            href="Membership-Program">會員計劃</a>
                                                     </li>
-                                                    <!--<li>
-                                                        <a class="dropdown-item"
-                                                           href="Testimonial">客戶評論</a>
-                                                    </li>-->
                                                 </ul>
                                             </li>
                                         </ul>
@@ -499,10 +495,6 @@ if (isset($_SESSION["cart_item"])) {
                                                         <a class="dropdown-item"
                                                            href="Membership-Program-EN">Membership Program</a>
                                                     </li>
-                                                    <!--<li>
-                                                        <a class="dropdown-item"
-                                                           href="Testimonial">Customer Review</a>
-                                                    </li>-->
                                                 </ul>
                                             </li>
                                         </ul>
