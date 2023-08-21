@@ -99,12 +99,10 @@ if (isset($_POST["placeOrder"])) {
 
     if (!isset($_SESSION['id'])) {
         $select = $db_handle->numRows("SELECT * FROM customer where email='$email'");
-        if ($select == 0 && $addInfo == 1) {
-            $info = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `address`, 
-                       `city`, `zip_code`, `password`, `inserted_at`, `updated_at`) 
+        $info = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `address`, 
+                       `city`, `zip_code`, `password`, `inserted_at`, `updated_at`,`status`) 
                        VALUES ('$name','$email','$phone','$address','$city','$zip_code','$password',
-                               '$updated_at','$updated_at')");
-        }
+                               '$updated_at','$updated_at','$addInfo')");
     }
 
     if($payment == 'Credit Card') {

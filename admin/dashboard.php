@@ -14,6 +14,8 @@ if (!isset($_SESSION['userid'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dashboard | Wayshk Admin</title>
+    <!-- Datatable -->
+    <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
    <?php include 'include/css.php'; ?>
 </head>
 <body>
@@ -303,9 +305,50 @@ if (!isset($_SESSION['userid'])) {
                         </div>
                     </div>
 				</div>
-
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Stock Alert</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example3" class="display min-w850">
+                                        <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Product Name</th>
+                                            <th>Product Code</th>
+                                            <th>Stock Quantity</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                        $product_data = $db_handle->runQuery("SELECT * FROM `stock`,`product` WHERE stock.product_id = product.id and stock.quantity < 20 ORDER by stock.quantity DESC;");
+                                        $row_count = $db_handle->numRows("SELECT * FROM `stock`,`product` WHERE stock.product_id = product.id and stock.quantity < 20 ORDER by stock.quantity DESC;");
+                                        if($row_count > 0){
+                                        for ($i = 0; $i < $row_count; $i++) {
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $i + 1; ?></td>
+                                                <td><?php echo $product_data[$i]['p_name'];?></td>
+                                                <td><?php echo $product_data[$i]['product_code'];?></td>
+                                                <td><?php echo $product_data[$i]["quantity"];?></td>
+                                            </tr>
+                                            <?php
+                                            }
+                                        }
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <!--**********************************
             Content body end
         ***********************************-->
@@ -318,5 +361,7 @@ if (!isset($_SESSION['userid'])) {
     ***********************************-->
 
     <?php include 'include/js.php'; ?>
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="js/plugins-init/datatables.init.js"></script>
 </body>
 </html>

@@ -76,3 +76,25 @@ if(isset($_GET['invoiceId'])){
         echo 'success';
     }
 }
+
+if(isset($_GET['deleteproductId'])){
+    $id = $_GET['deleteproductId'];
+
+    $fetch_products = $db_handle->runQuery("select * from invoice_details where id = '$id'");
+    $amount = $fetch_products[0]['product_total_price'];
+    $billing_id = $fetch_products[0]['billing_id'];
+
+    $fetch_total_amount = $db_handle->runQuery("SELECT `id`, `total_purchase` FROM `billing_details` WHERE `id` = '$billing_id'");
+    if($fetch_total_amount){
+        $previous_amount = $fetch_total_amount[0]['total_purchase'];
+        $updated_amount = $previous_amount - $amount;
+        $update = $db_handle -> insertQuery("UPDATE `billing_details` SET `total_purchase`='$updated_amount' WHERE `id` = '$billing_id'");
+        if($update){
+            $db_handle -> insertQuery("DELETE FROM `invoice_details` WHERE `id` = '$id'");
+            echo 'success';
+        }
+    }
+
+
+
+}

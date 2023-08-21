@@ -384,6 +384,41 @@ if(isset($_POST['add_invoice'])){
                 </script>";
 }
 
+if(isset($_POST['custom_product_add'])){
+    $inserted_at = date("Y-m-d H:i:s");
+    $total = $_POST['total'];
+    $productCodes = $_POST['product'];
+    $unitPrices = $_POST['unit_price'];
+    $quantities = $_POST['quantity'];
+    $subtotals = $_POST['subtotal'];
+    // Convert the variables to arrays if they are not already
+    $productCodes = is_array($productCodes) ? $productCodes : [$productCodes];
+    $unitPrices = is_array($unitPrices) ? $unitPrices : [$unitPrices];
+    $quantities = is_array($quantities) ? $quantities : [$quantities];
+    $subtotals = is_array($subtotals) ? $subtotals : [$subtotals];
+    $billId = $_POST['billId'];
+
+    for ($i = 0; $i < count($productCodes); $i++) {
+        $fetchProductName = $db_handle->runQuery("select p_name from product where id = '$productCodes[$i]'");
+        $productName = $fetchProductName[0]['p_name'];
+        $insertProducts = $db_handle->insertQuery("INSERT INTO `invoice_details`(`customer_id`, `billing_id`, `product_id`, `product_name`, `product_quantity`, `product_unit_price`, `product_total_price`, `updated_at`) VALUES ('0','$billId','$productCodes[$i]','$productName','$quantities[$i]','$unitPrices[$i]','$subtotals[$i]','$inserted_at')");
+    }
+
+    $fetch_bill_amount = $db_handle->runQuery("SELECT `id`, `total_purchase` FROM `billing_details` WHERE `id` = '$billId'");
+    if($fetch_bill_amount){
+        $previous_amount = $fetch_bill_amount[0]['total_purchase'];
+        $updated_amount = $previous_amount + $total;
+        $update = $db_handle -> insertQuery("UPDATE `billing_details` SET `total_purchase`='$updated_amount' WHERE `id` = '$billId'");
+        if($update){
+            echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Pending-Order';
+                </script>";
+        }
+    }
+}
+
+
 
 if(isset($_POST['add_bookkeeping'])){
     $recept_no = $db_handle->checkValue($_POST['recept_no']);
