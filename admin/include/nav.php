@@ -36,18 +36,9 @@
                 <ul aria-expanded="false">
                     <li><a href="Add-Textbook">Add Textbook</a></li>
                     <li><a href="Textbook">Textbook List</a></li>
+                    <li><a href="Sequence-Textbook">Sequence Textbook List</a></li>
                 </ul>
             </li>
-            <!--<li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-upload"></i>
-                    <span class="nav-text">Store</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="Add-Store">Add Store</a></li>
-                    <li><a href="Store">Store List</a></li>
-                </ul>
-            </li>-->
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-promotion"></i>
@@ -78,6 +69,7 @@
                 <ul aria-expanded="false">
                     <li><a href="Add-Course">Add Course</a></li>
                     <li><a href="Course">Course List</a></li>
+                    <li><a href="Sequence-Course">Sequence Course</a></li>
                 </ul>
             </li>
             <li>

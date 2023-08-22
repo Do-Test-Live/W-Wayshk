@@ -68,6 +68,13 @@ include('include/header.php');
                     ?>
                 </h2>
             </div>
+            <div class="col-12 text-center">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <input type="search" id="search-box" class="form-control" placeholder="I am searching for" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    </div>
+                </div>
+            </div>
             <div class="col-xxl-12 mt-5">
                 <div class="row g-4 ratio_65">
                     <?php
@@ -167,5 +174,25 @@ include('include/footer.php');
 
 <!-- thme setting js -->
 <script src="assets/js/theme-setting.js"></script>
+
+<script>
+    const searchBox = document.getElementById('search-box');
+    const blogBoxes = document.querySelectorAll('.blog-box');
+
+    searchBox.addEventListener('input', function() {
+        const searchTerm = searchBox.value.toLowerCase();
+
+        blogBoxes.forEach(blogBox => {
+            const titleElement = blogBox.querySelector('h3');
+            const titleText = titleElement.textContent.toLowerCase();
+
+            if (titleText.includes(searchTerm)) {
+                blogBox.style.display = 'block';
+            } else {
+                blogBox.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
 </html>

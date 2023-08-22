@@ -79,14 +79,21 @@ include('include/header.php');
                         echo 'Featured Courses'
                     ?></h2>
             </div>
+            <div class="col-12 text-center">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <input type="search" id="search-box" class="form-control" placeholder="I am searching for" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    </div>
+                </div>
+            </div>
             <div class="col-xxl-12 mt-5">
                 <div class="row g-4 ratio_65">
                 <?php
-                $fetch_course = $db_handle->runQuery("select * from course where status = '1' order by course_id desc");
-                $no_fetch_course = $db_handle->numRows("select * from course where status = '1' order by course_id desc");
+                $fetch_course = $db_handle->runQuery("select * from course where status = '1' order by order_no");
+                $no_fetch_course = $db_handle->numRows("select * from course where status = '1' order by order_no");
                 for ($i=0; $i < $no_fetch_course; $i++){
                     ?>
-                    <div class="col-xxl-4 col-sm-6 m-auto mt-3">
+                    <div class="col-xxl-4 col-sm-6 m-auto mt-3 blog-box wow fadeInUp">
                         <div class="blog-box wow fadeInUp">
                             <div class="blog-image">
                                 <a href="Course-Details?id=<?php echo $fetch_course[$i]['course_id'];?>">
@@ -206,5 +213,25 @@ include('include/footer.php');
 
 <!-- thme setting js -->
 <script src="assets/js/theme-setting.js"></script>
+
+<script>
+    const searchBox = document.getElementById('search-box');
+    const blogBoxes = document.querySelectorAll('.blog-box');
+
+    searchBox.addEventListener('input', function() {
+        const searchTerm = searchBox.value.toLowerCase();
+
+        blogBoxes.forEach(blogBox => {
+            const titleElement = blogBox.querySelector('h3');
+            const titleText = titleElement.textContent.toLowerCase();
+
+            if (titleText.includes(searchTerm)) {
+                blogBox.style.display = 'block';
+            } else {
+                blogBox.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
 </html>

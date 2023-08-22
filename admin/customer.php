@@ -51,7 +51,7 @@ if (!isset($_SESSION['userid'])) {
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Customer List</h4>
+                        <h4 class="card-title">All Customer List</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -69,8 +69,52 @@ if (!isset($_SESSION['userid'])) {
                                 </thead>
                                 <tbody>
                                 <?php
-                                $customer_data = $db_handle->runQuery("SELECT * FROM customer order by id desc");
-                                $row_count = $db_handle->numRows("SELECT * FROM customer order by id desc");
+                                $customer_data = $db_handle->runQuery("SELECT * FROM customer where status = 0 order by id desc");
+                                $row_count = $db_handle->numRows("SELECT * FROM customer where status = 0 order by id desc");
+
+                                for ($i = 0; $i < $row_count; $i++) {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $i + 1; ?></td>
+                                        <td><?php echo $customer_data[$i]["customer_name"]; ?></td>
+                                        <td><?php echo $customer_data[$i]["email"]; ?></td>
+                                        <td><?php echo $customer_data[$i]["number"]; ?></td>
+                                        <td><?php echo $customer_data[$i]["address"]; ?></td>
+                                        <td><?php echo $customer_data[$i]["city"]; ?></td>
+                                        <td><?php echo $customer_data[$i]["zip_code"]; ?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Listed Customers for Promotion</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display min-w850">
+                                <thead>
+                                <tr>
+                                    <th>SL</th>
+                                    <th>Customer Name</th>
+                                    <th>Email</th>
+                                    <th>Contact No</th>
+                                    <th>Address</th>
+                                    <th>City</th>
+                                    <th>Zip Code</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                $customer_data = $db_handle->runQuery("SELECT * FROM customer where status = 1 order by id desc");
+                                $row_count = $db_handle->numRows("SELECT * FROM customer where status = 1 order by id desc");
 
                                 for ($i = 0; $i < $row_count; $i++) {
                                     ?>

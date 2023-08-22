@@ -105,3 +105,7 @@ RewriteRule ^Payment-Method-Report payment_method_report.php [NE,L]
 RewriteRule ^Point-Customer add_points_customer.php [NE,L]
 
 RewriteRule ^View-Points view_points.php [NE,L]
+
+RewriteRule ^Sequence-Course sequence_course.php
+
+RewriteRule ^Sequence-Textbook sequence_textbook.php [NE,L]
