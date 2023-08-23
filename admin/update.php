@@ -541,7 +541,23 @@ if(isset($_POST['updateCashFlow'])){
     if($data){
         echo "<script>
                 document.cookie = 'alert = 3;';
-                window.location.href='Cash-Flow';
+                window.location.href='Cash-Capital';
+                </script>";
+    }
+}
+
+if(isset($_POST['updateCashFlowWithdraw'])){
+    $id = $db_handle->checkValue($_POST['id']);
+    $date = $db_handle->checkValue($_POST['date']);
+    $amount = $db_handle->checkValue($_POST['amount']);
+    $note = $db_handle->checkValue($_POST['note']);
+    $updated_at = date("Y-m-d H:i:s");
+
+    $data = $db_handle->insertQuery("UPDATE `cash_flow_withdraw` SET `date`='$date',`amount`='$amount',`note`='$note',`updated_at`='$updated_at' WHERE cash_withdraw_id  = '$id'");
+    if($data){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Cash-Capital';
                 </script>";
     }
 }

@@ -64,6 +64,11 @@ if(isset($_GET['cashFlowId'])){
     echo 'success';
 }
 
+if(isset($_GET['cashId'])){
+    $db_handle->insertQuery("delete from cash_flow_withdraw where cash_withdraw_id =" . $_GET['cashId'] . "");
+    echo 'success';
+}
+
 if(isset($_GET['bankInterestId'])){
     $db_handle->insertQuery("delete from bank_interest where bank_id =" . $_GET['bankInterestId'] . "");
     echo 'success';

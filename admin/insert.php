@@ -506,6 +506,22 @@ if(isset($_POST['add_cash_flow'])){
     }
 }
 
+if(isset($_POST['withdraw_cash_flow'])){
+    $date = $_POST['date'];
+    $amount = $_POST['amount'];
+    $note = $_POST['note'];
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $query = $db_handle->insertQuery("INSERT INTO `cash_flow_withdraw`(`date`, `amount`, `note`, `inserted_at`) VALUES ('$date','$amount','$note','$inserted_at')");
+    if($query){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Cash-Capital';
+                </script>";
+    }
+}
+
+
 if(isset($_POST['add_bank_interest'])){
     $date = $_POST['date'];
     $amount = $_POST['amount'];
