@@ -217,6 +217,13 @@ if (!isset($_SESSION['userid'])) {
                             <div class="card-header">
                                 <h4 class="card-title">Product List</h4>
                             </div>
+                            <div class="mb-3 row">
+                                <div class="col-sm-12 mx-auto">
+                                    <a type="submit" class="btn btn-primary w-25"
+                                       href="product_data_csv.php" target="_blank">Export CSV
+                                    </a>
+                                </div>
+                            </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example3" class="display min-w850">

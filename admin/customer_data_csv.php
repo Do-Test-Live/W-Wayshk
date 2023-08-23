@@ -37,10 +37,6 @@ if (!isset($_SESSION['userid'])) {
 ***********************************-->
 <div id="main-wrapper">
 
-    <?php include 'include/header.php'; ?>
-
-    <?php include 'include/nav.php'; ?>
-
     <!--**********************************
         Content body start
     ***********************************-->
@@ -52,13 +48,6 @@ if (!isset($_SESSION['userid'])) {
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">All Customer List</h4>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-12 mx-auto">
-                            <a type="submit" class="btn btn-primary w-25"
-                               href="customer_data_csv.php" target="_blank">Export CSV
-                            </a>
-                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -103,13 +92,6 @@ if (!isset($_SESSION['userid'])) {
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Listed Customers for Promotion</h4>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-12 mx-auto">
-                            <a type="submit" class="btn btn-primary w-25"
-                                    href="customer_data_csv.php" target="_blank">Export CSV
-                            </a>
-                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -164,10 +146,30 @@ if (!isset($_SESSION['userid'])) {
 ***********************************-->
 
 <?php include 'include/js.php'; ?>
-
 <!-- Datatable -->
-<script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
-<script src="js/plugins-init/datatables.init.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#example3').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'csv'
+            ]
+        } );
+        $('#example4').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'csv'
+            ]
+        } );
+    } );
+</script>
 
 </body>
 </html>
