@@ -108,8 +108,8 @@ if (isset($_POST['updateProduct'])) {
         $databaseValue = implode(',', $dataFileName);
         $query .= ",`p_image`='" . $databaseValue . "'";
         $fetch_image = $db_handle->runQuery("select p_image from product WHERE id={$id}");
-        $img = explode(',',$fetch_image[0]['p_image']);
-        foreach ($img as $i){
+        $img = explode(',', $fetch_image[0]['p_image']);
+        foreach ($img as $i) {
             unlink($i);
         }
     }
@@ -290,7 +290,7 @@ if (isset($_POST['delivery'])) {
     $date = $fetch_customer[0]['updated_at'];
     $payment = $fetch_customer[0]['payment_type'];
 
-    if($payment != 'Credit Card' && $customer != 0){
+    if ($payment != 'Credit Card' && $customer != 0) {
         $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$points','$date')");
     }
 
@@ -341,25 +341,46 @@ if (isset($_POST['approved'])) {
                 $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
             }
         }
+
+        $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+        $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+        $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
+        $tableHtml .= '<tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品名稱</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品代碼</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">數量</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">價格</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">合計</th>
+                </tr>';
+
+        for ($i = 0; $i < $no_product_details; $i++) {
+            $tableHtml .= '<tr>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
+            $tableHtml .= '</tr>';
+        }
+
+        $tableHtml .= '</table>';
+
+        $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
+
+        $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>期待您再次光臨Wayshk！</h4></br></br>';
+        $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>聯絡我們</h4>';
+        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">如你有任何關於此訂單的查詢，請與Wayshk聯繫。</h5>';
+        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">香港大圍成運路21-23號群力工業大廈3樓1室</h5>';
+        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</h5>';
+        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</h5>';
+
+        $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
         $email_to = $email;
-        $subject = 'Wayshk';
-
-
+        $subject = 'Wayshk 活籽兒童用品店 – 訂單更新 ';
         $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
         $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-
-        $messege = "
-            <html>
-                <body style='background-color: #eee; font-size: 16px;'>
-                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <h3 style='color:black'>Order Update</h3>
-                    <p style='color:black;'>
-                    Your products are delivered. Thank you for your purchase! Fell free to buy again.
-                    </p>
-                </div>
-                </body>
-            </html>";
-        if (mail($email_to, $subject, $messege, $headers)) {
+        $message = $img . '<br><br>您的訂單 WHK #' . $id . ' <br><br>已經完成出貨程序。點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $footer;
+        if (mail($email_to, $subject, $message, $headers)) {
             echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Confirm-Order';
@@ -530,7 +551,7 @@ if (isset($_POST['updateBook'])) {
     }
 }
 
-if(isset($_POST['updateCashFlow'])){
+if (isset($_POST['updateCashFlow'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $date = $db_handle->checkValue($_POST['date']);
     $amount = $db_handle->checkValue($_POST['amount']);
@@ -538,7 +559,7 @@ if(isset($_POST['updateCashFlow'])){
     $updated_at = date("Y-m-d H:i:s");
 
     $data = $db_handle->insertQuery("UPDATE `cash_flow` SET `date`='$date',`amount`='$amount',`note`='$note',`updated_at`='$updated_at' WHERE cash_id = '$id'");
-    if($data){
+    if ($data) {
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Cash-Capital';
@@ -546,7 +567,7 @@ if(isset($_POST['updateCashFlow'])){
     }
 }
 
-if(isset($_POST['updateCashFlowWithdraw'])){
+if (isset($_POST['updateCashFlowWithdraw'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $date = $db_handle->checkValue($_POST['date']);
     $amount = $db_handle->checkValue($_POST['amount']);
@@ -554,7 +575,7 @@ if(isset($_POST['updateCashFlowWithdraw'])){
     $updated_at = date("Y-m-d H:i:s");
 
     $data = $db_handle->insertQuery("UPDATE `cash_flow_withdraw` SET `date`='$date',`amount`='$amount',`note`='$note',`updated_at`='$updated_at' WHERE cash_withdraw_id  = '$id'");
-    if($data){
+    if ($data) {
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Cash-Capital';
@@ -562,7 +583,7 @@ if(isset($_POST['updateCashFlowWithdraw'])){
     }
 }
 
-if(isset($_POST['updateBankInterest'])){
+if (isset($_POST['updateBankInterest'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $date = $db_handle->checkValue($_POST['date']);
     $amount = $db_handle->checkValue($_POST['amount']);
@@ -570,7 +591,7 @@ if(isset($_POST['updateBankInterest'])){
     $updated_at = date("Y-m-d H:i:s");
 
     $data = $db_handle->insertQuery("UPDATE `bank_interest` SET `date`='$date',`amount`='$amount',`note`='$note',`updated_at`='$updated_at' WHERE bank_id = '$id'");
-    if($data){
+    if ($data) {
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Bank-Interest';

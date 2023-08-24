@@ -189,7 +189,8 @@ if (!isset($_SESSION['userid'])) {
                                         <h2 class="text-white font-w600">
                                             <?php
                                             $capital = $db_handle->runQuery("SELECT SUM(amount) as s from cash_flow");
-                                            echo $capital[0]['s'];
+                                            $withdraw = $db_handle->runQuery("SELECT SUM(amount) as b from cash_flow_withdraw");
+                                            echo $capital[0]['s'] - $withdraw[0]['b'];
                                             ?> HKD
                                         </h2>
                                         <span class="text-white">Total Capital Investment</span>
