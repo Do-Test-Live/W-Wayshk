@@ -295,25 +295,57 @@ if (isset($_POST['delivery'])) {
     }
 
     if ($data) {
-        $email_to = $email;
-        $subject = 'Wayshk';
+        $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+        $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+        $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
+        $tableHtml .= '<tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品名稱</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品代碼</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">數量</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">價格</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">合計</th>
+                </tr>';
 
+        for ($i = 0; $i < $no_product_details; $i++) {
+            $tableHtml .= '<tr>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
+            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
+            $tableHtml .= '</tr>';
+        }
+
+        $tableHtml .= '</table>';
+
+        $payment1 = '<h3>消費積分獎賞</h3>';
+        $payment1 .= ' <p>如為Wayshk活籽兒童用品店網店會員，每消費1元即可賺取1積分。本次消費積分已經加入您的帳戶，可當作現金使用或下載各類創意教學資源。</p>';
+        $payment1 .= ' <p>登入會員帳號查看積分：https://www.wayshk.com/Login</p>';
+        $payment1 .= ' <p>立即使用現金回贈： https://www.wayshk.com/Shop</p>';
+        $payment1 .= ' <p>下載教學資源： https://www.wayshk.com/Resources-Download  </p>';
+
+        $payment2 = '<h3>評價回贈獎賞</h3>';
+        $payment2 .= '<p>第一步：撰寫Carousell/Facebook好評或直接提供試玩照片及建議</p>';
+        $payment2 .= '<p>第二步：截圖回覆此電郵/傳送到WhatsApp 5605 8389</p>';
+        $payment2 .= '<p>第三步：經店員確認後可獲得額外200積分（=$5購物現金）</p>';
+        $payment2 .= '<h3>聯絡我們</h3>';
+        $payment2 .= '<p>如你有任何關於此訂單的查詢，請與Wayshk聯繫。</p>';
+        $payment2 .= '<p>香港大圍成運路21-23號群力工業大廈3樓1室</p>';
+        $payment2 .= '<p>產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</p>';
+        $payment2 .= '<p>其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</p>';
+
+        $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
+
+
+        $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
+        $email_to = $email;
+        $subject = 'Wayshk 活籽兒童用品店 – 訂單確認';
 
         $headers = "From: Wayshk <" . $db_handle->from_email() . ">\r\n";
         $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-        $messege = "
-            <html>
-                <body style='background-color: #eee; font-size: 16px;'>
-                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <h3 style='color:black'>Order Update</h3>
-                    <p style='color:black;'>
-                    Your order is successfully received. We will try to process your order as soon as possible. Please contact us for more details.
-                    </p>
-                </div>
-                </body>
-            </html>";
-        if (mail($email_to, $subject, $messege, $headers)) {
+        $message = $img . '<br><br>感謝您購買 Wayshk活籽兒童用品店的商品，您的訂單已經確認。 ' . $id . ' <br><br>點擊連結檢視訂單詳情，並下載收據 ：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $payment1. '<br><br>' . $payment2;
+        if (mail($email_to, $subject, $message, $headers)) {
             echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Pending-Order';
