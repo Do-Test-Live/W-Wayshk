@@ -580,8 +580,8 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             <div class="cs-invoice_head cs-type1 cs-mb25">
                 <div class="cs-invoice_left">
 
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">收帳單 / Invoice</p>
-                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">訂單編號：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票 / Invoice</p>
+                    <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">發票編號：</b> #WHK<?php echo $billing_details[0]['id']; ?></p>
                     <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">日期: </b>
                         <?php
                         $date = date_create($billing_details[0]["updated_at"]);
@@ -705,7 +705,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
                     <p class="cs-m0">2) 直接存款 ：銀行戶口號碼為 769-334699-883 （恆生銀行） 銀行戶口名稱: Wayshk</p>
                     <p class="cs-m0">3) Payme/轉數快：5265-7359</p>
                     <p class="cs-m0">4) 自取點以現金支付</p>
-                    <p class="cs-m0">此收帳單為電腦編印文件，毋須蓋印或簽署</p>
+                    <p class="cs-m0" style="font-weight: bold; margin-top: 20px">此收帳單為電腦編印文件，毋須蓋印或簽署</p>
                 </div>
             </div>
         </div>

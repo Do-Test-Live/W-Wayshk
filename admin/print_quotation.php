@@ -600,9 +600,9 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `quotation_details` WHERE
                     <p>
                         <?php echo $billing_details[0]['f_name'] . ' ' . $billing_details[0]['l_name']; ?><br>
                         機構名稱: <?php echo $billing_details[0]['organization_name']; ?><br>
-                        <?php echo $billing_details[0]['address']; ?>,<br><?php echo $billing_details[0]['city']; ?>
-                        ,<br>
-                        <?php echo $billing_details[0]['zip_code']; ?>
+                        <?php echo $billing_details[0]['address']; ?><br><?php echo $billing_details[0]['phone']; ?>
+                        <br>
+                        <?php echo $billing_details[0]['email']; ?>
                     </p>
                 </div>
                 <div class="cs-invoice_right cs-text_right">
@@ -680,7 +680,7 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `quotation_details` WHERE
                         <table>
                             <tbody>
                             <tr class="cs-border_none">
-                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">全部的</td>
+                                <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">總計</td>
                                 <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">
                                     <?php echo $billing_details[0]['total_purchase'] + $billing_details[0]['delivery_charges'] ;?> HKD
                                 </td>
@@ -701,11 +701,11 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `quotation_details` WHERE
                 </div>
                 <div class="cs-note_right">
                     <p class="cs-mb0"><b class="cs-primary_color cs-bold">付款方式</b></p>
-                    <p class="cs-m0">自取時以現金付款</p>
-                    <p class="cs-m0">PayMe （電話： +852 5265 7359）</p>
-                    <p class="cs-m0">轉數款 FPS （電話： +852 5265 7359）</p>
-                    <p class="cs-m0">銀行入數戶口號碼為 769-334699-883 (恆生銀行) 戶口名稱: Wayshk</p>
-                    <p class="cs-m0">Whatsapp: +852 56058389 | Email: wayshk.order@gmail.com</p>
+                    <p class="cs-m0">1) 郵寄支票 ：支票抬頭請書明受款人為「 Wayshk」，信封請註明 Attn: Wayshk 並郵寄往大圍成運路 21-23 號群力工業大廈 3 樓 1 室</p>
+                    <p class="cs-m0">2) 直接存款 ：銀行戶口號碼為 769-334699-883 （恆生銀行） 銀行戶口名稱: Wayshk</p>
+                    <p class="cs-m0">3) PayMe/轉數快：5265-7359</p>
+                    <p class="cs-m0">4) 自取點以現金支付</p>
+                    <p class="cs-m0" style="font-weight: bold; margin-top: 20px">此收帳單為電腦編印文件，毋須蓋印或簽署</p>
                 </div>
             </div>
         </div>

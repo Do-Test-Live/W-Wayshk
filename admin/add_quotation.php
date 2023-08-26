@@ -94,6 +94,7 @@ if (!isset($_SESSION['userid'])) {
                                                 <option value="Alipay">Alipay</option>
                                                 <option value="Cash">Cash</option>
                                                 <option value="Direct Bank Transfer">Direct Bank Transfer</option>
+                                                <option value="Cheque">Cheque</option>
                                                 <option value="Others">Others</option>
                                             </select>
                                         </div>
@@ -128,6 +129,13 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="form-group col-md-6">
                                             <label>Address</label>
                                             <textarea type="text" class="form-control" placeholder="" name="address"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Note</label>
+                                            <input type="text" class="form-control" placeholder="" name="note">
                                         </div>
                                     </div>
 

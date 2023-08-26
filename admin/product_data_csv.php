@@ -55,12 +55,16 @@ if (!isset($_SESSION['userid'])) {
                                 <thead>
                                 <tr>
                                     <th>SL</th>
+                                    <th>Product Name (CN)</th>
                                     <th>Product Name</th>
                                     <th>Product Price</th>
+                                    <th>Category Name (CN)</th>
                                     <th>Category Name</th>
                                     <th>Product Code</th>
                                     <th>Product Weight</th>
                                     <th>Product Cost</th>
+                                    <th>Description (CN)</th>
+                                    <th>Description</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -72,12 +76,16 @@ if (!isset($_SESSION['userid'])) {
                                     ?>
                                     <tr>
                                         <td><?php echo $i + 1; ?></td>
+                                        <td><?php echo $product_data[$i]["p_name"]; ?></td>
                                         <td><?php echo $product_data[$i]["p_name_en"]; ?></td>
                                         <td><?php echo $product_data[$i]["product_price"]; ?></td>
+                                        <td><?php echo $product_data[$i]["c_name"]; ?></td>
                                         <td><?php echo $product_data[$i]["c_name_en"]; ?></td>
                                         <td><?php echo $product_data[$i]["product_code"]; ?></td>
                                         <td><?php echo $product_data[$i]["product_weight"]; ?></td>
                                         <td><?php echo $product_data[$i]["cost"]; ?></td>
+                                        <td><?php echo $product_data[$i]["description"]; ?></td>
+                                        <td><?php echo $product_data[$i]["description_en"]; ?></td>
                                     </tr>
                                     <?php
                                 }

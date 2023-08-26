@@ -94,6 +94,7 @@ if (!isset($_SESSION['userid'])) {
                                                 <option value="Alipay">Alipay</option>
                                                 <option value="Cash">Cash</option>
                                                 <option value="Direct Bank Transfer">Direct Bank Transfer</option>
+                                                <option value="Cheque">Cheque</option>
                                                 <option value="Others">Others</option>
                                             </select>
                                         </div>

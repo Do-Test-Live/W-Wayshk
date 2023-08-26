@@ -540,7 +540,7 @@ if(isset($_POST['add_bank_interest'])){
 if(isset($_POST['add_quotation'])){
     // Retrieve the values from the form fields
     $inserted_at = date("Y-m-d H:i:s");
-    $note = $_POST['platform'];
+    $platform = $_POST['platform'];
     $paymentMethod = $_POST['payment_method'];
     $deliveryMethods = $_POST['delivery_methods'];
     $organizationName = $_POST['organization_name'];
@@ -551,6 +551,7 @@ if(isset($_POST['add_quotation'])){
     $discount = $_POST['discount'];
     $shipping_fee = $_POST['shipping_fee'];
     $total = $_POST['total'];
+    $note = $_POST['note'];
 
     // Retrieve the values of the appended rows
     $productCodes = $_POST['product'];
@@ -564,7 +565,7 @@ if(isset($_POST['add_quotation'])){
     $quantities = is_array($quantities) ? $quantities : [$quantities];
     $subtotals = is_array($subtotals) ? $subtotals : [$subtotals];
 
-    $insertBillingDetails = $db_handle->insertQuery("INSERT INTO `quotation_details`(`f_name`, `organization_name`, `email`, `phone`, `address`, `payment_type`, `shipping_method`, `discount`, `note`, `total_purchase`, `delivery_charges`, `purchase_points`, `updated_at`) VALUES ('$contactPersonName','$organizationName','$contactPersonEmail','$contactPersonPhone','$address','$paymentMethod','$deliveryMethods','$discount','$note','$total','$shipping_fee','0','$inserted_at')");
+    $insertBillingDetails = $db_handle->insertQuery("INSERT INTO `quotation_details`(`f_name`, `organization_name`, `email`, `phone`, `address`, `payment_type`, `shipping_method`, `discount`, `platform`, `total_purchase`, `delivery_charges`, `purchase_points`, `updated_at`,`note`) VALUES ('$contactPersonName','$organizationName','$contactPersonEmail','$contactPersonPhone','$address','$paymentMethod','$deliveryMethods','$discount','$platform','$total','$shipping_fee','0','$inserted_at','$note')");
 
     $fetchBillNumber = $db_handle->runQuery("select id from quotation_details order by id desc limit 1");
     $billId = $fetchBillNumber[0]['id'];

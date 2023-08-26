@@ -26,7 +26,7 @@ for ($i = 0; $i < $no_fetch_products; $i++){
 
 echo "
 <script>
-alert('The quatation is successfully converted to order');
+alert('The quotation is successfully converted to order');
 window.location.href = 'View-Quotation'
 </script>
 ";

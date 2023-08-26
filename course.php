@@ -82,7 +82,7 @@ include('include/header.php');
             <div class="col-12 text-center">
                 <div class="row text-center">
                     <div class="col-4">
-                        <input type="search" id="search-box" class="form-control" placeholder="I am searching for" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <input type="search" id="search-box" class="form-control" placeholder="<?php if ($_SESSION['language'] == 'CN') echo '搜尋課程'; else echo 'Search courses';?>" aria-label="Recipient's username" aria-describedby="button-addon2">
                     </div>
                 </div>
             </div>
