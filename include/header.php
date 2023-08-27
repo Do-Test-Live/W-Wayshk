@@ -527,7 +527,7 @@ if (isset($_SESSION["cart_item"])) {
 <!-- mobile fix menu start -->
 <div class="mobile-menu d-md-none d-block mobile-cart" style="background: black;padding-top:17px;padding-bottom: 17px">
     <ul>
-        <li class="active">
+        <li class="">
             <a href="Home">
                 <i class="fa-solid fa-house text-white" style="font-size: 18px"></i>
             </a>
@@ -535,7 +535,7 @@ if (isset($_SESSION["cart_item"])) {
 
         <li class="mobile-category">
             <a href="javascript:void(0)">
-                <i class="fa-solid fa-border-all text-white" style="font-size: 18px"></i>
+                <i class="fa-solid fa-bag-shopping text-white" style="font-size: 18px"></i>
             </a>
         </li>
 
