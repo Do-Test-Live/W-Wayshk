@@ -100,6 +100,9 @@ if (!isset($_SESSION['userid'])) {
                                                 <a href="Order-Details?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1"><i
                                                             class="fa fa-eye"></i></a>
+                                                <a href="print_invoice.php?id=<?php echo $bill_data[$i]["id"]; ?>"
+                                                   class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Invoice"><i
+                                                            class="fa fa-print"></i></a>
                                             </div>
                                         </td>
                                     </tr>
