@@ -20,7 +20,7 @@ if (!isset($_SESSION['userid'])) {
     <?php include 'include/css.php'; ?>
 
     <!-- Select2 CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -73,17 +73,20 @@ if (!isset($_SESSION['userid'])) {
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label>Order Date</label>
-                                            <input type="text" class="form-control" placeholder="" name="order_date" value="<?php echo $updated_at;?>" required readonly>
+                                            <input type="text" class="form-control" placeholder="" name="order_date"
+                                                   value="<?php echo $updated_at; ?>" required readonly>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Order Number</label>
-                                            <input type="text" class="form-control" placeholder="" name="order_number" value="#WHK" required readonly>
+                                            <input type="text" class="form-control" placeholder="" name="order_number"
+                                                   value="#WHK" required readonly>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label>Platform</label>
-                                            <input type="text" class="form-control" placeholder="" name="platform" required>
+                                            <input type="text" class="form-control" placeholder="" name="platform"
+                                                   required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Payment Methods </label>
@@ -102,18 +105,21 @@ if (!isset($_SESSION['userid'])) {
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label>Delivery Methods</label>
-                                            <input type="text" class="form-control" placeholder="" name="delivery_methods" required>
+                                            <input type="text" class="form-control" placeholder=""
+                                                   name="delivery_methods" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Organization Name</label>
-                                            <input type="text" class="form-control" placeholder="" name="organization_name">
+                                            <input type="text" class="form-control" placeholder=""
+                                                   name="organization_name">
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label>Contact Person Name</label>
-                                            <input type="text" class="form-control" placeholder="" name="c_name" required>
+                                            <input type="text" class="form-control" placeholder="" name="c_name"
+                                                   required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Contact Person Email</label>
@@ -128,7 +134,8 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Address</label>
-                                            <textarea type="text" class="form-control" placeholder="" name="address"></textarea>
+                                            <textarea type="text" class="form-control" placeholder=""
+                                                      name="address"></textarea>
                                         </div>
                                     </div>
 
@@ -139,58 +146,62 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                     </div>
 
-                                    <table id="productTable" class="display min-w850 table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>Product Code</th>
-                                            <th>Unit Price</th>
-                                            <th>QTY</th>
-                                            <th>Sub total</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr class="productRow mt-5">
-                                            <td>
-                                                <select name="product[]" class="productSelect">
-                                                    <?php
-                                                    $fetch_product = $db_handle->runQuery("select * from product");
-                                                    $no_fetch_product = $db_handle->numRows("select * from product");
-                                                    for($i=0; $i<$no_fetch_product; $i++){
-                                                        ?>
-                                                        <option value="<?php echo $fetch_product[$i]['id'];?>"><?php echo $fetch_product[$i]['product_code'];?></option>
+                                    <div class="table-responsive">
+                                        <table id="productTable" class="display min-w850 table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>Product Code</th>
+                                                <th>Unit Price</th>
+                                                <th>QTY</th>
+                                                <th>Sub total</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr class="productRow mt-5">
+                                                <td>
+                                                    <select name="product[]" class="productSelect">
                                                         <?php
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </td>
-                                            <td><input type="text" name="unit_price[]"></td>
-                                            <td><input type="text" name="quantity[]"></td>
-                                            <td><input type="text" name="subtotal[]"></td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary addRow">Add</button>
-                                                <button type="button" class="btn btn-danger removeRow">Remove</button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            <th colspan="3">Discount</th>
-                                            <th><input type="number" name="discount"></th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="3">Shipping Fee</th>
-                                            <th><input type="number" name="shipping_fee"></th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="3">Total</th>
-                                            <th><input type="number" name="total"></th>
-                                        </tr>
-                                        </tfoot>
-                                    </table>
+                                                        $fetch_product = $db_handle->runQuery("select * from product");
+                                                        $no_fetch_product = $db_handle->numRows("select * from product");
+                                                        for ($i = 0; $i < $no_fetch_product; $i++) {
+                                                            ?>
+                                                            <option value="<?php echo $fetch_product[$i]['id']; ?>"><?php echo $fetch_product[$i]['product_code']; ?></option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" name="unit_price[]"></td>
+                                                <td><input type="text" name="quantity[]"></td>
+                                                <td><input type="text" name="subtotal[]"></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary addRow">Add</button>
+                                                    <button type="button" class="btn btn-danger removeRow">Remove
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <th colspan="3">Discount</th>
+                                                <th><input type="number" name="discount"></th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="3">Shipping Fee</th>
+                                                <th><input type="number" name="shipping_fee"></th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="3">Total</th>
+                                                <th><input type="number" name="total"></th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
 
                                     <div class="text-center mt-5">
-                                        <button type="submit" class="btn btn-primary w-50" name="add_quotation">Submit</button>
+                                        <button type="submit" class="btn btn-primary w-50" name="add_quotation">Submit
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -223,10 +234,10 @@ if (!isset($_SESSION['userid'])) {
 </script>-->
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // Add event listener to the "Add" button
-        $(document).on('click', '.addRow', function() {
+        $(document).on('click', '.addRow', function () {
             var row = $(this).closest('tr').clone();
             row.find('.addRow').removeClass('addRow').addClass('removeRow').text('Remove');
             $('tbody').append(row);
@@ -235,13 +246,13 @@ if (!isset($_SESSION['userid'])) {
 
 
         // Add event listener to the "Remove" button
-        $(document).on('click', '.removeRow', function() {
+        $(document).on('click', '.removeRow', function () {
             $(this).closest('tr').remove();
             calculateTotal(); // Recalculate the total when a row is removed
         });
 
         // Add event listener to the "change" event of the product select field
-        $(document).on('change', '.productSelect', function() {
+        $(document).on('change', '.productSelect', function () {
             var selectedProductId = $(this).val();
             var currentRow = $(this).closest('tr');
 
@@ -249,8 +260,8 @@ if (!isset($_SESSION['userid'])) {
             $.ajax({
                 url: 'fetch_unit_price.php', // Replace with the actual URL to your PHP script
                 type: 'POST',
-                data: { productId: selectedProductId }, // Send the selected product ID as data
-                success: function(response) {
+                data: {productId: selectedProductId}, // Send the selected product ID as data
+                success: function (response) {
                     currentRow.find('input[name="unit_price[]"]').val(response);
                     calculateSubtotal(currentRow);
                 }
@@ -258,7 +269,7 @@ if (!isset($_SESSION['userid'])) {
         });
 
         // Add event listeners to the unit price and quantity fields
-        $(document).on('change', 'input[name="unit_price[]"], input[name="quantity[]"]', function() {
+        $(document).on('change', 'input[name="unit_price[]"], input[name="quantity[]"]', function () {
             var currentRow = $(this).closest('tr');
             calculateSubtotal(currentRow);
         });
@@ -278,7 +289,7 @@ if (!isset($_SESSION['userid'])) {
         }
 
         // Add event listeners to the discount and shipping fee fields
-        $(document).on('change', 'input[name="discount"], input[name="shipping_fee"]', function() {
+        $(document).on('change', 'input[name="discount"], input[name="shipping_fee"]', function () {
             calculateTotal();
         });
 
@@ -289,7 +300,7 @@ if (!isset($_SESSION['userid'])) {
             var shippingFee = parseFloat($('input[name="shipping_fee"]').val()) || 0;
 
             // Iterate over each row and sum up the subtotals
-            $('input[name="subtotal[]"]').each(function() {
+            $('input[name="subtotal[]"]').each(function () {
                 var subtotal = parseFloat($(this).val());
                 if (!isNaN(subtotal)) {
                     subtotalSum += subtotal;

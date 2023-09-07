@@ -30982,3 +30982,12 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
       color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
+.admin_header{
+    width: 200px;
+}
+
+@media only screen and (max-width: 1300px){
+    .admin_header{
+        width: 70px;
+    }
+}
