@@ -14,12 +14,12 @@ $currency = "hkd";
  */
 define('STRIPE_API_KEY', 'sk_test_51Js7yMEef0ZfRYif2EiZDwOsgckQWfhufIaCy6AA4V2khdgX3HjPVUVayrmgoaSZrbKWurDNaS51ykeUjVkDvH3C00jqJ2LxSf');
 define('STRIPE_PUBLISHABLE_KEY', 'pk_test_51Js7yMEef0ZfRYif2yukLvrLbqS7IhDndBYnLlxB6oFfD354C5GDXlrkoUfhR0ICChKmTrzeWi7sfKUvrQmXajXJ00hPvG6I62');
-define('STRIPE_SUCCESS_URL', 'https://localhost/W-Wayshk/payment-success.php'); //Payment success URL
-define('STRIPE_CANCEL_URL', 'https://localhost/W-Wayshk/payment-cancel.php'); //Payment cancel URL
+define('STRIPE_SUCCESS_URL', 'https://wayshk.com/payment-success.php'); //Payment success URL
+define('STRIPE_CANCEL_URL', 'https://wayshk.com/payment-cancel.php'); //Payment cancel URL
 
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'wayshk');
+define('DB_USERNAME', 'ucssg0fcjfusr');
+define('DB_PASSWORD', 'd}2<#{21*}e3');
+define('DB_NAME', 'dbitzyiljpihld');
 

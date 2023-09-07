@@ -11,7 +11,7 @@ if (!isset($_SESSION['userid'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Pending Order | Wayshk Admin</title>
+    <title>Confirm Order | Wayshk Admin</title>
     <!-- Datatable -->
     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <?php include 'include/css.php'; ?>
@@ -100,6 +100,9 @@ if (!isset($_SESSION['userid'])) {
                                                 <a href="Order-Details?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1"><i
                                                             class="fa fa-eye"></i></a>
+                                                <a href="Print-Receipt?id=<?php echo $bill_data[$i]["id"]; ?>"
+                                                   class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Receipt"><i
+                                                            class="fa fa-print"></i></a>
                                                 <a href="print_invoice.php?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Invoice"><i
                                                             class="fa fa-print"></i></a>

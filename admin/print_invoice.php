@@ -597,13 +597,11 @@ $billing_details = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE i
             <div class="cs-invoice_head cs-mb10">
                 <div class="cs-invoice_left">
                     <b class="cs-primary_color">致：</b>
-                    <p>
-                        <?php echo $billing_details[0]['f_name'] . ' ' . $billing_details[0]['l_name']; ?><br>
-                        機構名稱: <?php echo $billing_details[0]['organization_name']; ?><br>
-                        <?php echo $billing_details[0]['address']; ?>,<br><?php echo $billing_details[0]['city']; ?>
-                        ,<br>
-                        <?php echo $billing_details[0]['zip_code']; ?>
-                    </p>
+                    <p><?php echo $billing_details[0]['f_name'] . ' ' . $billing_details[0]['l_name']; ?></p>
+                        <p>機構名稱: <?php echo $billing_details[0]['organization_name']; ?></p>
+                        <p><?php echo $billing_details[0]['address']; ?>,</p>
+                        <p><?php echo $billing_details[0]['city']; ?>,</p>
+                        <p><?php echo $billing_details[0]['zip_code']; ?></p>
                 </div>
                 <div class="cs-invoice_right cs-text_right">
                     <b class="cs-primary_color">支付給:</b>
