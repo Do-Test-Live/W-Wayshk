@@ -276,29 +276,29 @@ if (isset($_POST['updateDeliveryCharges'])) {
 }
 
 
-if (isset($_POST['delivery'])) {
+if (isset($_POST['payment_status'])) {
     $id = $db_handle->checkValue($_POST['billing_id']);
     $email = $db_handle->checkValue($_POST['email']);
-    $date = $db_handle->checkValue($_POST['date']);
-    $status = $db_handle->checkValue($_POST['status']);
+    $payment_status = $db_handle->checkValue($_POST['payment']);
 
-    $data = $db_handle->insertQuery("UPDATE `billing_details` SET `delivery_date`='$date',`approve` = '$status' WHERE id='$id'");
+    $data = $db_handle->insertQuery("UPDATE `billing_details` SET `payment_status` = '$payment_status' WHERE id='$id'");
 
-    $fetch_customer = $db_handle->runQuery("select customer_id,total_purchase,updated_at,payment_type from billing_details where id='$id'");
-    $customer = $fetch_customer[0]['customer_id'];
-    $points = $fetch_customer[0]['total_purchase'];
-    $date = $fetch_customer[0]['updated_at'];
-    $payment = $fetch_customer[0]['payment_type'];
+    if($payment_status == '1'){
+        $fetch_customer = $db_handle->runQuery("select customer_id,total_purchase,updated_at,payment_type from billing_details where id='$id'");
+        $customer = $fetch_customer[0]['customer_id'];
+        $points = $fetch_customer[0]['total_purchase'];
+        $date = $fetch_customer[0]['updated_at'];
+        $payment = $fetch_customer[0]['payment_type'];
 
-    if ($payment != 'Credit Card' && $customer != 0) {
-        $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$points','$date')");
-    }
+        if ($payment != 'Credit Card' && $customer != 0) {
+            $insert_point = $db_handle->insertQuery("INSERT INTO `point`( `customer_id`, `points`, `date`) VALUES ('$customer','$points','$date')");
+        }
 
-    if ($data) {
-        $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
-        $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
-        $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
-        $tableHtml .= '<tr>
+        if ($data) {
+            $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+            $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+            $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
+            $tableHtml .= '<tr>
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品名稱</th>
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品代碼</th>
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">數量</th>
@@ -306,78 +306,87 @@ if (isset($_POST['delivery'])) {
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">合計</th>
                 </tr>';
 
-        for ($i = 0; $i < $no_product_details; $i++) {
-            $tableHtml .= '<tr>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
-            $tableHtml .= '</tr>';
-        }
+            for ($i = 0; $i < $no_product_details; $i++) {
+                $tableHtml .= '<tr>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
+                $tableHtml .= '</tr>';
+            }
 
-        $tableHtml .= '</table>';
+            $tableHtml .= '</table>';
 
-        $payment1 = '<h3>消費積分獎賞</h3>';
-        $payment1 .= ' <p>如為Wayshk活籽兒童用品店網店會員，每消費1元即可賺取1積分。本次消費積分已經加入您的帳戶，可當作現金使用或下載各類創意教學資源。</p>';
-        $payment1 .= ' <p>登入會員帳號查看積分：https://www.wayshk.com/Login</p>';
-        $payment1 .= ' <p>立即使用現金回贈： https://www.wayshk.com/Shop</p>';
-        $payment1 .= ' <p>下載教學資源： https://www.wayshk.com/Resources-Download  </p>';
+            $payment1 = '<h3>消費積分獎賞</h3>';
+            $payment1 .= ' <p>如為Wayshk活籽兒童用品店網店會員，每消費1元即可賺取1積分。本次消費積分已經加入您的帳戶，可當作現金使用或下載各類創意教學資源。</p>';
+            $payment1 .= ' <p>登入會員帳號查看積分：https://www.wayshk.com/Login</p>';
+            $payment1 .= ' <p>立即使用現金回贈： https://www.wayshk.com/Shop</p>';
+            $payment1 .= ' <p>下載教學資源： https://www.wayshk.com/Resources-Download  </p>';
 
-        $payment2 = '<h3>評價回贈獎賞</h3>';
-        $payment2 .= '<p>第一步：撰寫Carousell/Facebook好評或直接提供試玩照片及建議</p>';
-        $payment2 .= '<p>第二步：截圖回覆此電郵/傳送到WhatsApp 5605 8389</p>';
-        $payment2 .= '<p>第三步：經店員確認後可獲得額外200積分（=$5購物現金）</p>';
-        $payment2 .= '<h3>聯絡我們</h3>';
-        $payment2 .= '<p>如你有任何關於此訂單的查詢，請與Wayshk聯繫。</p>';
-        $payment2 .= '<p>香港大圍成運路21-23號群力工業大廈3樓1室</p>';
-        $payment2 .= '<p>產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</p>';
-        $payment2 .= '<p>其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</p>';
+            $payment2 = '<h3>評價回贈獎賞</h3>';
+            $payment2 .= '<p>第一步：撰寫Carousell/Facebook好評或直接提供試玩照片及建議</p>';
+            $payment2 .= '<p>第二步：截圖回覆此電郵/傳送到WhatsApp 5605 8389</p>';
+            $payment2 .= '<p>第三步：經店員確認後可獲得額外200積分（=$5購物現金）</p>';
+            $payment2 .= '<h3>聯絡我們</h3>';
+            $payment2 .= '<p>如你有任何關於此訂單的查詢，請與Wayshk聯繫。</p>';
+            $payment2 .= '<p>香港大圍成運路21-23號群力工業大廈3樓1室</p>';
+            $payment2 .= '<p>產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</p>';
+            $payment2 .= '<p>其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</p>';
 
-        $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
+            $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
 
 
-        $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
-        $email_to = $email;
-        $subject = 'Wayshk 活籽兒童用品店 – 訂單確認';
+            $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
+            $email_to = $email;
+            $subject = 'Wayshk 活籽兒童用品店 – 訂單確認';
 
-        $headers = "From: Business <" . $db_handle->from_email() . ">\r\n";
-        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+            $headers = "From: Business <" . $db_handle->from_email() . ">\r\n";
+            $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-        $message = $img . '<br><br>感謝您購買 Wayshk活籽兒童用品店的商品，您的訂單已經確認。  您的訂單 #WHK' . $id . '已經確認 <br><br>點擊連結檢視訂單詳情，並下載收據 ：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $payment1. '<br><br>' . $payment2;
-        if (mail($email_to, $subject, $message, $headers)) {
-            echo "<script>
+            $message = $img . '<br><br>感謝您購買 Wayshk活籽兒童用品店的商品，您的訂單已經確認。  您的訂單 #WHK' . $id . '已經確認 <br><br>點擊連結檢視訂單詳情，並下載收據 ：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $payment1. '<br><br>' . $payment2;
+            if (mail($email_to, $subject, $message, $headers)) {
+                echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Pending-Order';
                 </script>";
+            }
         }
+    } else{
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Pending-Order';
+                </script>";
     }
 
 }
 
-if (isset($_POST['approved'])) {
+if (isset($_POST['delivery'])) {
     $id = $db_handle->checkValue($_POST['billing_id']);
+    $delivery_status = $db_handle->checkValue($_POST['delivery_status']);
 
-    $data = $db_handle->insertQuery("UPDATE `billing_details` SET `approve` = '1' WHERE id='$id'");
-    if ($data) {
-        $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
-        $no_fetch_product = $db_handle->numRows("select * from invoice_details where billing_id = '$id'");
-        for ($i = 0; $i < $no_fetch_product; $i++) {
-            $quantity = $fetch_product[$i]['product_quantity'];
-            $product_id = $fetch_product[$i]['product_id'];
-            $fetch_stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
-            $no_fetch_stock = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
-            if ($no_fetch_stock > 0) {
-                $s_quantity = $fetch_stock[0]['quantity'];
-                $s_quantity = $s_quantity - $quantity;
-                $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
+    $data = $db_handle->insertQuery("UPDATE `billing_details` SET delivery_status = '$delivery_status' WHERE id='$id'");
+
+    if($delivery_status == '1'){
+        if ($data) {
+            $fetch_product = $db_handle->runQuery("select * from invoice_details where billing_id = '$id'");
+            $no_fetch_product = $db_handle->numRows("select * from invoice_details where billing_id = '$id'");
+            for ($i = 0; $i < $no_fetch_product; $i++) {
+                $quantity = $fetch_product[$i]['product_quantity'];
+                $product_id = $fetch_product[$i]['product_id'];
+                $fetch_stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
+                $no_fetch_stock = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
+                if ($no_fetch_stock > 0) {
+                    $s_quantity = $fetch_stock[0]['quantity'];
+                    $s_quantity = $s_quantity - $quantity;
+                    $update_stock = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$s_quantity' WHERE product_id = '$product_id'");
+                }
             }
-        }
 
-        $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
-        $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
-        $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
-        $tableHtml .= '<tr>
+            $product_details = $db_handle->runQuery("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+            $no_product_details = $db_handle->numRows("SELECT * FROM `invoice_details`, `product` WHERE `billing_id` = '$id' and invoice_details.product_id = product.id");
+            $tableHtml = '<table style="border-collapse: collapse; width: 100%;">';
+            $tableHtml .= '<tr>
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品名稱</th>
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">產品代碼</th>
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">數量</th>
@@ -385,42 +394,48 @@ if (isset($_POST['approved'])) {
                     <th style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">合計</th>
                 </tr>';
 
-        for ($i = 0; $i < $no_product_details; $i++) {
-            $tableHtml .= '<tr>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
-            $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
-            $tableHtml .= '</tr>';
-        }
+            for ($i = 0; $i < $no_product_details; $i++) {
+                $tableHtml .= '<tr>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_name'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_code'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_quantity'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_unit_price'] . '</td>';
+                $tableHtml .= '<td style="border: 1px solid #000; padding: 8px; text-align: center; text-align: center;">' . $product_details[$i]['product_total_price'] . '</td>';
+                $tableHtml .= '</tr>';
+            }
 
-        $tableHtml .= '</table>';
+            $tableHtml .= '</table>';
 
-        $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
+            $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
 
-        $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>期待您再次光臨Wayshk！</h4></br></br>';
-        $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>聯絡我們</h4>';
-        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">如你有任何關於此訂單的查詢，請與Wayshk聯繫。</h5>';
-        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">香港大圍成運路21-23號群力工業大廈3樓1室</h5>';
-        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</h5>';
-        $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</h5>';
+            $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>期待您再次光臨Wayshk！</h4></br></br>';
+            $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>聯絡我們</h4>';
+            $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">如你有任何關於此訂單的查詢，請與Wayshk聯繫。</h5>';
+            $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">香港大圍成運路21-23號群力工業大廈3樓1室</h5>';
+            $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">產品訂購 WhatsApp +852 56058389/電郵地址wayshk.order@gmail.com</h5>';
+            $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">其他查詢WhatsApp +852 52657359 /電郵地址ways00.hk@gmail.com</h5>';
 
-        $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
-        $email_to = $email;
-        $subject = 'Wayshk 活籽兒童用品店 – 訂單更新 ';
-        $headers = "From: Business <" . $db_handle->from_email() . ">\r\n";
-        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-        $message = $img . '<br><br>您的訂單 WHK #' . $id . ' <br><br>已經完成出貨程序。點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $footer;
-        if (mail($email_to, $subject, $message, $headers)) {
-            echo "<script>
+            $img = '<img src="https://wayshk.com/assets/images/email-banner.jpg" alt="" style="width: 100%;">';
+            $email_to = $email;
+            $subject = 'Wayshk 活籽兒童用品店 – 訂單更新 ';
+            $headers = "From: Business <" . $db_handle->from_email() . ">\r\n";
+            $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+            $message = $img . '<br><br>您的訂單 WHK #' . $id . ' <br><br>已經完成出貨程序。點擊以下連結檢視您的訂單詳情：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $footer;
+            if (mail($email_to, $subject, $message, $headers)) {
+                echo "<script>
                 document.cookie = 'alert = 3;';
-                window.location.href='Confirm-Order';
+                window.location.href='Pending-Order';
                 </script>";
+            }
         }
-    }
+    }  echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Pending-Order';
+                </script>";
 
 }
+
+
 
 if (isset($_POST['updatePassword'])) {
     $o_pass = $db_handle->checkValue($_POST['o_pass']);

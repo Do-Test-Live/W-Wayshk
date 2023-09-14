@@ -77,15 +77,15 @@ if (!isset($_SESSION['userid'])) {
                                 </thead>
                                 <tbody>
                                 <?php
-                                $bill_data = $db_handle->runQuery("SELECT * FROM billing_details where approve != '1' order by id desc");
-                                $row_count = $db_handle->numRows("SELECT * FROM billing_details where approve != '1' order by id desc");
+                                $bill_data = $db_handle->runQuery("SELECT * FROM billing_details where delivery_status = '0' or payment_status = '0' order by id desc");
+                                $row_count = $db_handle->numRows("SELECT * FROM billing_details where delivery_status = '0' or payment_status = '0' order by id desc");
 
                                 for ($i = 0; $i < $row_count; $i++) {
                                     ?>
                                     <tr>
                                         <td><?php echo $i + 1; ?></td>
                                         <?php
-                                        if ($bill_data[$i]["approve"] == 3) {
+                                        if ($bill_data[$i]["approve"] == 0) {
                                             ?>
                                             <td>Pending</td>
                                             <?php

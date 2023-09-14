@@ -76,8 +76,8 @@ if (!isset($_SESSION['userid'])) {
                                 </thead>
                                 <tbody>
                                 <?php
-                                $bill_data = $db_handle->runQuery("SELECT * FROM billing_details where approve = '1' order by id desc");
-                                $row_count = $db_handle->numRows("SELECT * FROM billing_details where approve = '1' order by id desc");
+                                $bill_data = $db_handle->runQuery("SELECT * FROM billing_details where payment_status = '1' and delivery_status = '1' order by id desc");
+                                $row_count = $db_handle->numRows("SELECT * FROM billing_details where payment_status = '1' and delivery_status = '1' order by id desc");
 
                                 for ($i = 0; $i < $row_count; $i++) {
                                     ?>
