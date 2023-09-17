@@ -171,7 +171,7 @@ if (isset($_POST["placeOrder"])) {
     $payment2 .= '<p>電話：2877 8787</p>';
     $payment2 .= '<p>請必須預約取貨時間。</p>';
 
-    $button = "<a href='https://wayshk.com/print_receipt.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
+    $button = "<a href='https://wayshk.com/admin/print_invoice.php?id=" . $id . "' class='password-button' style='margin-left: 60px;' target='_blank'>See Details</a>";
 
     $footer = '<h4 style="font-size: 19px; font-weight: 700; margin: 0;>聯絡我們</h4>';
     $footer .= '<h5 style="font-size: 13px; text-transform: uppercase; margin: 0; letter-spacing:1px; font-weight: 500;">如你有任何關於此訂單的查詢，請與Wayshk聯繫。</h5>';

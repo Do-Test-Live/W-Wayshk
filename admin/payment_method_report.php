@@ -97,13 +97,13 @@ if($currentMonth == '1'){
         </thead>
         <tbody>
         <?php
-        $fetch_data = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
-        $no_fetch_data = $db_handle->numRows("SELECT * FROM `billing_details` WHERE `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $fetch_data = $db_handle->runQuery("SELECT * FROM `billing_details` WHERE `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $no_fetch_data = $db_handle->numRows("SELECT * FROM `billing_details` WHERE `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
         if ($no_fetch_data > 0) {
             for ($i = 0; $i < $no_fetch_data; $i++) {
                 ?>
                 <tr>
-                    <td>WHK <?php echo $fetch_data[$i]['id']; ?> </td>
+                    <td>WHK# <?php echo $fetch_data[$i]['id']; ?> </td>
                     <td><?php echo $fetch_data[$i]['total_purchase']; ?></td>
                     <td><?php if ($fetch_data[$i]['payment_type'] == 'Transfer FPS') echo $fetch_data[$i]['total_purchase']; else echo ''; ?></td>
                     <td><?php if ($fetch_data[$i]['payment_type'] == 'Pay by cash when picking up') echo $fetch_data[$i]['total_purchase']; else echo ''; ?></td>
@@ -114,12 +114,12 @@ if($currentMonth == '1'){
                 <?php
             }
         }
-        $total = $db_handle->runQuery("SELECT SUM(`total_purchase`) as total FROM `billing_details` WHERE `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
-        $transfer_fps = $db_handle->runQuery("SELECT SUM(`total_purchase`) as fps FROM `billing_details` WHERE `payment_type` = 'Transfer FPS' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
-        $cash_payment = $db_handle->runQuery("SELECT SUM(`total_purchase`) as cash FROM `billing_details` WHERE `payment_type` = 'Pay by cash when picking up' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
-        $check_payment = $db_handle->runQuery("SELECT SUM(`total_purchase`) as cheque FROM `billing_details` WHERE `payment_type` = 'Check' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
-        $credit_card = $db_handle->runQuery("SELECT SUM(`total_purchase`) as card FROM `billing_details` WHERE `payment_type` = 'Credit Card' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
-        $payme = $db_handle->runQuery("SELECT SUM(`total_purchase`) as pay FROM `billing_details` WHERE `payment_type` = 'PayMe' and `approve` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $total = $db_handle->runQuery("SELECT SUM(`total_purchase`) as total FROM `billing_details` WHERE `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $transfer_fps = $db_handle->runQuery("SELECT SUM(`total_purchase`) as fps FROM `billing_details` WHERE `payment_type` = 'Transfer FPS' and `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $cash_payment = $db_handle->runQuery("SELECT SUM(`total_purchase`) as cash FROM `billing_details` WHERE `payment_type` = 'Pay by cash when picking up' and `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $check_payment = $db_handle->runQuery("SELECT SUM(`total_purchase`) as cheque FROM `billing_details` WHERE `payment_type` = 'Check' and `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $credit_card = $db_handle->runQuery("SELECT SUM(`total_purchase`) as card FROM `billing_details` WHERE `payment_type` = 'Credit Card' and `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
+        $payme = $db_handle->runQuery("SELECT SUM(`total_purchase`) as pay FROM `billing_details` WHERE `payment_type` = 'PayMe' and `payment_status` = '1' and `delivery_status` = '1' and MONTH(updated_at) = $currentMonth AND YEAR(updated_at) = $currentYear;");
         ?>
         <tr>
             <td>Total</td>

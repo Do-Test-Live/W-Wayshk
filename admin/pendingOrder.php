@@ -100,7 +100,7 @@ if (!isset($_SESSION['userid'])) {
                                                 <a href="Order-Details?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1"><i
                                                             class="fa fa-eye"></i></a>
-                                                <a href="Print-Receipt?id=<?php echo $bill_data[$i]["id"]; ?>"
+                                                <a href="../print_receipt.php?id=<?php echo $bill_data[$i]["id"]; ?>"
                                                    class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="tooltip" data-placement="bottom" title="Print Receipt"><i
                                                             class="fa fa-print"></i></a>
                                                 <a href="print_invoice.php?id=<?php echo $bill_data[$i]["id"]; ?>"

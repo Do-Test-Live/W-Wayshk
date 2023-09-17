@@ -344,7 +344,7 @@ if (isset($_POST['payment_status'])) {
             $headers = "From: Business <" . $db_handle->from_email() . ">\r\n";
             $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-            $message = $img . '<br><br>感謝您購買 Wayshk活籽兒童用品店的商品，您的訂單已經確認。  您的訂單 #WHK' . $id . '已經確認 <br><br>點擊連結檢視訂單詳情，並下載收據 ：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $payment1. '<br><br>' . $payment2;
+            $message = $img . '<br><br>感謝您購買 Wayshk活籽兒童用品店的商品。  您的訂單 #WHK' . $id . '已經確認 <br><br>點擊連結檢視訂單詳情，並下載收據 ：' . $button . '<br><br> 訂單摘要： ' . $tableHtml . '<br><br>' . $payment1. '<br><br>' . $payment2;
             if (mail($email_to, $subject, $message, $headers)) {
                 echo "<script>
                 document.cookie = 'alert = 3;';
