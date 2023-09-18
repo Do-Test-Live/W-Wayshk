@@ -122,8 +122,8 @@ $id = $_GET['id'];
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <input type="hidden" value="<?php echo $id; ?>" name="billing_id">
-                                            <input type="hidden" value="<?php echo $status[0]['email']; ?>"
+                                            <input type="text" value="<?php echo $id; ?>" name="billing_id">
+                                            <input type="text" value="<?php echo $status[0]['email']; ?>"
                                                    name="email">
                                         </div>
                                         <div class="mb-3 row">

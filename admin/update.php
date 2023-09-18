@@ -363,6 +363,7 @@ if (isset($_POST['payment_status'])) {
 
 if (isset($_POST['delivery'])) {
     $id = $db_handle->checkValue($_POST['billing_id']);
+    $email = $db_handle->checkValue($_POST['email']);
     $delivery_status = $db_handle->checkValue($_POST['delivery_status']);
 
     $data = $db_handle->insertQuery("UPDATE `billing_details` SET delivery_status = '$delivery_status' WHERE id='$id'");
