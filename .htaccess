@@ -61,3 +61,5 @@ RewriteRule ^Customer-Review customer_review.php [NE,L]
 RewriteRule ^Testimonial testimonial.php [NE,L]
 
 RewriteRule ^Reset-Pass reset_pass.php [NE,L]
+
+RewriteRule ^Verify verify.php [NE,L]
