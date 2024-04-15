@@ -6,13 +6,6 @@ if (isset($_SESSION['id'])) {
 include('admin/include/dbController.php');
 $db_handle = new DBController();
 
-if(!isset($_SESSION['verify'])){
-    echo "
-    <script>
-    window.location.href = 'Verify';
-</script>
-    ";
-}
 ?>
 
 <!DOCTYPE html>

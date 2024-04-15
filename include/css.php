@@ -1,3 +1,13 @@
+<?php
+if(!isset($_SESSION['verify'])){
+    echo "
+    <script>
+    window.location.href = 'Verify';
+</script>
+    ";
+}
+?>
+
 <!-- Google font -->
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
